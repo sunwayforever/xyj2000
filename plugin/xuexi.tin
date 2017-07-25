@@ -1,0 +1,18 @@
+#class xuexi open;
+#alias {do_xue} {
+    xue literate from yun;
+};
+#action {似乎有些心得。} {
+    do_xue;
+};
+#action {你今天太累了，结果什么也没有学到。} {
+    #delay {1} {
+        e;e;s;
+        sleep;
+    };
+};
+#action {你一觉醒来，只觉精力充沛。该活动一下了} {
+    n;w;w;
+    do_xue;
+};
+#class xuexi close;
