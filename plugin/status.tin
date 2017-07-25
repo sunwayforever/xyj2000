@@ -20,11 +20,11 @@
 #gag {气血：};
 #gag {精神：};
 
-#action { 气血：  %d/  %d (%*)    内力：    %d /    %d (%*) (%*)} {
-    #var curr_qx %1;
-    #var max_qx %2;
-    #var curr_nl %4;
-    #var max_nl %5;
+#action { 气血：%s%d/%s%d (%*)%s内力：%s%d /%s%d (%*) (%*)} {
+    #var curr_qx %2;
+    #var max_qx %4;
+    #var curr_nl %8;
+    #var max_nl %10;
 };
 
 #action { 精神：  %d/  %d (%*)    法力：    %d /    %d (%*) (%*)} {
@@ -43,16 +43,16 @@
 #gag {饮水：};
 #gag {潜能：};
 
-#action {食物：    %d/  %d           武学： %d} {
-    #var food %1;
-    #var maxfood %2;
-    #var wx %3;
+#action {食物：%s%d/%s%d%s武学：%s%d} {
+    #var food %2;
+    #var maxfood %4;
+    #var wx %7;
 };
 
-#action {饮水：    %d/  %d           道行： %*} {
-    #var water %1;
-    #var maxwater %2;
-    #var dh %3;
+#action {饮水：%s%d/%s%d%s道行：%s%*} {
+    #var water %2;
+    #var maxwater %4;
+    #var dh %7;
     drawhp;
 };
 

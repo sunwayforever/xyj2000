@@ -811,3 +811,7 @@ walk_to east;
     @clearenv{hb_lunci};
     @clearenv{hb_lunci_total};
 };
+
+#alias {shifu} {
+    gt $gps_shifu;
+};
