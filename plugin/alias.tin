@@ -1,0 +1,1305 @@
+#alias c chat;
+#alias * chat*;
+#alias r reply;
+
+#alias {load} {
+    #var v %1;
+    #if {"${v}" == "spec"} {
+        #read plugin/spec/${char_menpai}${dot}tin;
+    };
+    #else {
+        #read plugin/%1.tin;
+    };
+};
+
+#alias {unload} {
+    #class %1 kill;
+};
+
+#alias {chifan} {
+    #6 {drink cha};
+};
+
+#alias {lm} {
+    localmaps %0;
+};
+
+#alias {grep} {
+    #grep %1;
+};
+
+#alias {le} {l east};
+#alias {lw} {l west};
+#alias {ls} {l south};
+#alias {ln} {l north};
+
+
+#alias {i} {
+    #send {i %0};
+    lock 你身上带著下列;
+};
+
+#alias {sc} {
+    #send {sc %0};
+    lock 你是一位;
+};
+
+#alias {st} {
+    #send {status_me};
+    lock ≡━◎;
+};
+
+#alias {hp} {
+    #send {hp};
+    lock ≡━━━━;
+};
+
+#alias {sk} {
+    #send {sk};
+    lock 你目前所学过的技能;
+};
+
+#alias {jifa} {
+    #send {jifa %0};
+    lock 以下是你目前使用中的特殊技能;
+};
+
+#alias {lock} {
+    #if {"%0" != ""} {
+        #action {%0} {
+            #action {^>} {
+                #buffer lock;
+                #unaction {^>}
+            };
+            #unaction {%0};
+        };
+    };
+};
+
+#alias {Q} {
+    quest;
+};
+
+#alias {jd} {
+    jianding %0;
+};
+
+#alias {special_repair} {
+    #alias tmp_special_repair #cr;
+    #alias tmp_special_repair %1;
+    #if {${special_min_naijiu} < 100} {
+        #action {抵达目的地} {
+            #unaction {抵达目的地};
+            #delay {2} {
+                #foreach {${my_special_weapons}[%*]} {weapon} {
+                    fix ${weapon};
+                };
+                #delay {3} {
+                    tmp_special_repair;
+                };
+            };
+        };
+        gt 发呆室;
+    };
+    #else {
+        tmp_special_repair;
+    };
+};
+
+#alias {iall} {
+    #echo {≡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━≡};
+    #send {i ring};
+    #send {i necklace};
+    #send {i spear};
+    #send {i staff};
+    #send {i blade};
+    #send {i shield};
+    #send {i sword};
+    #send {i whip};
+    #send {i head};
+    #send {i hands};
+    #send {i waist};
+    #send {i armor};
+    #send {i cloth};
+    #send {i boots};
+    #send {i wrists};
+    #send {i surcoat};
+    #action {你身上id为surcoat的东西有下面这些} {
+        #delay {0.5} {
+            #echo {≡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━≡};
+            #buffer lock;
+        };
+    };
+};
+
+#alias {pp} {
+    helpme ...;
+    helpme find %0;
+};
+
+#alias {autopp} {
+    #alias tmp_auto_pp #cr;
+    #alias tmp_auto_pp %1;
+    #if {"${pp_target}" != ""} {
+        helpme ...;
+        helpme find ${pp_target};
+        #ticker {pp} {
+            helpme ...;
+            helpme find ${pp_target};
+        } {15};
+        #delay {pp_delay} {
+            #class pp.inner kill;
+            #unticker {pp};
+            tmp_auto_pp nil;
+        } {150};
+        #class pp.inner open;
+
+        #action {告诉你：【%*(%*)】目前在【{\S+?}的%*】,快去摁死它吧!} {
+            #class pp.inner kill;
+            #undelay {pp_delay};
+            #unticker {pp};
+            show_to_info %%1(%%2) @ %%4;
+            tmp_auto_pp %%4;
+        } {1};
+        #action {告诉你：【%*(%*)】目前在【%*】,快去摁死它吧!} {
+            #class pp.inner kill;
+            #undelay {pp_delay};
+            #unticker {pp};
+            show_to_info %%1(%%2) @ %%3;
+            tmp_auto_pp %%3;
+        } {2};
+        #action {桃白白%*告诉你：【%*】并不存在} {
+            #cr;
+        } {1}
+        #action {告诉你：【%*】并不存在} {
+            #class pp.inner kill;
+            #undelay {pp_delay};
+            #unticker {pp};
+            show_to_info %%1 @ 不存在;
+            tmp_auto_pp nil;
+        } {2};
+        #class pp.inner close;
+    };
+};
+
+#alias {autopp.set} {
+    #if {@isalphabet{%1} == 1} {
+        #var pp_target @lower{%0};
+    };
+    #else {
+        #var pp_target @py{%1};
+    };
+};
+
+#alias {jq} {
+    jobquery;
+};
+
+#alias {heal.stop} {
+    #unticker {heal};
+};
+
+#alias {heal.start} {
+    #ticker {heal} {
+        yun lifeheal %1;
+        #edelay {2} {
+            dazuo 100;
+        };
+    } {5};
+};
+
+#alias {on_halt} {
+    #alias tmp_halt #cr;
+    #alias tmp_halt %0;
+
+    #class halt.inner open;
+    #gag {你现在不忙};
+    #ticker {halt_ticker} {
+        #10 halt;
+    } {0.5};
+    #action {你现在不忙} {
+        #class halt.inner kill;
+        #delay {tmp_halt_delay} {
+            tmp_halt;
+        } {0.5};
+    } {1};
+    #class halt.inner close;
+    #10 halt;
+};
+
+#alias {on_hit} {
+    #alias tmp_hit #cr;
+    #alias tmp_hit %0;
+    #action {你战胜了} {
+        #unaction {你战胜了};
+        #delay {2} {
+            halt;
+            tmp_hit;
+        };
+    };
+};
+
+#alias {on_dead} {
+    #alias tmp_dead #cr;
+    #alias tmp_dead %0;
+    #action {死了} {
+        #unaction {死了};
+        #delay {2} {
+            halt;
+            tmp_dead;
+        };
+    } {1};
+};
+
+#alias {health.cancel} {
+    #class health.inner kill;
+    #alias tmp_health #cr;
+    dz.cancel;
+    tn.cancel;
+};
+
+#alias {halt_life} {
+    #alias tmp_half_life #cr;
+    #alias tmp_half_life %0;
+    #class half_life.inner open;
+    #alias {start_chat} {
+        #ticker {chat} {
+            #10 chat;
+            #if {${eff_qx_percent} < 50} {
+                #class half_life.inner kill;
+                #unticker {chat};
+                on_unbusy {
+                    tmp_half_life;
+                };
+            };
+        } {1};
+    };
+    #class half_life.inner close;
+    #if {${eff_qx_percent} > 50} {
+        gt 扬州城知府大堂;
+        on_there {
+            start_chat;
+        };
+    };
+    #else {
+        #class half_life.inner kill;
+        tmp_half_life;
+    };
+};
+
+#alias {on_health} {
+    #alias tmp_health #cr;
+    #alias tmp_health %0;
+    #class health.inner open;
+    #alias {check_qx} {
+        #if {${eff_qx_percent} < 99} {
+            #if {${qx_percent} < 50} {
+                yun lifeheal ${char_id};
+            };
+            #else {
+                yun heal;
+            }
+            #delay {0.5} {
+                check_qx;
+            };
+        };
+        #else {
+            check_js;
+        };
+    };
+    #alias {check_js} {
+        #if {${eff_js_percent} < 99} {
+            yun inspire;
+            #delay {0.5} {
+                check_js;
+            };
+        };
+        #else {
+            #class health.inner kill;
+            re;
+            chifan;
+            #delay {0.5} {
+                tmp_health;
+            };
+        };
+    };
+
+    #alias {check_all} {
+        dz.full {
+            tn.full {
+                check_qx;
+            };
+        };
+    };
+
+    #action {已经受伤过重，经受不起你的真气震荡} {
+        health.cancel;
+        on_severe_wound;
+     };
+
+     #action {你已经受伤过重，只怕一运真气便有生命危险！} {
+         health.cancel;
+        on_severe_wound;
+    };
+    #class health.inner close;
+    re;
+    check_all;
+};
+
+#alias {b2} {
+    set brief 2;
+};
+
+#alias {b1} {
+    set brief 1;
+};
+
+#alias {on_wakeup} {
+    #alias tmp_wakeup #cr;
+    #alias tmp_wakeup %0;
+    #class on_wakeup.inner open;
+    #action {翻来覆去无法入眠!} {
+        #delay {sleep} {
+            sleep;
+        } {10};
+    };
+    #action {睡过一觉} {
+        #delay {sleep} {
+            sleep;
+        } {10};
+    };
+    #action {你一觉醒来} {
+        #class on_wakeup.inner kill;
+        #delay {wakeup} {
+            tmp_wakeup;
+        } {3};
+    };
+    #class on_wakeup.inner close;
+};
+
+#alias {init_set} {
+    set hubiao_additional 1;
+    set learn_emote 1;
+    set nowieldmsg 1;
+    set nowiki 1;
+    set skip_combat 2;
+    set wimpy 20;
+    set hansz_new_mode 1;
+    set zzz 1;
+};
+
+#var xy_info off;
+#ticker {check_baowei} {
+    check_baowei;
+} {300};
+
+#var xy_ended 0;
+#action {保卫襄阳任务全部结束！} {
+    #var xy_ended 1;
+};
+
+#list baowei_time create {3;7;11;15;19;23};
+#alias {check_baowei} {
+    #format {epoch} {%T};
+    #format {current_time} {%t} {{%T}{$epoch}};
+    #var tmp_baowei 0;
+    #foreach {${baowei_time}[%*]} {single_time} {
+        #format from_time {%d:30:99} ${single_time}-1;
+        #format to_time {%d:50:99} ${single_time};
+        #if {"${current_time}" > "${from_time}" && "${current_time}" < "${to_time}"} {
+            #var tmp_baowei 1;
+        };
+    };
+    #if {${tmp_baowei} == 1} {
+        #if {${xy_ended} == 0} {
+            #var xy_info on;
+        };
+    };
+    #else {
+        #var xy_ended 0;
+        #var xy_info off;
+    };
+};
+
+#var dot .;
+#alias {log.save} {
+    #system {cp debug${dot}${char_id}${dot}log ${char_id}${dot}log};
+};
+
+#alias {log.start} {
+    #log overwrite debug${dot}${char_id}${dot}log;
+    #debug all log;
+    #var debug_info on;
+    update_status;
+};
+
+#alias {log.stop} {
+    #log off;
+    #debug all off;
+};
+
+#alias {gj.watch} {
+    gt wm;
+    on_there {
+        u;
+        ask jin about 参观劫难;
+    };
+};
+
+#alias {al} {
+    autoload %0;y;
+};
+
+#alias {dl} {
+    disload %0;y;
+};
+
+#alias {play} {
+    #system {mplayer sound/%1 1>/dev/null 2>&1 &};
+};
+
+#alias {walk_to} {
+    #var  direction %1;
+    #var  action #cr;
+    #alias {get_pos_done} {
+        #list exits_list create ${exits_list};
+        #if {@ismember{${direction};exits_list}} {
+            @abbrev{${direction}};
+        };
+        #else {
+            #foreach {${exits_list}[%*]} {exit} {
+                #regexp {${exit}} {%*${direction}%*} {#var action ${exit}};
+            };
+            @abbrev{${action}};
+        };
+    };
+    get_pos {
+        get_pos_done;
+    };
+};
+
+#macro {\e[1;3A} {#nop ];
+walk_to north;
+};
+#macro {\e[1;3B} {#nop ];
+walk_to south;
+};
+#macro {\e[1;3D} {#nop ];
+walk_to west;
+};
+#macro {\e[1;3C} {#nop ];
+walk_to east;
+};
+
+#alias {unbusy} {
+    on_unbusy {%1; on_unbusy {%2 ;on_unbusy {%3 ;on_unbusy {%4 ;on_unbusy {%5 ;on_unbusy {%6 ;on_unbusy {%7 ;on_unbusy {%8 ;on_unbusy {%9 ;on_unbusy {%10 ;on_unbusy {%11 ;on_unbusy {%12;};};};};};};};};};};};};
+};
+
+#alias {chain} {
+    on_unbusy {%1 {on_unbusy {%2 {on_unbusy {%3 {on_unbusy {%4 {on_unbusy {%5 {on_unbusy {%6 {on_unbusy {%7 {on_unbusy {%8 {on_unbusy {%9 {on_unbusy {%10 {on_unbusy {%11 {on_unbusy {%12;};};};};};};};};};};};};};};};};};};};};};};};
+};
+
+#alias {sell.all} {
+    #alias tmp_sell #cr;
+    #alias tmp_sell %1;
+    #alias {sell_weapon} {
+        on_there {
+            sell all;
+            #delay {3} {
+                sell_other;
+            };
+        };
+        gt rbz;
+    };
+
+    #alias {sell_other} {
+        #class sell_other.inner open;
+        #action {你身上没有puti zi} {
+            #ticker {sell_other} {
+                sell baicao dan;
+            } {1};
+        };
+        #action {你身上没有baicao dan} {
+            #class sell_other.inner kill;
+            #unticker {sell_other};
+            #delay {3} {
+                tmp_sell;
+            };
+        };
+        #class sell_other.inner close;
+        on_there {
+            #ticker {sell_other} {
+                sell puti zi;
+            } {1};
+        };
+        gt 扬州当铺;
+    };
+    sell_weapon;
+};
+
+#alias {repair} {
+    #alias tmp_repair #cr;
+    #alias tmp_repair %1;
+    #if {${min_naijiu} < 350} {
+        #action {抵达目的地} {
+            #unaction {抵达目的地};
+            e;ne;
+            #delay {2} {
+                #foreach {${my_weapons}[%*]} {weapon} {
+                    fix ${weapon};
+                };
+                play repair.wav;
+                #delay {3} {
+                    sw;w;
+                    #delay {3} {
+                        tmp_repair;
+                    };
+                };
+            };
+        };
+        gt ly;
+    };
+    #else {
+        tmp_repair;
+    };
+};
+
+#function {py} {
+    INVOKE pinyin %0;
+};
+
+#var min_naijiu 10000;
+#alias {check_naijiu} {
+    #class check.naijiu.inner open;
+    #alias {do_check_naijiu} {
+        #if {${tmp_min_naijiu} > %%1} {
+            #var tmp_min_naijiu %%1;
+        };
+        #delay {d} {
+            #class check.naijiu.inner kill;
+            #if {${tmp_min_naijiu} != 10000} {
+                #var min_naijiu ${tmp_min_naijiu};
+                update_status;
+            };
+            #if {@numitems{my_special_weapons} > 0} {
+                check_special_naijiu;
+            };
+        } {3};
+    };
+    #action {耐久度:%*/%*} {
+        do_check_naijiu %%1;
+    } {2};
+    #action {耐久度:%*} {
+        do_check_naijiu %%1;
+    } {3};
+    #class check.naijiu.inner close;
+
+    #var tmp_min_naijiu 10000;
+    #foreach {${my_weapons}[%*]} {weapon} {#send {l ${weapon}}};
+};
+
+#var special_min_naijiu 10000;
+#alias {check_special_naijiu} {
+    #action {耐久度:%*/%*} {
+        #if {${tmp_min_naijiu} > %%1} {
+            #var tmp_min_naijiu %%1;
+        };
+        #delay {d} {
+            #unaction {耐久度:%*/%*};
+            #if {${tmp_min_naijiu} != 10000} {
+                #var special_min_naijiu ${tmp_min_naijiu};
+            };
+        } {3};
+    } {1};
+    #var tmp_min_naijiu 10000;
+    #foreach {${my_special_weapons}[%*]} {weapon} {#send {l ${weapon}}};
+};
+
+#ticker {check_naijiu} {
+    check_naijiu;
+} {250};
+
+#alias {n} {north};
+#alias {s} {south};
+#alias {e} {east};
+#alias {w} {west};
+#alias {u} {up};
+#alias {d} {down};
+#alias {ne} {northeast};
+#alias {sw} {southwest};
+#alias {nw} {northwest};
+#alias {se} {southeast};
+#alias {nd} {northdown};
+#alias {su} {southup};
+#alias {nu} {northup};
+#alias {sd} {southdown};
+#alias {eu} {eastup};
+#alias {wd} {westdown};
+#alias {ed} {eastdown};
+#alias {wu} {westup};
+
+#list kaimen_actions create {open;push;pull;break};
+#list kaimen_names create {door;gate;men;stone};
+#alias {kaimen} {
+    #gag 什么？;
+    #foreach {${kaimen_actions}[%*]} {kaimen_action} {
+        #foreach {${kaimen_names}[%*]} {kaimen_name} {
+            #show ${kaimen_action} ${kaimen_name};
+            ${kaimen_action} ${kaimen_name};
+        };
+    };
+    #delay {1} {
+        #ungag 什么？;
+    };
+};
+
+#alias {on_echo} {
+    #alias tmp_echo #cr;
+    #alias tmp_echo %0;
+    #action {^>} {
+        #unaction {^>};
+        tmp_echo;
+    };
+};
+
+#alias {l} {
+    #ungag {^$};
+    #send {l %0};
+    #delay {gag_delay} {
+        #gag {^$};
+    } {1.5};
+    #action {^>} {
+        #unaction {^>};
+        #gag {^$};
+    }
+};
+
+#macro {\eL} {
+    show.reset;
+};
+
+#alias {get_pos} {
+    #alias tmp_get_pos #cr;
+    #alias tmp_get_pos %1;
+    #var record_state 0;
+    #var current_room {};
+    #var description {};
+    #class record.inner open;
+    #action {^%* - $} {
+        #var record_state 1;
+        #var current_room %%1;
+        #if {"${current_room}" == "海中"} {
+            get_exits_done;
+        };
+        #elseif {"${current_room}" == "马车"} {
+            get_exits_done;
+            xia;
+        };
+        #elseif {"${current_room}" == "茅厕"} {
+            get_exits_done;
+        };
+    } {1};
+
+    #action {你可以看看(look):} {
+        #delay {look_delay} {
+            get_exits_done;
+        } {1};
+    } {6};
+
+    #action {    「%*」: %*} {
+        #delay {look_delay} {
+            #var exits_list  {};
+            get_exits_done;
+        } {1};
+    } {6};
+    #action {这里没有任何明显的出路。} {
+        #var exits_list  {};
+        get_exits_done;
+    } {7};
+
+    #action {这里唯一的出口是 %w。} {
+        #var exits_list  {%%1;};
+        get_exits_done;
+    } {7};
+
+    #action {这里明显的出口是 %w 和 %w。} {
+        #var exits_list {%%1;%%2;};
+        get_exits_done;
+    } {7};
+
+    #action {这里明显的出口是 %w、%w 和 %w。} {
+        #var exits_list {%%1;%%2;%%3;};
+        get_exits_done;
+    } {7};
+
+    #action {这里明显的出口是 %w、%w、%w 和 %w。} {
+        #var exits_list {%%1;%%2;%%3;%%4;};
+        get_exits_done;
+    } {7};
+
+    #action {这里明显的出口是 %w、%w、%w、%w 和 %w。} {
+        #var exits_list {%%1;%%2;%%3;%%4;%%5;};
+        get_exits_done;
+    } {7};
+
+    #action {这里明显的出口是 %w、%w、%w、%w、%w 和 %w。} {
+        #var exits_list {%%1;%%2;%%3;%%4;%%5;%%6;};
+        get_exits_done;
+    } {7};
+
+    #action {这里明显的出口是 %w、%w、%w、%w、%w、%w 和 %w。} {
+        #var exits_list {%%1;%%2;%%3;%%4;%%5;%%6;%%7;};
+        get_exits_done;
+    } {7};
+
+    #nop max 7 exits;
+    #action {这里明显的出口是 %w、%w、%w、%w、%w、%w、%w} {
+        #var exits_list {%%1;%%2;%%3;%%4;%%5;%%6;%%7;};
+        get_exits_done;
+    } {7};
+
+    #alias {get_exits_done} {
+        #var pos.room ${current_room};
+        #replace {description} { } {};
+        #replace {description} {	} {};
+        #var pos.desc ${description};
+        #var pos.exits ${exits_list};
+        #class record.inner kill;
+        #undelay {look_delay};
+        tmp_get_pos;
+    };
+
+    #action {^%S%*} {
+        #if {$record_state == 1} {
+            #var description ${description}%%1%%2;
+        };
+    } {9};
+
+    #ticker {ticker_get_position_look} {
+        #send {l};
+    } {3};
+    #class record.inner close;
+    #send {l};
+};
+
+#alias {get_area} {
+    #alias tmp_get_area #cr;
+    #alias tmp_get_area %1;
+    #var pos.area {};
+    #class record.inner open;
+    #action {这里暂时没有地图。} {
+        #class record.inner kill;
+        #var pos.area {};
+        tmp_get_area;
+    };
+    #action {【%*地图】} {
+        #class record.inner kill;
+        #var pos.area %%1;
+        tmp_get_area;
+    };
+    #action {【%*地图－%*】} {
+        #class record.inner kill;
+        #var pos.area %%1%%2;
+        tmp_get_area;
+    };
+    #ticker {lm_ticker} {
+        localmaps;
+        q;
+    } {3};
+    #class record.inner close;
+    localmaps;
+    q;
+};
+
+#alias {INVOKE} {
+    #script {file_name} {python3 -m bin.%0 ${char_id}};
+    #var file_name ${file_name}[1];
+    #if {"${file_name}" != ""} {
+        #read ${file_name};
+        #system {rm ${file_name}};
+    };
+};
+
+#var ignore_fullme 0;
+#alias {fullme} {
+    #alias tmp_on_fullme #cr;
+    #alias tmp_on_fullme %0;
+    #class fullme_inner open;
+    #action {福米完成} {
+        #class fullme_inner kill;
+        #undelay {fullme_delay};
+        tmp_on_fullme;
+    };
+    #action {福米没到时间呢} {
+        #class fullme_inner kill;
+        #undelay {fullme_delay};
+    };
+    #action {福米失败} {
+        #class fullme_inner kill;
+        #undelay {fullme_delay};
+    };
+    #delay {fullme_delay} {
+        #class fullme_inner kill;
+        notify 福米超时;
+        on_fullme_timeout;
+    } {1200};
+    #class fullme_inner close;
+    #if {${ignore_fullme} == 0} {
+        #if {${fm_remaining_time} > 40} {
+            #class fullme_inner kill;
+            #undelay {fullme_delay};
+            tmp_on_fullme;
+        };
+        #else {
+            xmpp.status 福米;
+            notify 福米;
+        };
+    };
+    #else {
+        #showme 也许是上天垂青于你的勤奋和努力吧，一个小时之内你不用担心被判为机器人。;
+    };
+};
+
+#alias {on_fullme_timeout} {
+    fsk.start;
+};
+
+#alias {fm} {
+    #undelay {fullme_delay};
+    on_unbusy {
+        #send {fullme %0};
+    };
+};
+
+#var pid 0;
+#alias {check_heart_beat} {
+    #delay {check_heart_beat_delay} {
+        #if {${pid} != 0} {
+            #system {kill -30 ${pid}};
+            end_and_restart;
+        };
+    } {120};
+};
+
+#event {SESSION DEACTIVATED} {
+    #if {"%0" == "pkuxkx"} {
+        #if {${pid} != 0} {
+            #system {kill -30 ${pid}};
+            end_and_restart;
+        };
+    };
+};
+
+#alias {end_and_restart} {
+    #end;
+};
+
+#alias {end} {
+    #unevent {SESSION DEACTIVATED};
+    unset_last_quest;
+    #end;
+};
+
+#alias {quit_and_restart} {
+    #class quit.inner.open;
+    #action {你丢下} {
+        #class quit.inner kill;
+        #end;
+    };
+    #ticker {quit} {
+        #send {quit};
+    } {3};
+    #class quit.inner.close;
+    #send {quit};
+};
+
+#alias {quit} {
+    #unevent {SESSION DEACTIVATED};
+    unset_last_quest;
+    quit_and_restart;
+};
+
+#alias {set_last_quest} {
+    #var last_quest %1;
+    xmpp.status ${last_quest};
+    @setenv{last_quest;${last_quest}};
+};
+
+#alias {unset_last_quest} {
+    #var last_quest nil;
+    xmpp.status ${last_quest};
+    @setenv{last_quest;nil};
+};
+
+#alias {restart_last_quest} {
+    #var last_quest @getenv{last_quest};
+    #if {"${last_quest}" != "nil"} {
+        ${last_quest}${dot}start;
+    };
+};
+
+#alias {notify} {
+    play alert.wav;
+    show_to_info %0;
+    #nop desktop.notify %0;
+    xmpp.notify %0;
+};
+
+#alias {cure} {
+    #alias tmp_cure #cr;
+    #alias tmp_cure %1;
+    gt 扬州药铺;
+    on_there {
+        ask ping about cure;
+    };
+    #class cure.inner open;
+    #action {%*：%*两黄金。} {
+        give ping @ctd{%%2} gold;
+        #class cure.inner kill;
+    };
+    #action {平一指说道：「差不多了，再发作一次就会好了。」} {
+        #class cure.inner kill;
+        tmp_cure;
+    };
+    #class cure.inner close;
+};
+
+#alias {keyao} {
+    #alias tmp_keyao #cr;
+    #alias tmp_keyao %1;
+
+    #class on_severe_wound.inner open;
+    #alias {start_keyao} {
+        #ticker {eat_yao} {
+            #if {${qx_percent} < 50} {
+                buy yao;
+                eat yao;
+            };
+            #else {
+                #unticker {eat_yao};
+                #ticker {eat_dan} {
+                    #if {${js_percent} < 50} {
+                        buy dan;
+                        eat dan;
+                    };
+                    #else {
+                        #unticker {eat_dan};
+                        tmp_keyao;
+                    };
+                } {3};
+            };
+        } {3};
+    };
+
+    #class on_severe_wound.inner close;
+    gt 扬州药铺;
+    on_there {
+        start_keyao;
+    };
+};
+
+#var busying 0;
+#list unbusy_list create {};
+#alias {do_unbusy} {
+    #list unbusy_list size busy_list_size;
+    #if {${busy_list_size} == 0} {
+        #var busy_action nil;
+    };
+    #else {
+        #list unbusy_list get ${busy_list_size} busy_action;
+        #list unbusy_list delete ${busy_list_size};
+    };
+    #if {"${busy_action}" != "nil"} {
+        #var busying 1;
+        on_unbusy_inner {
+            ${busy_action};
+            do_unbusy;
+        };
+    };
+    #else {
+        #var busying 0;
+    };
+};
+
+#alias {on_unbusy} {
+    #list unbusy_list add {%0};
+    #if {${busying} == 0} {
+        do_unbusy;
+    };
+};
+
+#gag {你不忙};
+#alias {on_unbusy_inner} {
+    #alias tmp_unbusy #cr;
+    #alias tmp_unbusy %0;
+    #class unbusy.inner open;
+    #action {你不忙} {
+        #class unbusy.inner kill;
+        #undelay {delay_unbusy};
+        tmp_unbusy;
+    } {1};
+    #ticker {checkbusy} {
+        checkbusy;
+    } {0.5};
+    #class unbusy.inner close;
+    checkbusy;
+};
+
+#alias {drop_garbage} {
+    drop yun tie;
+    drop huo tong;
+    drop xuan bing;
+    drop shi tan;
+};
+
+@mapcreate{menpai};
+@mapset{menpai;朝廷;chaoting};
+@mapset{menpai;华山派;huashan};
+@mapset{menpai;古墓派;gumu};
+@mapset{menpai;武当派;wudang};
+@mapset{menpai;少林派;shaolin};
+@mapset{menpai;星宿派;xingxiu};
+@mapset{menpai;大轮寺;dalun};
+@mapset{menpai;丐帮;gaibang};
+@mapset{menpai;峨眉派;emei};
+@mapset{menpai;全真派;quanzhen};
+@mapset{menpai;日月神教;riyue};
+@mapset{menpai;明教;mingjiao};
+@mapset{menpai;桃花岛;taohua};
+@mapset{menpai;天龙寺;tianlong};
+
+#alias {get_char_info} {
+    #show INFO: 获取角色信息;
+    #alias get_char_info_action #cr;
+    #alias get_char_info_action %1;
+
+    #class get_char_info.inner open;
+    #action {【%*】%*(%*)} {
+        #var char_id @lower{%%3};
+    };
+    #gag 你是朝廷第;
+    #action {你是朝廷%*} {
+        #showme 你是朝廷第;
+    };
+    #action {你是%*第} {
+        #var char_menpai_zh %%1;
+        #var char_menpai @mapget{menpai;%%1};
+        load spec/${char_menpai};
+        #var weapons_to_wield ${my_weapons_to_wield};
+    };
+    #action {≡━━━━━━━━━━━━━━━━━━━━━━◎%*侠客行◎━━≡} {
+        #class get_char_info.inner kill;
+
+        #class get_name.inner open;
+        #action {姓    名：	%*} {
+            #var real_char_name %%%1;
+        };
+        #class get_name.inner close;
+
+        #class get_st.inner open;
+        #action {　姓名：　%S%s 　ＩＤ} {
+            #var char_name %%%1;
+            update_status;
+            get_char_info_action;
+        };
+        #action {姓名:%*%sID:%S} {
+            #var char_name %%%1;
+            update_status;
+            get_char_info_action;
+        };
+        #action {内力恢复  　%d.%d  } {
+            #var char_nl_recovery %%%1;
+        };
+        #action {内力恢复：+%* } {
+            #var char_nl_recovery %%%1;
+        } {3};
+        #action {内力恢复：+%*.%* } {
+            #var char_nl_recovery %%%1;
+        } {2};
+        #action {系统喘气中} {
+            #delay {10} {
+                #send {status_me};
+            };
+        };
+        #action {≡━━━━━━━━━━━━━━━━━━━━━━━◎%*侠客行◎━━≡} {
+            #class get_st.inner kill;
+        };
+        #class get_st.inner close;
+        on_unbusy {
+            #send {finger ${char_id}};
+            #send {status_me};
+        };
+    };
+    #class get_char_info.inner close;
+    on_unbusy {
+        #send {sc};
+    };
+};
+
+#alias {startup} {
+    #action {张 三双手抱拳，对着%*${char_name}作了个揖道} {
+        notify 张三;
+    };
+    #action {${char_name}(damage:%*气血:%*)} {
+        #if {${fighting} == 0} {
+            war;
+        };
+    };
+    #show INFO: 检查负重;
+    #send {i};
+    #send {hpbrief};
+    #send {time};
+    init_set;
+    xmpp.start;
+    #show INFO: 检查保卫;
+    check_baowei;
+    #show INFO: 检查环境变量;
+    update_env;
+    #show INFO: 检查气血;
+    check_health;
+    #delay {3} {
+        #send {uptime};
+        check_fm;
+        #show INFO: 检查武器;
+        weapons.check;
+    };
+    #delay {4} {
+        #if {${need_reload} == 1} {
+            #show INFO: 需要重新加载武器;
+        };
+        #else {
+            #showme reloaded;
+            #show INFO: 装备武器并检查耐久;
+            wi;
+            we;
+            check_naijiu;
+        };
+        #show INFO: 检查特技;
+        pfm_special;
+        #show INFO: 检查武功设置;
+        #send {jifa};
+        reborn;
+        #delay {2} {
+            #showme INFO: 自动 login 完成;
+            show.init;
+            on_unbusy {
+                post_login;
+            };
+        };
+    };
+};
+
+#alias {post_login} {
+    restart_last_quest;
+};
+
+#alias {login} {
+    get_char_info {
+        startup;
+    };
+};
+
+#alias {corpse} {
+    get all from corpse;
+};
+
+#alias {forge} {
+    ask huo ji about forge;
+    #send {yes};
+};
+
+#alias {lvlup} {
+    #send {levelup};
+    #send {y};
+};
+
+#alias {donate.all} {
+    #alias tmp_donate #cr;
+    #alias tmp_donate %1;
+    #class donate.inner open;
+    #alias {donate} {
+        #var donate_item %%0;
+        #var tmp_count @getburden{${donate_item}};
+
+        #if {${tmp_count} > 0} {
+            #loop 1 ${tmp_count} i {
+                put %%0 in xiang;
+            };
+            chat ${char_name}将${tmp_count}个${donate_item}放进功德箱;
+        };
+    };
+    #alias {burden.check.done} {
+        donate 火龙丹;
+        donate 女娲石;
+        donate 孽龙丹;
+        donate 千年火龙丹;
+        donate 朱睛冰蟾;
+        donate 龙 牙;
+        donate 龙 鳞;
+        donate 龙 心;
+        #delay {donate_delay} {
+            tmp_donate;
+        } {1};
+    };
+    #class donate.inner close;
+    gt wm;
+    on_there {
+        burden.check {
+            burden.check.done;
+        };
+    };
+};
+
+#alias {might} {
+    on_unbusy {
+        jiali max;
+        special might;
+        jiali 0;
+    };
+};
+
+#alias {pfm_special} {
+    #class pfm_special.inner open;
+    #action {你现在会以下这些特技：} {
+        #action {%S(%S)} {
+            #if {"%%%2" == "might"} {
+                might;
+                #ticker {pfm_might} {
+                    might;
+                } {300};
+            };
+            #else {
+                on_unbusy {
+                    special %%%2;
+                };
+            };
+
+            #if {"%%%2" == "chainless"} {
+                load chainless;
+            };
+            #elseif {"%%%2" == "perceive"} {
+                load pp;
+            };
+            #elseif {"%%%2" == "sociability"} {
+                #alias {gps.clear} {
+                    #nop %%%%1;
+                    gps.run;
+                };
+            };
+        };
+        on_echo {
+            #unaction {%S(%S)};
+            #class pfm_special.inner kill;
+        };
+    };
+    #class pfm_special.inner close;
+    special;
+};
+
+#alias {on_server_reboot} {
+    #showme INFO: 服务器重启!;
+    @clearenv{hb_state};
+    @clearenv{hb_mixin_lunci};
+    @clearenv{hb_lunci};
+    @clearenv{hb_lunci_total};
+};

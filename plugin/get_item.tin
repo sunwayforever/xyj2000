@@ -1,0 +1,466 @@
+#class get_item open;
+#tab get.xtj;
+#tab get.gls;
+#tab get.qian;
+#tab get.san;
+#tab get.shl;
+#tab get.fan;
+#tab get.bao;
+#tab get.fenjiu;
+#tab get.shou_yin;
+
+#alias get.xtj get.xuan_tie_jian;
+#alias {get.xuan_tie_jian} {
+    gt jx;
+    on_there {
+        e;nd;ask diao about 独孤求败;nu;
+        ask yu about 过河;
+        ask yu about 对岸;
+        ask yu about 疯子;
+        se; catch fish;
+    };
+    #class xuetie.inner open;
+    #action {你将小鱼捉了起来} {
+        nw;
+        give fish to yu;
+    };
+
+    #action {渔夫说道：给你个水靠，可以游到对岸。} {
+        #delay {1} {
+            swim river;
+            pick sword;
+        };
+    };
+
+    #action {你运起内力将玄铁剑拿了起来} {
+        show_to_info 玄铁剑!;
+        xtj_back;
+        #showme 拿到玄铁剑;
+    };
+
+    #action {剑已被拿走了。} {
+        show_to_info 玄铁剑没了;
+        xtj_back;
+        #showme 玄铁剑没了;
+    };
+    #alias {xtj_back} {
+        swim river;
+        sd;sd;su;w;
+        #class xuetie.inner kill;
+    };
+    #class xuetie.inner close;
+};
+
+#alias {get.qian} {
+    #alias tmp_get_qian #cr;
+    #alias tmp_get_qian %1;
+
+    #class get.qian.inner open;
+    #alias {burden.check.done} {
+        #var qian_count @getburden{一千两银票};
+        #if {${qian_count} > 5} {
+            #math delta ${qian_count}-2;
+            #class get.qian.inner open;
+            #ticker {qian_ticker} {
+                cun ${delta} cash;
+            } {1};
+            #class get.qian.inner close;
+        };
+        #elseif {${qian_count} < 2} {
+            #math delta 2-${qian_count};
+            #class get.qian.inner open;
+            #ticker {qian_ticker} {
+                qu ${delta} cash;
+            } {1}
+            #class get.qian.inner close;
+        };
+        #else {
+            #class get.qian.inner kill;
+            tmp_get_qian;
+        };
+    };
+    #action {你从银号里取出} {
+        #class get.qian.inner kill;
+        tmp_get_qian;
+    };
+    #action {你拿出%*存进了银号。} {
+        #class get.qian.inner kill;
+        tmp_get_qian;
+    };
+    #class get.qian.inner close;
+
+
+    gt 扬州钱庄;
+    on_there {
+        burden.check {
+            burden.check.done;
+        };
+    };
+};
+
+#alias {get.bao} {
+    #alias tmp_get_bao #cr;
+    #alias tmp_get_bao %1;
+    #class get.bao.inner open;
+    #action {你身上没有bao} {
+        buy im_110;
+    };
+    #action {你把身上的一个包袱卖掉} {
+        #delay {1} {
+            buy im_110;
+        };
+    };
+    #action {掌柜的说：客官您这包袱里面还有东西呢。} {
+        #showme 你向当铺买下一个包袱;
+    };
+    #action {你向当铺买下一个包袱} {
+        #class get.bao.inner kill;
+        on_unbusy {
+            tmp_get_bao;
+        };
+    };
+    #class get.bao.inner close;
+    gt rbz;
+    on_there {
+        n;
+        sell bao;
+    };
+};
+
+#alias {get.fan} {
+    #alias tmp_get_fan #cr;
+    #alias tmp_get_fan %1;
+    #class get.fan.inner open;
+    #action {哟，抱歉啊，我这儿正忙着呢……您请稍候。} {
+        #delay {get_fan_delay} {
+            buy tea 30;
+        } {5};
+    };
+    #action {你从江来福那里买下了%*酥油茶} {
+        #undelay {get_fan_delay};
+        #class get.fan.inner kill;
+        tmp_get_fan;
+    };
+    #alias {burden.check.done} {
+        #var cha_count @getburden{酥油茶};
+        #if {${cha_count} > 50} {
+            #showme 你从江来福那里买下了零碗酥油茶;
+        };
+        #else {
+            gps.gt 来福杂货;
+            on_there {
+                buy tea 30;
+            };
+        };
+    };
+    #class get.fan.inner close;
+
+    burden.check {
+        burden.check.done;
+    };
+};
+
+#var get_san_count 20;
+#alias {get.san} {
+    #alias tmp_get_san #cr;
+    #alias tmp_get_san %1;
+    #var get_san_id -1;
+    #var san_amount 0;
+    #class get_san.inner open;
+    #action {^%d%s清心散〖%*〗} {
+        #if {${san_amount} == 0 || %%3 > ${san_amount}} {
+            #var san_amount %%3;
+            #var get_san_id %%1;
+        };
+    };
+    #action {柜子里空空如也，啥也没有！} {
+        #class get_san.inner kill;
+        notify 清心散没货了;
+    };
+    #action {^柜子里目前存放的物品有：$} {
+        #delay {get_san_delay} {
+            #if {${get_san_id} == -1} {
+                #class get_san.inner kill;
+                notify 清心散没货了;
+            };
+            #else {
+                getout ${get_san_id};
+                on_unbusy {
+                    out;
+                    drop ${get_san_count} san;
+                    enter ${char_id};
+                    store san;
+                    out;
+                    get san;
+                };
+            };
+        } {1};
+    };
+
+    #action {你没有那么多的清心散} {
+        #class get_san.inner kill;
+        notify 清心散没货了;
+    };
+
+    #action {你捡起一些清心散} {
+        #class get_san.inner kill;
+        on_unbusy {
+            tmp_get_san;
+        };
+    };
+    #class get_san.inner close;
+    on_there {
+        find;
+    };
+    on_not_there {
+        #class get_san.inner kill;
+    };
+    gt bs;
+};
+
+#alias {store.san} {
+    #alias tmp_store_san #cr;
+    #alias tmp_store_san %1;
+    #var get_san_id -1;
+    #var san_amount 0;
+    #class store_san.inner open;
+    #alias {do_store_san} {
+        #class store_san.inner kill;
+        on_unbusy {
+            store san;
+            on_unbusy {
+                tmp_store_san;
+            };
+        };
+    };
+    #action {^%d%s清心散〖%*〗} {
+        #if {${san_amount} == 0 || %%3 < ${san_amount}} {
+            #var san_amount %%3;
+            #var get_san_id %%1;
+        };
+    };
+    #action {柜子里空空如也，啥也没有！} {
+        do_store_san;
+    };
+    #action {^柜子里目前存放的物品有：$} {
+        #delay {get_san_delay} {
+            #if {${get_san_id} == -1} {
+                do_store_san;
+            };
+            #else {
+                getout ${get_san_id};
+                do_store_san;
+            };
+        } {1};
+    };
+    #class store_san.inner close;
+    on_there {
+        find;
+    };
+    on_not_there {
+        #class store_san.inner kill;
+    };
+    gt bs;
+};
+
+#alias {ask.san} {
+    #alias tmp_ask_san #cr;
+    #alias tmp_ask_san %1;
+    #class ask_san.inner open;
+    #action {大老子给你一些清心散。} {
+        tmp_ask_san;
+        #class ask_san.inner kill;
+    };
+    #class ask_san.inner close;
+    on_there {
+        tell gamester san;
+    };
+    gt 星宿派储藏室;
+};
+
+#alias get.gls get.guang_ling_san;
+#alias {get.guang_ling_san} {
+    #class get.sibao.inner open;
+    #action {你从冼老板那里买下了一个花雕酒袋} {
+        gt  2913;
+        on_there {
+            give qu jiudai;
+        };
+    };
+    #action {你移动了一捆柴火，突然从柴火下面滚出一个人来。} {
+        gt 醉仙楼二楼;
+        on_there {
+            buy jiudai;
+        };
+    };
+    #action {曲洋死了。} {
+        gt 805;
+        on_there {
+            ask ren about 令狐冲;
+        };
+    };
+    #action {任盈盈交给你一封信。} {
+        gt 思过崖;
+        on_there {
+            give letter to linghu;
+        };
+    };
+    #action {你给令狐冲一封给令狐冲的信} {
+        gt xc;
+        on_there {
+            gt ny;
+            on_there {
+                gt 805;
+            };
+        };
+    };
+    #action {任盈盈一下子投入了令狐冲的怀抱} {
+        ask ren about 曲长老;
+    };
+
+    #action {任盈盈说道：%*这具燕语古琴就送给你作个纪念吧！} {
+        show_to_info 拿到...古琴;
+        #class get.sibao.inner kill;
+    };
+
+    #action {任盈盈说道：%*这本《笑傲江湖》就送给你作个纪念吧！} {
+        show_to_info 拿到...《笑傲江湖》;
+        #class get.sibao.inner kill;
+    };
+
+    #action {任盈盈给你一本《广陵散》} {
+        show_to_info 广陵散!;
+        #class get.sibao.inner kill;
+    };
+
+    #action {任盈盈说道：「怎么？你也知道曲长老的事吗？」} {
+        give xiao ao jiang hu to ren;
+    };
+
+    #action {你翻了翻这些枯枝，结果什么也没发现。} {
+        #class get.sibao.inner kill;
+        show_to_info 来晚了;
+    };
+    #class get.sibao.inner close;
+    gt 2913;
+    on_there {
+        move wood;
+    };
+};
+
+#alias {get.shou_yin} {
+    gt guiyun;
+    on_there {
+        e;e;n;n;w;s;ask ren about 手印;
+        #delay {1} {
+            n;e;s;s;w;w;sd;sd;out;w;w;w;s;e;give shouyin to %1
+        };
+    };
+};
+
+#alias {get.fenjiu} {
+    #alias tmp_get_fenjiu #cr;
+    #alias tmp_get_fenjiu %1;
+    #class get.fenjiu.inner open;
+
+    #action {你从沈千盅那里买下了%*坛汾酒} {
+        #class get.fenjiu.inner kill;
+        tmp_get_fenjiu;
+    };
+    #alias {burden.check.done} {
+        #var fenjiu_count @getburden{汾酒};
+        #if {${fenjiu_count} > 5} {
+            #showme 你从沈千盅那里买下了零坛汾酒;
+        };
+        #else {
+            gps.gt 扬州酒店;
+            on_there {
+                buy fenjiu 10;
+            };
+        };
+    };
+    #class get.fenjiu.inner close;
+
+    burden.check {
+        burden.check.done;
+    };
+};
+
+#alias get.shl get.sheng_huo_ling;
+#alias {get.sheng_huo_ling} {
+    #alias tmp_get_sheng_huo_ling #cr;
+    #alias tmp_get_sheng_huo_ling %1;
+
+    #class get.sheng_huo_ling.inner open;
+    #action {张无忌说道：「好吧，这个圣火令你拿回去好好保管。」} {
+        tmp_get_sheng_huo_ling;
+    };
+    #class get.sheng_huo_ling.inner close;
+    gt 明教大殿;
+    on_there {
+        ask zhang about 圣火令;
+    };
+};
+
+#alias {get.42_1} {
+    gt 慈宁宫;
+    on_there {
+        on_truce {
+            move bedding;
+            on_truce {
+                open cabinet;
+            };
+        };
+    };
+};
+
+#alias {get.42_2} {
+    gt 鳌拜卧房;
+    #alias {tmp_do_search} {
+        #ticker {search} {
+            search;
+        } {2};
+    };
+    #action {你前不久才来拿过东西，现在又来拿太贪心了吧，至少要过几天} {
+        #unticker {search};
+        on_unbusy {
+            up;
+        };
+    };
+    #action {鳌拜死了。} {
+        unbusy {move pi} {open door} down search;
+    };
+    on_there {
+        kill ao bai;
+    };
+};
+
+#alias {get.42_3} {
+    #alias {zlq_ask_wu} {
+        ask wu about 射月弓;
+        on_unbusy {
+            give wu gong;
+        };
+    };
+    #action {吴三桂说道：「大侠果然出手不凡，好，请入我密室一游!」} {
+        push desk;
+        on_unbusy {
+            d;light lampn;light lamps;light lampe;light lampw;d;break men;d;open cabinet;
+        };
+    };
+    #action {你从萍水逢的尸体身上搜出一张射月弓} {
+        gt 1987;
+        on_there {
+            zlq_ask_wu;
+        };
+    };
+    gt 1983;
+    on_there {
+        ask ping about 射月弓;
+        kill ping;
+        on_dead {
+            corpse;
+        };
+    };
+};
+#class get_item close;

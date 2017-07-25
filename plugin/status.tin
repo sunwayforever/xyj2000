@@ -1,0 +1,111 @@
+#class status open
+
+#var health_info nil;
+#var exp_info  nil;
+#alias {update_status} {
+    #var status_content ${char_name};
+    show_to_status ${status_content};
+    drawhp;
+};
+
+#var qx_percent 100;
+#var js_percent 100;
+#var nl_percent 100;
+#var fl_percent 100;
+
+#ticker hp {
+    #send {hp};
+} {10};
+
+#action { 气血：  %d/  %d (%*)    内力：    %d /    %d (%*) (%*)} {
+    #var curr_qx %1;
+    #var max_qx %2;
+    #var curr_nl %4;
+    #var max_nl %5;
+};
+
+#action { 精神：  %d/  %d (%*)    法力：    %d /    %d (%*) (%*)} {
+    #var curr_js %1;
+    #var max_js %2;
+    #var curr_fl %4;
+    #var max_fl %5;
+};
+
+#var food 0;
+#var maxfood 100;
+#var water 0;
+#var maxwater 100;
+
+#action {食物：  %d/  %d           武学： %d} {
+    #var food %1;
+    #var maxfood %2;
+    #var wx %3;
+};
+
+#action {饮水：  %d/  %d           道行： %*} {
+    #var water %1;
+    #var maxwater %2;
+    #var dh %3;
+    drawhp;
+};
+
+
+#alias {drawhp} {
+    #echo {{<099>@hpcolor{气血[;$curr_qx}@hpdraw{$curr_qx;$max_qx}@hpcolor{];$curr_qx} @hpcolor{精神[;$curr_js}@hpdraw{$curr_js;$max_js}@hpcolor{];$curr_js} @hpcolor{法力[;$curr_fl}@hpdraw{$curr_fl;$max_fl}@hpcolor{];$curr_fl} @hpcolor{内力[;$curr_nl}@hpdraw{$curr_nl;$max_nl}@hpcolor{];$curr_nl} @hpcolor{食物[;$food}@hpdraw{$food;$maxfood}@hpcolor{];$food} @hpcolor{饮水[;$water}@hpdraw{$water;$maxwater}@hpcolor{];$water}<099>} {${show_status_pos}}};
+};
+
+#function {hpdraw}
+{
+    #var tmp @eval{%1*10/%2};
+    #if {$tmp<0} {#var tmp 0};
+    #elseif {$tmp==0 & %1>0} {#var tmp 1};
+    #elseif {$tmp==10 & %1>%2} {#var tmp 11};
+    #elseif {$tmp>20} {#var tmp 20};
+    #switch {$tmp} {
+        #case 0  {#var result {<099>          }};
+        #case 1  {#var result {<DAA> <099>         }};
+        #case 2  {#var result {<DBA>  <099>        }};
+        #case 3  {#var result {<DCA>   <099>       }};
+        #case 4  {#var result {<DDA>    <099>      }};
+        #case 5  {#var result {<CDA>     <099>     }};
+        #case 6  {#var result {<BDA>      <099>    }};
+        #case 7  {#var result {<ADA>       <099>   }};
+        #case 8  {#var result {<ADA>        <099>  }};
+        #case 9  {#var result {<ADA>         <099> }};
+        #case 10  {#var result {<ADA>          <099>}};
+        #case 11  {#var result {<AEE> <ADA>         <099>}};
+        #case 12  {#var result {<AEE>  <ADA>        <099>}};
+        #case 13 {#var result {<AEE>   <ADA>       <099>}};
+        #case 14 {#var result {<AEE>    <ADA>      <099>}};
+        #case 15 {#var result {<AEE>     <ADA>     <099>}};
+        #case 16 {#var result {<AEE>      <ADA>    <099>}};
+        #case 17 {#var result {<AEE>       <ADA>   <099>}};
+        #case 18 {#var result {<AEE>        <ADA>  <099>}};
+        #case 19 {#var result {<AEE>         <ADA> <099>}};
+        #case 20 {#var result {<AEE>          <099>}};
+    };
+};
+
+#function {fzdraw} {
+    #var tmp @eval{%1*10/%2};
+    #if {$tmp<0} {#var tmp 0};
+    #elseif {$tmp==0 & %1>0} {#var tmp 1};
+    #elseif {$tmp>10} {#var tmp 10};
+    #switch {$tmp} {
+        #case 0  {#var result {<099>          }};
+        #case 1  {#var result {<ADA> <099>         }};
+        #case 2  {#var result {<ADA>  <099>        }};
+        #case 3  {#var result {<ADA>   <099>       }};
+        #case 4  {#var result {<ADA>    <099>      }};
+        #case 5  {#var result {<BDA>     <099>     }};
+        #case 6  {#var result {<CDA>      <099>    }};
+        #case 7  {#var result {<DDA>       <099>   }};
+        #case 8  {#var result {<DCA>        <099>  }};
+        #case 9  {#var result {<DBA>         <099> }};
+        #case 10  {#var result {<DAA>          <099>}};
+    };
+};
+#function {hpcolor}{
+    #var result <099>%1;
+};
+#class status close

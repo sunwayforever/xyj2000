@@ -1,0 +1,25 @@
+#PATHDIR          {north}  {south}  {1}
+#PATHDIR          {east}  {west}  {2}
+#PATHDIR          {south}  {north}  {4}
+#PATHDIR          {west}  {east}  {8}
+
+#PATHDIR          {up}  {down}  {16}
+#PATHDIR          {down}  {up}  {32}
+#PATHDIR	  {out} {enter} {64}
+#PATHDIR	  {enter} {out} {128}
+
+#PATHDIR          {northup}  {southdown}  {17}
+#PATHDIR          {southdown}  {northup}  {36}
+#PATHDIR          {northdown}  {southup}  {33}
+#PATHDIR          {southup}  {northdown}  {20}
+#PATHDIR          {westup}  {eastdown}  {24}
+#PATHDIR          {eastdown}  {westup}  {34}
+#PATHDIR          {westdown}  {eastup}  {40}
+#PATHDIR          {eastup}  {westdown}  {18}
+
+#PATHDIR          {northeast}  {southwest}  {3}
+#PATHDIR          {southeast}  {northwest}  {6}
+#PATHDIR          {northwest}  {southeast}  {9}
+#PATHDIR          {southwest}  {northeast}  {12}
+
+

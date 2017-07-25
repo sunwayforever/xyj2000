@@ -1,0 +1,453 @@
+#class gps open;
+load gps_actions;
+
+#alias gt gps.gt;
+
+#var gps_path_index 0;
+#var gps_path_size 0;
+
+#alias {on_there} {
+    #alias tmp_there #cr;
+    #alias tmp_there %0;
+    #action {GPS: 抵达目的地} {
+        #unaction {GPS: 抵达目的地};
+        on_unbusy {
+            tmp_there;
+        };
+    };
+};
+
+#alias {on_not_there} {
+    #alias tmp_not_there #cr;
+    #alias tmp_not_there %0;
+    #action {GPS: 目标房间不可达, 无法行走} {
+        #unaction {GPS: 目标房间不可达, 无法行走};
+        on_unbusy {
+            tmp_not_there;
+        };
+    };
+};
+
+#action {^你的动作还没有完成，不能移动。} {
+    gps.watchdog.kick;
+};
+
+#alias {gps.watchdog.kick} {
+    #if {"${gps.run.mode}" == "NORMAL"} {
+        #delay {gps_delay_check} {
+            gps.gt.check;
+        } {10};
+    };
+};
+
+#alias {gps.watchdog.stop} {
+    #if {"${gps.run.mode}" == "NORMAL"} {
+        #undelay {gps_delay_check};
+    };
+};
+
+#alias {gps.teardown} {
+    #class gps.inner kill;
+};
+
+#alias {gps.setup} {
+    #class gps.inner open;
+    #class gps.inner close;
+};
+#var gps_gt_check_count 0;
+#alias {gps.gt.check} {
+    gps.gt.stop;
+    #var gps_stop 0;
+    #alias {gps_gt} {
+        gps.gt ${dst_roomno};
+    };
+    #alias {gps_check_room_done} {
+        #var src_roomno ${gps.roomno};
+        #if {${src_roomno} == ${dst_roomno}} {
+            #var gps_gt_check_count 0;
+            gt.stop;
+            #delay {1} {
+                #showme {GPS: 抵达目的地};
+            };
+        };
+        #else {
+            #math gps_gt_check_count ${gps_gt_check_count}+1;
+            #if {${gps_gt_check_count} >= 20} {
+                #var gps_gt_check_count 0;
+                gt.stop;
+                #showme {GPS: 抵达目的地};
+            };
+            #else {
+                #if {${gps_stop} == 0} {
+                    #delay {1} {
+                        taopao {
+                            gps_gt;
+                        };
+                    };
+                };
+            };
+        };
+    };
+    gps.check_room {
+        gps_check_room_done;
+    };
+};
+
+#alias gt.stop gps.gt.stop;
+#alias {gps.gt.stop} {
+    #var gps.run.mode nil;
+    gps.stop;
+};
+#alias {gps.stop} {
+    gps.teardown;
+    #var gps_stop 1;
+    #class gps.action.inner kill;
+    gps.watchdog.stop;
+    #undelay {there_delay};
+    #undelay {gps_delay};
+    #unticker {gps_ticker};
+    #alias gps_gt #cr;
+    #alias tmp_get_pos #cr;
+    set brief 2;
+};
+
+#alias {gps.gt} {
+    #var gps_stop 0;
+    #var gps_gt_dest %1;
+    #replace gps_gt_dest ( \(;
+    #replace gps_gt_dest ) \);
+    gps.setup;
+    #alias {gps_gt} {
+        gps.gt ${gps_gt_dest};
+    };
+    #alias {gps_check_room_done} {
+        #var src_roomno ${gps.roomno};
+        #if {${gps.roomno} == -1} {
+            #delay {1} {
+                #showme {GPS: 当前房间未记录, 无法行走};
+                taopao {
+                    gps_gt;
+                };
+            };
+        };
+        #else {
+            #if {@isdigit{${gps_gt_dest}}} {
+                #var dst_roomno ${gps_gt_dest};
+            };
+            #else {
+                INVOKE gps.get_room ${gps_gt_dest};
+                #var dst_roomno ${gps.roomno};
+            };
+
+            #if {${dst_roomno} == ${src_roomno}} {
+                gt.stop;
+                #delay {1} {
+                    #showme {GPS: 抵达目的地};
+                };
+            };
+            #else {
+                #format {epoch_from} {%T};
+                #showme {GPS: 正在寻路: ${src_roomno} -> ${dst_roomno}};
+                gps.get_path ${src_roomno} ${dst_roomno};
+                #format {epoch_to} {%T};
+                #showme {GPS: 完成寻路, 耗时: @eval{$epoch_to-$epoch_from} 秒};
+                #var gps_path_index 1;
+                #list gps_path size gps_path_size;
+                #if {${gps_path_size} == 0} {
+                    #delay {1} {
+                        #showme GPS: 目标房间不可达, 无法行走;
+                        notify GPS: 目标房间不可达, 无法行走: ${gps_gt_dest};
+                    };
+                    on_there {
+                        #cr;
+                    };
+                };
+                #else {
+                    #var gps.run.mode NORMAL;
+                    set brief 1;
+                    gps.run;
+                };
+            };
+        };
+    };
+    gps.check_room {
+        gps_check_room_done;
+    };
+};
+
+#alias {on_reachable} {
+    #alias tmp_there #cr;
+    #alias tmp_there %0;
+    #action {GPS: 目标房间可达} {
+        #unaction {GPS: 目标房间可达};
+        on_unbusy {
+            tmp_there;
+        };
+    };
+};
+
+#alias {on_unreachable} {
+    #alias tmp_not_there #cr;
+    #alias tmp_not_there %0;
+    #action {GPS: 目标房间不可达} {
+        #unaction {GPS: 目标房间不可达};
+        on_unbusy {
+            tmp_not_there;
+        };
+    };
+};
+
+#alias {gps.check} {
+    #var gps_stop 0;
+    #var gps_gt_dest %1;
+    #replace gps_gt_dest ( \(;
+    #replace gps_gt_dest ) \);
+
+    #alias {gps_check_room_done} {
+        #var src_roomno ${gps.roomno};
+        #if {${gps.roomno} == -1} {
+            #showme GPS: 目标房间可达;
+        };
+        #else {
+            #if {@isdigit{${gps_gt_dest}}} {
+                #var dst_roomno ${gps_gt_dest};
+            };
+            #else {
+                INVOKE gps.get_room ${gps_gt_dest};
+                #var dst_roomno ${gps.roomno};
+            };
+
+            #if {${dst_roomno} == ${src_roomno}} {
+                #showme GPS: 目标房间可达;
+            };
+            #else {
+                gps.get_path ${src_roomno} ${dst_roomno};
+                #list gps_path size gps_path_size;
+                #if {${gps_path_size} == 0} {
+                    #showme GPS: 目标房间不可达;
+                };
+                #else {
+                    #showme GPS: 目标房间可达;
+                };
+            };
+        };
+    };
+    gps.check_room {
+        gps_check_room_done;
+    };
+};
+
+#alias {gps.run} {
+    #if {"${gps.run.mode}" == "NORMAL"} {
+        gps.watchdog.kick;
+    };
+    #var is_break 0;
+    #var accu 0;
+    #while {${gps_path_index} <= ${gps_path_size}} {
+        #if {${gps_stop} == 1} {
+            #var is_break 1;
+            #break;
+        };
+        #if {"${gps.run.mode}" == "NORMAL"} {
+            #math accu ${accu}+1;
+        };
+        #list gps_path get ${gps_path_index} gps_next_step;
+        #math gps_path_index ${gps_path_index}+1;
+        ${gps_next_step};
+        #if {@startwith{${gps_next_step};gps} == 1} {
+            #var is_break 1;
+            #break;
+        };
+        #elseif {"${gps.run.mode}" == "TRAVERSE"} {
+            gps.delay 0.8;
+            #var is_break 1;
+            #break;
+        };
+        #elseif {"${gps.run.mode}" == "NORMAL" && ${accu} > 10} {
+            gps.delay 0.5;
+            #var is_break 1;
+            #break;
+        };
+    };
+    #if {${gps_path_index} > ${gps_path_size} && ${is_break} == 0} {
+        gps.watchdog.stop;
+        set brief 2;
+        #delay {gps_delay} {
+            #if {"${gps.run.mode}" == "NORMAL"} {
+                gps.gt.check;
+            };
+            #elseif {"${gps.run.mode}" == "TRAVERSE"} {
+                bl.stop;
+                #showme {GPS: 遍历完成};
+                #unaction {${gps_traverse_target}};
+            };
+        } {1};
+    };
+};
+
+#alias bl.next gps.traverse.continue;
+#alias bl.start gps.traverse;
+#alias bl.stop gps.traverse.stop;
+
+#var gps_stop 0;
+#alias {gps.traverse.continue} {
+    #action {${gps_traverse_target}} {
+        #unaction {${gps_traverse_target}};
+        #showme 找到目标: ${gps_traverse_target};
+        bl.stop;
+    } {1};
+
+    #var gps_stop 0;
+    #var gps.run.mode TRAVERSE;
+    set brief 1;
+    gps.run;
+};
+
+#alias {gps.traverse.stop} {
+    #unaction {${gps_traverse_target}};
+    #var gps.run.mode nil;
+    gps.stop;
+};
+
+#alias {gps.traverse} {
+    #unvar gps_traverse_target;
+    gps.setup;
+    #var gps_stop 0;
+    #var traverse_tmp %1;
+    #var mode nil;
+    #var mode %2;
+    #var gps_traverse_location nil;
+
+    #replace traverse_tmp {@} {;};
+    #list traverse_tmp_list create ${traverse_tmp};
+    #list traverse_tmp_list size traverse_tmp_size;
+    #var gps_traverse_target $traverse_tmp_list[1];
+    #if {${traverse_tmp_size} == 2} {
+        #var gps_traverse_location $traverse_tmp_list[2];
+    };
+
+    #alias {gps_check_room_done} {
+        #action {${gps_traverse_target}} {
+            #unaction {${gps_traverse_target}};
+            #showme 找到目标: ${gps_traverse_target};
+            bl.stop;
+        } {1};
+
+        #if {${gps.roomno} == -1} {
+            #delay {gps_check_delay} {
+                #showme {GPS: 当前房间未记录, 无法遍历};
+                taopao {
+                    gps.traverse ${traverse_tmp} ${mode};
+                };
+            } {1};
+        };
+        #else {
+            INVOKE gps.traverse ${gps.roomno} ${gps_traverse_location} ${mode};
+            #var gps_path_index 1;
+            #list gps_path size gps_path_size;
+            #var gps.run.mode TRAVERSE;
+            set brief 1;
+            #delay {gps_delay} {
+                #if {${gps_stop} == 0} {
+                    gps.run;
+                };
+            } {1};
+        };
+    };
+
+    gps.check_room {
+        gps_check_room_done;
+    };
+};
+
+#alias {gps.get_path} {
+    #nop about type: 1. gps.clear 2. gps.guohe 3. gps.delay 4. gps.zuoche 5. gps.goto_bt 6. gps.long_delay 7. shudong 8. 江河;
+    #nop weight > 0: there is a weight;
+    #nop weight = 0: there is no weight;
+    #nop weight < 0: the path is disabled;
+
+    #var DEFAULT_GPS_WEIGHT "50,100,10,50,100,80,1,150";
+    INVOKE gps.get_path %1 %2 ${DEFAULT_GPS_WEIGHT};
+};
+
+#macro {\e[24~} { #nop ];
+    gps.check_link;
+};
+
+#alias {gps.check_room} {
+    #alias tmp_check_room #cr;
+    #alias tmp_check_room %1;
+    #alias {get_pos_done} {
+        INVOKE gps.check_room "${pos.area}" "${pos.room}" "${pos.desc}" "${pos.exits}";
+        tmp_check_room;
+    };
+    get_area {
+        get_pos {
+            get_pos_done;
+        };
+    };
+};
+
+#alias {gps.insert_room} {
+    #alias {get_pos_done} {
+        INVOKE gps.insert_room "${pos.room}" "${pos.desc}" "${pos.exits}" "${pos.area}";
+        gps.check_link;
+    };
+    get_area {
+        get_pos {
+            get_pos_done;
+        };
+    };
+};
+
+#alias {gps.update_room} {
+    #var roomno 0;
+    #var roomno %1;
+    #alias {gps_check_room_done} {
+        INVOKE gps.update_room ${roomno} "${pos.area}" "${pos.room}" "${pos.desc}" "${pos.exits}";
+        gps.check_link;
+    };
+    gps.check_room {
+        gps_check_room_done;
+    };
+};
+
+#alias {gps.check_link} {
+    #alias {gps_check_room_done} {
+        #delay {1} {
+            #show {GPS: ${pos.room}: ${gps.roomno}};
+        };
+        #if {${gps.roomno} == -1} {
+            #delay {1} {
+                #show {GPS: 房间未记录, 无法检查连接};
+            };
+        };
+        #else {
+            INVOKE gps.check_link ${gps.roomno};
+        };
+    };
+    gps.check_room {
+        gps_check_room_done;
+    };
+};
+
+#alias {gps.insert_link} {
+    #var target_room_no %1;
+    #var direction %2;
+    #var reverse_direction %3;
+    #alias {gps_check_room_done} {
+        #if {${gps.roomno} == -1} {
+            #delay {1} {
+                #show {GPS: 房间未记录, 无法插入连接};
+            };
+        };
+        #else {
+            INVOKE gps.insert_link ${gps.roomno} ${target_room_no} "${direction}" "${reverse_direction}"
+            gps.check_link;
+        };
+    };
+    gps.check_room {
+        gps_check_room_done;
+    };
+};
+#class gps close;

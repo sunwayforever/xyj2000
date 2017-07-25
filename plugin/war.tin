@@ -1,0 +1,436 @@
+#class war open;
+
+#alias {re} {
+    yun recover;
+    yun regenerate;
+};
+
+#var heal_count 1;
+#alias {heal} {
+    re;
+    #var heal_count %1;
+    #loop {1} {${heal_count}} {tmp} {
+        yun heal;
+        yun inspire;
+    };
+};
+
+#action {你对%*说道：%*领教%*高招！} {
+    war;
+};
+
+#action {你对%*大喝一声：看招！} {
+    war;
+};
+
+#action {看起来%1想杀死你} {
+    war;
+};
+
+#action {你似乎十分疲惫，看来需要好好休息了} {re} {1};
+#action {你气喘嘘嘘，看起来状况并不太好} {re} {1};
+#action {你看起来已经力不从心了} {re} {1};
+
+#list poisions create {
+    你一中掌，身子一晃，看来已经中了毒！;
+    你突然打了个寒战，明显感到一股寒流已经侵入体内！;
+    忽然一阵刺骨的奇寒袭来;
+    突然你打了个寒战，你中的冰魄寒毒发作了！;
+    他的剧毒散至你的全身;
+};
+
+#var qxs_count 0;
+#action {你吃下一包清心散} {
+    #math qxs_count ${qxs_count}+1;
+};
+
+#foreach {${poisions}[%*]} {poision} {
+    #action {${poision}} {
+        #if {${qx_percent} < 90 || ${eff_qx_percent} < 90} {
+            qudu;
+        };
+    } {1};
+};
+
+#action {你似乎十分疲惫，看来需要好好休息了} {
+    re;
+};
+
+#alias {detect_mingjiao} {
+    l %0;
+    #action {这是一位明教} {
+        mj.start;
+    };
+
+    #action {圣火令} {
+        mj.start;
+    };
+
+    #delay {2} {
+        #unaction {圣火令};
+        #unaction {这是一位明教};
+    };
+};
+
+#var mj_started 0;
+#alias {mj.start} {
+    #if {${mj_started} == 0} {
+        #var mj_started 1;
+        raw;
+        war;
+    };
+};
+
+#var mj_id {};
+#alias {mj.stop} {
+    #if {${mj_started} == 1} {
+        #var mj_started 0;
+        #var mj_id {};
+    };
+};
+
+#alias {qudu} {
+    eat san;
+};
+
+#alias {on_skill_hit} {
+    #var not_used %%0;
+    #cr;
+};
+
+#alias {on_skill_miss} {
+    #var not_used %%0;
+    #cr;
+};
+
+#alias {raw} {
+    #alias {on_skill_hit} {
+        #var not_used %%0;
+        #cr;
+    };
+    #alias {on_skill_miss} {
+        #var not_used %%0;
+        #cr;
+    };
+    #var pfming 0;
+    @stackcreate{pfm};
+    #var fighting 0;
+    #class war.inner kill;
+    #class attack.inner kill;
+    #undelay {attack.delay};
+    attack.end;
+    #var enemy nil;
+    #var enemy_menpai nil;
+    jiali none;
+};
+
+#alias {on_truce} {
+    #alias tmp_truce %0;
+    #class truce.inner open;
+    #action {truce} {
+        #class truce.inner kill;
+        on_unbusy {
+            tmp_truce;
+        };
+    };
+    #class truce.inner close;
+    war.monitor;
+};
+
+#gag {wait_for_fight};
+#var fighting 0;
+#alias {war.monitor} {
+    #var fighting 1;
+    #class war.inner open;
+    #alias {war_end} {
+        mj.stop;
+        raw;
+        check_health;
+    };
+
+    #action {对不起，武庙你只能老实呆着。} {
+        war_end;
+    };
+
+    #action {这里无法使用内功} {
+        war_end;
+    };
+
+    #action {你已经受伤过重，只怕一运真气便有生命危险！} {
+        war_end;
+    };
+
+    #action {你全身放松} {
+        war_end;
+    };
+
+    #action {战斗中不能疗伤！} {
+        #cr;
+    };
+
+    #ticker {fighting} {
+        yun heal;
+    } {2};
+    #class war.inner close;
+};
+
+#alias {war} {
+    war.prepare;
+    attack;
+};
+
+#ticker {check_health_ticker} {
+    #if {${critical_running} == 0} {
+        check_health;
+    };
+} {170};
+
+#var in_special_state 0;
+#alias {check_health} {
+    #class check_health.inner open;
+    #ticker {check_hp} {
+        #send {hp};
+    } {3};
+    #action {^【 状态 】 %*} {
+        #class check_health.inner kill;
+        #var health_info %%1;
+        #replace health_info {、醉酒} {};
+        update_status;
+        #if {@issubstring{${health_info};、} == 1} {
+            #var in_special_state 1;
+            #delay {check_health_delay} {
+                check_health;
+            } {30};
+            #if {${qx_percent} < 45} {
+                #delay {health_delay} {
+                    on_special_state;
+                    #alias {on_special_state} {
+                        #cr;
+                    } {1};
+                } {5};
+            };
+        };
+        #else {
+            #var in_special_state 0;
+            #showme truce;
+        };
+    } {1};
+    #class check_health.inner close;
+    #send {hp};
+};
+
+#action {^你身上的%*被火焰刀所焚，象片片破布般飘落。} {
+    #delay {huoyan_dao_delay} {
+        notify 火焰刀!;
+        on_huoyandao;
+    } {0.5};
+} {1};
+
+#action {猛烈间火球温度飙升，火花迸射，炸开了你的护具！} {
+    notify 火球!;
+    on_huoqiu;
+} {1};
+
+#alias {attack.end} {#cr};
+
+#action {乾坤大挪移自然激发而出，将你的攻势反击了回去。} {
+    mj.start;
+};
+
+#action {^%*运起九阳神功} {
+    mj.start;
+    #showme mingjiao enemy:%1;
+};
+
+#alias {taopao} {
+    set brief 2;
+    #alias tmp_on_taopao #cr;
+    #alias tmp_on_taopao %1;
+
+    #alias {taopao_random_walk} {
+        #list exits_list create ${exits_list};
+        #list exits_list size tmp_exit_list_size;
+        #if {${tmp_exit_list_size} == 0} {
+            #return;
+        };
+        #var tmp_exit_index @random{${tmp_exit_list_size}};
+        #list exits_list get  ${tmp_exit_index} exit;
+        raw;
+        #5 halt;
+        ${exit};
+    };
+
+    #alias {get_pos_done} {
+        #if {"${pos.room}" == "武门"} {
+            raw;
+            #5 halt;
+            tmp_on_taopao;
+            #return;
+        };
+        #class taopao.inner open;
+        #ticker {taopao_ticker} {
+            taopao_random_walk;
+        } {3};
+        #action {这里%*出口} {
+            #class taopao.inner kill;
+            #undelay {taopao_delay};
+            #delay {taopao_delay} {
+                tmp_on_taopao;
+                #alias tmp_on_taopao #cr;
+            } {1};
+        };
+        #delay {taopao_delay} {
+            #class taopao.inner kill;
+            tmp_on_taopao;
+            #alias tmp_on_taopao #cr;
+        } {10};
+        #class taopao.inner close;
+        taopao_random_walk;
+    };
+    get_pos {
+        get_pos_done;
+    };
+};
+
+#action {${char_name}%*不由自主的放开了兵器} {
+    wi;
+};
+
+#var enemy nil;
+#alias {perform} {
+    #if {"${enemy}" == "nil"} {
+        #send {perform %0};
+    };
+    #else {
+        #send {perform %0 ${enemy}};
+    };
+};
+
+#alias {disarm.start} {
+    unwi;
+    #alias {attack} {#cr};
+    bei none;
+};
+
+#alias {disarm.stop} {
+    reborn;
+    wi;
+};
+
+#alias {busy.start} {
+    #var busy_target %0;
+    disarm.start;
+    #send {hit ${busy_target}};
+    #class busy.start.inner open;
+    #action {你战胜了} {
+        #send {hit ${busy_target}};
+    };
+    #ticker {busy} {
+        chan;
+    } {0.5};
+    #class busy.start.inner close;
+};
+
+#alias {busy.stop} {
+    #class busy.start.inner kill;
+    disarm.stop;
+};
+
+#gag clear: done;
+#alias {clear} {
+    kill %0;
+    #class clear.inner open;
+    #action {^这里没有这个人} {
+        #unaction {^这里没有这个人};
+        #class clear.inner kill;
+        raw;
+        #showme clear: done;
+    } {1};
+    #ticker {kill} {
+        kill %0;
+    } {3};
+    #class clear.inner close;
+};
+
+#alias {on_cleared} {
+    #alias tmp_on_cleared %0;
+    #action {clear: done} {
+        #unaction {clear: done};
+        #delay {3} {
+            tmp_on_cleared;
+        };
+    };
+};
+
+#alias {war.prepare} {
+    wi;
+    war.monitor;
+    on_unbusy {
+        yun qi;
+        yun jing;
+    };
+    #class war.inner open;
+    #ticker {qi_ticker} {
+        yun qi;
+        yun jing;
+    } {6};
+    #class war.inner close;
+    #if {${youxiao_neigong} > 750 && ${char_nl_recovery} > 100} {
+        yun shield;
+    };
+    attack.prepare;
+};
+
+#alias {kill} {
+    war.prepare;
+    #send kill %0;
+};
+
+#alias {killall} {
+    war.prepare;
+    #send killall %0;
+};
+
+#alias {hit} {
+    war.prepare;
+    #send hit %0;
+};
+
+#alias {fight} {
+    war.prepare;
+    #send fight %0;
+};
+
+#var pfming 0;
+#alias {pfm.inner} {
+    #var pfm_action @stackpoll{pfm};
+    #if {"${pfm_action}" != "nil"} {
+        #var pfming 1;
+        on_unbusy {
+            ${pfm_action};
+            #var pfming 0;
+            pfm.inner;
+        };
+    };
+    #else {
+        #var pfming 0;
+    };
+};
+
+@stackcreate{pfm};
+#alias {pfm} {
+    #if {@stackismember{pfm;%1} == 0} {
+        @stackpush{pfm;%1};
+        #if {${pfming} == 0} {
+            pfm.inner;
+        };
+    };
+};
+
+#action {试图夺走你的兵器} {
+    unwi;
+};
+
+#nop 你略一动情，心如刀绞。;
+
+#class war close;

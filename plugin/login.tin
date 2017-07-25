@@ -1,0 +1,30 @@
+#class login open;
+#action {您是否是中小学学生或年龄更小？} {
+    #send {no};
+};
+
+#action {您的英文名字：} {
+    #send {${char}};
+};
+
+#action {请输入相应密码：} {
+    #send {${passwd}};
+};
+
+#action {重新连线完毕。} {
+    login;
+};
+
+#alias {login} {
+    #send {score};
+};
+
+#action {【%*】%* %*(%*)} {
+    #var char_name %3;
+    #var char_id @lower{%4};
+    #class login kill;
+    #send {hp};
+    show.init;
+};
+
+#class login close;

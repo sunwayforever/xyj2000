@@ -1,0 +1,16 @@
+#config {REPEAT ENTER} {ON}
+#config {PACKET PATCH} {0.5};
+#CONFIG {COMMAND ECHO} {ON};
+#debug action off
+#debug variable off
+
+#read pathdir.tin
+
+#read plugin/util.tin
+#read plugin/action.tin
+#read plugin/alias.tin
+
+#read plugin/login.tin
+#read plugin/show.tin
+#read plugin/status.tin
+#read plugin/gag.tin

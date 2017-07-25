@@ -1,0 +1,170 @@
+#class wield open
+#list weapon_types create {blade;sword;staff;whip;spear;hammer;dagger;axe;};
+#var wi_freezed 0;
+#alias {wi.freeze} {
+    #var wi_freezed 1;
+};
+#alias {wi.unfreeze} {
+    #var wi_freezed 0;
+};
+#alias {unwi} {
+    #if {${wi_freezed} == 0} {
+        unwield all;
+    };
+};
+
+#alias {wi} {
+    unwi;
+    #if {"${quest}" == "hb" || "${quest}" == "nil" || "${quest}" == ""} {
+        #foreach {${weapons_to_wield}[%*]} {weapon} {
+            do_wield ${weapon};
+        };
+    };
+};
+
+#alias {do_wield} {
+    #var wield_type %1;
+    #var wield_count 1;
+    #if {"%2" != ""} {
+        #var wield_count %2;
+    };
+    #if {${wi_freezed} == 0} {
+        wield ${${wield_type}_list}[${wield_count}];
+    };
+};
+
+#alias ss weapons.check;
+#var need_reload 0;
+#alias {weapons.check} {
+    #if {${level_info} >= 16} {
+        #var need_reload 1;
+    };
+    #else {
+        #var need_reload 0;
+    };
+    #foreach {${weapon_types}[%*]} {weapon_type} {
+        #list ${weapon_type}_list clear;
+        #list my_${weapon_type}_list clear;
+    };
+    #list my_weapons clear;
+    #list my_special_weapons clear;
+
+    #send {id};
+    #class weapons.inner open;
+    #var id_triggerd 0;
+    #alias {id_triggerd} {
+        #if {${id_triggerd} == 0} {
+            #var id_triggerd 1;
+            #class weapons.inner open;
+            #action {^>} {
+                #class weapons.inner kill;
+                #foreach {${weapon_types}[%*]} {weapon_type} {
+                    #if {@numitems{${weapon_type}_list} == 1} {
+                        #list ${weapon_type}_list add {${${weapon_type}_list}[1] 2};
+                    };
+                    #list special_${weapon_type} size tmp_weapons_size;
+                    #if {${tmp_weapons_size} != 0} {
+                        #foreach {${special_${weapon_type}}[%*]} {sw} {
+                            #list ${weapon_type}_list add ${sw};
+                            #list my_special_weapons add ${sw};
+                        };
+                    };
+                };
+            };
+            #class weapons.inner close;
+        };
+    };
+    #nop sword, my sword;
+    #action {%* = {[^,]+}, {my [^,]+},} {
+        id_triggerd;
+        #var weapon_type %%2;
+        #var weapon_name %%3;
+        #var need_reload 0;
+        #list my_${weapon_type}_list size my_tmp_weapons_size;
+        #math my_tmp_weapons_size ${my_tmp_weapons_size}+1;
+
+        #if {${my_tmp_weapons_size} == 1} {
+            #if {@ismember{${weapon_type};weapon_types} != 0} {
+                #list my_weapons add ${weapon_name};
+                #list ${weapon_type}_list insert 1 ${weapon_name};
+                #list my_${weapon_type}_list add ${weapon_name};
+            };
+        };
+        #else {
+            #if {@ismember{${weapon_type};weapon_types} != 0} {
+                #list my_weapons add {${weapon_name} ${my_tmp_weapons_size}};
+                #list ${weapon_type}_list insert 1 {${weapon_name} ${my_tmp_weapons_size}};
+                #list my_${weapon_type}_list add {${weapon_name} ${my_tmp_weapons_size}};
+            };
+        };
+    } {2};
+    #action {%* = {[^,]+}, {[^,]+}} {
+        id_triggerd;
+        #nop xuantie-jian, sword;
+        #var weapon_type %%3;
+        #var weapon_name %%2;
+        #list ${weapon_type}_list size tmp_weapons_size;
+        #math tmp_weapons_size ${tmp_weapons_size}+1;
+        #if {${tmp_weapons_size} == 1} {
+            #list ${weapon_type}_list add ${weapon_type};
+        };
+        #else {
+            #list ${weapon_type}_list add {${weapon_type} ${tmp_weapons_size}};
+        };
+    } {3};
+    #action {%* = {[^,]+}} {
+        id_triggerd;
+        #nop sword;
+        #var weapon_type %%2;
+        #var weapon_name %%2;
+        #list ${weapon_type}_list size tmp_weapons_size;
+        #math tmp_weapons_size ${tmp_weapons_size}+1;
+        #if {${tmp_weapons_size} == 1} {
+            #list ${weapon_type}_list add ${weapon_name};
+        };
+        #else {
+            #list ${weapon_type}_list add {${weapon_name} ${tmp_weapons_size}};
+        };
+    } {4};
+    #class weapons.inner close;
+};
+
+#alias {on_reload} {
+    #alias tmp_on_reload #cr;
+    #alias tmp_on_reload %0;
+    #action {reloaded} {
+        #unaction {reloaded};
+        tmp_on_reload;
+    };
+};
+
+#alias {reload} {
+    #alias tmp_reload #cr;
+    #alias tmp_reload %0;
+    #class reload_inner open;
+    #action {你在我这里并没有保存任何装备} {
+        #class reload_inner kill;
+        #showme reloaded;
+        tmp_reload;
+    };
+
+    #action {好了，你走吧} {
+        #class reload_inner kill;
+        remove all;
+        #delay {3} {
+            weapons.check;
+        };
+        #delay {5} {
+            wi;
+            we;
+            check_naijiu;
+            #showme reloaded;
+            tmp_reload;
+        };
+    };
+    #class reload_inner close;
+    #nop gt 名人堂;
+    #send {reload};
+};
+
+#class wield close

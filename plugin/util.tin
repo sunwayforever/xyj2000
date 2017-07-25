@@ -1,0 +1,214 @@
+#class util open
+#function {mapcreate} {
+    #var map_name map_%1;
+    #list ${map_name}_keys create {};
+    #list ${map_name}_values create {};
+    #var result #cr;
+};
+
+#function {mapclear} {
+    #var map_name map_%1;
+    #var map_key %2;
+    #list ${map_name}_keys find ${map_key} map_index;
+    #if {${map_index} != 0} {
+        #list ${map_name}_keys delete ${map_index};
+        #list ${map_name}_values delete ${map_index};
+    };
+    #var result #cr;
+};
+
+#function {mapset} {
+    #var map_name map_%1;
+    #var map_key %2;
+    #var map_value %3;
+    #list ${map_name}_keys find ${map_key} map_index;
+    #if {${map_index} == 0} {
+        #list ${map_name}_keys add ${map_key};
+        #list ${map_name}_values add ${map_value};
+    };
+    #else {
+        #list ${map_name}_values set ${map_index} ${map_value};
+    };
+    #var result #cr;
+};
+
+#function {mapget} {
+    #var map_name map_%1;
+    #var map_key %2;
+    #list ${map_name}_keys find ${map_key} map_index;
+    #if {${map_index} == 0} {
+        #var result nil;
+    };
+    #else {
+        #list ${map_name}_values get ${map_index} result;
+    };
+};
+
+#function {stackcreate} {
+    #var stack_name stack_%1;
+    #list ${stack_name} create {};
+    #var result #cr;
+};
+
+#function {stackpush} {
+    #var stack_name stack_%1;
+    #list ${stack_name} add %2;
+    #var result #cr;
+};
+
+#function {stackadd} {
+    #var stack_name stack_%1;
+    #list ${stack_name} insert 1 %2;
+    #var result #cr;
+};
+
+#function {stacktop} {
+    #var stack_name stack_%1;
+    #list ${stack_name} size tmp_size;
+    #if {${tmp_size} == 0} {
+        #var result nil;
+    };
+    #else {
+        #list ${stack_name} get ${tmp_size} result;
+    };
+};
+
+#function {stacktolist} {
+    #var stack_name stack_%1;
+    #var result ${${stack_name}};
+};
+
+#function {stackpop} {
+    #var stack_name stack_%1;
+    #list ${stack_name} size tmp_size;
+    #if {${tmp_size} == 0} {
+        #var result nil;
+    };
+    #else {
+        #list ${stack_name} get ${tmp_size} result;
+        #list ${stack_name} delete ${tmp_size};
+    };
+};
+
+#function {stackpoll} {
+    #var stack_name stack_%1;
+    #list ${stack_name} size tmp_size;
+    #if {${tmp_size} == 0} {
+        #var result nil;
+    };
+    #else {
+        #list ${stack_name} get 1 result;
+        #list ${stack_name} delete 1;
+    };
+};
+
+#function {stackismember} {
+    #var stack_name stack_%1;
+    #list ${stack_name} find %2 result;
+};
+
+#function {startwith} {
+    #regexp {%1} {^%2} {#var result 1} {#var result 0};
+};
+
+#function {endwith} {
+    #regexp {%1} {%*%2$} {#var result 1} {#var result 0};
+};
+
+#function {issubstring} {
+    #regexp {%1} {%*%2%*} {#var result 1} {#var result 0};
+};
+
+#function {isalphabet} {
+    #regexp {%1} {^%w$} {#var result 1} {#var result 0};
+};
+
+#function {isdigit} {
+    #regexp {%1} {^%d$} {#var result 1} {#var result 0};
+};
+
+#function {iscomment} {
+    #regexp {%1} {^#nop} {#var result 1} {#var result 0};
+};
+
+#function {power} {
+    #var a %1;
+    #var b %2;
+    #var tmp_power 0;
+    #var result 1;
+    #while {${tmp_power} < ${b}} {
+        #math result ${result}*${a};
+        #math tmp_power ${tmp_power}+1;
+    };
+};
+
+#function {numitems} {#list %1 size result};
+#function {ismember} {#list %2 find %1 result};
+#function {item} {#list %1 get %2 result};
+#function {eval} {#math result {%1}};
+#function {lower} {#format result {%l} {%1}};
+#function {capital} {#format result {%n} {%1}};
+#function {len} {#format result {%L} {%1}};
+#function {trim} {#format result {%p} {%1}};
+#function {screenw} {#format result {%C}};
+#function {screenh} {#format result {%R}};
+#function {replace} {#var result %1;#replace result {%2} {%3}};
+#function {ctd} {
+    #var first_part 零;
+    #var second_part 零;
+    #regexp %1 {{.*}万{.*}} {#var first_part &1; #var second_part &2} {#var first_part nil};
+    #if {"${first_part}" != "nil"} {
+        #math result @ctd_inner{${first_part}} * 10000 + @ctd_inner{${second_part}};
+    };
+    #else {
+        #return @ctd_inner{%1};
+    };
+};
+
+#function {ctd_inner} {
+    #math result {@replace{@replace{{0+@replace{@replace{@replace{@replace{@replace{@replace{@replace{@replace{@replace{@replace{@replace{@replace{@replace{@replace{%1;{零};{*0+}};{十};{*10+}};{百};{*100+}};{千};{*1000+}};{万};{*10000+}};{六};{6}};{一};{1}};{二};{2}};{三};{3}};{四};{4}};{五};{5}};{七};{7}};{八};{8}};{九};{9}}+0};{++};{+}};{+*};{+}}}
+};
+
+#list directions create {
+    north;south;east;west;up;down;enter;out;northeast;southwest;northwest;southeast;northdown;southup;northup;southdown;eastup;westdown;eastdown;westup;
+    n;s;e;w;u;d;ne;sw;nw;se;nd;su;nu;sd;eu;wd;ed;wu;
+    gn;gs;ge;gw;gu;gd;gne;gsw;gnw;gse;gnd;gsu;gnu;gsd;geu;gwd;ged;gwu;genter;gout;
+};
+#list abbrev_directions create {
+    n;s;e;w;u;d;enter;out;ne;sw;nw;se;nd;su;nu;sd;eu;wd;ed;wu;
+};
+#list chinese_directions create {
+    北;南;东;西;上;下;里;外;东北;西南;西北;东南;
+};
+#list opposite_directions create {
+    south;north;west;east;down;up;out;enter;southwest;northeast;southeast;northwest;southup;northdown;southdown;northup;westdown;eastup;westup;eastdown;
+    s;n;w;e;d;u;sw;ne;se;nw;su;nd;sd;nu;wd;eu;wu;ed;
+    gs;gn;gw;ge;gd;gu;gsw;gne;gse;gnw;gsu;gnd;gsd;gnu;gwd;geu;gwu;ged;gout;genter;
+};
+#function {opposite} {
+    #list {directions} {find} {%1} {opposite_index};
+    #if {${opposite_index} == 0} {
+        #return nil;
+    };
+    #else {
+        #list opposite_directions get ${opposite_index} result;
+    };
+};
+#function {cdirection} {
+    #list {chinese_directions} {find} {%1} {chinese_index};
+    #if {${chinese_index} == 0} {
+        #return nil;
+    };
+    #else {
+        #list directions get ${chinese_index} result;
+    };
+};
+#function {abbrev} {
+    #list {directions} {find} {%1} {abbrev_index};
+    #list abbrev_directions get ${abbrev_index} result;
+};
+#function {random} {
+    #var max_random %1;
+    #math result 1d${max_random};
+};
+#class util close

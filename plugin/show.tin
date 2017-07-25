@@ -1,0 +1,169 @@
+#class show open;
+
+#nop hp/-/status/-/shortcut/-/4(info)/-/5(chat)/- = 17
+#var info_window {{1}{ } {2}{ } {3}{ } {4}{ }};
+#var chat_window {{1}{ } {2}{ } {3}{ } {4}{ } {5}{ }};
+
+#var show_hp_pos -1;
+#nop -;
+#var show_status_pos -3;
+#nop -;
+#var show_shortcut_pos -5;
+#nop -;
+#var show_info_pos -6;
+#math show_chat_pos $show_info_pos - &info_window[];
+#nop -;
+#math show_chat_pos ${show_chat_pos} - 1;
+
+#var chat_on 0;
+#alias {chat.on} {
+    #var chat_on 1;
+    show.init;
+};
+
+#alias {chat.off} {
+    #var chat_on 0;
+    show.init;
+    #send {l};
+};
+
+#alias {show.reset} {
+    #var info_window {{1}{ } {2}{ } {3}{ } {4}{ }};
+    #var chat_window {{1}{ } {2}{ } {3}{ } {4}{ } {5}{ }};
+    show.init;
+};
+
+#var show_inited 0;
+#alias {show.init} {
+    #if {${chat_on} == 1} {
+        #math split_all 1-${show_chat_pos}+&chat_window[];
+    };
+    #else {
+        #math split_all 1-$show_info_pos+&info_window[];
+    };
+    #split ${split_all} 1;
+    #var show_inited 1;
+    #event {SCREEN RESIZE} {
+        show_to_shortcut ${shortcut};
+        show.init;
+        update_status;
+    };
+
+    update_status;
+    show_to_shortcut ${shortcut};
+
+    #loop {1} {&info_window[]} {cnt}
+    {
+        #math pos ${show_info_pos}-$cnt;
+        #echo {{<aff>$info_window[$cnt]<099>} {$pos}};
+    }
+
+    #if {${chat_on} == 1} {
+        #loop {1} {&chat_window[]} {cnt}
+        {
+            #math pos ${show_chat_pos}-$cnt;
+            #echo {{<aff>$chat_window[$cnt]<099>} {$pos}};
+        }
+    };
+};
+
+#alias {show_to_status} {
+    #var show_status %0;
+    #if {${show_inited} == 0} {
+        #return;
+    };
+    update_status_line;
+};
+
+#alias {show_to_shortcut} {
+    #var show_key %0;
+    #if {${show_inited} == 0} {
+        #return;
+    };
+    #echo {{<cfa>${show_key}<099>}{${show_shortcut_pos}}};
+};
+
+#alias {show_to_info} {
+    #format {tmp_time} {%t} {%T};
+    #var screen_width @screenw{};
+    #math header_width @len{tmp_time}+2;
+    #var temp ${tmp_time} <099> %0;
+
+    #if {@len{${temp}} > ${screen_width}} {
+        #math split_chunk_size ${screen_width}-${header_width}-10;
+        INVOKE split_string "%0" ${split_chunk_size};
+        #foreach {${split_string}[%*]} {item} {
+            show_to_info > ${item};
+        };
+        #return;
+    };
+
+    #list info_window ins -1 $temp;
+    #list info_window del 1;
+
+    #if {${show_inited} == 0} {
+        #return;
+    };
+
+    #loop {1} {&info_window[]} {info_cnt}
+    {
+        #math info_pos ${show_info_pos}-${info_cnt};
+        #echo {{<aff>$info_window[$info_cnt]<099>} {${info_pos}}};
+    }
+};
+
+#var showing_to_chat 0;
+#alias {show_to_chat} {
+    #if {${chat_on} == 0} {
+        #return;
+    };
+    #if {${showing_to_chat} == 1} {
+        #delay {0.2} {
+            show_to_chat %0;
+        };
+        #return;
+    };
+    #format {tmp_time} {%t} {%T};
+    #var screen_width @screenw{};
+    #math header_width @len{tmp_time}+2;
+    #var temp ${tmp_time} <099> %0;
+
+    #if {@len{${temp}} > ${screen_width}} {
+        #math split_chunk_size (${screen_width}-${header_width}-20)/2;
+        INVOKE split_string "%0" ${split_chunk_size};
+        #foreach {${split_string}[%*]} {item} {
+            show_to_chat > ${item};
+        };
+        #return;
+    };
+
+    #var showing_to_chat 1;
+    #list chat_window ins -1 {$temp};
+    #list chat_window del 1;
+
+    #if {${show_inited} == 0} {
+        #var showing_to_chat 0;
+        #return;
+    };
+
+    #loop {1} {&chat_window[]} {chat_cnt}
+    {
+        #math chat_pos ${show_chat_pos}-${chat_cnt};
+        #echo {{<aff>%s<099>} {${chat_pos}}} {$chat_window[$chat_cnt]};
+    }
+    #var showing_to_chat 0;
+};
+
+#alias {update_status_line} {
+    #echo {{<099>${show_status}<099> => <cfa>${show_quest}<099>}{${show_hp_pos}}};
+};
+
+#alias {show_to_quest} {
+    #var show_quest %0;
+    xmpp.status ${show_quest};
+    #if {${show_inited} == 0} {
+        #return;
+    };
+    update_status_line;
+};
+#class show close;
