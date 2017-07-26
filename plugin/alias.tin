@@ -448,57 +448,6 @@ walk_to east;
     };
 };
 
-#var ignore_fullme 0;
-#alias {fullme} {
-    #alias tmp_on_fullme #cr;
-    #alias tmp_on_fullme %0;
-    #class fullme_inner open;
-    #action {福米完成} {
-        #class fullme_inner kill;
-        #undelay {fullme_delay};
-        tmp_on_fullme;
-    };
-    #action {福米没到时间呢} {
-        #class fullme_inner kill;
-        #undelay {fullme_delay};
-    };
-    #action {福米失败} {
-        #class fullme_inner kill;
-        #undelay {fullme_delay};
-    };
-    #delay {fullme_delay} {
-        #class fullme_inner kill;
-        notify 福米超时;
-        on_fullme_timeout;
-    } {1200};
-    #class fullme_inner close;
-    #if {${ignore_fullme} == 0} {
-        #if {${fm_remaining_time} > 40} {
-            #class fullme_inner kill;
-            #undelay {fullme_delay};
-            tmp_on_fullme;
-        };
-        #else {
-            xmpp.status 福米;
-            notify 福米;
-        };
-    };
-    #else {
-        #showme 也许是上天垂青于你的勤奋和努力吧，一个小时之内你不用担心被判为机器人。;
-    };
-};
-
-#alias {on_fullme_timeout} {
-    fsk.start;
-};
-
-#alias {fm} {
-    #undelay {fullme_delay};
-    on_unbusy {
-        #send {fullme %0};
-    };
-};
-
 #var pid 0;
 #alias {check_heart_beat} {
     #delay {check_heart_beat_delay} {
@@ -573,59 +522,6 @@ walk_to east;
     xmpp.notify %0;
 };
 
-#alias {cure} {
-    #alias tmp_cure #cr;
-    #alias tmp_cure %1;
-    gt 扬州药铺;
-    on_there {
-        ask ping about cure;
-    };
-    #class cure.inner open;
-    #action {%*：%*两黄金。} {
-        give ping @ctd{%%2} gold;
-        #class cure.inner kill;
-    };
-    #action {平一指说道：「差不多了，再发作一次就会好了。」} {
-        #class cure.inner kill;
-        tmp_cure;
-    };
-    #class cure.inner close;
-};
-
-#alias {keyao} {
-    #alias tmp_keyao #cr;
-    #alias tmp_keyao %1;
-
-    #class on_severe_wound.inner open;
-    #alias {start_keyao} {
-        #ticker {eat_yao} {
-            #if {${qx_percent} < 50} {
-                buy yao;
-                eat yao;
-            };
-            #else {
-                #unticker {eat_yao};
-                #ticker {eat_dan} {
-                    #if {${js_percent} < 50} {
-                        buy dan;
-                        eat dan;
-                    };
-                    #else {
-                        #unticker {eat_dan};
-                        tmp_keyao;
-                    };
-                } {3};
-            };
-        } {3};
-    };
-
-    #class on_severe_wound.inner close;
-    gt 扬州药铺;
-    on_there {
-        start_keyao;
-    };
-};
-
 #var busying 0;
 #list unbusy_list create {};
 #alias {do_unbusy} {
@@ -678,16 +574,6 @@ walk_to east;
 
 #alias {corpse} {
     get all from corpse;
-};
-
-#alias {forge} {
-    ask huo ji about forge;
-    #send {yes};
-};
-
-#alias {lvlup} {
-    #send {levelup};
-    #send {y};
 };
 
 #alias {on_server_reboot} {

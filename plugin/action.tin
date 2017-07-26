@@ -15,19 +15,9 @@
     };
 };
 
-#action {以你目前的级别，你放不了更多宝石。} {
-    show_to_info 宝石放不下了;
-};
-
 #action {你告诉%*：notify %*} {
     #cr;
 } {1};
-
-#action {此ID档案已存在} {
-    #delay {3} {
-        login;
-    };
-};
 
 #alias {we} {
     remove all;
@@ -44,24 +34,6 @@
     wear my necklace;
     #nop wear my shield;
     wear all;
-};
-
-#action {原来是你的肚子在叫了} {
-    #if {${critical_running} == 0} {
-        chifan;
-    };
-};
-
-#action {你舔了舔干裂的嘴唇，看来是很久没有喝水了。} {
-    #if {${critical_running} == 0} {
-        chifan;
-    };
-};
-
-#action {你渴得眼冒金星} {
-    #if {${critical_running} == 0} {
-        chifan;
-    };
 };
 
 #action {你现在正忙着哩} {
@@ -84,148 +56,6 @@
     #action {${name}} {
         #showme busy_for_move;
     };
-};
-
-#action {您要将另一个连线中的相同人物赶出去} {
-    y;
-};
-
-#action {你确实要存储%*点潜能吗} {
-    y;
-};
-
-#action {没钱怎么坐船} {
-    set brief 2;
-};
-
-#action {丑雕神情冷漠地拦住了你的去路} {
-    ask diao about 独孤求败;
-};
-
-#action {爸爸说不能给陌生人进去的} {
-    ask xiao mao about 老朋友;
-};
-
-#action {褚万里喝道} {
-    kill zhu;
-    on_dead {
-        enter;
-    };
-};
-
-#action {江百胜伸手拦住你说道} {
-    kill jiang;
-    on_dead {
-        nu;
-    };
-};
-
-#action {天狼子伸手拦住了你的去路} {
-    kill tianlang zi;
-    on_dead {
-        n;
-    };
-};
-
-#action {出尘子一言不发} {
-    kill chuchen zi;
-    on_dead {
-        enter;
-    };
-};
-
-#action {陆大有喝道：你不是华山弟子，不得入内。} {
-    kill dayou;
-    on_dead {
-        s;w;w;
-    };
-};
-
-#action {守将大声喝到:干什么的} {
-    answer 送信;
-};
-
-#action {你的东西根本没坏} {
-    #cr;
-};
-
-#action {爱爱告诉你：“修这把兵器共花了} {
-    #delay {delay_temp_repaired} {
-        check_naijiu;
-    } {1};
-};
-
-#action {你花费了%*,修好%*！} {
-    show_to_info %2 修好了, 花费%1;
-    #delay {delay_temp_repaired} {
-        check_naijiu;
-    } {1};
-};
-
-#action {你喜欢原地逛逛么} {
-    #delay {1.5} {
-        #showme 抵达目的地;
-    };
-};
-
-#action {有人从别处%*连线取代你所控制的人物。} {
-    end;
-};
-
-#action {你端起一碗酥油茶喝了一大口，长出了口气，满意的点了点头。} {
-    #delay {delay_hp} {
-        #send {hp};
-    } {1};
-};
-
-#action {游方和尚(youfang heshang)告诉你：你还没找到之前失散的亲戚吧？} {
-    notify 认亲;
-};
-
-#action {没有经过通传，任何人等不得擅闯都统治府。} {
-    ask shiwei about 通传;
-};
-
-#action {^%s%S点经验；$} {
-    show_to_info @ctd{%2} 点经验;
-};
-
-#action {^太遗憾了} {
-    #showme 福米失败;
-    notify 福米失败;
-};
-
-#action {^http://pkuxkx.net/antirobot/robot.php?filename=%1} {
-    notify http://pkuxkx.net/antirobot/robot.php?filename=%1;
-};
-
-#action {你刚刚用过这个命令不久，还要%*才能再用。} {
-    #showme 福米没到时间呢;
-    notify 福米没到时间呢;
-};
-
-#action {也许是上天垂青于你的勤奋和努力吧，一个小时之内你不用担心被判为机器人。} {
-    #format {last_fm_time} {%T};
-    @setenv{last_fm_time;${last_fm_time}};
-    check_fm;
-    #send {hp};
-    update_status;
-    #showme 福米完成;
-    notify 福米完成;
-};
-
-#action {【表决】%*投票打开%*(%*)的交谈频道} {
-    #nop vote unchblk %3;
-    #cr;
-};
-
-#gag {设定环境变量：};
-#action {设定环境变量：%*} {
-    #showme 环境变量：%1;
-};
-
-#action {北大侠客行再过%*将重新启动} {
-    show_to_info %0;
 };
 
 #class action close;

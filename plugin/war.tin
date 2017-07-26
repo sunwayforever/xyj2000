@@ -52,47 +52,6 @@
     } {1};
 };
 
-#action {你似乎十分疲惫，看来需要好好休息了} {
-    re;
-};
-
-#alias {detect_mingjiao} {
-    l %0;
-    #action {这是一位明教} {
-        mj.start;
-    };
-
-    #action {圣火令} {
-        mj.start;
-    };
-
-    #delay {2} {
-        #unaction {圣火令};
-        #unaction {这是一位明教};
-    };
-};
-
-#var mj_started 0;
-#alias {mj.start} {
-    #if {${mj_started} == 0} {
-        #var mj_started 1;
-        raw;
-        war;
-    };
-};
-
-#var mj_id {};
-#alias {mj.stop} {
-    #if {${mj_started} == 1} {
-        #var mj_started 0;
-        #var mj_id {};
-    };
-};
-
-#alias {qudu} {
-    eat san;
-};
-
 #alias {on_skill_hit} {
     #var not_used %%0;
     #cr;
@@ -146,10 +105,6 @@
         mj.stop;
         raw;
         check_health;
-    };
-
-    #action {对不起，武庙你只能老实呆着。} {
-        war_end;
     };
 
     #action {这里无法使用内功} {
@@ -219,28 +174,7 @@
     #send {hp};
 };
 
-#action {^你身上的%*被火焰刀所焚，象片片破布般飘落。} {
-    #delay {huoyan_dao_delay} {
-        notify 火焰刀!;
-        on_huoyandao;
-    } {0.5};
-} {1};
-
-#action {猛烈间火球温度飙升，火花迸射，炸开了你的护具！} {
-    notify 火球!;
-    on_huoqiu;
-} {1};
-
 #alias {attack.end} {#cr};
-
-#action {乾坤大挪移自然激发而出，将你的攻势反击了回去。} {
-    mj.start;
-};
-
-#action {^%*运起九阳神功} {
-    mj.start;
-    #showme mingjiao enemy:%1;
-};
 
 #alias {taopao} {
     set brief 2;
@@ -430,7 +364,5 @@
 #action {试图夺走你的兵器} {
     unwi;
 };
-
-#nop 你略一动情，心如刀绞。;
 
 #class war close;
