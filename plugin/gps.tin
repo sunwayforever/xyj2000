@@ -374,6 +374,10 @@ load gps_actions;
     gps.check_link;
 };
 
+#macro {\e[23~} { #nop ];
+    gps.record;
+};
+
 #alias {gps.check_room} {
     #alias tmp_check_room #cr;
     #alias tmp_check_room %1;
@@ -389,16 +393,22 @@ load gps_actions;
 };
 
 #alias {gps.insert_room} {
-    #alias {get_pos_done} {
-        INVOKE gps.insert_room "${pos.room}" "${pos.desc}" "${pos.exits}" "${pos.area}";
-        gps.check_link;
-    };
-    get_area {
-        get_pos {
-            get_pos_done;
+    #alias {gps_check_room_done} {
+        #if {${gps.roomno} == -1} {
+            #show {GPS: 房间未记录};
+            INVOKE gps.insert_room "${pos.room}" "${pos.desc}" "${pos.exits}" "${pos.area}";
         };
+
+        #delay {1} {
+            #show {GPS: ${pos.room}: ${gps.roomno}};            
+        };
+
+        #showme ROOM_INSERTED;
     };
-};
+    gps.check_room {
+        gps_check_room_done;
+    };
+}
 
 #alias {gps.update_room} {
     #var roomno 0;
@@ -450,4 +460,215 @@ load gps_actions;
         gps_check_room_done;
     };
 };
+
+#alias {gps.record} {
+    #var lookaround_type 0;
+    #class gps.record open;
+    #action {ROOM_INSERTED} {
+        #if {${lookaround_type} == 0} {
+            do_lookaround;
+        };
+        #elseif {${lookaround_type} == 1} {
+            INVOKE gps.insert_link ${lookaround_room_no} ${gps.roomno} "${lookaround_exit}" "${reverse_direction}";
+            #var lookaround_type 0;
+            walk ${reverse_direction};
+        };
+    };
+
+    #action {ROOM_CHANGED} {
+        #if {${lookaround_type} == 0} {
+            look_next;
+        };
+        #elseif {${lookaround_type} == 1} {
+            gps.insert_room;
+        };
+    };
+
+    #action {ROOM_NOT_CHANGED} {
+        #if {${lookaround_type} == 1} {
+            look_next;
+        };
+        #elseif {${lookaround_type} == 0} {
+            finish_record;
+        };
+    };
+    
+    #class gps.record close;
+    #alias {finish_record} {
+        #class gps.record kill;
+        gps.check_link;
+    };
+    #alias {look_next} {
+        #math lookaround_exit_index ${lookaround_exit_index}+1;
+        #if {${lookaround_exit_index} > ${lookaround_exit_size}} {
+            finish_record;
+        };
+        #else {
+            #list lookaround_exits get ${lookaround_exit_index} lookaround_exit;
+            #var reverse_direction @opposite{${lookaround_exit}};
+            #var lookaround_type 1;
+            walk ${lookaround_exit};
+        };
+    };
+
+    #alias {do_lookaround} {
+        #list lookaround_exits create ${pos.exits};
+        #var lookaround_room_no ${gps.roomno};
+
+        #var lookaround_exit_index 0;
+        #list lookaround_exits size lookaround_exit_size;
+        
+        look_next;
+    };
+
+    gps.insert_room;
+};
+
+#alias {get_area} {
+    #alias tmp_get_area #cr;
+    #alias tmp_get_area %1;
+    #var pos.area {};
+    #class record.inner open;
+    #action {找不到当前地区的地图！} {
+        #class record.inner kill;
+        #undelay get_area_delay;
+        #var pos.area {};
+        tmp_get_area;
+    };
+    #action {这里暂时没有地图。} {
+        #class record.inner kill;
+        #undelay get_area_delay;
+        #var pos.area {};
+        tmp_get_area;
+    };
+    #action {^〖%*〗} {
+        #class record.inner kill;
+        #undelay get_area_delay;        
+        #var pos.area %%1;
+        tmp_get_area;
+    };
+    #action {^［%*］} {
+        #class record.inner kill;
+        #undelay get_area_delay;
+        #var pos.area %%1;
+        tmp_get_area;
+    };
+
+    #action {^[输入时暂存讯息]} {
+        #cr;
+    } {4};
+    
+    #action {^[%*]} {
+        #class record.inner kill;
+        #undelay get_area_delay;
+        #var pos.area %%1;
+        tmp_get_area;
+    };
+    #action {q 离开} {
+        #send {q};
+    };
+    
+    #delay get_area_delay {
+        #class record.inner kill;
+        #var pos.area {};
+        tmp_get_area;
+    } {3};
+    #class record.inner close;
+    map;
+};
+
+#alias {get_pos} {
+    #alias tmp_get_pos #cr;
+    #alias tmp_get_pos %1;
+    #var record_state 0;
+    #var current_room {};
+    #var description {};
+    #class record.inner open;
+    #action {^%* - $} {
+        #var record_state 1;
+        #var current_room %%1;
+    } {1};
+
+    #action {    「%*」: %*} {
+        #delay {look_delay} {
+            #var exits_list  {};
+            get_exits_done;
+        } {1};
+    } {6};
+
+    #action {这里没有任何明显的出路。} {
+        #var exits_list  {};
+        get_exits_done;
+    } {7};
+
+    #action {这里唯一的出口是 %w。} {
+        #var exits_list  {%%1;};
+        get_exits_done;
+    } {7};
+
+    #action {这里明显的出口是 %w 和 %w。} {
+        #var exits_list {%%1;%%2;};
+        get_exits_done;
+    } {7};
+
+    #action {这里明显的出口是 %w、%w 和 %w。} {
+        #var exits_list {%%1;%%2;%%3;};
+        get_exits_done;
+    } {7};
+
+    #action {这里明显的出口是 %w、%w、%w 和 %w。} {
+        #var exits_list {%%1;%%2;%%3;%%4;};
+        get_exits_done;
+    } {7};
+
+    #action {这里明显的出口是 %w、%w、%w、%w 和 %w。} {
+        #var exits_list {%%1;%%2;%%3;%%4;%%5;};
+        get_exits_done;
+    } {7};
+
+    #action {这里明显的出口是 %w、%w、%w、%w、%w 和 %w。} {
+        #var exits_list {%%1;%%2;%%3;%%4;%%5;%%6;};
+        get_exits_done;
+    } {7};
+
+    #action {这里明显的出口是 %w、%w、%w、%w、%w、%w 和 %w。} {
+        #var exits_list {%%1;%%2;%%3;%%4;%%5;%%6;%%7;};
+        get_exits_done;
+    } {7};
+
+    #nop max 7 exits;
+    #action {这里明显的出口是 %w、%w、%w、%w、%w、%w、%w} {
+        #var exits_list {%%1;%%2;%%3;%%4;%%5;%%6;%%7;};
+        get_exits_done;
+    } {7};
+
+    #alias {get_exits_done} {
+        #var pos.room ${current_room};
+        #replace {description} { } {};
+        #replace {description} {	} {};
+        #var pos.desc ${description};
+        #var pos.exits ${exits_list};
+        #class record.inner kill;
+        #undelay {look_delay};
+        tmp_get_pos;
+    };
+
+    #action {^    %S。} {
+        #cr
+    } {8};
+    
+    #action {^%S%*} {
+        #if {$record_state == 1} {
+            #var description ${description}%%1%%2;
+        };
+    } {9};
+
+    #ticker {ticker_get_position_look} {
+        #send {l};
+    } {3};
+    #class record.inner close;
+    #send {l};
+};
+
 #class gps close;
+

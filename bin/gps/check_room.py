@@ -9,26 +9,26 @@ from ..common import logger
 
 def check_room (conn, zone, room, desc, exits):
     room = fixup_room(room)
-    sql = "select roomno from mud_room where roomname = '%s'" % (room)
-    rows = conn.execute(sql).fetchall();
-    if len(rows) == 1:
-        return rows[0][0]
+    # sql = "select roomno from mud_room where roomname = '%s'" % (room)
+    # rows = conn.execute(sql).fetchall();
+    # if len(rows) == 1:
+    #     return rows[0][0]
 
-    sql = "select roomno from mud_room where roomname = '%s' and zone = '%s'" % (room, zone)
-    rows = conn.execute(sql).fetchall();
-    if len(rows) == 1:
-        return rows[0][0]
+    # sql = "select roomno from mud_room where roomname = '%s' and zone = '%s'" % (room, zone)
+    # rows = conn.execute(sql).fetchall();
+    # if len(rows) == 1:
+    #     return rows[0][0]
 
-    sql = "select roomno from mud_room where roomname = '%s' and description = '%s'" % (room, desc)
-    rows = conn.execute(sql).fetchall();
-    if len(rows) == 1:
-        return rows[0][0]
-    
-    sql = "select roomno from mud_room where roomname = '%s' and description = '%s' and exits = '%s'" % (room, desc, exits)
-    rows = conn.execute(sql).fetchall();
-    if len(rows) == 1:
-        return rows[0][0]
-    
+    # sql = "select roomno from mud_room where roomname = '%s' and description = '%s'" % (room, desc)
+    # rows = conn.execute(sql).fetchall();
+    # if len(rows) == 1:
+    #     return rows[0][0]
+
+    # sql = "select roomno from mud_room where roomname = '%s' and description = '%s' and exits = '%s'" % (room, desc, exits)
+    # rows = conn.execute(sql).fetchall();
+    # if len(rows) == 1:
+    #     return rows[0][0]
+
     sql = "select roomno from mud_room where zone = '%s' and roomname = '%s' and description = '%s' and exits = '%s'" % (zone, room, desc, exits)
     row = conn.execute(sql).fetchone();
     if row:
@@ -42,4 +42,3 @@ if __name__ == "__main__":
 
     tt = Tintin()
     tt.write ("#var gps.roomno %d;" % (roomno))
-

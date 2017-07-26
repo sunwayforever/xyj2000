@@ -17,8 +17,8 @@
     #send {hp};
 } {10};
 
-#gag {气血：};
-#gag {精神：};
+#nop #gag {气血：};
+#nop #gag {精神：};
 
 #action { 气血：%s%d/%s%d (%*)%s内力：%s%d /%s%d (%*) (%*)} {
     #var curr_qx %2;
@@ -39,9 +39,9 @@
 #var water 0;
 #var maxwater 100;
 
-#gag {食物：};
-#gag {饮水：};
-#gag {潜能：};
+#nop #gag {食物：};
+#nop #gag {饮水：};
+#nop #gag {潜能：};
 
 #action {食物：%s%d/%s%d%s武学：%s%d} {
     #var food %2;

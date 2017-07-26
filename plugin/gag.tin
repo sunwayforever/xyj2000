@@ -4,6 +4,7 @@
 #gag {^>};
 #gag {^$};
 #gag {走了过来};
-#gag {向%*离开};
+#gag {往%*离开};
+#gag {只见};
 
 #class gag close

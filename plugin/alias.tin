@@ -33,7 +33,6 @@
 #alias {ls} {l south};
 #alias {ln} {l north};
 
-
 #alias {i} {
     #send {i %0};
     lock 总计;
@@ -381,24 +380,24 @@ walk_to east;
     INVOKE pinyin %0;
 };
 
-#alias {n} {north};
-#alias {s} {south};
-#alias {e} {east};
-#alias {w} {west};
-#alias {u} {up};
-#alias {d} {down};
-#alias {ne} {northeast};
-#alias {sw} {southwest};
-#alias {nw} {northwest};
-#alias {se} {southeast};
-#alias {nd} {northdown};
-#alias {su} {southup};
-#alias {nu} {northup};
-#alias {sd} {southdown};
-#alias {eu} {eastup};
-#alias {wd} {westdown};
-#alias {ed} {eastdown};
-#alias {wu} {westup};
+#alias {n} {north;look};
+#alias {s} {south;look};
+#alias {e} {east;look};
+#alias {w} {west;look};
+#alias {u} {up;look};
+#alias {d} {down;look};
+#alias {ne} {northeast;look};
+#alias {sw} {southwest;look};
+#alias {nw} {northwest;look};
+#alias {se} {southeast;look};
+#alias {nd} {northdown;look};
+#alias {su} {southup;look};
+#alias {nu} {northup;look};
+#alias {sd} {southdown;look};
+#alias {eu} {eastup;look};
+#alias {wd} {westdown;look};
+#alias {ed} {eastdown;look};
+#alias {wu} {westup;look};
 
 #list kaimen_actions create {open;push;pull;break};
 #list kaimen_names create {door;gate;men;stone};
@@ -438,119 +437,6 @@ walk_to east;
 
 #macro {\eL} {
     show.reset;
-};
-
-#alias {get_pos} {
-    #alias tmp_get_pos #cr;
-    #alias tmp_get_pos %1;
-    #var record_state 0;
-    #var current_room {};
-    #var description {};
-    #class record.inner open;
-    #action {^%* - $} {
-        #var record_state 1;
-        #var current_room %%1;
-    } {1};
-
-    #action {    「%*」: %*} {
-        #delay {look_delay} {
-            #var exits_list  {};
-            get_exits_done;
-        } {1};
-    } {6};
-
-    #action {这里没有任何明显的出路。} {
-        #var exits_list  {};
-        get_exits_done;
-    } {7};
-
-    #action {这里唯一的出口是 %w。} {
-        #var exits_list  {%%1;};
-        get_exits_done;
-    } {7};
-
-    #action {这里明显的出口是 %w 和 %w。} {
-        #var exits_list {%%1;%%2;};
-        get_exits_done;
-    } {7};
-
-    #action {这里明显的出口是 %w、%w 和 %w。} {
-        #var exits_list {%%1;%%2;%%3;};
-        get_exits_done;
-    } {7};
-
-    #action {这里明显的出口是 %w、%w、%w 和 %w。} {
-        #var exits_list {%%1;%%2;%%3;%%4;};
-        get_exits_done;
-    } {7};
-
-    #action {这里明显的出口是 %w、%w、%w、%w 和 %w。} {
-        #var exits_list {%%1;%%2;%%3;%%4;%%5;};
-        get_exits_done;
-    } {7};
-
-    #action {这里明显的出口是 %w、%w、%w、%w、%w 和 %w。} {
-        #var exits_list {%%1;%%2;%%3;%%4;%%5;%%6;};
-        get_exits_done;
-    } {7};
-
-    #action {这里明显的出口是 %w、%w、%w、%w、%w、%w 和 %w。} {
-        #var exits_list {%%1;%%2;%%3;%%4;%%5;%%6;%%7;};
-        get_exits_done;
-    } {7};
-
-    #nop max 7 exits;
-    #action {这里明显的出口是 %w、%w、%w、%w、%w、%w、%w} {
-        #var exits_list {%%1;%%2;%%3;%%4;%%5;%%6;%%7;};
-        get_exits_done;
-    } {7};
-
-    #alias {get_exits_done} {
-        #var pos.room ${current_room};
-        #replace {description} { } {};
-        #replace {description} {	} {};
-        #var pos.desc ${description};
-        #var pos.exits ${exits_list};
-        #class record.inner kill;
-        #undelay {look_delay};
-        tmp_get_pos;
-    };
-
-    #action {^    %S。} {
-        #cr
-    } {8};
-    
-    #action {^%S%*} {
-        #if {$record_state == 1} {
-            #var description ${description}%%1%%2;
-        };
-    } {9};
-
-    #ticker {ticker_get_position_look} {
-        #send {l};
-    } {3};
-    #class record.inner close;
-    #send {l};
-};
-
-#alias {get_area} {
-    #alias tmp_get_area #cr;
-    #alias tmp_get_area %1;
-    #var pos.area {};
-    #class record.inner open;
-    #action {这里暂时没有地图。} {
-        #class record.inner kill;
-        #var pos.area {};
-        tmp_get_area;
-    };
-    #action {[%*]} {
-        #class record.inner kill;
-        #var pos.area %%1;
-        tmp_get_area;
-    };
-    #class record.inner close;
-    map;
-    q;
 };
 
 #alias {INVOKE} {
@@ -806,12 +692,27 @@ walk_to east;
 
 #alias {on_server_reboot} {
     #showme INFO: 服务器重启!;
-    @clearenv{hb_state};
-    @clearenv{hb_mixin_lunci};
-    @clearenv{hb_lunci};
-    @clearenv{hb_lunci_total};
 };
 
 #alias {shifu} {
     gt $gps_shifu;
 };
+
+#alias walk {
+    #alias tmp_walk_to #cr;
+    #alias tmp_walk_to %1;
+
+    #class on_walk open;
+    #action {^%S - } {
+        #class on_walk kill;
+        #undelay walk_delay;
+        #showme {ROOM_CHANGED};
+    };
+    #delay walk_delay {
+        #class on_walk kill;
+        #showme {ROOM_NOT_CHANGED};
+    } {3};
+    #class on_walk close;
+
+    tmp_walk_to;
+}
