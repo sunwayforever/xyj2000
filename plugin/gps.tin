@@ -529,6 +529,19 @@ load gps_actions;
     #alias tmp_get_area %1;
     #var pos.area {};
     #class record.inner open;
+    
+    #action {【西游记】－－%S} {
+        #class record.inner kill;
+        #undelay get_area_delay;        
+        #var pos.area %%1;
+        tmp_get_area;
+    };
+    #action {【西游记】──%S} {
+        #class record.inner kill;
+        #undelay get_area_delay;        
+        #var pos.area %%1;
+        tmp_get_area;
+    };
     #action {找不到当前地区的地图！} {
         #class record.inner kill;
         #undelay get_area_delay;
@@ -673,5 +686,40 @@ load gps_actions;
 #alias {ct} {
     gt 十字街头;
 };
+
+#alias {do_random_walk} {
+    #alias {get_pos_done} {
+        #list exits_list create ${pos.exits};
+        #list exits_list size tmp_exit_list_size;
+        #if {${tmp_exit_list_size} == 0} {
+            #cr;
+        };
+        #var tmp_exit_index @random{${tmp_exit_list_size}};
+        #list exits_list get  ${tmp_exit_index} exit;
+        #delay {1} {
+            walk ${exit};            
+        };
+    };
+    get_pos {
+        get_pos_done;
+    };    
+};
+
+#alias {random_walk.stop} {
+    #class random_walk kill;  
+};
+
+#alias {random_walk.start} {
+    #class random_walk open;
+    #action {ROOM_CHANGED} {
+        do_random_walk;
+    };
+    #action {ROOM_NOT_CHANGED} {
+        do_random_walk;
+    };
+    #class random_walk close;
+    do_random_walk;
+};
+
 #class gps close;
 
