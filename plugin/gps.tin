@@ -670,5 +670,8 @@ load gps_actions;
     #send {l};
 };
 
+#alias {ct} {
+    gt Ê®×Ö½ÖÍ·;
+};
 #class gps close;
 
