@@ -2,4 +2,5 @@
 #var gps_shifu 267;
 #var gps_sleep 264;
 #var gps_eat 271;
+#var shortcut nil;
 #class menpai close;
