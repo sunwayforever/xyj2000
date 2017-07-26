@@ -39,4 +39,5 @@
     };
     #class zuo_mufa close;
 };
+
 #class gps_actions close;

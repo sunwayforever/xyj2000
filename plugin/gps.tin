@@ -683,10 +683,6 @@ load gps_actions;
     #send {l};
 };
 
-#alias {ct} {
-    gt Ê®×Ö½ÖÍ·;
-};
-
 #alias {do_random_walk} {
     #alias {get_pos_done} {
         #list exits_list create ${pos.exits};
