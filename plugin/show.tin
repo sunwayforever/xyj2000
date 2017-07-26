@@ -15,7 +15,7 @@
 #nop -;
 #math show_chat_pos ${show_chat_pos} - 1;
 
-#var chat_on 0;
+#var chat_on 1;
 #alias {chat.on} {
     #var chat_on 1;
     show.init;
@@ -114,9 +114,6 @@
 
 #var showing_to_chat 0;
 #alias {show_to_chat} {
-    #if {${chat_on} == 0} {
-        #return;
-    };
     #if {${showing_to_chat} == 1} {
         #delay {0.2} {
             show_to_chat %0;
