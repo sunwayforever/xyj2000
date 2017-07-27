@@ -45,7 +45,7 @@ load gps_actions;
         #else {
             #if {${gps_stop} == 0} {
                 #delay {1} {
-                    taopao {
+                    random_walk {
                         gps.retry;
                     };
                 };
@@ -104,7 +104,7 @@ load gps_actions;
         #if {${gps.roomno} == -1} {
             #delay {1} {
                 #showme {GPS: 当前房间未记录, 无法行走};
-                taopao {
+                random_walk {
                     gps.retry;
                 };
             };
@@ -305,7 +305,7 @@ load gps_actions;
         #if {${gps.roomno} == -1} {
             #delay {gps_check_delay} {
                 #showme {GPS: 当前房间未记录, 无法遍历};
-                taopao {
+                random_walk {
                     gps.traverse ${traverse_tmp} ${mode};
                 };
             } {1};
@@ -686,4 +686,19 @@ load gps_actions;
     do_random_walk;
 };
 
+#alias {random_walk} {
+    #alias tmp_random_walk #cr;
+    #alias tmp_random_walk %1;
+    
+    #class random_walk open;
+    #action {ROOM_CHANGED} {
+        tmp_random_walk;
+    };
+    #action {ROOM_NOT_CHANGED} {
+        tmp_random_walk;
+    };
+    #class random_walk close;
+    
+    do_random_walk;
+};
 #class gps close;

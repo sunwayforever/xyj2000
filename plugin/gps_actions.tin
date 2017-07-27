@@ -50,7 +50,9 @@
     };
     #action {º£µ× -} {
         #class longgong kill;
-        gps.retry;
+        #delay {1} {
+            gps.retry;
+        };
     };
     #class longgong close;
     
