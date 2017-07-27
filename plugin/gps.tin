@@ -1,6 +1,7 @@
 #class gps open;
 load gps_actions;
 
+@stackcreate{gt};
 #alias gt gps.gt;
 
 #var gps_path_index 0;
@@ -28,61 +29,23 @@ load gps_actions;
     };
 };
 
-#action {^你的动作还没有完成，不能移动。} {
-    gps.watchdog.kick;
-};
-
-#alias {gps.watchdog.kick} {
-    #if {"${gps.run.mode}" == "NORMAL"} {
-        #delay {gps_delay_check} {
-            gps.gt.check;
-        } {10};
-    };
-};
-
-#alias {gps.watchdog.stop} {
-    #if {"${gps.run.mode}" == "NORMAL"} {
-        #undelay {gps_delay_check};
-    };
-};
-
-#alias {gps.teardown} {
-    #class gps.inner kill;
-};
-
-#alias {gps.setup} {
-    #class gps.inner open;
-    #class gps.inner close;
-};
-#var gps_gt_check_count 0;
 #alias {gps.gt.check} {
     gps.gt.stop;
     #var gps_stop 0;
-    #alias {gps_gt} {
-        gps.gt ${dst_roomno};
-    };
     #alias {gps_check_room_done} {
         #var src_roomno ${gps.roomno};
         #if {${src_roomno} == ${dst_roomno}} {
-            #var gps_gt_check_count 0;
             gt.stop;
+            #var tmp @stackpop{gt};
             #delay {1} {
                 #showme {GPS: 抵达目的地};
             };
         };
         #else {
-            #math gps_gt_check_count ${gps_gt_check_count}+1;
-            #if {${gps_gt_check_count} >= 20} {
-                #var gps_gt_check_count 0;
-                gt.stop;
-                #showme {GPS: 抵达目的地};
-            };
-            #else {
-                #if {${gps_stop} == 0} {
-                    #delay {1} {
-                        taopao {
-                            gps_gt;
-                        };
+            #if {${gps_stop} == 0} {
+                #delay {1} {
+                    taopao {
+                        gps.retry;
                     };
                 };
             };
@@ -99,16 +62,23 @@ load gps_actions;
     gps.stop;
 };
 #alias {gps.stop} {
-    gps.teardown;
     #var gps_stop 1;
     #class gps.action.inner kill;
-    gps.watchdog.stop;
     #undelay {there_delay};
     #undelay {gps_delay};
     #unticker {gps_ticker};
-    #alias gps_gt #cr;
     #alias tmp_get_pos #cr;
     set brief 2;
+};
+
+#alias {gps.retry} {
+    #var tmp @stackpop{gt};
+    #if {"${tmp}" == "nil"} {
+        #cr;
+    };
+    #else {
+        gps.gt $tmp;
+    };
 };
 
 #alias {gps.gt} {
@@ -116,31 +86,32 @@ load gps_actions;
     #var gps_gt_dest %1;
     #replace gps_gt_dest ( \(;
     #replace gps_gt_dest ) \);
-    gps.setup;
-    #alias {gps_gt} {
-        gps.gt ${gps_gt_dest};
+    
+    #if {@isdigit{${gps_gt_dest}}} {
+        #var dst_roomno ${gps_gt_dest};
     };
+    #else {
+        INVOKE gps.get_room ${gps_gt_dest};
+        #var dst_roomno ${gps.roomno};
+    };
+
+    @stackpush{gt;${dst_roomno}};
     #alias {gps_check_room_done} {
         #var src_roomno ${gps.roomno};
+        #var dst_roomno @stacktop{gt};
+        
         #if {${gps.roomno} == -1} {
             #delay {1} {
                 #showme {GPS: 当前房间未记录, 无法行走};
                 taopao {
-                    gps_gt;
+                    gps.retry;
                 };
             };
         };
         #else {
-            #if {@isdigit{${gps_gt_dest}}} {
-                #var dst_roomno ${gps_gt_dest};
-            };
-            #else {
-                INVOKE gps.get_room ${gps_gt_dest};
-                #var dst_roomno ${gps.roomno};
-            };
-
             #if {${dst_roomno} == ${src_roomno}} {
                 gt.stop;
+                @stackpop{gt};
                 #delay {1} {
                     #showme {GPS: 抵达目的地};
                 };
@@ -154,6 +125,7 @@ load gps_actions;
                 #var gps_path_index 1;
                 #list gps_path size gps_path_size;
                 #if {${gps_path_size} == 0} {
+                    @stackpop{gt};
                     #delay {1} {
                         #showme GPS: 目标房间不可达, 无法行走;
                         notify GPS: 目标房间不可达, 无法行走: ${gps_gt_dest};
@@ -238,9 +210,6 @@ load gps_actions;
 };
 
 #alias {gps.run} {
-    #if {"${gps.run.mode}" == "NORMAL"} {
-        gps.watchdog.kick;
-    };
     #var is_break 0;
     #var accu 0;
     #while {${gps_path_index} <= ${gps_path_size}} {
@@ -270,7 +239,6 @@ load gps_actions;
         };
     };
     #if {${gps_path_index} > ${gps_path_size} && ${is_break} == 0} {
-        gps.watchdog.stop;
         set brief 2;
         #delay {gps_delay} {
             #if {"${gps.run.mode}" == "NORMAL"} {
@@ -718,4 +686,3 @@ load gps_actions;
 };
 
 #class gps close;
-

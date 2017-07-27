@@ -50,7 +50,7 @@
     };
     #action {º£µ× -} {
         #class longgong kill;
-        gps.run;
+        gps.retry;
     };
     #class longgong close;
     
@@ -67,7 +67,7 @@
     };
     #action {µ´ÓÆÓÆÈý¸üÃÎ -} {
         #class honglou kill;
-        gps.run;
+        gps.retry;
     };
     #class honglou close;
     get_pillow;
