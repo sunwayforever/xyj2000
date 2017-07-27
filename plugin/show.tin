@@ -15,18 +15,6 @@
 #nop -;
 #math show_chat_pos ${show_chat_pos} - 1;
 
-#var chat_on 1;
-#alias {chat.on} {
-    #var chat_on 1;
-    show.init;
-};
-
-#alias {chat.off} {
-    #var chat_on 0;
-    show.init;
-    #send {l};
-};
-
 #alias {show.reset} {
     #var info_window {{1}{ } {2}{ } {3}{ } {4}{ }};
     #var chat_window {{1}{ } {2}{ } {3}{ } {4}{ } {5}{ }};

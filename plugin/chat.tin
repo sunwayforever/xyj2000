@@ -1,4 +1,16 @@
 #class chat open;
+#var chat_on 0;
+#alias {chat.on} {
+    #var chat_on 1;
+    show.init;
+};
+
+#alias {chat.off} {
+    #var chat_on 0;
+    show.init;
+    #send {l};
+};
+
 #list chat_ignore_list create {
 
 };

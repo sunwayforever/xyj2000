@@ -1,6 +1,8 @@
 #class login open;
-#action {重新连线完毕} {
-    login;
+#action {请输入相应密码} {
+    #delay {2} {
+        login;
+    };
 };
 
 #alias {login} {
