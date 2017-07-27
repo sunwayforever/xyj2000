@@ -109,25 +109,6 @@
     } {5};
 };
 
-#alias {on_halt} {
-    #alias tmp_halt #cr;
-    #alias tmp_halt %0;
-
-    #class halt.inner open;
-    #gag {你现在不忙};
-    #ticker {halt_ticker} {
-        #10 halt;
-    } {0.5};
-    #action {你现在不忙} {
-        #class halt.inner kill;
-        #delay {tmp_halt_delay} {
-            tmp_halt;
-        } {0.5};
-    } {1};
-    #class halt.inner close;
-    #10 halt;
-};
-
 #alias {on_hit} {
     #alias tmp_hit #cr;
     #alias tmp_hit %0;
@@ -552,11 +533,17 @@ walk_to east;
     };
 };
 
+#gag {禁止练功};
 #gag {你最少要花 20 点「气」才能练功。};
 #alias {on_unbusy_inner} {
     #alias tmp_unbusy #cr;
     #alias tmp_unbusy %0;
     #class unbusy.inner open;
+    #action {禁止练功} {
+        #class unbusy.inner kill;
+        #undelay {delay_unbusy};
+        tmp_unbusy;
+    };
     #action {你最少要花 20 点「气」才能练功。} {
         #class unbusy.inner kill;
         #undelay {delay_unbusy};
@@ -602,3 +589,31 @@ walk_to east;
 
     tmp_walk_to;
 }
+
+#alias get_bishuizhou {
+    gt 南城客栈;
+    on_there {
+        buy jiudai from er;
+    };
+    #class bishuizhou open;
+    #action {你撕开无字天书的背页，从里面小心翼翼地取出一张小纸片。} {
+        #class bishuizhou kill;
+    };
+    #action {你向店小二买下一个桂花酒袋} {
+        gt 袁氏草堂;
+        on_there {
+            give jiudai to yuan;
+            #delay {1} {
+                tear book;
+            };
+        };
+    };
+    #class bishuizhou close;
+};
+
+#alias get_pillow {
+    gt 南城客栈;
+    on_there {
+        buy pillow;
+    };
+};

@@ -1,0 +1,23 @@
+#class newbie open;
+#alias {equip} {
+    gt 281;
+    on_there {
+        drop shield;
+        drop tianyi;
+        drop shoes;
+        drop bonnet;
+        drop yupei;
+        drop ring;
+        drop hammer;
+        yao shield;
+        yao tianyi;
+        yao shoes;
+        yao bonnet;
+        yao yupei;
+        yao ring;
+        yao hammer;
+        wear all;
+        wield hammer;
+    };
+};
+#class newbie close;
