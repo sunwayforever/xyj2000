@@ -591,13 +591,22 @@ walk_to east;
 }
 
 #alias get_bishuizhou {
-    gt 南城客栈;
-    on_there {
-        buy jiudai from er;
-    };
     #class bishuizhou open;
+    #action {ITEM_NOT_FOUND} {
+        gt 南城客栈;
+        on_there {
+            buy jiudai from er;
+        };
+    };
+
+    #action {ITEM_FOUND} {
+        #class bishuizhou kill;
+        #showme GOT_BISHUIZHOU;
+    };
+
     #action {你撕开无字天书的背页，从里面小心翼翼地取出一张小纸片。} {
         #class bishuizhou kill;
+        #showme GOT_BISHUIZHOU;
     };
     #action {你向店小二买下一个桂花酒袋} {
         gt 袁氏草堂;
@@ -609,18 +618,28 @@ walk_to east;
         };
     };
     #class bishuizhou close;
+    checkitem {bishui zhou};
 };
 
 #alias get_pillow {
-    gt 南城客栈;
-    on_there {
-        buy pillow from er;
-    };
-
     #class get_pillow open;
-    #action {你向店小二买下一只黄粱枕。} {
+    #alias {got_pillow} {
         #class get_pillow kill;
-        #showme GOT PILLOW;
+        #showme GOT_PILLOW;        
+    };
+    #action {ITEM_NOT_FOUND} {
+        gt 南城客栈;
+        on_there {
+            buy pillow from er;
+        };
+    };
+    #action {ITEM_FOUND} {
+        got_pillow;
+    };
+    #action {你向店小二买下一只黄粱枕。} {
+        got_pillow;
     };
     #class get_pillow close;
+    
+    checkitem pillow;
 };

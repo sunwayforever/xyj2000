@@ -1,0 +1,38 @@
+#class baofu open;
+
+#alias {checkitem} {
+    #var check_item @lower{%0};
+    
+    @mapcreate{burden};
+    #class burden.check.inner open;
+    #var burden_start_cap 0;
+    #action {□%S(%*)} {
+        #if {${burden_start_cap} == 1} {
+            @mapset{burden;@lower{%%2};1}
+        }
+    };
+
+    #action {  %S(%*)} {
+        #if {${burden_start_cap} == 1} {
+            @mapset{burden;@lower{%%2};1}
+        }
+    };
+
+    #action {你身上带着下列这些东西} {
+        #var burden_start_cap 1;
+    } {1};
+    
+    #action {总计%*种。} {
+        #class burden.check.inner kill;
+        #if {@ismember{${check_item};map_burden_keys}!=0} {
+            #showme ITEM_FOUND;
+        };
+        #else {
+            #showme ITEM_NOT_FOUND;
+        };
+    };
+    #class burden.check.inner close;
+    #send {i};
+};
+
+#class baofu close;

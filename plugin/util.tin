@@ -143,7 +143,7 @@
 };
 
 #function {numitems} {#list %1 size result};
-#function {ismember} {#list %2 find %1 result};
+#function {ismember} {#list %2 find {%1} result};
 #function {item} {#list %1 get %2 result};
 #function {eval} {#math result {%1}};
 #function {lower} {#format result {%l} {%1}};

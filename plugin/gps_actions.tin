@@ -40,10 +40,26 @@
     #class zuo_mufa close;
 };
 
+#alias {gps.longgong} {
+    #class longgong open;
+    #action {GOT_BISHUIZHOU} {
+        gt 东海之滨;
+        on_there {
+            dive;
+        };
+    };
+    #action {海底 -} {
+        #class longgong kill;
+        gps.run;
+    };
+    #class longgong close;
+    
+    get_bishuizhou;
+};
+
 #alias {gps.honglou} {
-    get_pillow;
     #class honglou open;
-    #action {GOT PILLOW} {
+    #action {GOT_PILLOW} {
         gt ${gps_sleep};
         on_there {
             sleep;
@@ -54,5 +70,6 @@
         gps.run;
     };
     #class honglou close;
+    get_pillow;
 };
 #class gps_actions close;
