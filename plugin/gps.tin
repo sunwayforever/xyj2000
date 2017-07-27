@@ -30,8 +30,9 @@ load gps_actions;
 };
 
 #alias {gps.gt.check} {
-    gps.gt.stop;
+    gt.stop;
     #var gps_stop 0;
+    #var dst_roomno @stacktop{gt};
     #alias {gps_check_room_done} {
         #var src_roomno ${gps.roomno};
         #if {${src_roomno} == ${dst_roomno}} {
@@ -111,7 +112,7 @@ load gps_actions;
         #else {
             #if {${dst_roomno} == ${src_roomno}} {
                 gt.stop;
-                @stackpop{gt};
+                #var tmp @stackpop{gt};
                 #delay {1} {
                     #showme {GPS: 抵达目的地};
                 };
