@@ -614,6 +614,13 @@ walk_to east;
 #alias get_pillow {
     gt 南城客栈;
     on_there {
-        buy pillow;
+        buy pillow from er;
     };
+
+    #class get_pillow open;
+    #action {你向店小二买下一只黄粱枕。} {
+        #class get_pillow kill;
+        #showme GOT PILLOW;
+    };
+    #class get_pillow close;
 };

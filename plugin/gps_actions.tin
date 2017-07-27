@@ -40,4 +40,19 @@
     #class zuo_mufa close;
 };
 
+#alias {gps.honglou} {
+    get_pillow;
+    #class honglou open;
+    #action {GOT PILLOW} {
+        gt ${gps_sleep};
+        on_there {
+            sleep;
+        };
+    };
+    #action {µ´ÓÆÓÆÈý¸üÃÎ -} {
+        #class honglou kill;
+        gps.run;
+    };
+    #class honglou close;
+};
 #class gps_actions close;
