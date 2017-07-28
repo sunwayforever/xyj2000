@@ -80,7 +80,6 @@ load gps_actions;
         #var dst_roomno ${gps.roomno};
     };
 
-    #alias on_there_${dst_roomno} #cr;
     @stackpush{gt;${dst_roomno}};
     #alias {gps_check_room_done} {
         #var src_roomno ${gps.roomno};
@@ -215,7 +214,7 @@ load gps_actions;
             #break;
         };
         #elseif {"${gps.run.mode}" == "TRAVERSE"} {
-            gps.delay 0.8;
+            gps.delay 0.5;
             #var is_break 1;
             #break;
         };
