@@ -25,6 +25,7 @@
 
 #alias {raw} {
     #var pfming 0;
+    #unticker {fighting};
     @stackcreate{pfm};
     #class war.inner kill;
     #class attack.inner kill;
