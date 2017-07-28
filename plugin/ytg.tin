@@ -12,7 +12,15 @@
 };
 
 #action {袁天罡说道：在下不是请您去收服} {
-    
+    #delay {ytg.delay} {
+        ask yuan about kill;   
+    } {20};
+};
+
+#action {袁天罡将手中桃木剑缓缓放下} {
+    #delay {ytg.delay} {
+        ask yuan about kill;   
+    } {20};
 };
 
 #action {找到目标} {
@@ -20,10 +28,10 @@
 };
 
 #action {你灭妖有功} {
-    #showme DONE;
+    show_to_quest 灭妖: 完成;
 };
 
-#alias {ytg.bianli} {
+#alias {ytg.bl} {
     bl.start ${ytg_target};
 };
 
@@ -33,7 +41,7 @@
         #var ytg_target %2;
         gt %3;
         on_there {
-            ytg.bianli;
+            ytg.bl;
         };
     };
 };

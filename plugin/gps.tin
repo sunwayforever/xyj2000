@@ -347,7 +347,7 @@ load gps_actions;
     };
 };
 
-#alias {gps.insert_room} {
+#alias {gps.check_or_insert_room} {
     #alias {gps_check_room_done} {
         #if {${gps.roomno} == -1} {
             #show {GPS: ·¿¼äÎ´¼ÇÂ¼};
@@ -435,7 +435,7 @@ load gps_actions;
             look_next;
         };
         #elseif {${lookaround_type} == 1} {
-            gps.insert_room;
+            gps.check_or_insert_room;
         };
     };
 
@@ -476,7 +476,7 @@ load gps_actions;
         look_next;
     };
 
-    gps.insert_room;
+    gps.check_or_insert_room;
 };
 
 #alias {get_area} {
@@ -688,7 +688,7 @@ load gps_actions;
     do_random_walk;
 };
 
-#alias {gps.force_insert_room} {
+#alias {gps.insert_room} {
     #alias {get_pos_done} {
         INVOKE gps.insert_room "${pos.room}" "${pos.desc}" "${pos.exits}" "${pos.area}";
         #delay {1} {
