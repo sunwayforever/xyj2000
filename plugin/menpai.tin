@@ -1,6 +1,7 @@
 #class menpai open;
-#var gps_shifu 267;
-#var gps_sleep 264;
-#var gps_eat 271;
+#var shifu_pos 267;
+#var sleep_pos 264;
+#var eat_pos 271;
+#var shifu yun;
 #var shortcut nil;
 #class menpai close;

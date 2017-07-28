@@ -210,7 +210,7 @@
         } {3};
     };
     #class on_wakeup.inner close;
-    gt ${gps_sleep};
+    gt ${sleep_pos};
     on_there {
         sleep;
     };
@@ -558,7 +558,7 @@ walk_to east;
 };
 
 #alias {shifu} {
-    gt $gps_shifu;
+    gt $shifu_pos;
 };
 
 #alias walk {

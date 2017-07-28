@@ -62,7 +62,7 @@
 #alias {gps.honglou} {
     #class honglou open;
     #action {GOT_PILLOW} {
-        gt ${gps_sleep};
+        gt ${sleep_pos};
         on_there {
             sleep;
         };

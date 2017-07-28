@@ -1,18 +1,35 @@
 #class xuexi open;
-#alias {do_xue} {
-    xue force from yun;
-};
-#action {似乎有些心得。} {
-    do_xue;
-};
-#action {你今天太累了，结果什么也没有学到。} {
-    #delay {1} {
-        e;e;s;
-        sleep;
+#alias {xue.start} {
+    #var xue_jineng %1;
+    xue.setup;
+    gt ${shifu_pos};
+    on_there {
+        do_xue;
     };
 };
-#action {你一觉醒来，只觉精力充沛。该活动一下了} {
-    n;w;w;
-    do_xue;
+
+#alias {xue.stop} {
+    #class xue.inner kill;
 };
+
+#alias {do_xue} {
+    xue ${xue_jineng} from ${shifu};
+};
+
+#alias {xue.setup} {
+    #class xue.inner open;
+    #action {似乎有些心得。} {
+        do_xue;
+    };
+    #action {你今天太累了，结果什么也没有学到。} {
+        on_sleep {
+            gt ${shifu_pos};
+            on_there {
+                do_xue;
+            };
+        };
+    };
+    #class xue.inner close;
+};
+
 #class xuexi close;
