@@ -8,25 +8,8 @@ load gps_actions;
 #var gps_path_size 0;
 
 #alias {on_there} {
-    #alias tmp_there #cr;
-    #alias tmp_there %0;
-    #action {GPS: 抵达目的地} {
-        #unaction {GPS: 抵达目的地};
-        on_unbusy {
-            tmp_there;
-        };
-    };
-};
-
-#alias {on_not_there} {
-    #alias tmp_not_there #cr;
-    #alias tmp_not_there %0;
-    #action {GPS: 目标房间不可达, 无法行走} {
-        #unaction {GPS: 目标房间不可达, 无法行走};
-        on_unbusy {
-            tmp_not_there;
-        };
-    };
+    #alias on_there_${dst_roomno} #cr;
+    #alias on_there_${dst_roomno} %0;
 };
 
 #alias {gps.gt.check} {
@@ -40,6 +23,7 @@ load gps_actions;
             #var tmp @stackpop{gt};
             #delay {1} {
                 #showme {GPS: 抵达目的地};
+                on_there_${dst_roomno};
             };
         };
         #else {
@@ -96,6 +80,7 @@ load gps_actions;
         #var dst_roomno ${gps.roomno};
     };
 
+    #alias on_there_${dst_roomno} #cr;
     @stackpush{gt;${dst_roomno}};
     #alias {gps_check_room_done} {
         #var src_roomno ${gps.roomno};
@@ -115,6 +100,7 @@ load gps_actions;
                 #var tmp @stackpop{gt};
                 #delay {1} {
                     #showme {GPS: 抵达目的地};
+                    on_there_${dst_roomno};
                 };
             };
             #else {
@@ -379,7 +365,7 @@ load gps_actions;
     };
 }
 
-#alias {gps.update_room} {
+#alias {gps.set_roomno} {
     #var roomno 0;
     #var roomno %1;
     #alias {gps_check_room_done} {
@@ -391,10 +377,21 @@ load gps_actions;
     };
 };
 
+#alias {gps.set_abbrev} {
+    #var abbrev %1;
+    #alias {gps_check_room_done} {
+        INVOKE gps.set_abbrev ${gps.roomno} "$abbrev";
+        gps.check_link;
+    };
+    gps.check_room {
+        gps_check_room_done;
+    };
+};
+
 #alias {gps.check_link} {
     #alias {gps_check_room_done} {
         #delay {1} {
-            #show {GPS: ${pos.room}: ${gps.roomno}};
+            #show {GPS: ${pos.room}: ${gps.roomno} ${gps.abbr}};
         };
         #if {${gps.roomno} == -1} {
             #delay {1} {
