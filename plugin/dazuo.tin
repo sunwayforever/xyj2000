@@ -67,7 +67,7 @@
     #alias {start_ticker} {
         #ticker {dz} {
             dazuo ${dazuo_count};
-        } {2};
+        } {3};
     };
 
     #alias {stop_ticker} {
@@ -75,21 +75,39 @@
     };
 
     #action {你现在的气太少了} {
-        play_newbie_gift;
-        yun recover;
+        stop_dz;
+        on_sleep {
+            start_dz;
+        };
     };
 
+    #alias {stop_dz} {
+        stop_ticker;
+    };
+    
+    #alias {start_dz} {
+        gt ${shifu_pos};
+        on_there {
+            start_ticker;
+        };
+    };
+    
     #action {你的内力增强} {
         #math dz_total_count ${dz_total_count}+1;
         show_to_info force +${dz_total_count};
-        dz.check;
+        check_and_start_dz;
+    };
+
+    #alias {check_and_start_dz} {
+        stop_dz;
+        chifan;
+        #action {CHIFAN_DONE} {
+            start_dz;
+        };
     };
     #class dz.inner close;
-    start_ticker;
-};
-
-#alias {dz.check} {
     show_to_quest 打坐;
+    check_and_start_dz;
 };
 
 #alias {dz.stop} {
