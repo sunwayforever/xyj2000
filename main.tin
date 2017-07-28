@@ -20,6 +20,7 @@
 #read plugin/newbie.tin
 #read plugin/baofu.tin
 #read plugin/xuexi.tin
+#read plugin/dazuo.tin
 
 #read plugin/xmpp.tin
 

@@ -1,8 +1,13 @@
 #class war open;
 
+#alias {yun} {exert};
+
 #alias {re} {
+    place;play;
     yun recover;
-    yun regenerate;
+    place;play;
+    yun refresh;
+    place;play;
 };
 
 #var heal_count 1;

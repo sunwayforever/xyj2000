@@ -1,0 +1,100 @@
+#class dazuo open
+#tab dz.start;
+#tab dz.stop;
+
+#var dazuo_count 20;
+#var dz_total_count 0;
+#var dz_max 95;
+
+#alias {dz.cancel} {
+    #class dz.full.inner kill;
+    #unticker {dz};
+};
+
+#alias {dz.idle} {
+    #alias tmp_dz #cr;
+    #alias tmp_dz %1;
+    #class dz.full.inner open;
+    #action {你现在精不够} {
+        heal 1;
+    };
+    #action {你的内力增强} {
+        #class dz.full.inner kill;
+        #delay {dz_delay} {
+            tmp_dz;
+        } {3};
+    };
+    #ticker {dz} {
+        yun recover; dazuo ${dazuo_count};
+    } {1};
+    #class dz.full.inner close;
+    #math max_neili ${youxiao_neigong} * 10 - 10;
+    #if {${max_neili} < ${hpbrief_max_nl}} {
+        #class dz.full.inner kill;
+        #delay {dz_delay} {
+            tmp_dz;
+        } {@random{40}};
+    };
+};
+
+#alias {dz.full} {
+    #alias tmp_dz #cr;
+    #alias tmp_dz %1;
+    #class dz.full.inner open;
+    #action {你现在精不够} {
+        heal 1;
+    };
+    #class dz.full.inner close;
+    #delay {dz_delay} {
+        #ticker {dz} {
+            #if {${nl_percent} < ${dz_max}} {
+                yun recover; dazuo ${dazuo_count};
+            };
+            #else {
+                #unticker {dz};
+                #class dz.full.inner kill;
+                #delay {dz_delay} {
+                    tmp_dz;
+                    #showme dz.full;
+                } {3};
+            };
+        } {1};
+    }{1};
+};
+
+#alias {dz.start} {
+    #class dz.inner open;
+    #alias {start_ticker} {
+        #ticker {dz} {
+            dazuo ${dazuo_count};
+        } {2};
+    };
+
+    #alias {stop_ticker} {
+        #unticker {dz};
+    };
+
+    #action {你现在的气太少了} {
+        re;
+    };
+
+    #action {你的内力增强} {
+        #math dz_total_count ${dz_total_count}+1;
+        show_to_info force +${dz_total_count};
+        dz.check;
+    };
+    #class dz.inner close;
+    start_ticker;
+};
+
+#alias {dz.check} {
+    show_to_quest 打坐;
+};
+
+#alias {dz.stop} {
+    stop_ticker;
+    show_to_quest 打坐完毕;
+    #class dz.inner kill;
+};
+
+#class dazuo close

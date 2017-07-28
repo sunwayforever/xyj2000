@@ -16,10 +16,6 @@
     #class %1 kill;
 };
 
-#alias {chifan} {
-    #6 {drink cha};
-};
-
 #alias {lm} {
     map;
 };
@@ -41,11 +37,6 @@
 #alias {sc} {
     #send {score %0};
     lock 内力修为;
-};
-
-#alias {hp} {
-    #send {hp};
-    lock 杀气：;
 };
 
 #alias {sk} {
@@ -235,10 +226,6 @@
 #alias {log.stop} {
     #log off;
     #debug all off;
-};
-
-#alias {play} {
-    #system {mplayer sound/%1 1>/dev/null 2>&1 &};
 };
 
 #alias {walk_to} {
@@ -632,4 +619,37 @@ walk_to east;
     #class get_pillow close;
     
     checkitem pillow;
+};
+
+#alias {get_wan} {
+    gt 回春药铺;
+    #action {你向杨中顺买下%*辟谷丸。} {
+        #unaction {你向杨中顺买下%*辟谷丸。};
+        #showme GOT_WAN;
+    };
+    on_there {
+        buy 5 wan from boss;
+    };
+};
+
+#alias {chifan} {
+    #class chifan open;
+    #action {你身上没有这样东西。} {
+        get_wan;
+    };
+    #action {GOT_WAN} {
+        eat wan;
+    };
+    #action {你捏起一颗小小的辟谷丸往舌下一放。} {
+        #class chifan kill;
+        #showme CHIFAN_DONE;
+    };
+    #action {STATUS_UPDATED} {
+        #unaction {STATUS_UPDATED};
+        #if {${food_percent} < 50 || ${water_percent} < 50} {
+            eat wan;
+        };
+    };
+    #class chifan close;
+    #send {hp};
 };
