@@ -27,8 +27,8 @@ class Bot(ClientXMPP):
 def get_ip_address():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.connect(("8.8.8.8", 80))
-    return s.getsockname()[0]  
-            
+    return s.getsockname()[0]
+
 def remove_old_file():
     ten_minute_ago = time.time() - 600
     folder = '/var/www/image_pkuxkx/'
@@ -38,7 +38,7 @@ def remove_old_file():
         mtime=st.st_mtime
         if mtime < ten_minute_ago:
             os.unlink(somefile)
-            
+
 def send_image_async(xmpp, url, char_id):
     try:
         remove_old_file()
@@ -54,12 +54,12 @@ def send_image_async(xmpp, url, char_id):
         xmpp.send_message(mto="messenger@v587.info/xkx", mbody="http://%s:8080/image_pkuxkx/%s.png"%(get_ip_address(), file_name), mtype='chat')
     except:
         pass
-    
+
 if __name__ == '__main__':
     socket.setdefaulttimeout(10)
     char_id = sys.argv[1]
     xmpp = Bot(char_id)
-    xmpp.connect(("bandwagon.v587.info",5222))
+    xmpp.connect(("bandwagon",5222))
     xmpp.process(block=False)
     while (True):
         line = sys.stdin.readline()

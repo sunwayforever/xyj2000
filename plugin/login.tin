@@ -6,6 +6,7 @@
 };
 
 #alias {login} {
+    xmpp.start;
     #send {score};
 };
 

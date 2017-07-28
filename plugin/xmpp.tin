@@ -1,12 +1,12 @@
 #class xmpp open;
 #alias {xmpp.start} {
-    #run {xmpp} {./bin/xmpp.py ${char_id}};
+    #run {xmpp} {./bin/xmpp.py ${char}};
     #unticker {%*};
     #unaction {%*};
     #action {xmpp message: %*:%*} {
-        #pkuxkx %%2;
+        #mud %%2;
     };
-    #pkuxkx;
+    #mud;
 };
 
 #alias {xmpp.status} {
@@ -28,8 +28,6 @@
 #alias {status} {
     #alias {report_status} {
         xmpp.notify 位置: ${pos.room} @ ${pos.area};
-        xmpp.notify 任务: ${last_quest};
-        xmpp.notify 状态: 气: ${qx_percent} 神: ${js_percent} 内: ${nl_percent} 精: ${jl_percent} 经验: ${hpbrief_exp};
     };
     chain get_area get_pos report_status;
 };

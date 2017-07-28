@@ -20,4 +20,6 @@
 #read plugin/newbie.tin
 #read plugin/baofu.tin
 
+#read plugin/xmpp.tin
+
 #read plugin/ytg.tin
