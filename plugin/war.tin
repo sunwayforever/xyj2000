@@ -37,15 +37,7 @@
 
 #alias {war.monitor} {
     #class war.inner open;
-    #action {战斗中不能练内功。} {
-        #delay {way_delay} {
-            raw;
-        } {5};
-    };
 
-    #ticker {fighting} {
-        dazuo 20;
-    } {3};
     #class war.inner close;
 };
 
@@ -55,6 +47,7 @@
 };
 
 #alias {attack.end} {#cr};
+#alias {attack} {#cr};
 
 #var enemy nil;
 #alias {perform} {
