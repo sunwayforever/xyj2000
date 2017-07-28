@@ -650,7 +650,8 @@ walk_to east;
             eat wan;
         };
         #else {
-            #showme CHIFAN_DONE;            
+            #class chifan kill;
+            #showme CHIFAN_DONE;
         };
     };
     #class chifan close;
