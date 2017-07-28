@@ -408,23 +408,12 @@ load gps_actions;
 };
 
 #alias {gps.insert_link} {
-    #var target_room_no %1;
-    #var direction %2;
-    #var reverse_direction %3;
-    #alias {gps_check_room_done} {
-        #if {${gps.roomno} == -1} {
-            #delay {1} {
-                #show {GPS: 房间未记录, 无法插入连接};
-            };
-        };
-        #else {
-            INVOKE gps.insert_link ${gps.roomno} ${target_room_no} "${direction}" "${reverse_direction}"
-            gps.check_link;
-        };
-    };
-    gps.check_room {
-        gps_check_room_done;
-    };
+    #var room_no %1;
+    #var target_room_no %2;
+    #var direction %3;
+    #var reverse_direction %4;
+
+    INVOKE gps.insert_link ${room_no} ${target_room_no} "${direction}" "${reverse_direction}"
 };
 
 #alias {gps.record} {
@@ -697,5 +686,19 @@ load gps_actions;
     #class random_walk close;
     
     do_random_walk;
+};
+
+#alias {gps.force_insert_room} {
+    #alias {get_pos_done} {
+        INVOKE gps.insert_room "${pos.room}" "${pos.desc}" "${pos.exits}" "${pos.area}";
+        #delay {1} {
+            #echo {GPS: ${pos.room}: ${gps.roomno}};            
+        };
+    };
+    get_area {
+        get_pos {
+            get_pos_done;
+        };
+    };
 };
 #class gps close;

@@ -19,3 +19,5 @@
 #read plugin/chat.tin
 #read plugin/newbie.tin
 #read plugin/baofu.tin
+
+#read plugin/ytg.tin
