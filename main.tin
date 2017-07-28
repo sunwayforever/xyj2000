@@ -21,6 +21,7 @@
 #read plugin/baofu.tin
 #read plugin/xuexi.tin
 #read plugin/dazuo.tin
+#read plugin/war.tin
 
 #read plugin/xmpp.tin
 

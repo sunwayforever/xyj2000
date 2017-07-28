@@ -16,8 +16,13 @@
         yao yupei;
         yao ring;
         yao hammer;
+        remove all;
         wear all;
         wield hammer;
     };
+};
+
+#alias {gift} {
+    play;place;play;
 };
 #class newbie close;

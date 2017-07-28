@@ -75,7 +75,8 @@
     };
 
     #action {你现在的气太少了} {
-        re;
+        play_newbie_gift;
+        yun recover;
     };
 
     #action {你的内力增强} {
