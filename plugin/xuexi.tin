@@ -1,6 +1,6 @@
 #class xuexi open;
 #alias {do_xue} {
-    xue literate from yun;
+    xue force from yun;
 };
 #action {似乎有些心得。} {
     do_xue;

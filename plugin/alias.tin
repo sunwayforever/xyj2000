@@ -145,7 +145,7 @@
     #alias tmp_health %0;
     #class health.inner open;
     #alias {check_qx} {
-        #if {${eff_qx_percent} < 99} {
+        #if {${qx_percent} < 99} {
             #if {${qx_percent} < 50} {
                 yun lifeheal ${char_id};
             };
@@ -161,7 +161,7 @@
         };
     };
     #alias {check_js} {
-        #if {${eff_js_percent} < 99} {
+        #if {${js_percent} < 99} {
             yun inspire;
             #delay {0.5} {
                 check_js;
@@ -185,17 +185,7 @@
         };
     };
 
-    #action {已经受伤过重，经受不起你的真气震荡} {
-        health.cancel;
-        on_severe_wound;
-     };
-
-     #action {你已经受伤过重，只怕一运真气便有生命危险！} {
-         health.cancel;
-        on_severe_wound;
-    };
     #class health.inner close;
-    re;
     check_all;
 };
 
