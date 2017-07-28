@@ -102,6 +102,12 @@
 
 #var showing_to_chat 0;
 #alias {show_to_chat} {
+    #if {${chat_on} == 0} {
+        chat.on;
+        #delay {auto_chat_off} {
+            chat.off;
+        } {60};
+    };
     #if {${showing_to_chat} == 1} {
         #delay {0.2} {
             show_to_chat %0;
@@ -145,7 +151,6 @@
 
 #alias {show_to_quest} {
     #var show_quest %0;
-    xmpp.status ${show_quest};
     #if {${show_inited} == 0} {
         #return;
     };
