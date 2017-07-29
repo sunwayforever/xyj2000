@@ -58,4 +58,7 @@
     };
 };
 
+#action {马盗冲过来，对你大喝一声：要钱还是要命？} {
+    give ma 1 silver;
+};
 #class action close;
