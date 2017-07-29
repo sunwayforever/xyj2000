@@ -387,6 +387,17 @@ load gps_actions;
     };
 };
 
+#alias {gps.set_zone} {
+    #var zone %1;
+    #alias {gps_check_room_done} {
+        INVOKE gps.set_zone ${gps.roomno} "$zone";
+        gps.check_link;
+    };
+    gps.check_room {
+        gps_check_room_done;
+    };
+};
+
 #alias {gps.check_link} {
     #alias {gps_check_room_done} {
         #delay {1} {
@@ -478,6 +489,69 @@ load gps_actions;
     gps.check_or_insert_room;
 };
 
+#alias {gps.record_zone} {
+    #var zone %1;
+    #var lookaround_type 0;
+    #class gps.record open;
+    #action {ROOM_INSERTED} {
+        INVOKE gps.set_zone ${gps.roomno} ${zone};
+        #if {${lookaround_type} == 0} {
+            do_lookaround;
+        };
+        #elseif {${lookaround_type} == 1} {
+            #var lookaround_type 0;
+            walk ${reverse_direction};
+        };
+    };
+
+    #action {ROOM_CHANGED} {
+        #if {${lookaround_type} == 0} {
+            look_next;
+        };
+        #elseif {${lookaround_type} == 1} {
+            gps.check_or_insert_room;
+        };
+    };
+
+    #action {ROOM_NOT_CHANGED} {
+        #if {${lookaround_type} == 1} {
+            look_next;
+        };
+        #elseif {${lookaround_type} == 0} {
+            finish_record;
+        };
+    };
+    
+    #class gps.record close;
+    #alias {finish_record} {
+        #class gps.record kill;
+        gps.check_link;
+    };
+    #alias {look_next} {
+        #math lookaround_exit_index ${lookaround_exit_index}+1;
+        #if {${lookaround_exit_index} > ${lookaround_exit_size}} {
+            finish_record;
+        };
+        #else {
+            #list lookaround_exits get ${lookaround_exit_index} lookaround_exit;
+            #var reverse_direction @opposite{${lookaround_exit}};
+            #var lookaround_type 1;
+            walk ${lookaround_exit};
+        };
+    };
+
+    #alias {do_lookaround} {
+        #list lookaround_exits create ${pos.exits};
+
+        #var lookaround_exit_index 0;
+        #list lookaround_exits size lookaround_exit_size;
+        
+        look_next;
+    };
+ 
+    gps.check_or_insert_room;
+};
+
 #alias {get_area} {
     #alias tmp_get_area #cr;
     #alias tmp_get_area %1;
@@ -539,7 +613,7 @@ load gps_actions;
         #class record.inner kill;
         #var pos.area {};
         tmp_get_area;
-    } {3};
+    } {1};
     #class record.inner close;
     map;
 };

@@ -3,13 +3,20 @@
 #alias {ytg.start} {
     #var ytg_stopped 0;
     ytg.setup;
-    ytg.q;
+    ytg.check_and_q;
 };
 
 #alias {ytg.stop} {
     #var ytg_stopped 1;
     #undelay {ytg.delay};
     ytg.teardown;
+};
+
+#alias {ytg.check_and_q} {
+    chifan;
+    #action {CHIFAN_DONE} {
+        ytg.q;
+    };
 };
 
 #alias {ytg.q} {
@@ -54,11 +61,18 @@
 
     #action {你灭妖有功} {
         show_to_quest 灭妖: 完成;
+        show_to_info 完成: ${ytg_area};
+        
         #if {${ytg_stopped} == 0} {
-            ytg.q;
+            ytg.check_and_q;
         };
     };
 
+    #action {GPS: 遍历完成} {
+        show_to_info 没有找到怪: ${ytg_area};
+        ytg.check_and_q;
+    };
+    
     #alias {ytg.bl} {
         bl.start ${ytg_target};
     };
@@ -67,6 +81,7 @@
         #if {${ytg_got_task} == 1} {
             show_to_quest 灭妖: %%1 @ %%3;
             #var ytg_target %%2;
+            #var ytg_area %%3;
             gt %%3;
             on_there {
                 ytg.bl;

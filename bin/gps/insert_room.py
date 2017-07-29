@@ -7,7 +7,7 @@ from ..common import Tintin
 
 
 def insert_room(conn, room, desc, exits, zone):
-    sql = "insert into mud_room values (NULL, '%s', '%s', '%s', '%s', NULL, NULL)" % (
+    sql = "insert into mud_room values (NULL, '%s', '%s', '%s', '%s', NULL, NULL, NULL)" % (
         room, desc, exits, zone)
     conn.execute(sql)
     conn.commit()

@@ -10,9 +10,9 @@ if __name__ == "__main__":
     tt = Tintin()
     tt.write ("#delay {1} {\n");
     tt.write ("#echo {[1;31m---------------------------------------[2;37;0m};\n")
-    
+
     conn = open_database()
-    sql = "select src_room_name, src_room_zone from room_and_entrance where src_room_no = %d limit 1" %(int(sys.argv[1]))
+    sql = "select src_room_name, src_room_zone, src_room_zone2 from room_and_entrance where src_room_no = %d limit 1" %(int(sys.argv[1]))
     cursor = conn.execute(sql)
     row = cursor.fetchone()
     if not row:
@@ -21,7 +21,11 @@ if __name__ == "__main__":
         tt.write ("};");
         exit(0)
     zone = row[1]
-    tt.write("#echo {(%d) %s @ %s:};\n" % (int(sys.argv[1]),row[0], row[1]))
+    if row[2] is None:
+        tt.write("#echo {(%d) %s @ %s:};\n" % (int(sys.argv[1]),row[0], row[1]))
+    else:
+        tt.write("#echo {(%d) %s @ [%s]:};\n" % (int(sys.argv[1]),row[0], row[2]))
+
     tt.write ("#echo {[1;31m---------------------------------------[2;37;0m};\n")
     sql = "select dst_room_zone, dst_room_name, dst_room_no, direction, is_boundary from room_and_entrance where src_room_no = %d" %(int(sys.argv[1]))
     cursor = conn.execute(sql)

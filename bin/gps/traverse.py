@@ -89,7 +89,7 @@ def traverse_dfs(mud, roomno, location, candidate=None):
                 if link.linkroomno in candidate:
                     stack.append((link.linkroomno, link.linkroomname))
             else:
-                if link.src_room_zone == link.dst_room_zone:
+                if link.src_room_zone2 == link.dst_room_zone2 or link.src_room_zone2 is None or link.dst_room_zone2 is None:
                     stack.append((link.linkroomno, link.linkroomname))
 
     traverse_path.extend(mud.get_path(last_room_no, roomno))

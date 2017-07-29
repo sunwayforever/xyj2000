@@ -10,7 +10,7 @@ from ..common import Tintin
 from ..common import logger
 
 class Link:
-    def __init__(self,roomno,linkroomno,direction,weight_type,is_boundary, linkroomname, src_room_zone, dst_room_zone):
+    def __init__(self,roomno,linkroomno,direction,weight_type,is_boundary, linkroomname, src_room_zone, src_room_zone2, dst_room_zone, dst_room_zone2):
         self.roomno = roomno
         self.linkroomno = linkroomno
         self.direction = direction
@@ -19,7 +19,12 @@ class Link:
         self.linkroomname = linkroomname
         self.src_room_zone = src_room_zone
         self.dst_room_zone = dst_room_zone
-        
+        self.src_room_zone2 = src_room_zone2
+        if self.src_room_zone2 is None:
+            self.src_room_zone2 = src_room_zone
+        self.dst_room_zone2 = dst_room_zone2
+        if self.dst_room_zone2 is None:
+            self.dst_room_zone2 = dst_room_zone
 
 class MudRoom:
     def __init__ (self,conn, weights):
@@ -39,15 +44,15 @@ class MudRoom:
         sql = "select max(roomno) from mud_room"
         row = self.conn.execute(sql).fetchone();
         self.max_room_no = int(row[0])+1
-        
-        sql = "select src_room_no, dst_room_no, direction, weight_type, is_boundary, dst_room_name, src_room_zone, dst_room_zone from room_and_entrance"
+
+        sql = "select src_room_no, dst_room_no, direction, weight_type, is_boundary, dst_room_name, src_room_zone, src_room_zone2, dst_room_zone, dst_room_zone2 from room_and_entrance"
         rows = self.conn.execute(sql).fetchall()
         for row in rows:
-            link = Link(row[0],row[1],row[2],row[3],row[4], row[5], row[6], row[7])
+            link = Link(row[0],row[1],row[2],row[3],row[4], row[5], row[6], row[7], row[8], row[9])
             if not row[0] in self.neighbours:
                 self.neighbours[row[0]]=[]
             self.neighbours[row[0]].append(link)
-                
+
             if not row[1] in self.rev_neighbours:
                 self.rev_neighbours[row[1]]=[]
             self.rev_neighbours[row[1]].append(link)
@@ -65,7 +70,7 @@ class MudRoom:
             self.weights_info[(row[0],row[1])] = 1
 
         self.weights_info_saved = self.weights_info.copy()
-            
+
     def get_path(self, src, dst):
         self.__reset_weights();
         return self.__shortest_path_dijkstra(src,dst)
@@ -80,7 +85,7 @@ class MudRoom:
         distance[src] = 0
         found = False
         heapq.heappush(pq, (0,src))
-        
+
         while len(pq) != 0:
             i = heapq.heappop(pq)[1]
             for link in self.neighbours[i]:
@@ -102,7 +107,7 @@ class MudRoom:
             ret.insert(0,parent[tail].direction)
             tail = parent[tail].roomno
         return ret
-    
+
     def __shortest_path_test(self, src, dst):
         if (src == dst):
             return []
@@ -152,14 +157,14 @@ class MudRoom:
             ret.insert(0,parent[tail].direction)
             tail = parent[tail].roomno
         return ret
-    
+
     def __shortest_path_bfs(self, src, dst):
         if (src == dst):
             return []
-        
+
         src_set = set([src])
         dst_set = set([dst])
-            
+
         while True:
             updated = False
             tmp_set = set()
@@ -175,13 +180,13 @@ class MudRoom:
                     elif current_weight > 1:
                         updated = True
                         self.weights_info[(link.roomno,link.linkroomno)] = current_weight - 1
-                        
+
             src_set=src_set.union(tmp_set)
 
             tmp_set = set()
             for i in dst_set:
                 if not i in self.rev_neighbours:
-                    break            
+                    break
                 for link in self.rev_neighbours[i]:
                     current_weight = self.weights_info[(link.roomno,link.linkroomno)]
                     if current_weight == 0:
@@ -190,7 +195,7 @@ class MudRoom:
                             tmp_set.add(link.roomno)
                     elif current_weight > 0:
                         self.weights_info[(link.roomno,link.linkroomno)] = current_weight - 1
-                        
+
             dst_set=dst_set.union(tmp_set)
 
             if not updated:
@@ -207,13 +212,12 @@ class MudRoom:
                     ret = self.__shortest_path_bfs(src, middle)
                     ret.extend(self.__shortest_path_bfs(middle, dst))
                     return ret
-        
+
 def get_path(from_room, to_room, weights):
     if to_room == -1:
         return []
-    
+
     global char_id
-    has_sibao = os.path.isfile("/tmp/pkuxkx_sibao_%s.lock"%(char_id))
 
     conn = open_database()
     from_zone = get_zone(conn,from_room)
@@ -221,32 +225,17 @@ def get_path(from_room, to_room, weights):
 
     mud = MudRoom(conn, weights)
 
-    if to_zone == "梅庄" and from_zone != to_zone:
-        paths = mud.get_path(from_room, 3655)
-        paths.append("gps.qu_sibao")
-        paths.extend(mud.get_path(3655,to_room))
-        return paths;
-
-    if to_zone == "梅庄" and from_zone == to_zone:
-        return mud.get_path(from_room, to_room)
-
-    if has_sibao == True:
-        paths = mud.get_path(from_room, 3655)
-        paths.append("gps.huan_sibao")
-        paths.extend(mud.get_path(3655,to_room))
-        return paths;
-    
     return mud.get_path(from_room, to_room)
 
 if __name__ == "__main__":
     global char_id
-    
+
     from_room = int(sys.argv[1])
     to_room = int(sys.argv[2])
     weights = sys.argv[3]
     char_id = sys.argv[4]
 
     paths = get_path(from_room,to_room,weights)
-    
+
     tt = Tintin()
     tt.write ("#list gps_path create {%s};\n" % (";".join(paths)))
