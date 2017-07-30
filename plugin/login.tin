@@ -7,7 +7,17 @@
 
 #alias {login} {
     xmpp.start;
+    init_set;
     #send {score};
+};
+
+#alias {init_set} {
+    set wimpy 35;
+    set openmap 1;
+    set combat_message_others 2;
+    set report_message_status 1;
+    set equip_message 3;
+    set active_message_others 2;
 };
 
 #action {¡¾%*¡¿%* %*(%*)} {

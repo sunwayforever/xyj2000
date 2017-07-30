@@ -207,10 +207,6 @@
     };
 };
 
-#alias {init_set} {
-    set wimpy 20;
-};
-
 #var dot .;
 #alias {log.save} {
     #system {cp debug${dot}${char_id}${dot}log ${char_id}${dot}log};
