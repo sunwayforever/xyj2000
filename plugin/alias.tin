@@ -671,3 +671,16 @@ walk_to east;
         wd;
     } {300};
 };
+
+#alias {save_qn} {
+    #class save_qn open;
+    #action {你储存%*点潜能！} {
+        #class save_qn kill;
+        #showme SAVE_QN_DONE;
+    };
+    #class save_qn close;
+    gt 潜能银行;
+    on_there {
+        deposit ${qn};
+    };
+};

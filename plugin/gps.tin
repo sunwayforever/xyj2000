@@ -267,18 +267,10 @@ load gps_actions;
     #unvar gps_traverse_target;
     gps.setup;
     #var gps_stop 0;
-    #var traverse_tmp %1;
     #var mode nil;
+    #var gps_traverse_target %1;
     #var mode %2;
     #var gps_traverse_location nil;
-
-    #replace traverse_tmp {@} {;};
-    #list traverse_tmp_list create ${traverse_tmp};
-    #list traverse_tmp_list size traverse_tmp_size;
-    #var gps_traverse_target $traverse_tmp_list[1];
-    #if {${traverse_tmp_size} == 2} {
-        #var gps_traverse_location $traverse_tmp_list[2];
-    };
 
     #alias {gps_check_room_done} {
         #action {${gps_traverse_target}} {

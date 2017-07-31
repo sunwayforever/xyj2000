@@ -4,7 +4,7 @@
     #var ytg_stopped 0;
     wd.start {ytg.start};
     ytg.setup;
-    ytg.check_and_q;
+    ytg.prepare;
 };
 
 #alias {ytg.stop} {
@@ -14,10 +14,10 @@
     ytg.teardown;
 };
 
-#alias {ytg.check_and_q} {
+#alias {ytg.prepare} {
     wd.kick;
-    chifan;
-    #action {CHIFAN_DONE} {
+    prepare;
+    #action {PREPARE_DONE} {
         ytg.q;
     };
 };
@@ -71,14 +71,14 @@
         show_to_info 完成: ${ytg_area};
         
         #if {${ytg_stopped} == 0} {
-            ytg.check_and_q;
+            ytg.prepare;
         };
     };
 
     #action {GPS: 遍历完成} {
         wd.kick;
         show_to_info 没有找到怪: ${ytg_area};
-        ytg.check_and_q;
+        ytg.prepare;
     };
     
     #alias {ytg.bl} {
