@@ -30,7 +30,7 @@
 #action { ÆøÑª£º%s%d/%s%d (%*)%sÄÚÁ¦£º%s%d /%s%d (%*) (%*)} {
     #var curr_qx %2;
     #var max_qx %4;
-    #math qx_percent ${curr_nl}*100/${max_qx};
+    #math qx_percent ${curr_qx}*100/${max_qx};
     #var curr_nl %8;
     #var max_nl %10;
     #math nl_percent ${curr_nl}*100/${max_nl};

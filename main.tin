@@ -17,7 +17,6 @@
 #read plugin/gps.tin
 #read plugin/menpai.tin
 #read plugin/chat.tin
-#read plugin/newbie.tin
 #read plugin/baofu.tin
 #read plugin/xuexi.tin
 #read plugin/dazuo.tin

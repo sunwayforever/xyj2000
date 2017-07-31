@@ -37,6 +37,9 @@
 #alias {ytg.setup} {
     #class ytg.inner open;
     #var ytg_got_task 0;
+    #action {看来该找机会逃跑了．．．} {
+        ytg.prepare;
+    };
     #action {袁天罡将手中桃木剑向四方一划，对你说道：} {
         #var ytg_got_task 1;
     };
