@@ -74,4 +74,12 @@
     #class honglou close;
     get_pillow;
 };
+
+#alias {gps.bgz} {
+    #2 ne;
+    #2 nw;
+    #2 sw;
+    se;n;
+    gps.run;
+};
 #class gps_actions close;

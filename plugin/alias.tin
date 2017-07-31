@@ -678,6 +678,10 @@ walk_to east;
         #class save_qn kill;
         #showme SAVE_QN_DONE;
     };
+    #action {你想耍我啊？} {
+        #class save_qn kill;
+        #showme SAVE_QN_DONE;
+    };
     #class save_qn close;
     gt 潜能银行;
     on_there {
