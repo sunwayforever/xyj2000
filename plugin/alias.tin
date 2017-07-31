@@ -653,3 +653,21 @@ walk_to east;
     #class chifan close;
     #send {hp};
 };
+
+#alias {wd.start} {
+    #alias wd %1;
+    #delay {wd_delay} {
+        wd;
+    } {60};
+};
+
+#alias {wd.stop} {
+    #alias wd #cr;
+    #undelay {wd_delay};
+};
+
+#alias {wd.kick} {
+    #delay {wd_delay} {
+        wd;
+    } {300};
+};

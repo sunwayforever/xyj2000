@@ -26,3 +26,4 @@
 #read plugin/xmpp.tin
 
 #read plugin/ytg.tin
+#read plugin/picker.tin

@@ -1,0 +1,46 @@
+#class picker open;
+#alias {picker.start} {
+    picker.setup;
+    picker.bl;
+};
+
+#alias {picker.bl} {
+    gt 龙宫;
+    on_there {
+        bl.start 亮银甲;
+    };
+};
+
+#alias {picker.stop} {
+    #class picker kill;
+    #undelay {picker_delay};
+};
+
+#alias {picker.sell} {
+    gt 董记当铺;
+    on_there {
+        sell armor;
+        #delay {picker_delay} {
+            picker.bl;
+        }{2};
+    };
+};
+#alias {picker.setup} {
+    #class picker open;
+    #ticker {picker_ticker} {
+        picker.start;
+    } {300};
+    #action {GPS: 遍历完成} {
+        #delay {picker_delay} {
+            bl.start 亮银甲;            
+        } {30};
+    };
+    #action {找到目标} {
+        get armor;
+        #delay {picker_delay} {
+            picker.sell;            
+        }{2};
+    };
+    #class picker close;
+};
+#class picker close;

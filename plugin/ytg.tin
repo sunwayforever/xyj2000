@@ -2,17 +2,20 @@
 #var ytg_stopped 1;
 #alias {ytg.start} {
     #var ytg_stopped 0;
+    wd.start {ytg.start};
     ytg.setup;
     ytg.check_and_q;
 };
 
 #alias {ytg.stop} {
+    wd.stop;
     #var ytg_stopped 1;
     #undelay {ytg.delay};
     ytg.teardown;
 };
 
 #alias {ytg.check_and_q} {
+    wd.kick;
     chifan;
     #action {CHIFAN_DONE} {
         ytg.q;
@@ -20,6 +23,7 @@
 };
 
 #alias {ytg.q} {
+    wd.kick;
     gt ytg;
     on_there {
         ask yuan about kill;
@@ -45,6 +49,7 @@
     };
 
     #alias {ytg.wait} {
+        wd.kick;
         #delay {ytg.delay} {
             ask yuan about kill;   
         } {20};
@@ -56,10 +61,12 @@
     };
 
     #action {找到目标} {
+        wd.kick;
         kill @lower{${ytg_target}};
     };
 
     #action {你灭妖有功} {
+        wd.kick;
         show_to_quest 灭妖: 完成;
         show_to_info 完成: ${ytg_area};
         
@@ -69,16 +76,19 @@
     };
 
     #action {GPS: 遍历完成} {
+        wd.kick;
         show_to_info 没有找到怪: ${ytg_area};
         ytg.check_and_q;
     };
     
     #alias {ytg.bl} {
+        wd.kick;
         bl.start ${ytg_target};
     };
 
     #action {　　近有%*(%*)在%*出没，为害不小，请速去收服！} {
         #if {${ytg_got_task} == 1} {
+            wd.kick;
             show_to_quest 灭妖: %%1 @ %%3;
             #var ytg_target %%2;
             #var ytg_area %%3;
