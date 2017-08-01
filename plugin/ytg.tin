@@ -17,9 +17,6 @@
 #alias {ytg.prepare} {
     wd.kick;
     prepare;
-    #action {PREPARE_DONE} {
-        ytg.q;
-    };
 };
 
 #alias {ytg.q} {
@@ -37,6 +34,9 @@
 #alias {ytg.setup} {
     #class ytg.inner open;
     #var ytg_got_task 0;
+    #action {PREPARE_DONE} {
+        ytg.q;
+    };
     #action {慢慢地你终于又有了知觉．．．} {
         ytg.prepare;
     };
