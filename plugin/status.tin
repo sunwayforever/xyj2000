@@ -3,7 +3,7 @@
 #var health_info nil;
 #var exp_info  nil;
 #alias {update_status} {
-    #var status_content ${char_name}: 道行: ${dh} 潜能: ${qn} 武学: ${wx} 杀气: ${sq};
+    #var status_content ${char_name}: 道行: ${dh}年 潜能: ${qn} 武学: ${wx} 杀气: ${sq};
     show_to_status ${status_content};
     drawhp;
 };
@@ -67,6 +67,7 @@
     #var maxwater %4;
     #math water_percent ${water}*100/${maxwater};
     #var dh %7;
+    #regexp $dh {{.*}年} {#var dh @ctd{&1}} {#var dh 0};
     #showme STATUS_UPDATED;
     update_status;
 };

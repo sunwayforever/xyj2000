@@ -264,7 +264,7 @@ load gps_actions;
 };
 
 #alias {gps.traverse} {
-    #unvar gps_traverse_target;
+    #unaction {${gps_traverse_target}};
     gps.setup;
     #var gps_stop 0;
     #var mode nil;
