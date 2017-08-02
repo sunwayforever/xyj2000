@@ -1,13 +1,18 @@
 #class picker open;
+#list picker_items create {Silver armor;Dragon rake;Dragon blade;Pink skirt;Teng jia;Gang cha;Iron armor};
+
 #alias {picker.start} {
     picker.setup;
+    #var picker_item_index 1;
+    #list picker_items size picker_item_size;
+    #list picker_items get ${picker_item_index} picker_item;
     picker.bl;
 };
 
 #alias {picker.bl} {
     gt 龙宫;
     on_there {
-        bl.start 亮银甲;
+        bl.start {${picker_item}};
     };
 };
 
@@ -31,16 +36,57 @@
         picker.start;
     } {300};
     #action {GPS: 遍历完成} {
-        #delay {picker_delay} {
-            bl.start 亮银甲;            
-        } {30};
+        #math picker_item_index ${picker_item_index}+1;
+        #if {${picker_item_index} > ${picker_item_size}} {
+            #var picker_item_index 1;
+        };
+        #list picker_items get ${picker_item_index} picker_item;
+        picker.bl;
     };
     #action {找到目标} {
-        get armor;
-        #delay {picker_delay} {
-            picker.sell;            
-        }{2};
+        picker.get_all @lower{${picker_item}};
+    };
+
+    #action {GET_ALL_DONE} {
+        gt 董记当铺;
+        on_there {
+            picker.sell_all @lower{${picker_item}};
+        };
+    };
+
+    #action {SELL_ALL_DONE} {
+        picker.bl;
     };
     #class picker close;
+};
+
+#alias {picker.get_all} {
+    #var get_all_item %0;
+    #class get_all open;
+    #ticker {get_all} {
+        get ${get_all_item};
+    } {2};
+    #action {对你而言太重了。} {
+        #class get_all kill;
+        #showme GET_ALL_DONE;
+    };
+    #action {你附近没有这样东西。} {
+        #class get_all kill;
+        #showme GET_ALL_DONE;
+    };
+    #class get_all close;
+};
+
+#alias {picker.sell_all} {
+    #var sell_all_item %0;
+    #class sell_all open;
+    #ticker {sell_all} {
+        sell ${sell_all_item};
+    } {3};
+    #action {你要卖断什么物品？} {
+        #class sell_all kill;
+        #showme SELL_ALL_DONE;
+    };
+    #class sell_all close;
 };
 #class picker close;
