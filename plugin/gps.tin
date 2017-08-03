@@ -214,7 +214,7 @@ load gps_actions;
             #break;
         };
         #elseif {"${gps.run.mode}" == "TRAVERSE"} {
-            gps.delay 1;
+            gps.delay 0.8;
             #var is_break 1;
             #break;
         };
@@ -239,7 +239,7 @@ load gps_actions;
     };
 };
 
-#alias bl.next gps.traverse.continue;
+#alias bl.continue gps.traverse.continue;
 #alias bl.start gps.traverse;
 #alias bl.stop gps.traverse.stop;
 
