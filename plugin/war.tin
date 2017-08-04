@@ -131,6 +131,11 @@
     };
 };
 
+#alias {cancel_prepare} {
+    #class prepare kill;
+    #undelay {recover_delay};
+};
+
 #alias {prepare} {
     #class prepare open;
     #action {EQUIP_DONE} {
@@ -155,9 +160,9 @@
         #showme RECOVER_DONE;
     };
     #else {
-        #delay {10} {
+        #delay {recover_delay} {
             recover;
-        };
+        } {10};
     };
 };
 

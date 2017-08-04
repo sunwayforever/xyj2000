@@ -28,7 +28,8 @@
 };
 
 #alias {ytg.teardown} {
-    #class ytg.inner kill;    
+    #class ytg.inner kill;
+    cancel_prepare;
 };
 
 #alias {ytg.setup} {

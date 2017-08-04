@@ -42,12 +42,12 @@ def get_room(conn, desc):
     rows = conn.execute(sql).fetchall();
     if len(rows) == 1:
         return rows[0][0]
-    
+
     sql = "select roomno from mud_room where roomname like '%%%s%%' and zone = '%s'" % (actual_room, actual_zone)
     row = conn.execute(sql).fetchone();
     if row:
         return row[0]
-    
+
     # sql = "select distinct(dst_room_zone) from room_and_entrance where src_room_zone = '%s' and is_boundary = 0" % (actual_zone)
     # zones = ",".join(["'%s'" % (row[0]) for row in conn.execute(sql).fetchall()])
 
@@ -60,7 +60,7 @@ def get_room(conn, desc):
     # row = conn.execute(sql).fetchone();
     # if row:
     #     return row[0]
-    
+
     return -1
 
 if __name__ == "__main__":
@@ -69,4 +69,3 @@ if __name__ == "__main__":
 
     tt = Tintin()
     tt.write ("#var gps.roomno %d;" % (roomno))
-

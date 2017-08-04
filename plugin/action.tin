@@ -59,7 +59,9 @@
 };
 
 #action {马盗冲过来，对你大喝一声：要钱还是要命？} {
-    give ma 1 silver;
+    #delay {1} {
+        give ma 20 coin;        
+    };
 };
 
 #action {秦安喝道：将军府岂是你乱闯之地！有何贵干(answer)？} {
