@@ -11,32 +11,6 @@
     #unticker {dz};
 };
 
-#alias {dz.idle} {
-    #alias tmp_dz #cr;
-    #alias tmp_dz %1;
-    #class dz.full.inner open;
-    #action {你现在精不够} {
-        heal 1;
-    };
-    #action {你的内力增强} {
-        #class dz.full.inner kill;
-        #delay {dz_delay} {
-            tmp_dz;
-        } {3};
-    };
-    #ticker {dz} {
-        yun recover; dazuo ${dazuo_count};
-    } {1};
-    #class dz.full.inner close;
-    #math max_neili ${youxiao_neigong} * 10 - 10;
-    #if {${max_neili} < ${hpbrief_max_nl}} {
-        #class dz.full.inner kill;
-        #delay {dz_delay} {
-            tmp_dz;
-        } {@random{40}};
-    };
-};
-
 #alias {dz.full} {
     #alias tmp_dz #cr;
     #alias tmp_dz %1;
@@ -120,4 +94,44 @@
     #class dz.inner kill;
 };
 
+#alias {ms.start} {
+    #class mingsi open;
+    #alias {start_ms} {
+        gt ${shifu_pos};
+        on_there {
+            start_ticker;
+        };
+    };
+    #alias {start_ticker} {
+        #ticker {mingsi}{
+            mingsi 20
+        } {3};
+    };
+    #action {你现在神智不清,不能再想入非非了。} {
+        stop_ms;
+        on_sleep {
+            start_ms;
+        };
+    };
+    #alias {stop_ms} {
+        #unticker {mingsi};
+    };
+
+    #alias {check_and_start_ms} {
+        stop_ms;
+        chifan;
+        #action {CHIFAN_DONE} {
+            start_ms;
+        };
+    };
+    #class mingsi close;
+    show_to_quest 冥思;
+    check_and_start_ms;
+};
+
+#alias {ms.stop} {
+    stop_ms;
+    show_to_quest 冥思完毕;
+    #class mingsi kill;
+};
 #class dazuo close
