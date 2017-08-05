@@ -15,7 +15,7 @@
 #read plugin/status.tin
 #read plugin/gag.tin
 #read plugin/gps.tin
-#read plugin/menpai.tin
+#read char/${char}${dot}tin
 #read plugin/chat.tin
 #read plugin/baofu.tin
 #read plugin/xuexi.tin

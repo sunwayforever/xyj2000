@@ -24,6 +24,7 @@ load gps_actions;
             #delay {1} {
                 #showme {GPS: 抵达目的地};
                 on_there_${dst_roomno};
+                #alias on_there_${dst_roomno} #cr;
             };
         };
         #else {
@@ -100,6 +101,7 @@ load gps_actions;
                 #delay {1} {
                     #showme {GPS: 抵达目的地};
                     on_there_${dst_roomno};
+                    #alias on_there_${dst_roomno} #cr;
                 };
             };
             #else {

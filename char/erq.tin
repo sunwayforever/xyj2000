@@ -1,0 +1,7 @@
+#class erq open;
+#var shifu_pos Ω≤æ≠Ã√;
+#var sleep_pos 264;
+#var eat_pos 271;
+#var shifu master;
+#var shortcut nil;
+#class erq close;

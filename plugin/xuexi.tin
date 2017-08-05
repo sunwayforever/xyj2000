@@ -4,29 +4,37 @@
     xue.setup;
     gt ${shifu_pos};
     on_there {
-        do_xue;
+        start_ticker;
     };
 };
 
 #alias {xue.stop} {
+    stop_ticker;
     #class xue.inner kill;
-};
-
-#alias {do_xue} {
-    xue ${xue_jineng} from ${shifu};
 };
 
 #alias {xue.setup} {
     #class xue.inner open;
-    #action {似乎有些心得。} {
-        do_xue;
+    #alias {do_xue} {
+        xue ${xue_jineng} from ${shifu};
+    };
+    #action {你的潜能不足！} {
+        xue.stop;
+    };
+    #alias {start_ticker} {
+        #ticker {xue} {
+            do_xue;  
+        } {1};
+    };
+    #alias {stop_ticker} {
+        #unticker {xue};
     };
     #action {你今天太累了，结果什么也没有学到。} {
-        yun refresh;
+        stop_ticker;
         on_sleep {
             gt ${shifu_pos};
             on_there {
-                do_xue;
+                start_ticker;
             };
         };
     };

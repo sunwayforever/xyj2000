@@ -1,7 +1,0 @@
-#class menpai open;
-#var shifu_pos 267;
-#var sleep_pos 264;
-#var eat_pos 271;
-#var shifu yun;
-#var shortcut nil;
-#class menpai close;

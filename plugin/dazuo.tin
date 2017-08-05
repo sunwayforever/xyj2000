@@ -98,6 +98,10 @@
         check_and_start_dz;
     };
 
+    #action {似乎内力修为已经遇到了瓶颈} {
+        dz.stop;
+    };
+    
     #alias {check_and_start_dz} {
         stop_dz;
         chifan;

@@ -200,6 +200,12 @@
             tmp_wakeup;
         } {3};
     };
+    #action {µ´ÓÆÓÆÈý¸üÃÎ -} {
+        #class on_wakeup.inner kill;
+        #delay {wakeup} {
+            tmp_wakeup;
+        } {3};
+    };
     #class on_wakeup.inner close;
     gt ${sleep_pos};
     on_there {
