@@ -19,7 +19,7 @@
 #read plugin/chat.tin
 #read plugin/baofu.tin
 #read plugin/xuexi.tin
-#read plugin/dazuo.tin
+#read plugin/xiulian.tin
 #read plugin/war.tin
 
 #read plugin/xmpp.tin

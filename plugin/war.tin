@@ -206,4 +206,78 @@
     #class equip close;
     checkitem {meihua hammer};
 };
+
+#alias {check_gongfu} {
+    #class check_gongfu open;
+    #list skills create  {force;spells;cuff;strike;staff;sword;parry;blade;spear;dodge;hammer};
+    #list skills size skill_size;
+    #list level_a create {};
+    #list level_b create {};
+    #list level_a clear;
+    #list level_b clear;
+    #loop 1 $skill_size tmp {#list level_b add 0;#list level_a add 0};
+    #var skill_index 1;
+    #list skills get $skill_index skill;
+
+    #action {  %S (%*)%s： %S%s有效等级：} {
+        #var basic_skill_en %%2;
+        #var special_skill_zh %%4;
+        #list special_skills find ${special_skill_zh} tmp;
+        #if {${tmp} != 0} {
+            #list special_skills_level get ${tmp} tmp_level;
+            record_level_b ${basic_skill_en} ${tmp_level};
+        };
+    } {2};
+
+    #action {┃  %S (%S)%s- %S%s%d/} {
+        #var basic_skill_zh %%1;
+        #var basic_skill_en %%2;
+        #var basic_skill_level %%6;
+        record_level_a  ${basic_skill_en} ${basic_skill_level};
+    } {3};
+
+    #action {┃□%S (%S)%s - %S%s%d/} {
+        #var special_skill_zh %%1;
+        #var special_skill_en %%2;
+        #var special_skill_level %%6;
+        #list special_skills add ${special_skill_zh};
+        #list special_skills_level add ${special_skill_level};
+    } {2};
+
+    #alias {get_level_a} {
+        #var skill_level_a 0;
+        #list skills find %%1 tmp_index;
+        #if {$tmp_index != 0} {
+            #list level_a get $tmp_index tmp;
+            #var skill_level_a $tmp;
+        };
+    };
+
+    #alias {get_level_b} {
+        #var skill_level_b 0;
+        #list skills find %%1 tmp_index;
+        #if {$tmp_index != 0} {
+            #list level_b get $tmp_index tmp;
+            #var skill_level_b $tmp;
+        };
+    };
+
+    #alias {record_level_a} {
+        #list skills find %%1 tmp_index;
+        #if {$tmp_index != 0} {
+            #list level_a set $tmp_index %%2;
+        };
+    };
+
+    #alias {record_level_b} {
+        #list skills find %%1 tmp_index;
+        #if {$tmp_index != 0} {
+            #list level_b set $tmp_index %%2;
+        };
+    };
+
+    #class check_gongfu close;
+    #send {skills};
+    #send {jifa};
+};
 #class war close;
