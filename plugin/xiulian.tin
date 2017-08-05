@@ -4,6 +4,7 @@
 
 #var dazuo_count 20;
 #var dz_total_count 0;
+#var ms_total_count 0;
 #var dz_max 95;
 
 #alias {dz.cancel} {
@@ -43,13 +44,13 @@
 
 #alias {do_dazuo} {
     #class dazuo open;
-    #alias {start_ticker} {
+    #alias {start_dazuo} {
         #ticker {dz} {
             dazuo ${dazuo_count};
         } {3};
     };
 
-    #alias {stop_ticker} {
+    #alias {stop_dazuo} {
         #unticker {dz};
     };
 
@@ -60,13 +61,13 @@
     };
 
     #alias {stop_dz} {
-        stop_ticker;
+        stop_dazuo;
     };
     
     #alias {start_dz} {
         gt ${shifu_pos};
         on_there {
-            start_ticker;
+            start_dazuo;
         };
     };
     
@@ -117,14 +118,19 @@
     #alias {start_ms} {
         gt ${shifu_pos};
         on_there {
-            start_ticker;
+            start_mingsi;
         };
     };
-    #alias {start_ticker} {
+    #alias {start_mingsi} {
         #ticker {mingsi}{
             mingsi 20
         } {3};
     };
+    #action {你的法力增强} {
+        #math ms_total_count ${ms_total_count}+1;
+        show_to_info spells +${ms_total_count};
+    };
+
     #action {你现在神智不清,不能再想入非非了。} {
         stop_ms;
         #class mingsi kill;
@@ -162,5 +168,26 @@
     cancel_mingsi;
     #class ms.inner kill;
     show_to_quest 冥思完毕;
+};
+
+#alias {xl.start} {
+    #class xiulian open;
+    #action {DAZUO_DONE} {
+        do_mingsi;
+    };
+
+    #action {MINGSI_DONE} {
+        on_sleep {
+            do_dazuo;
+        };
+    };
+    #class xiulian close;
+    do_dazuo;
+};
+
+#alias {xl.stop} {
+    #class xiulian kill;
+    cancel_mingsi;
+    cancel_dazuo;
 };
 #class xiulian close

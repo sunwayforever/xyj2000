@@ -236,7 +236,6 @@
     } {2};
 
     #action {©§  %S (%S)%s- %S%s%d/} {
-        #echo match;
         #var basic_skill_zh %%1;
         #var basic_skill_en %%2;
         #var basic_skill_level %%6;
@@ -250,7 +249,6 @@
     } {3};
 
     #action {©§¡õ%S (%S)%s - %S%s%d/} {
-        #echo match;
         #var special_skill_zh %%1;
         #var special_skill_en %%2;
         #var special_skill_level %%6;

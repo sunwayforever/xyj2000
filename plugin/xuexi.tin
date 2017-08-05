@@ -4,12 +4,13 @@
     xue.setup;
     gt ${shifu_pos};
     on_there {
-        start_ticker;
+        start_xue;
     };
 };
 
 #alias {xue.stop} {
-    stop_ticker;
+    stop_xue;
+    cancel_dazuo;
     #class xue.inner kill;
 };
 
@@ -19,24 +20,32 @@
         xue ${xue_jineng} from ${shifu};
     };
     #action {你的潜能不足！} {
+        show_to_quest 潜能不足;
         xue.stop;
     };
-    #alias {start_ticker} {
+    #action {你的法术修为还不够高深，无法学习} {
+        show_to_quest spells 等级不够;
+        xue.stop;
+    };
+    #alias {start_xue} {
         #ticker {xue} {
             do_xue;  
         } {1};
     };
-    #alias {stop_ticker} {
+    #alias {stop_xue} {
         #unticker {xue};
     };
-    #action {你今天太累了，结果什么也没有学到。} {
-        stop_ticker;
+    #action {DAZUO_DONE} {
         on_sleep {
             gt ${shifu_pos};
             on_there {
-                start_ticker;
+                start_xue;
             };
         };
+    };
+    #action {你今天太累了，结果什么也没有学到。} {
+        stop_xue;
+        do_dazuo;
     };
     #class xue.inner close;
 };
