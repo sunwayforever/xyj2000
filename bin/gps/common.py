@@ -45,7 +45,7 @@ area_alias = [
     ["峨嵋","峨嵋派"],
     ["洛阳","洛阳城"],
     ["长安","长安城"],
-    ["镇江","镇江府"],    
+    ["镇江","镇江府"],
 ]
 
 room_alias = {
@@ -115,3 +115,8 @@ def get_zone(conn, room):
         return row[0]
     else:
         return "nil"
+
+def normalize_exits(exits):
+    exits = exits.strip(";").split(";")
+    exits.sort()
+    return ";".join(exits)

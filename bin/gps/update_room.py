@@ -3,11 +3,12 @@ import sqlite3
 import os
 import sys
 from .common import open_database
+from .common import normalize_exits
 from .insert_room import insert_room
 
 def update_room (conn, roomno, zone, room, desc, exits):
     if roomno != 0:
-        sql = "insert or replace into mud_room values (%d, '%s', '%s', '%s', '%s', NULL, NULL)" % (roomno, room, desc, exits, zone)
+        sql = "insert or replace into mud_room values (%d, '%s', '%s', '%s', '%s', NULL, NULL, NULL)" % (roomno, room, desc, exits, zone)
         conn.execute(sql)
         conn.commit()
     else:
@@ -21,7 +22,5 @@ def update_room (conn, roomno, zone, room, desc, exits):
 
 if __name__ == "__main__":
     conn = open_database()
-    update_room (conn, int(sys.argv[1]), sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
+    update_room (conn, int(sys.argv[1]), sys.argv[2], sys.argv[3], sys.argv[4], normalize_exits(sys.argv[5]))
     conn.close()
-
-

@@ -42,7 +42,7 @@ def check_room(conn, zone, room, desc, exits):
 if __name__ == "__main__":
     conn = open_database()
     roomno, abbr = check_room(conn, sys.argv[1], sys.argv[2], sys.argv[3],
-                        sys.argv[4])
+                              normalize_exits(sys.argv[4]))
 
     tt = Tintin()
     tt.write("#var gps.roomno %d;" % (roomno))

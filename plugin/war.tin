@@ -226,17 +226,31 @@
         #if {${tmp} != 0} {
             #list special_skills_level get ${tmp} tmp_level;
             record_level_b ${basic_skill_en} ${tmp_level};
+            #if {"${basic_skill_en}" == "force"} {
+                #math nl_limit ${nl_limit}+${tmp_level}*10;
+            };
+            #if {"${basic_skill_en}" == "spells"} {
+                #math fl_limit ${fl_limit}+${tmp_level}*10;
+            };
         };
     } {2};
 
     #action {©§  %S (%S)%s- %S%s%d/} {
+        #echo match;
         #var basic_skill_zh %%1;
         #var basic_skill_en %%2;
         #var basic_skill_level %%6;
         record_level_a  ${basic_skill_en} ${basic_skill_level};
+        #if {"${basic_skill_en}" == "force"} {
+            #math nl_limit ${basic_skill_level}*5;
+        };
+        #if {"${basic_skill_en}" == "spells"} {
+            #math fl_limit ${basic_skill_level}*5;
+        };
     } {3};
 
     #action {©§¡õ%S (%S)%s - %S%s%d/} {
+        #echo match;
         #var special_skill_zh %%1;
         #var special_skill_en %%2;
         #var special_skill_level %%6;

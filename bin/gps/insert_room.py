@@ -3,6 +3,7 @@ import sqlite3
 import os
 import sys
 from .common import open_database
+from .common import normalize_exits
 from ..common import Tintin
 
 
@@ -20,7 +21,7 @@ def insert_room(conn, room, desc, exits, zone):
 
 if __name__ == "__main__":
     conn = open_database()
-    roomno = insert_room(conn, sys.argv[1], sys.argv[2], sys.argv[3],
+    roomno = insert_room(conn, sys.argv[1], sys.argv[2], normalize_exits(sys.argv[3]),
                          sys.argv[4])
     conn.close()
     tt = Tintin()
