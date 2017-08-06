@@ -23,6 +23,10 @@
     };
 };
 
+#ticker {gongfu} {
+    check_gongfu;
+} {300};
+
 #ticker hp {
     #send {hp};
 } {5};
@@ -130,4 +134,5 @@
 #function {hpcolor}{
     #var result <099>%1;
 };
+
 #class status close

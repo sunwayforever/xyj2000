@@ -9,6 +9,7 @@
     xmpp.start;
     init_set;
     #send {score};
+    check_gongfu;
 };
 
 #alias {init_set} {

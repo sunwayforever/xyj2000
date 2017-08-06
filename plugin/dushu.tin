@@ -1,0 +1,45 @@
+#class dushu open;
+#var du_book book;
+#alias {du.start} {
+    du.setup;
+    get_book;
+};
+
+#alias {du.stop} {
+    stop_du;
+    #class du.inner kill;
+};
+
+#alias {du.setup} {
+    #class du.inner open;
+    #action {GOT_BOOK} {
+        gt ${shifu_pos};
+        on_there {
+            start_du;
+        };
+    };
+    #alias {do_du} {
+        du ${du_book};
+    };
+    #alias {start_du} {
+        #ticker {du} {
+            do_du;  
+        } {1};
+    };
+    #alias {stop_du} {
+        #unticker {du};
+    };
+
+    #action {你现在过于疲倦，无法专心下来研读新知。} {
+        on_sleep {
+            gt ${shifu_pos};
+            on_there {
+                start_du;
+            };
+        };        
+    };
+
+    #class du.inner close;
+};
+
+#class dushu close;

@@ -43,6 +43,14 @@
 };
 
 #alias {do_dazuo} {
+    #if {${limit_nl} < ${max_nl} + 50} {
+        #delay {1} {
+            #showme DAZUO_DONE;            
+        };
+
+        #return;
+    };
+
     #class dazuo open;
     #alias {start_dazuo} {
         #ticker {dz} {
@@ -70,6 +78,12 @@
             start_dazuo;
         };
     };
+
+    #action {似乎内力修为已经遇到了瓶颈。} {
+        stop_dz;
+        #class dazuo kill;
+        #shomwe DAZUO_FAIL;
+    };
     
     #action {你的内力增强} {
         #math dz_total_count ${dz_total_count}+1;
@@ -84,18 +98,20 @@
         };
     };
     #class dazuo close;
+
     check_and_start_dz;
 };
 
 #alias {dz.start} {
     #class dz.inner open;
     #action {DAZUO_DONE} {
+        #if {${limit_nl} < ${max_nl} + 50} {
+            dz.stop;
+            #return;
+        };
         on_sleep {
             do_dazuo;
         };
-    };
-    #action {似乎内力修为已经遇到了瓶颈} {
-        dz.stop;
     };
 
     #class dz.inner close;
@@ -114,6 +130,12 @@
     #class mingsi kill;
 };
 #alias {do_mingsi} {
+    #if {${limit_fl} < ${max_fl} + 50} {
+        #delay {1} {
+            #showme MINGSI_DONE;            
+        };
+        #return;
+    };
     #class mingsi open;
     #alias {start_ms} {
         gt ${shifu_pos};
@@ -155,6 +177,10 @@
 #alias {ms.start} {
     #class ms.inner open;
     #action {MINGSI_DONE} {
+        #if {${limit_fl} < ${max_fl} + 50} {
+            ms.stop;
+            #return;
+        };
         on_sleep {
             do_mingsi;            
         };
@@ -177,9 +203,19 @@
     };
 
     #action {MINGSI_DONE} {
-        on_sleep {
-            do_dazuo;
+        #if {${limit_fl} < ${max_fl} + 50} {
+            xl.stop;
         };
+        #if {${limit_nl} < ${max_nl} + 50} {
+            on_sleep {
+                do_mingsi;
+            };  
+        };
+        #else {
+            on_sleep {
+                do_dazuo;
+            };
+        }
     };
     #class xiulian close;
     do_dazuo;

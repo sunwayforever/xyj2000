@@ -227,10 +227,10 @@
             #list special_skills_level get ${tmp} tmp_level;
             record_level_b ${basic_skill_en} ${tmp_level};
             #if {"${basic_skill_en}" == "force"} {
-                #math nl_limit ${nl_limit}+${tmp_level}*10;
+                #math limit_nl ${limit_nl}+${tmp_level}*10;
             };
             #if {"${basic_skill_en}" == "spells"} {
-                #math fl_limit ${fl_limit}+${tmp_level}*10;
+                #math limit_fl ${limit_fl}+${tmp_level}*10;
             };
         };
     } {2};
@@ -241,10 +241,10 @@
         #var basic_skill_level %%6;
         record_level_a  ${basic_skill_en} ${basic_skill_level};
         #if {"${basic_skill_en}" == "force"} {
-            #math nl_limit ${basic_skill_level}*5;
+            #math limit_nl ${basic_skill_level}*5;
         };
         #if {"${basic_skill_en}" == "spells"} {
-            #math fl_limit ${basic_skill_level}*5;
+            #math limit_fl ${basic_skill_level}*5;
         };
     } {3};
 
