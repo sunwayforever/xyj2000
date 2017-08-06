@@ -1,6 +1,7 @@
 #class xuexi open;
 #alias {xue.start} {
     #var xue_jineng %1;
+    show_to_quest 学习: ${xue_jineng};
     xue.setup;
     gt ${shifu_pos};
     on_there {
@@ -9,6 +10,7 @@
 };
 
 #alias {xue.stop} {
+    show_to_quest 学习完成;
     stop_xue;
     cancel_dazuo;
     #class xue.inner kill;

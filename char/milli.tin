@@ -1,0 +1,7 @@
+#class milli open;
+#var shifu_pos 605;
+#var sleep_pos 952;
+#var shifu long;
+#var shortcut nil;
+
+#class milli close;
