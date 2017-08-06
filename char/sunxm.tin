@@ -1,7 +1,7 @@
 #class sunxm open;
-#var shifu_pos 篱笆小院;
+#var shifu_pos 长思馆;
 #var sleep_pos 950;
-#var shifu yue;
+#var shifu chang e;
 #var shortcut nil;
 
 #class sunxm close;

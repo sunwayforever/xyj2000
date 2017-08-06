@@ -645,7 +645,7 @@ walk_to east;
     };
     #class get_pillow close;
     
-    checkitem pillow;
+    checkitem huangliang zhen;
 };
 
 #alias {get_wan} {
@@ -717,5 +717,19 @@ walk_to east;
     gt 潜能银行;
     on_there {
         deposit ${qn};
+    };
+};
+
+#alias {qu_qn} {
+    gt 潜能银行;
+    on_there {
+        withdraw %1;
+    };
+};
+
+#alias {cun_qn} {
+    gt 潜能银行;
+    on_there {
+        deposit %1;
     };
 };
