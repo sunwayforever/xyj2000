@@ -116,7 +116,9 @@
     #class dz.inner close;
     show_to_quest ´ò×ø;
     do_dazuo;
-    wd.statr {dz.start};
+    wd.start {
+        dz.start;
+    };
 };
 
 #alias {dz.stop} {
@@ -190,7 +192,9 @@
     #class ms.inner close;
     show_to_quest Ú¤Ë¼;
     do_mingsi;
-    wd.start{ms.start};
+    wd.start{
+        ms.start;
+    };
 };
 
 #alias {ms.stop} {
@@ -224,7 +228,9 @@
         }
     };
     #class xiulian close;
-    wd.statr {xl.start};
+    wd.start {
+        xl.start;
+    };
     do_dazuo;
 };
 

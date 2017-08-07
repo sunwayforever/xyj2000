@@ -1,0 +1,20 @@
+#class watchdog open;
+#alias {wd.start} {
+    #alias wd_action #cr;
+    #alias wd_action %0;
+    #delay {wd_delay} {
+        wd_action;
+    } {300};
+};
+
+#alias {wd.stop} {
+    #alias wd_action #cr;
+    #undelay {wd_delay};
+};
+
+#alias {wd.kick} {
+    #delay {wd_delay} {
+        wd_action;
+    } {300};
+};
+#class watchdog close;

@@ -2,20 +2,6 @@
 #alias * chat*;
 #alias r reply;
 
-#alias {load} {
-    #var v %1;
-    #if {"${v}" == "spec"} {
-        #read plugin/spec/${char_menpai}${dot}tin;
-    };
-    #else {
-        #read plugin/%1.tin;
-    };
-};
-
-#alias {unload} {
-    #class %1 kill;
-};
-
 #alias {lm} {
     map;
 };
@@ -262,10 +248,6 @@ walk_to west;
 walk_to east;
 };
 
-#alias {unbusy} {
-    on_unbusy {%1; on_unbusy {%2 ;on_unbusy {%3 ;on_unbusy {%4 ;on_unbusy {%5 ;on_unbusy {%6 ;on_unbusy {%7 ;on_unbusy {%8 ;on_unbusy {%9 ;on_unbusy {%10 ;on_unbusy {%11 ;on_unbusy {%12;};};};};};};};};};};};};
-};
-
 #alias {chain} {
     on_unbusy {%1 {on_unbusy {%2 {on_unbusy {%3 {on_unbusy {%4 {on_unbusy {%5 {on_unbusy {%6 {on_unbusy {%7 {on_unbusy {%8 {on_unbusy {%9 {on_unbusy {%10 {on_unbusy {%11 {on_unbusy {%12;};};};};};};};};};};};};};};};};};};};};};};};
 };
@@ -481,62 +463,6 @@ walk_to east;
     xmpp.notify %0;
 };
 
-#var busying 0;
-#list unbusy_list create {};
-#alias {do_unbusy} {
-    #list unbusy_list size busy_list_size;
-    #if {${busy_list_size} == 0} {
-        #var busy_action nil;
-    };
-    #else {
-        #list unbusy_list get ${busy_list_size} busy_action;
-        #list unbusy_list delete ${busy_list_size};
-    };
-    #if {"${busy_action}" != "nil"} {
-        #var busying 1;
-        on_unbusy_inner {
-            ${busy_action};
-            do_unbusy;
-        };
-    };
-    #else {
-        #var busying 0;
-    };
-};
-
-#alias {on_unbusy} {
-    #list unbusy_list add {%0};
-    #if {${busying} == 0} {
-        do_unbusy;
-    };
-};
-
-#gag {禁止练功};
-#gag {你最少要花 20 点「气」才能练功。};
-#alias {on_unbusy_inner} {
-    #alias tmp_unbusy #cr;
-    #alias tmp_unbusy %0;
-    #class unbusy.inner open;
-    #action {禁止练功} {
-        #class unbusy.inner kill;
-        #undelay {delay_unbusy};
-        tmp_unbusy;
-    };
-    #action {你最少要花 20 点「气」才能练功。} {
-        #class unbusy.inner kill;
-        #undelay {delay_unbusy};
-        tmp_unbusy;
-    } {1};
-    #ticker {checkbusy} {
-        dazuo 1;
-    } {0.5};
-    #class unbusy.inner close;
-    dazuo 1;
-};
-
-@mapcreate{menpai};
-@mapset{menpai;朝廷;chaoting};
-
 #alias {corpse} {
     get all from corpse;
 };
@@ -599,24 +525,6 @@ walk_to east;
     #send {hp};
 };
 
-#alias {wd.start} {
-    #alias wd %1;
-    #delay {wd_delay} {
-        wd;
-    } {300};
-};
-
-#alias {wd.stop} {
-    #alias wd #cr;
-    #undelay {wd_delay};
-};
-
-#alias {wd.kick} {
-    #delay {wd_delay} {
-        wd;
-    } {300};
-};
-
 #alias {save_qn} {
     #class save_qn open;
     #action {你储存%*点潜能！} {
@@ -647,3 +555,101 @@ walk_to east;
         deposit %1;
     };
 };
+
+#alias {check_gongfu} {
+    #list skills create {force;spells;cuff;strike;staff;sword;parry;blade;spear;dodge;hammer};
+    #list skills size skill_size;
+    #list special_skills create {};
+    #list special_skills_level create {};
+    #list level_a create {};
+    #list level_b create {};
+    #list level_a clear;
+    #list level_b clear;
+    #class check_gongfu open;
+    #loop 1 $skill_size tmp {#list level_b add 0;#list level_a add 0};
+    #var skill_index 1;
+    #list skills get $skill_index skill;
+
+    #action {  %S (%*)%s： %S%s有效等级：} {
+        #var basic_skill_en %%2;
+        #var special_skill_zh %%4;
+        #list special_skills find ${special_skill_zh} tmp;
+        #if {${tmp} != 0} {
+            #list special_skills_level get ${tmp} tmp_level;
+            record_level_b ${basic_skill_en} ${tmp_level};
+            #if {"${basic_skill_en}" == "force"} {
+                #math limit_nl_b ${tmp_level}*10;
+            };
+            #if {"${basic_skill_en}" == "spells"} {
+                #math limit_fl_b ${tmp_level}*10;
+            };
+        };
+    } {2};
+
+    #action {┃  %S (%S)%s- %S%s%d/} {
+        #var basic_skill_zh %%1;
+        #var basic_skill_en %%2;
+        #var basic_skill_level %%6;
+        record_level_a  ${basic_skill_en} ${basic_skill_level};
+        #if {"${basic_skill_en}" == "force"} {
+            #math limit_nl_a ${basic_skill_level}*5;
+        };
+        #if {"${basic_skill_en}" == "spells"} {
+            #math limit_fl_a ${basic_skill_level}*5;
+        };
+    } {3};
+
+    #action {┃□%S (%S)%s - %S%s%d/} {
+        #var special_skill_zh %%1;
+        #var special_skill_en %%2;
+        #var special_skill_level %%6;
+        #list special_skills add ${special_skill_zh};
+        #list special_skills_level add ${special_skill_level};
+    } {2};
+
+    #alias {get_level_a} {
+        #var skill_level_a 0;
+        #list skills find %%1 tmp_index;
+        #if {$tmp_index != 0} {
+            #list level_a get $tmp_index tmp;
+            #var skill_level_a $tmp;
+        };
+    };
+
+    #alias {get_level_b} {
+        #var skill_level_b 0;
+        #list skills find %%1 tmp_index;
+        #if {$tmp_index != 0} {
+            #list level_b get $tmp_index tmp;
+            #var skill_level_b $tmp;
+        };
+    };
+
+    #alias {record_level_a} {
+        #list skills find %%1 tmp_index;
+        #if {$tmp_index != 0} {
+            #list level_a set $tmp_index %%2;
+        };
+    };
+
+    #alias {record_level_b} {
+        #list skills find %%1 tmp_index;
+        #if {$tmp_index != 0} {
+            #list level_b set $tmp_index %%2;
+        };
+    };
+
+    #action {你歪头想了会，说道：好吧！} {
+        #math limit_nl ${limit_nl_a}+${limit_nl_b};
+        #math limit_fl ${limit_fl_a}+${limit_fl_b};
+        #class check_gongfu kill;
+    };
+    #class check_gongfu close;
+    #send {skills};
+    #send {jifa};
+    #send {ok};
+};
+
+#alias {yun} {exert};
+#alias {cun} {deposit};
+#alias {qu} {withdraw};

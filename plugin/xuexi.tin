@@ -4,8 +4,8 @@
     show_to_quest ѧϰ: ${xue_jineng};
     xue.setup;
     restart_xue;
-    wd.start{
-        xue.start ${xue_jineng}
+    wd.start {
+        xue.start ${xue_jineng};
     };
 };
 

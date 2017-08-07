@@ -212,4 +212,19 @@
     #var max_random %1;
     #math result 1d${max_random};
 };
+
+#alias {load} {
+    #var v %1;
+    #if {"${v}" == "spec"} {
+        #read plugin/spec/${char_menpai}${dot}tin;
+    };
+    #else {
+        #read plugin/%1.tin;
+    };
+};
+
+#alias {unload} {
+    #class %1 kill;
+};
+
 #class util close

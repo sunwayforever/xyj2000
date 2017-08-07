@@ -1,7 +1,7 @@
 #class sunxm open;
-#var shifu_pos ³¤Ë¼¹Ý;
+#var shifu_pos ÎÔÔÆÐù;
 #var sleep_pos 950;
-#var shifu chang e;
+#var shifu xi;
 #var shortcut nil;
 
 #class sunxm close;

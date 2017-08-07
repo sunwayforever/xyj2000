@@ -1,0 +1,54 @@
+#class busy open;
+#var busying 0;
+#list unbusy_list create {};
+#alias {do_unbusy} {
+    #list unbusy_list size busy_list_size;
+    #if {${busy_list_size} == 0} {
+        #var busy_action nil;
+    };
+    #else {
+        #list unbusy_list get ${busy_list_size} busy_action;
+        #list unbusy_list delete ${busy_list_size};
+    };
+    #if {"${busy_action}" != "nil"} {
+        #var busying 1;
+        on_unbusy_inner {
+            ${busy_action};
+            do_unbusy;
+        };
+    };
+    #else {
+        #var busying 0;
+    };
+};
+
+#alias {on_unbusy} {
+    #list unbusy_list add {%0};
+    #if {${busying} == 0} {
+        do_unbusy;
+    };
+};
+
+#gag {禁止练功};
+#gag {你最少要花 20 点「气」才能练功。};
+#alias {on_unbusy_inner} {
+    #alias tmp_unbusy #cr;
+    #alias tmp_unbusy %0;
+    #class unbusy.inner open;
+    #action {禁止练功} {
+        #class unbusy.inner kill;
+        #undelay {delay_unbusy};
+        tmp_unbusy;
+    };
+    #action {你最少要花 20 点「气」才能练功。} {
+        #class unbusy.inner kill;
+        #undelay {delay_unbusy};
+        tmp_unbusy;
+    } {1};
+    #ticker {checkbusy} {
+        dazuo 1;
+    } {0.5};
+    #class unbusy.inner close;
+    dazuo 1;
+};
+#class busy close;
