@@ -232,6 +232,7 @@
         xl.start;
     };
     do_dazuo;
+    show_to_quest ÐÞÁ¶;
 };
 
 #alias {xl.stop} {
@@ -239,5 +240,6 @@
     wd.stop;
     cancel_mingsi;
     cancel_dazuo;
+    show_to_quest ÐÞÁ¶½áÊø;
 };
 #class xiulian close

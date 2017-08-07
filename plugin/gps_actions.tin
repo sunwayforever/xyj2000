@@ -1,6 +1,9 @@
 #class gps_actions open;
 
-#var sleep_pos 264;
+#if {"${sleep_pos}z" == "z"} {
+    #var sleep_pos 264;
+}
+
 #alias gps.clear gps.force_clear;
 
 #alias {gps.force_clear} {
