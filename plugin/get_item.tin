@@ -106,4 +106,29 @@
         buy wan from boss;
     };
 };
+
+#alias {get_gift} {
+    #alias gift_action #cr;
+    #alias gift_action %1;
+    #class gift.inner open;
+    #action {ITEM_FOUND} {
+        #class gift.inner kill;
+        #showme GOT_GIFT;
+        gift_action;
+    };
+    #action {ITEM_NOT_FOUND} {
+        gt 礼品店;
+        on_there {
+            buy newbie gift from boss;
+        }
+    };
+    #action {你向二手货商买下一个新手宝贝。} {
+        #class gift.inner kill;
+        #showme GOT_GIFT;
+        gift_action;
+    };
+    #class gift.inner close;
+
+    checkitem {newbie gift};
+};
 #class get_item close;

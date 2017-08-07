@@ -45,7 +45,7 @@
 #alias {do_dazuo} {
     #alias dazuo_action #cr;
     #alias dazuo_action %1;
-    #if {${limit_nl} < ${max_nl} + 50} {
+    #if {${limit_nl} < ${max_nl} + 5} {
         #delay {1} {
             #showme DAZUO_DONE;            
             dazuo_action;
@@ -104,7 +104,7 @@
     #class dz.inner open;
     #action {DAZUO_DONE} {
         wd.kick;
-        #if {${limit_nl} < ${max_nl} + 50} {
+        #if {${limit_nl} < ${max_nl} + 5} {
             dz.stop;
             #return;
         };
@@ -132,8 +132,9 @@
     stop_ms;
     #class mingsi kill;
 };
+
 #alias {do_mingsi} {
-    #if {${limit_fl} < ${max_fl} + 50} {
+    #if {${limit_fl} < ${max_fl} + 5} {
         #delay {1} {
             #showme MINGSI_DONE;            
         };
@@ -181,7 +182,7 @@
     #class ms.inner open;
     #action {MINGSI_DONE} {
         wd.kick;
-        #if {${limit_fl} < ${max_fl} + 50} {
+        #if {${limit_fl} < ${max_fl} + 5} {
             ms.stop;
             #return;
         };
@@ -205,7 +206,7 @@
 };
 
 #alias {xl.start} {
-    #class xiulian open;
+    #class xiulian.inner open;
     #action {DAZUO_DONE} {
         wd.kick;
         do_mingsi;
@@ -213,10 +214,10 @@
 
     #action {MINGSI_DONE} {
         wd.kick;
-        #if {${limit_fl} < ${max_fl} + 50} {
+        #if {${limit_fl} < ${max_fl} + 5} {
             xl.stop;
         };
-        #if {${limit_nl} < ${max_nl} + 50} {
+        #if {${limit_nl} < ${max_nl} + 5} {
             on_sleep {
                 do_mingsi;
             };  
@@ -227,7 +228,7 @@
             };
         }
     };
-    #class xiulian close;
+    #class xiulian.inner close;
     wd.start {
         xl.start;
     };
@@ -236,7 +237,7 @@
 };
 
 #alias {xl.stop} {
-    #class xiulian kill;
+    #class xiulian.inner kill;
     wd.stop;
     cancel_mingsi;
     cancel_dazuo;
