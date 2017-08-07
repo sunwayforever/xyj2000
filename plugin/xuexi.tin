@@ -3,15 +3,12 @@
     #var xue_jineng %1;
     show_to_quest 学习: ${xue_jineng};
     xue.setup;
-    gt ${shifu_pos};
-    on_there {
-        start_xue;
-    };
+    restart_xue;
 };
 
 #alias {xue.stop} {
     show_to_quest 学习完成;
-    stop_xue;
+    #unticker {xue};
     cancel_dazuo;
     #class xue.inner kill;
 };
@@ -34,20 +31,17 @@
             do_xue;  
         } {1};
     };
-    #alias {stop_xue} {
-        #unticker {xue};
+
+    #alias {restart_xue} {
+        gt ${shifu_pos};
+        on_there {
+            start_xue;
+        };  
     };
-    #action {DAZUO_DONE} {
-        on_sleep {
-            gt ${shifu_pos};
-            on_there {
-                start_xue;
-            };
-        };
-    };
+    
     #action {你今天太累了，结果什么也没有学到。} {
-        stop_xue;
-        do_dazuo;
+        #unticker {xue};
+        chain chifan do_dazuo on_sleep restart_xue;
     };
     #class xue.inner close;
 };

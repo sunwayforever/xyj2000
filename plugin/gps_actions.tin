@@ -1,6 +1,8 @@
 #class gps_actions open;
 
+#var sleep_pos 264;
 #alias gps.clear gps.force_clear;
+
 #alias {gps.force_clear} {
     clear %0;
     on_cleared {

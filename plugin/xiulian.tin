@@ -43,9 +43,12 @@
 };
 
 #alias {do_dazuo} {
+    #alias dazuo_action #cr;
+    #alias dazuo_action %1;
     #if {${limit_nl} < ${max_nl} + 50} {
         #delay {1} {
             #showme DAZUO_DONE;            
+            dazuo_action;
         };
 
         #return;
@@ -66,6 +69,7 @@
         stop_dz;
         #class dazuo kill;
         #showme DAZUO_DONE;
+        dazuo_action;
     };
 
     #alias {stop_dz} {
@@ -77,12 +81,6 @@
         on_there {
             start_dazuo;
         };
-    };
-
-    #action {似乎内力修为已经遇到了瓶颈。} {
-        stop_dz;
-        #class dazuo kill;
-        #shomwe DAZUO_FAIL;
     };
     
     #action {你的内力增强} {

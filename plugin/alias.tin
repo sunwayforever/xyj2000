@@ -181,8 +181,8 @@
 };
 
 #alias {on_sleep} {
-    #alias tmp_wakeup #cr;
-    #alias tmp_wakeup %0;
+    #alias sleep_action #cr;
+    #alias sleep_action %0;
     #class on_wakeup.inner open;
     #action {翻来覆去无法入眠!} {
         #delay {sleep} {
@@ -197,13 +197,13 @@
     #action {你一觉醒来} {
         #class on_wakeup.inner kill;
         #delay {wakeup} {
-            tmp_wakeup;
+            sleep_action;
         } {3};
     };
     #action {荡悠悠三更梦 -} {
         #class on_wakeup.inner kill;
         #delay {wakeup} {
-            tmp_wakeup;
+            sleep_action;
         } {3};
     };
     #class on_wakeup.inner close;
@@ -660,6 +660,8 @@ walk_to east;
 };
 
 #alias {chifan} {
+    #alias chifan_action #cr;
+    #alias chifan_action %1;
     #class chifan open;
     #action {你身上没有这样东西。} {
         get_wan;
@@ -670,6 +672,7 @@ walk_to east;
     #action {你捏起一颗小小的辟谷丸往舌下一放。} {
         #class chifan kill;
         #showme CHIFAN_DONE;
+        chifan_action;
     };
     #action {STATUS_UPDATED} {
         #unaction {STATUS_UPDATED};
@@ -679,6 +682,7 @@ walk_to east;
         #else {
             #class chifan kill;
             #showme CHIFAN_DONE;
+            chifan_action;
         };
     };
     #class chifan close;

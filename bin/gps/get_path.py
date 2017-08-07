@@ -217,8 +217,6 @@ def get_path(from_room, to_room, weights):
     if to_room == -1:
         return []
 
-    global char_id
-
     conn = open_database()
     from_zone = get_zone(conn,from_room)
     to_zone = get_zone(conn,to_room)
@@ -228,12 +226,10 @@ def get_path(from_room, to_room, weights):
     return mud.get_path(from_room, to_room)
 
 if __name__ == "__main__":
-    global char_id
 
     from_room = int(sys.argv[1])
     to_room = int(sys.argv[2])
     weights = sys.argv[3]
-    char_id = sys.argv[4]
 
     paths = get_path(from_room,to_room,weights)
 
