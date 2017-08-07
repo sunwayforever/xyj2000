@@ -3,27 +3,8 @@
 #CONFIG {COMMAND ECHO} {ON};
 #debug action off
 #debug variable off
-
 #read pathdir.tin
 
-#read plugin/util.tin
-#read plugin/action.tin
-#read plugin/alias.tin
-
-#read plugin/login.tin
-#read plugin/show.tin
-#read plugin/status.tin
-#read plugin/gag.tin
-#read plugin/gps.tin
+#var dot .;
+#var percent %%;
 #read char/${char}${dot}tin
-#read plugin/chat.tin
-#read plugin/baofu.tin
-#read plugin/xuexi.tin
-#read plugin/xiulian.tin
-#read plugin/dushu.tin
-#read plugin/war.tin
-
-#read plugin/xmpp.tin
-
-#read plugin/ytg.tin
-#read plugin/picker.tin

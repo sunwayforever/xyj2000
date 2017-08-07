@@ -213,7 +213,6 @@
     };
 };
 
-#var dot .;
 #alias {log.save} {
     #system {cp debug${dot}${char_id}${dot}log ${char_id}${dot}log};
 };
@@ -569,95 +568,6 @@ walk_to east;
     tmp_walk_to;
 }
 
-#alias get_bishuizhou {
-    #class bishuizhou open;
-    #action {ITEM_NOT_FOUND} {
-        gt 南城客栈;
-        on_there {
-            buy jiudai from er;
-        };
-    };
-
-    #action {ITEM_FOUND} {
-        #class bishuizhou kill;
-        #showme GOT_BISHUIZHOU;
-    };
-
-    #action {你撕开无字天书的背页，从里面小心翼翼地取出一张小纸片。} {
-        #class bishuizhou kill;
-        #showme GOT_BISHUIZHOU;
-    };
-    #action {你向店小二买下一个桂花酒袋} {
-        gt 袁氏草堂;
-        on_there {
-            give jiudai to yuan;
-            #delay {1} {
-                tear book;
-            };
-        };
-    };
-    #class bishuizhou close;
-    checkitem {bishui zhou};
-};
-
-#alias {get_book} {
-    #class bishuizhou open;
-    #action {ITEM_NOT_FOUND} {
-        gt 南城客栈;
-        on_there {
-            buy jiudai from er;
-        };
-    };
-
-    #action {ITEM_FOUND} {
-        #class bishuizhou kill;
-        #showme GOT_BOOK;
-    };
-
-    #action {你向店小二买下一个桂花酒袋} {
-        gt 袁氏草堂;
-        on_there {
-            give jiudai to yuan;
-            #showme GOT_BOOK;
-        };
-    };
-    #class bishuizhou close;
-    checkitem {book};    
-};
-
-#alias get_pillow {
-    #class get_pillow open;
-    #alias {got_pillow} {
-        #class get_pillow kill;
-        #showme GOT_PILLOW;        
-    };
-    #action {ITEM_NOT_FOUND} {
-        gt 南城客栈;
-        on_there {
-            buy pillow from er;
-        };
-    };
-    #action {ITEM_FOUND} {
-        got_pillow;
-    };
-    #action {你向店小二买下一只黄粱枕。} {
-        got_pillow;
-    };
-    #class get_pillow close;
-    
-    checkitem huangliang zhen;
-};
-
-#alias {get_wan} {
-    gt 回春药铺;
-    #action {你向杨中顺买下%*辟谷丸。} {
-        #unaction {你向杨中顺买下%*辟谷丸。};
-        #showme GOT_WAN;
-    };
-    on_there {
-        buy wan from boss;
-    };
-};
 
 #alias {chifan} {
     #alias chifan_action #cr;

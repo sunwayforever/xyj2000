@@ -1,0 +1,39 @@
+#!/bin/bash
+restart=1
+if [[ $# != 2 ]]; then
+   echo "useage ./xyj <id> <pass>"
+   exit 1
+fi
+char=$1
+pass=$2
+
+MY_PATH="`dirname \"$0\"`"
+cd $MY_PATH
+
+restart() {
+    restart=1
+}
+
+remove_tmp() {
+    sleep 5;
+    rm /tmp/xyj_${char}.tin
+}
+# erq, sunxm, milli, salonbus
+login() {
+    echo "#var pid $$;" > /tmp/xyj_${char}.tin
+    echo "#var char $char;" >> /tmp/xyj_${char}.tin
+    echo "#read main.tin;" >> /tmp/xyj_${char}.tin
+    for i in plugin/*.tin; do
+        echo "#read $i;" >> /tmp/xyj_${char}.tin
+    done
+    echo "#delay {1} {#session mud xyj.thu.cn 6666;gb;no;$char;$pass;y};" >> /tmp/xyj_${char}.tin
+    LANG="zh_CN.GBK" tt++ -G /tmp/xyj_${char}.tin
+}
+
+trap "restart" 30
+
+while [[ ${restart} -eq 1 ]]; do
+    restart=0
+    login
+    sleep 5
+done

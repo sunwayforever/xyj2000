@@ -2,7 +2,6 @@
 
 #var health_info nil;
 #var exp_info  nil;
-#var percent %%;
 #alias {update_status} {
     #var status_content ${char_name}: 道行: ${dh}年 潜能: ${qn} 武学: ${wx} 杀气: ${sq} 冥思: @eval{(${max_fl}*100+100)/(${limit_nl}+1)}${percent} 打坐: @eval{(${max_nl}*100+100)/(${limit_nl}+1)}${percent};
     show_to_status ${status_content};
