@@ -288,15 +288,14 @@
         };
     };
 
-    #action {CHECK_GONGFU_DONE} {
+    #action {你歪头想了会，说道：好吧！} {
         #math limit_nl ${limit_nl_a}+${limit_nl_b};
         #math limit_fl ${limit_fl_a}+${limit_fl_b};
+        #class check_gongfu kill;
     };
     #class check_gongfu close;
     #send {skills};
     #send {jifa};
-    #delay {2} {
-        #showme {CHECK_GONGFU_DONE};        
-    };
+    #send {ok};
 };
 #class war close;

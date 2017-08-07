@@ -103,6 +103,7 @@
 #alias {dz.start} {
     #class dz.inner open;
     #action {DAZUO_DONE} {
+        wd.kick;
         #if {${limit_nl} < ${max_nl} + 50} {
             dz.stop;
             #return;
@@ -115,12 +116,14 @@
     #class dz.inner close;
     show_to_quest 打坐;
     do_dazuo;
+    wd.statr {dz.start};
 };
 
 #alias {dz.stop} {
     cancel_dazuo;
     #class dz.inner kill;
     show_to_quest 打坐完毕;
+    wd.stop;
 };
 
 #alias {cancel_mingsi} {
@@ -175,6 +178,7 @@
 #alias {ms.start} {
     #class ms.inner open;
     #action {MINGSI_DONE} {
+        wd.kick;
         #if {${limit_fl} < ${max_fl} + 50} {
             ms.stop;
             #return;
@@ -186,9 +190,11 @@
     #class ms.inner close;
     show_to_quest 冥思;
     do_mingsi;
+    wd.start{ms.start};
 };
 
 #alias {ms.stop} {
+    wd.stop;
     cancel_mingsi;
     #class ms.inner kill;
     show_to_quest 冥思完毕;
@@ -197,10 +203,12 @@
 #alias {xl.start} {
     #class xiulian open;
     #action {DAZUO_DONE} {
+        wd.kick;
         do_mingsi;
     };
 
     #action {MINGSI_DONE} {
+        wd.kick;
         #if {${limit_fl} < ${max_fl} + 50} {
             xl.stop;
         };
@@ -216,11 +224,13 @@
         }
     };
     #class xiulian close;
+    wd.statr {xl.start};
     do_dazuo;
 };
 
 #alias {xl.stop} {
     #class xiulian kill;
+    wd.stop;
     cancel_mingsi;
     cancel_dazuo;
 };

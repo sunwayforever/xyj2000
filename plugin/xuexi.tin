@@ -4,6 +4,9 @@
     show_to_quest 学习: ${xue_jineng};
     xue.setup;
     restart_xue;
+    wd.start{
+        xue.start ${xue_jineng}
+    };
 };
 
 #alias {xue.stop} {
@@ -11,6 +14,7 @@
     #unticker {xue};
     cancel_dazuo;
     #class xue.inner kill;
+    wd.stop;
 };
 
 #alias {xue.setup} {
@@ -21,6 +25,9 @@
     #action {你的潜能不足！} {
         show_to_quest 潜能不足;
         xue.stop;
+    };
+    #action {似乎有些心得。} {
+        wd.kick;
     };
     #action {你的法术修为还不够高深，无法学习} {
         show_to_quest spells 等级不够;
@@ -40,8 +47,11 @@
     };
     
     #action {你今天太累了，结果什么也没有学到。} {
+        wd.kick;
         #unticker {xue};
-        chain chifan do_dazuo on_sleep restart_xue;
+        #delay {1} {
+            chain chifan do_dazuo on_sleep restart_xue;            
+        };
     };
     #class xue.inner close;
 };

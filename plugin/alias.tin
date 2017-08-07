@@ -603,7 +603,7 @@ walk_to east;
     #alias wd %1;
     #delay {wd_delay} {
         wd;
-    } {60};
+    } {300};
 };
 
 #alias {wd.stop} {
