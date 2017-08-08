@@ -1,194 +1,194 @@
-MUD»ù±¾ÃüÁîÈëÃÅ 
-Íæ¼ÒÃüÁî]
-help(°ïÖú) quit(ÍË³ö) passwd(ÐÞ¸ÄÃÜÂë)
-save(±£´æ) nick(È¡êÇ³Æ) score(²é¿´ÊôÐÔ)
-hp(²é¿´×´Ì¬) id(²é¿´ÎïÆ·Ó¢ÎÄÃû) inventory(i)(¿´ÉíÉÏµÄ¶«Î÷)
-set(ÉèÖÃ»·¾³±äÁ¿) unset(È¡Ïû»·¾³±äÁ¿) time(µ±Ç°Ê±¼ä)
- f0uptime(ÓÎÏ·Ö´ÐÐÊ±¼ä) version(ÓÎÏ·°æ±¾ºÅ) wimpy(ÌÓÅÜÏµÊý)
-alias(¼ò»¯ÃüÁî) suicide(×ÔÉ±) semote(²é±íÇé¶¯´Ê)
-wizlist(²é¿´Î×Ê¦Ãûµ¥) sleep(Ë¯¾õ) title(×Ô¼ºµÄÃûºÅ) TOP(²é¿´ÔÚÏßÊ®´ó¸ßÊÖ)
-[Õ½¶·ÓÃÖ¸Áî]
-fight(ÇÐ´è) kill(É±) hit(¹¥»÷)
-persuade(È°¼Ü) ansuan(°µËã) touxi(ÍµÏ®)
-surrender(Í¶½µ)
-[¹µÍ¨ÓÃÖ¸Áî]
-ask(ÎÊ) chat(ÏÐÁÄ) finger(²éÑ¯)
-tell(¸æËß) reply(»Ø´ð) say(Ëµ)
-tune(¹Ø±Õ½»Ì¸ÆµµÀ) whisper(¶úÓï) who(²éÔÚÏßÍæ¼Ò)
-follow(¸úËæ) vote(¼ì¾Ù) emote(±íÇé)
-ct(·òÆÞ¶Ô»°) describe(Éè¶¨ÃèÊö) chfn(ÐÞ¸Äemail addr×ÔÎÒ½éÉÜ¼°Ç©Ãû)
-[Îä¹¦]
-learn(Ñ§Îä¹¦) skills(²é¿´¼¼ÄÜ) abandon(·ÅÆúÄ³ÑùÎä¹¦)
-enforce(ÓÃÄÚÁ¦) exercise(Á·ÄÚÁ¦) exert(ÔËÓÃÄÚ¹¦)
-respitate(Á··¨Á¦) enable(¼¤»îÌØÊâ¼¼ÄÜ) conjure(Ê¹ÓÃÉñÍ¨)
-practice(Á·Îä¹¦) perform(Ê¹ÓÃÍâ¹¦) check(´òÌý±ðÈËµÄÎä¹¦) 
-wear(´©×Å) remove(ÍÑ) wield(×°±¸ÎäÆ÷)
-unwield(·ÅÏÂÎäÆ÷) study(¶ÁÊé) teach(½Ì)
-[ÃÅÅÉ]
-apprentice|bai(°ÝÊ¦) expell(¿ª³ý) recruit(ÊÕÍ½)
-[¶ÔÌØ¶¨¶ÔÏóÊ¹ÓÃµÄÖ¸Áî]
-open(´ò¿ª) close(¹Ø±Õ) get(¼ðÆð)
-give(¸ø) drop(¶ªÆú) look(¿´)
-follow(¸úËæ) tear(Ëº²¼Ìõ) bandage(°üÔú)
-eat(³Ô) drink(ºÈ) fill(×°Ë®)
-buy(Âò) sell(Âô) list(¿´ÉÌÆ·ÁÐ±í)
-beg(ÆòÌÖ) steal(Íµ)
-MUD»ù±¾ÃüÁîÈëÃÅ
-Ò»¡¢Ì½ÏÕÓÃÖ¸Áî
+MUDåŸºæœ¬å‘½ä»¤å…¥é—¨ 
+çŽ©å®¶å‘½ä»¤]
+help(å¸®åŠ©) quit(é€€å‡º) passwd(ä¿®æ”¹å¯†ç )
+save(ä¿å­˜) nick(å–æ˜µç§°) score(æŸ¥çœ‹å±žæ€§)
+hp(æŸ¥çœ‹çŠ¶æ€) id(æŸ¥çœ‹ç‰©å“è‹±æ–‡å) inventory(i)(çœ‹èº«ä¸Šçš„ä¸œè¥¿)
+set(è®¾ç½®çŽ¯å¢ƒå˜é‡) unset(å–æ¶ˆçŽ¯å¢ƒå˜é‡) time(å½“å‰æ—¶é—´)
+ f0uptime(æ¸¸æˆæ‰§è¡Œæ—¶é—´) version(æ¸¸æˆç‰ˆæœ¬å·) wimpy(é€ƒè·‘ç³»æ•°)
+alias(ç®€åŒ–å‘½ä»¤) suicide(è‡ªæ€) semote(æŸ¥è¡¨æƒ…åŠ¨è¯)
+wizlist(æŸ¥çœ‹å·«å¸ˆåå•) sleep(ç¡è§‰) title(è‡ªå·±çš„åå·) TOP(æŸ¥çœ‹åœ¨çº¿åå¤§é«˜æ‰‹)
+[æˆ˜æ–—ç”¨æŒ‡ä»¤]
+fight(åˆ‡ç£‹) kill(æ€) hit(æ”»å‡»)
+persuade(åŠæž¶) ansuan(æš—ç®—) touxi(å·è¢­)
+surrender(æŠ•é™)
+[æ²Ÿé€šç”¨æŒ‡ä»¤]
+ask(é—®) chat(é—²èŠ) finger(æŸ¥è¯¢)
+tell(å‘Šè¯‰) reply(å›žç­”) say(è¯´)
+tune(å…³é—­äº¤è°ˆé¢‘é“) whisper(è€³è¯­) who(æŸ¥åœ¨çº¿çŽ©å®¶)
+follow(è·Ÿéš) vote(æ£€ä¸¾) emote(è¡¨æƒ…)
+ct(å¤«å¦»å¯¹è¯) describe(è®¾å®šæè¿°) chfn(ä¿®æ”¹email addrè‡ªæˆ‘ä»‹ç»åŠç­¾å)
+[æ­¦åŠŸ]
+learn(å­¦æ­¦åŠŸ) skills(æŸ¥çœ‹æŠ€èƒ½) abandon(æ”¾å¼ƒæŸæ ·æ­¦åŠŸ)
+enforce(ç”¨å†…åŠ›) exercise(ç»ƒå†…åŠ›) exert(è¿ç”¨å†…åŠŸ)
+respitate(ç»ƒæ³•åŠ›) enable(æ¿€æ´»ç‰¹æ®ŠæŠ€èƒ½) conjure(ä½¿ç”¨ç¥žé€š)
+practice(ç»ƒæ­¦åŠŸ) perform(ä½¿ç”¨å¤–åŠŸ) check(æ‰“å¬åˆ«äººçš„æ­¦åŠŸ) 
+wear(ç©¿ç€) remove(è„±) wield(è£…å¤‡æ­¦å™¨)
+unwield(æ”¾ä¸‹æ­¦å™¨) study(è¯»ä¹¦) teach(æ•™)
+[é—¨æ´¾]
+apprentice|bai(æ‹œå¸ˆ) expell(å¼€é™¤) recruit(æ”¶å¾’)
+[å¯¹ç‰¹å®šå¯¹è±¡ä½¿ç”¨çš„æŒ‡ä»¤]
+open(æ‰“å¼€) close(å…³é—­) get(æ‹£èµ·)
+give(ç»™) drop(ä¸¢å¼ƒ) look(çœ‹)
+follow(è·Ÿéš) tear(æ’•å¸ƒæ¡) bandage(åŒ…æ‰Ž)
+eat(åƒ) drink(å–) fill(è£…æ°´)
+buy(ä¹°) sell(å–) list(çœ‹å•†å“åˆ—è¡¨)
+beg(ä¹žè®¨) steal(å·)
+MUDåŸºæœ¬å‘½ä»¤å…¥é—¨
+ä¸€ã€æŽ¢é™©ç”¨æŒ‡ä»¤
 buy 
-buy from ¿ÉÒÔ´ÓÄ³Ð©ÈËÉíÉÏÂòµ½ÎïÆ·?
+buy from å¯ä»¥ä»ŽæŸäº›äººèº«ä¸Šä¹°åˆ°ç‰©å“?
 close 
-close »ò <·½Ïò> ÈÃÄã¹ØÉÏÃÅ.
+close æˆ– <æ–¹å‘> è®©ä½ å…³ä¸Šé—¨.
 drop 
-drop <ÎïÆ·Ãû³Æ> ¶ªÏÂÄãËùÐ¯´øµÄÎïÆ·.
+drop <ç‰©å“åç§°> ä¸¢ä¸‹ä½ æ‰€æºå¸¦çš„ç‰©å“.
 get 
-get <ÎïÆ·Ãû³Æ> [from <ÈÝÆ÷Ãû>] ¼ñÆðµØÉÏ»òÈÝÆ÷ÄÚµÄÄ³ÑùÎïÆ·.
+get <ç‰©å“åç§°> [from <å®¹å™¨å>] æ¡èµ·åœ°ä¸Šæˆ–å®¹å™¨å†…çš„æŸæ ·ç‰©å“.
 give 
-give <ÎïÆ·Ãû³Æ> to <Ä³ÈË> ½«Ä³ÑùÎïÆ·¸ø±ðÈË.
+give <ç‰©å“åç§°> to <æŸäºº> å°†æŸæ ·ç‰©å“ç»™åˆ«äºº.
 go 
-go <·½Ïò> ÍùÖ¸¶¨µÄ·½ÏòÒÆ¶¯¡£
+go <æ–¹å‘> å¾€æŒ‡å®šçš„æ–¹å‘ç§»åŠ¨ã€‚
  
-id ËùÐ¯´øÎïÆ·µÄÃû³Æ. 'id here' ÔòÏÔÊ¾ËùÓÐ¸úÄãÔÚÍ¬Ò»¸ö»·¾³ÀïµÄÎï¼þÃû³Æ.
-inventory ¿ÉÁÐ³öÄãÄ¿Ç°ÉíÉÏËùÐ¯´øµÄËùÓÐÎïÆ·¡£¿ÉÒÔ " i " ´úÌæ¡£
+id æ‰€æºå¸¦ç‰©å“çš„åç§°. 'id here' åˆ™æ˜¾ç¤ºæ‰€æœ‰è·Ÿä½ åœ¨åŒä¸€ä¸ªçŽ¯å¢ƒé‡Œçš„ç‰©ä»¶åç§°.
+inventory å¯åˆ—å‡ºä½ ç›®å‰èº«ä¸Šæ‰€æºå¸¦çš„æ‰€æœ‰ç‰©å“ã€‚å¯ä»¥ " i " ä»£æ›¿ã€‚
 look 
-look <ÎïÆ·> <ÉúÎï> <·½Ïò> ²é¿´ÄãËùÔÚµÄ»·¾³¡¢Ä³¼þÎïÆ·¡¢»òÊÇ·½Ïò
+look <ç‰©å“> <ç”Ÿç‰©> <æ–¹å‘> æŸ¥çœ‹ä½ æ‰€åœ¨çš„çŽ¯å¢ƒã€æŸä»¶ç‰©å“ã€æˆ–æ˜¯æ–¹å‘
 open
- open »ò <·½Ïò> ¿ÉÒÔÈÃÄã´ò¿ªÃÅ.
+ open æˆ– <æ–¹å‘> å¯ä»¥è®©ä½ æ‰“å¼€é—¨.
 put 
-put <ÎïÆ·Ãû³Æ> in <Ä³ÈÝÆ÷> ½«Ä³ÑùÎïÆ··Å½øÒ»¸öÈÝÆ÷£¬
+put <ç‰©å“åç§°> in <æŸå®¹å™¨> å°†æŸæ ·ç‰©å“æ”¾è¿›ä¸€ä¸ªå®¹å™¨ï¼Œ
 skills 
-skills [<Ä³ÈË>] ÈÃÄã(¡õ)²éÑ¯ËùÑ§¹ýµÄ¼¼ÄÜ¡£
+skills [<æŸäºº>] è®©ä½ (â–¡)æŸ¥è¯¢æ‰€å­¦è¿‡çš„æŠ€èƒ½ã€‚
 score 
-score <¶ÔÏóÃû³Æ> ¿ÉÒÔÏÔÊ¾Äã»òÖ¸¶¨¶ÔÏó(º¬¹ÖÎï)µÄ»ù±¾×ÊÁÏ¡£
+score <å¯¹è±¡åç§°> å¯ä»¥æ˜¾ç¤ºä½ æˆ–æŒ‡å®šå¯¹è±¡(å«æ€ªç‰©)çš„åŸºæœ¬èµ„æ–™ã€‚
 follow 
-follow [<ÉúÎï>none] ¸úËæÄ³ÈË»òÉúÎï¡£ follow none ÔòÍ£Ö¹¸úËæ
+follow [<ç”Ÿç‰©>none] è·ŸéšæŸäººæˆ–ç”Ÿç‰©ã€‚ follow none åˆ™åœæ­¢è·Ÿéš
 beg 
-beg (Ä³Îï) from (Ä³ÈË) ÆòÌÖ(½öÏÞÆòØ¤)¡£
+beg (æŸç‰©) from (æŸäºº) ä¹žè®¨(ä»…é™ä¹žä¸)ã€‚
 check
- check (Ä³ÈË) ´òÌýÄ³ÈËËùÑ§¹ýµÄ¼¼ÄÜ(½öÏÞÆòØ¤)¡£
+ check (æŸäºº) æ‰“å¬æŸäººæ‰€å­¦è¿‡çš„æŠ€èƒ½(ä»…é™ä¹žä¸)ã€‚
 steal 
-steal (Ä³Îï) from (Ä³ÈË)¡£ ´Ó±ðÈËÉíÉÏÍµ¶«Î÷
+steal (æŸç‰©) from (æŸäºº)ã€‚ ä»Žåˆ«äººèº«ä¸Šå·ä¸œè¥¿
 halt 
-halt ÓÃÓÚÍ£Ö¹ÊÖÍ·ÕýÔÚ×öµÄÊÂÇé£¬
+halt ç”¨äºŽåœæ­¢æ‰‹å¤´æ­£åœ¨åšçš„äº‹æƒ…ï¼Œ
 sleep
-sleep Ë¯¾õ
+sleep ç¡è§‰
 -----------------------------------------------------------------------------------
-Õ½¶·ÓÃÖ¸Áî
+æˆ˜æ–—ç”¨æŒ‡ä»¤
 fight
-fight <ÈËÎï> ÏòÒ»¸öÈËÎï¡¸ÌÖ½Ì¡¹»òÕßÊÇ¡¸ÇÐ´èÎäÒÕ
+fight <äººç‰©> å‘ä¸€ä¸ªäººç‰©ã€Œè®¨æ•™ã€æˆ–è€…æ˜¯ã€Œåˆ‡ç£‹æ­¦è‰º
 kill
-kill <ÈËÎï> Ö÷¶¯¿ªÊ¼¹¥»÷Ò»¸öÈËÎï£¬²¢ÇÒÊÔÉ±ËÀ¶Ô·½
+kill <äººç‰©> ä¸»åŠ¨å¼€å§‹æ”»å‡»ä¸€ä¸ªäººç‰©ï¼Œå¹¶ä¸”è¯•æ€æ­»å¯¹æ–¹
 remove 
-remove all <ÎïÆ·Ãû³Æ> ÍÑµôÉíÉÏÄ³¼þ·À¾ß.
+remove all <ç‰©å“åç§°> è„±æŽ‰èº«ä¸ŠæŸä»¶é˜²å…·.
 unwield
-unwield <ÎïÆ·Ãû> ·ÅÏÂÊÖÖÐµÄÎäÆ÷
+unwield <ç‰©å“å> æ”¾ä¸‹æ‰‹ä¸­çš„æ­¦å™¨
 wear
- wear <×°±¸Ãû³Æ> ×°±¸Ä³¼þ·À¾ß¡£
+ wear <è£…å¤‡åç§°> è£…å¤‡æŸä»¶é˜²å…·ã€‚
 wield
- wield <×°±¸Ãû³Æ> ×°±¸Ä³¼þÎïÆ·×÷ÎäÆ÷
-wimpy set wimpy 60 Éè¶¨µ±ÆøÉÙÓÚ60%Ê±ÌÓÅÜ
-exert(yun) exert <¹¦ÄÜÃû³Æ> [<Ê©ÓÃ¶ÔÏó>] ÓÃÄÚÁ¦½øÐÐÒ»Ð©ÌØÒì¹¦ÄÜ
+ wield <è£…å¤‡åç§°> è£…å¤‡æŸä»¶ç‰©å“ä½œæ­¦å™¨
+wimpy set wimpy 60 è®¾å®šå½“æ°”å°‘äºŽ60%æ—¶é€ƒè·‘
+exert(yun) exert <åŠŸèƒ½åç§°> [<æ–½ç”¨å¯¹è±¡>] ç”¨å†…åŠ›è¿›è¡Œä¸€äº›ç‰¹å¼‚åŠŸèƒ½
 ----------------------------------------------------------------------------------
-¹µÍ¨ÓÃÖ¸Áî
+æ²Ÿé€šç”¨æŒ‡ä»¤
 ask
- ask about ÎÊ±ðÈË¹ØÓÚÊÂÇé
+ ask about é—®åˆ«äººå…³äºŽäº‹æƒ…
 finger
- finger [Ê¹ÓÃÕßÐÕÃû] ÏÔÊ¾³öÕýÔÚÏßÉÏÍæ¼ÒµÄÁ¬Ïß×ÊÁÏ.
+ finger [ä½¿ç”¨è€…å§“å] æ˜¾ç¤ºå‡ºæ­£åœ¨çº¿ä¸ŠçŽ©å®¶çš„è¿žçº¿èµ„æ–™.
 reply
- reply <Ñ¶Ï¢> ºÍ¸Õ²ÅÓÃ tell ºÍÄãËµ»°µÄÊ¹ÓÃÕßËµ»°¡£
+ reply <è®¯æ¯> å’Œåˆšæ‰ç”¨ tell å’Œä½ è¯´è¯çš„ä½¿ç”¨è€…è¯´è¯ã€‚
  
 say
- say <Ñ¶Ï¢> ËùÓÐ¸úÄãÔÚÍ¬Ò»¸ö·¿¼äµÄÈË¶¼»áÌýµ½ÄãËµµÄ»°¡£
-rumor Ò¥ÑÔ
-menpai Ê¹ÓÃÍ¬ÃÅ½»Ì¸ÆµµÀ
+ say <è®¯æ¯> æ‰€æœ‰è·Ÿä½ åœ¨åŒä¸€ä¸ªæˆ¿é—´çš„äººéƒ½ä¼šå¬åˆ°ä½ è¯´çš„è¯ã€‚
+rumor è°£è¨€
+menpai ä½¿ç”¨åŒé—¨äº¤è°ˆé¢‘é“
 semote
- semote Õâ¸öÖ¸Áî¿ÉÒÔÁÐ³öÄ¿Ç°ËùÄÜÊ¹ÓÃµÄemote.
+ semote è¿™ä¸ªæŒ‡ä»¤å¯ä»¥åˆ—å‡ºç›®å‰æ‰€èƒ½ä½¿ç”¨çš„emote.
 tell
- tell <Ä³ÈË> <Ñ¶Ï¢> ÓÃÕâ¸öÖ¸ÁîºÍÆäËûµØ·½µÄÊ¹ÓÃÕßËµ»°¡£
+ tell <æŸäºº> <è®¯æ¯> ç”¨è¿™ä¸ªæŒ‡ä»¤å’Œå…¶ä»–åœ°æ–¹çš„ä½¿ç”¨è€…è¯´è¯ã€‚
 tune
- tune[<ÆµµÀÃû³Æ>] Ñ¡ÔñÊÇ·ñÒªÊÕÌýÄ³Ò»ÆµµÀµÄÑ¶Ï¢
+ tune[<é¢‘é“åç§°>] é€‰æ‹©æ˜¯å¦è¦æ”¶å¬æŸä¸€é¢‘é“çš„è®¯æ¯
 whisper
- whisper <Ä³ÈË> <Ñ¶Ï¢> ºÍÍ¬Ò»·¿¼äÖÐµÄÈË¶úÓï£¬°üÀ¨ NPC ÔÚÄÚ
+ whisper <æŸäºº> <è®¯æ¯> å’ŒåŒä¸€æˆ¿é—´ä¸­çš„äººè€³è¯­ï¼ŒåŒ…æ‹¬ NPC åœ¨å†…
 who 
-who [-l -i -w] ÁÐ³öËùÓÐÔÚÏßÉÏµÄÍæ¼Ò¼°ÆäµÈ¼¶¡£
--l Ñ¡ÏîÁÐ³ö½Ï³¤µÄÑ¶Ï¢¡£ -i Ö»ÁÐ³öÍæ¼ÒµÄÓ¢ÎÄ´úºÅ¡£ -w Ö»ÁÐ³öÏßÉÏËùÓÐµÄÎ×Ê¦¡£
+who [-l -i -w] åˆ—å‡ºæ‰€æœ‰åœ¨çº¿ä¸Šçš„çŽ©å®¶åŠå…¶ç­‰çº§ã€‚
+-l é€‰é¡¹åˆ—å‡ºè¾ƒé•¿çš„è®¯æ¯ã€‚ -i åªåˆ—å‡ºçŽ©å®¶çš„è‹±æ–‡ä»£å·ã€‚ -w åªåˆ—å‡ºçº¿ä¸Šæ‰€æœ‰çš„å·«å¸ˆã€‚
 emote
- emote <¶¯×÷´Ê> ÈÃÄã±í´ïÒ»¸öÏµÍ³Ã»ÓÐÔ¤ÉèµÄ¶¯×÷´Ê
+ emote <åŠ¨ä½œè¯> è®©ä½ è¡¨è¾¾ä¸€ä¸ªç³»ç»Ÿæ²¡æœ‰é¢„è®¾çš„åŠ¨ä½œè¯
 ----------------------------------------------------------------------------
-Îä¹¦Ö¸Áî
+æ­¦åŠŸæŒ‡ä»¤
 enable(jifa) 
-enable [<¼¼ÄÜÖÖÀà> <¼¼ÄÜÃû³Æ> none] Ö¸¶¨ËùÒªÓÃµÄ¼¼ÄÜ£¬ÐèÖ¸Ã÷¼¼ÄÜÖÖÀàºÍ¼¼ÄÜÃû³Æ¡£
+enable [<æŠ€èƒ½ç§ç±»> <æŠ€èƒ½åç§°> none] æŒ‡å®šæ‰€è¦ç”¨çš„æŠ€èƒ½ï¼Œéœ€æŒ‡æ˜ŽæŠ€èƒ½ç§ç±»å’ŒæŠ€èƒ½åç§°ã€‚
 enforce(jiali) 
-enforce <Ê¹³ö¼¸µãÄÚÁ¦ÉËµÐ>none Òª·¢³ö¼¸µãÄÚÁ¦ÉËµÐ¡£
+enforce <ä½¿å‡ºå‡ ç‚¹å†…åŠ›ä¼¤æ•Œ>none è¦å‘å‡ºå‡ ç‚¹å†…åŠ›ä¼¤æ•Œã€‚
 exercise 
-exercise ÔËÆøÁ·¹¦£¬(yun)
+exercise è¿æ°”ç»ƒåŠŸï¼Œ(yun)
 learn 
-learn <¼¼ÄÜ> from <Ä³ÈË> Ïò±ðÈËÇë½ÌÓÐ¹ØÄ³Ò»ÖÖ¼¼ÄÜµÄÒÉÄÑÎÊÌâ
+learn <æŠ€èƒ½> from <æŸäºº> å‘åˆ«äººè¯·æ•™æœ‰å…³æŸä¸€ç§æŠ€èƒ½çš„ç–‘éš¾é—®é¢˜
 practice
-practice <¼¼ÄÜÖÖÀà> Á·Ï°Ä³¸öÖÖÀàµÄ¼¼ÄÜ(lian)
+practice <æŠ€èƒ½ç§ç±»> ç»ƒä¹ æŸä¸ªç§ç±»çš„æŠ€èƒ½(lian)
 study 
-study <ÎïÆ·Ãû³Æ> ´ÓÃØóÅ»òÆäËûÎïÆ·×ÔÑ§Ä³Ð©¼¼ÇÉ, (du)
+study <ç‰©å“åç§°> ä»Žç§˜ç¬ˆæˆ–å…¶ä»–ç‰©å“è‡ªå­¦æŸäº›æŠ€å·§, (du)
 perform 
-perfrom [<Îä¹¦ÖÖÀà>.]<ÕÐÊ½Ãû³Æ> [<Ê©ÓÃ¶ÔÏó>]
+perfrom [<æ­¦åŠŸç§ç±»>.]<æ‹›å¼åç§°> [<æ–½ç”¨å¯¹è±¡>]
 abandon 
-abandon <¼¼ÄÜÃû³Æ> ·ÅÆúÒ»ÏîÄãËùÑ§µÄ¼¼ÄÜ£¬
+abandon <æŠ€èƒ½åç§°> æ”¾å¼ƒä¸€é¡¹ä½ æ‰€å­¦çš„æŠ€èƒ½ï¼Œ
 -----------------------------------------------------------------------------------
-ÃÅ¡¡ÅÉ
+é—¨ã€€æ´¾
 nick 
-nick <ÍâºÅ, ´ÂºÅ> Îª×Ô¼ºÈ¡Ò»¸öÏìÁÁµÄÃûºÅ»òÍ·ÏÎ 
-$BLK$£ººÚÉ« $HIW$£º°×É« $RED$£ººìÉ«
-$HIY$£º»ÆÉ« $HIB$£ºÀ¶É« $GRN$£ºÂÌÉ«
-$BLU$£ºÉîÀ¶É« $YEL$£ºÍÁ»ÆÉ« $MAG$£ºÇ³×ÏÉ«
-$CYN$£ºÀ¶ÂÌÉ« $WHT$£ºÇ³»ÒÉ« $HIC$£ºÌìÇàÉ«
-$HIM$£º·ÛºìÉ« $HIG$£ºÁÁÂÌÉ« $HIR$£ºÁÁºìÉ«
-$NOR$£º»Ö¸´Õý³£ÑÕÉ«
-----------------------------------------------------------------------------------°®
-¶ÔÌØ¶¨¶ÔÏóÊ¹ÓÃµÄÖ¸Áî
-drink ºÈ 
-list ÔÚÉÌµêÖÐ²éÓÐÊ²Ã´ÎïÆ·
+nick <å¤–å·, ç»°å·> ä¸ºè‡ªå·±å–ä¸€ä¸ªå“äº®çš„åå·æˆ–å¤´è¡” 
+$BLK$ï¼šé»‘è‰² $HIW$ï¼šç™½è‰² $RED$ï¼šçº¢è‰²
+$HIY$ï¼šé»„è‰² $HIB$ï¼šè“è‰² $GRN$ï¼šç»¿è‰²
+$BLU$ï¼šæ·±è“è‰² $YEL$ï¼šåœŸé»„è‰² $MAG$ï¼šæµ…ç´«è‰²
+$CYN$ï¼šè“ç»¿è‰² $WHT$ï¼šæµ…ç°è‰² $HIC$ï¼šå¤©é’è‰²
+$HIM$ï¼šç²‰çº¢è‰² $HIG$ï¼šäº®ç»¿è‰² $HIR$ï¼šäº®çº¢è‰²
+$NOR$ï¼šæ¢å¤æ­£å¸¸é¢œè‰²
+----------------------------------------------------------------------------------çˆ±
+å¯¹ç‰¹å®šå¯¹è±¡ä½¿ç”¨çš„æŒ‡ä»¤
+drink å– 
+list åœ¨å•†åº—ä¸­æŸ¥æœ‰ä»€ä¹ˆç‰©å“
 fill 
-fill <ÈÝÆ÷> ÍùÈÝÆ÷ÖÐÌî¶«Î÷
+fill <å®¹å™¨> å¾€å®¹å™¨ä¸­å¡«ä¸œè¥¿
 push 
-push ¡´ÎïÃû¡µ»ò<·½Ïò> ¡¡ ÍÆ¿ª?
+push ã€ˆç‰©åã€‰æˆ–<æ–¹å‘> ã€€ æŽ¨å¼€?
 pull 
-pull <ÎïÃû> °ÑÄ³Îï°Î³öÀ´
+pull <ç‰©å> æŠŠæŸç‰©æ‹”å‡ºæ¥
 -----------------------------------------------------------------------------------
-Æä¡¡Ëû
-alias alias alias <ÓûÉè¶¨Ö®Ö¸Áî> <Ö¸Áî> ¿ÉÓÃ´ËÒ»Ö¸ÁîÉè¶¨²¢Ìæ´úÔ­ÓÐÖ®Ö¸Áî
-help help <Ö÷Ìâ>
-passwd passwd ÐÞ¸ÄÄãµÄÈËÎïÃÜÂë
-quit µ±ÄãÀë¿ª
-save save °ÑÄãÐÁ¿à·Ü¶·µÄ½á¹û´æÆðÀ´?
-suicide suicide [-f] ×ÔÉ±.
-time time ÏÖÔÚµÄÊ±³½¡£
-set set <±äÊýÃû> [<±äÊýÖµ>] Éè¶¨Ò»Ð©»·¾³±äÊý
-unset unset <±äÊýÃû> É¾³ý»·¾³±äÊýµÄÉè¶¨
-to to (chat,rumor....) ¶àµÃµÄÊä³öÄÚÈÝ
-wizlist wizlist ÁÐ³öÄ¿Ç°ËùÓÐµÄÎ×Ê¦Ãûµ¥
-uptime uptime ÒÑ¾­Á¬ÐøÖ´ÐÐÁË¶à¾Ã.
-version version ÓÎÏ·Ä¿Ç°ËùÓÃµÄ MudOS driver °æ±¾.
-Ç®×¯ÓÃÖ¸Áî£º
-check ²éÒøÐÐÖÐµÄ´æ¿î¡£
-cun ´æ¿î£¬
-convert(duihuan) convert (amount) (unit) to (unit)¡£¶Ò»»»õ±Ò£¬
-QUEST³£ÓÃÖ¸Áî:
-yell yell (ÄÚÈÝ)¡£ º°£¬ÀýÈçÔÚººË®°¶±ßº°´¬¼ÒÎª¡°yell boat¡±¡£
-jump jump (ÎïÃû µØ·½)¡£ Ìøµ½Ä³ÎïÆ·»òµØ·½¡£
-climb climb ÅÀÊ÷»òÕßÆäËûÓÐ¸ß¶ÈµÄ³¡¾°ÓÃÖ¸Áî ¡£
-move move (ÎïÃû)»ò(·½Ïò)£¬ ÒÆ¶¯¶«Î÷»òÕßÏòÄ³·½ÏòÒÆ¶¯¡£
-unlock unlock (ÎïÃû)»ò(·½Ïò)£¬ Äã¿ªËø£¨Ã»ÓÐÔ¿³×Ê±Òª»áÇÁËø£©¡£
-turn turn(ÎïÃû)»ò(·½Ïò)¡£Èçturn e£¬×ª¶¯ÎïÆ·»òÕß×ªÒ»¸ö·½Ïò¡£
-knock knock(ÎïÃû)¡£ ÇÃ,ÀýÈçknock table¡£
-press press(ÎïÃû)¡£ ÅÄ,ÀýÈçpress table¡£
-answer answer(ÄÚÈÝ)¡£ »Ø´ðNPCµÄÎÊÌâÊ±ÓÃ£¬ÄÚÈÝÐèÒª×Ô¼ºÈ¥·¢ÏÖ¡£
-[Ò»°ãÄÚ¹¦µÄ¹¦ÓÃ]
-ÒÔÏÂÊÇÒ»Ð©ÄÚ¹¦³£¼ûµÄ¹¦ÓÃ£¬²»Ò»¶¨ËùÓÐÄÚ¹¦¶¼ÓÐÕâÐ©¹¦ÄÜ¡£
-ÆÕÍ¨¹¦ÄÜ£º
-exert regenerate »Ö¸´×Ô¼ºµÄ¾«
-exert recover »Ö¸´×Ô¼ºµÄÆø
-ÌØÊâ¹¦ÄÜ(ÐèÒª×°±¸¸ß¼¶ÄÚ¹¦)£º
-exert heal ÓÃÄÚÁ¦Ìæ×Ô¼ºÁÆÉË
-exert heal ID ÓÃÄÚÁ¦ÌæËûÈËÁÆÉË 
-exert lifeheal ID ÓÃÄÚÁ¦ÌæËûÈËÐøÆø 
-exert jingheal ÓÃÄÚÁ¦Ìæ×Ô¼º»Ö¸´¾«Éñ
-exert jingheal ID ÓÃÄÚÁ¦ÌæËûÈË»Ö¸´¾«Éñ
+å…¶ã€€ä»–
+alias alias alias <æ¬²è®¾å®šä¹‹æŒ‡ä»¤> <æŒ‡ä»¤> å¯ç”¨æ­¤ä¸€æŒ‡ä»¤è®¾å®šå¹¶æ›¿ä»£åŽŸæœ‰ä¹‹æŒ‡ä»¤
+help help <ä¸»é¢˜>
+passwd passwd ä¿®æ”¹ä½ çš„äººç‰©å¯†ç 
+quit å½“ä½ ç¦»å¼€
+save save æŠŠä½ è¾›è‹¦å¥‹æ–—çš„ç»“æžœå­˜èµ·æ¥?
+suicide suicide [-f] è‡ªæ€.
+time time çŽ°åœ¨çš„æ—¶è¾°ã€‚
+set set <å˜æ•°å> [<å˜æ•°å€¼>] è®¾å®šä¸€äº›çŽ¯å¢ƒå˜æ•°
+unset unset <å˜æ•°å> åˆ é™¤çŽ¯å¢ƒå˜æ•°çš„è®¾å®š
+to to (chat,rumor....) å¤šå¾—çš„è¾“å‡ºå†…å®¹
+wizlist wizlist åˆ—å‡ºç›®å‰æ‰€æœ‰çš„å·«å¸ˆåå•
+uptime uptime å·²ç»è¿žç»­æ‰§è¡Œäº†å¤šä¹….
+version version æ¸¸æˆç›®å‰æ‰€ç”¨çš„ MudOS driver ç‰ˆæœ¬.
+é’±åº„ç”¨æŒ‡ä»¤ï¼š
+check æŸ¥é“¶è¡Œä¸­çš„å­˜æ¬¾ã€‚
+cun å­˜æ¬¾ï¼Œ
+convert(duihuan) convert (amount) (unit) to (unit)ã€‚å…‘æ¢è´§å¸ï¼Œ
+QUESTå¸¸ç”¨æŒ‡ä»¤:
+yell yell (å†…å®¹)ã€‚ å–Šï¼Œä¾‹å¦‚åœ¨æ±‰æ°´å²¸è¾¹å–Šèˆ¹å®¶ä¸ºâ€œyell boatâ€ã€‚
+jump jump (ç‰©å åœ°æ–¹)ã€‚ è·³åˆ°æŸç‰©å“æˆ–åœ°æ–¹ã€‚
+climb climb çˆ¬æ ‘æˆ–è€…å…¶ä»–æœ‰é«˜åº¦çš„åœºæ™¯ç”¨æŒ‡ä»¤ ã€‚
+move move (ç‰©å)æˆ–(æ–¹å‘)ï¼Œ ç§»åŠ¨ä¸œè¥¿æˆ–è€…å‘æŸæ–¹å‘ç§»åŠ¨ã€‚
+unlock unlock (ç‰©å)æˆ–(æ–¹å‘)ï¼Œ ä½ å¼€é”ï¼ˆæ²¡æœ‰é’¥åŒ™æ—¶è¦ä¼šæ©‡é”ï¼‰ã€‚
+turn turn(ç‰©å)æˆ–(æ–¹å‘)ã€‚å¦‚turn eï¼Œè½¬åŠ¨ç‰©å“æˆ–è€…è½¬ä¸€ä¸ªæ–¹å‘ã€‚
+knock knock(ç‰©å)ã€‚ æ•²,ä¾‹å¦‚knock tableã€‚
+press press(ç‰©å)ã€‚ æ‹,ä¾‹å¦‚press tableã€‚
+answer answer(å†…å®¹)ã€‚ å›žç­”NPCçš„é—®é¢˜æ—¶ç”¨ï¼Œå†…å®¹éœ€è¦è‡ªå·±åŽ»å‘çŽ°ã€‚
+[ä¸€èˆ¬å†…åŠŸçš„åŠŸç”¨]
+ä»¥ä¸‹æ˜¯ä¸€äº›å†…åŠŸå¸¸è§çš„åŠŸç”¨ï¼Œä¸ä¸€å®šæ‰€æœ‰å†…åŠŸéƒ½æœ‰è¿™äº›åŠŸèƒ½ã€‚
+æ™®é€šåŠŸèƒ½ï¼š
+exert regenerate æ¢å¤è‡ªå·±çš„ç²¾
+exert recover æ¢å¤è‡ªå·±çš„æ°”
+ç‰¹æ®ŠåŠŸèƒ½(éœ€è¦è£…å¤‡é«˜çº§å†…åŠŸ)ï¼š
+exert heal ç”¨å†…åŠ›æ›¿è‡ªå·±ç–—ä¼¤
+exert heal ID ç”¨å†…åŠ›æ›¿ä»–äººç–—ä¼¤ 
+exert lifeheal ID ç”¨å†…åŠ›æ›¿ä»–äººç»­æ°” 
+exert jingheal ç”¨å†…åŠ›æ›¿è‡ªå·±æ¢å¤ç²¾ç¥ž
+exert jingheal ID ç”¨å†…åŠ›æ›¿ä»–äººæ¢å¤ç²¾ç¥ž

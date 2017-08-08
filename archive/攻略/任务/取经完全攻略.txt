@@ -1,651 +1,651 @@
-ȡ����ȫ����
+取经完全攻略
 
 
-1. �����ݣ���ɽ�¡�
-��ɽ����ȥҪ�ҳ���ҪѪ��
-fly changan;#16 s;#8 w;#3 wu;s;ask fa ming about Ѫ��
-�ٵ�����fly changan;#16 s;#4 w;#2 n;wɱ�������4������,Ȼ�������߽�ȥ�ͼ������½�
-ask yin wenjiao about �¹���
-�ٰѴӷ��������ǵõ��Ķ�������.give han shan to yin wenjiao
-(ע�⣺��ʱ��Ҫע���Ա߲��� �����������)��
-Ȼ����룬����ͻȻ���˽���,����������ɱ�ˣ��͹��ꡣ
+1. 【江州／金山寺】
+金山寺先去要找长老要血书
+fly changan;#16 s;#8 w;#3 wu;s;ask fa ming about 血书
+再到衙门fly changan;#16 s;#4 w;#2 n;w杀光那里的4个衙役,然后往西走进去就见到殷温娇
+ask yin wenjiao about 陈光蕊
+再把从法明长老那得到的东西给他.give han shan to yin wenjiao
+(注意：这时候要注意旁边不能 有其他的玩家)。
+然后李彪，刘洪突然闯了进来,把他们两个杀了，就过完。
 
-2 ��˫���롿
-(·������ʮ�ֽ�ͷ#7 w;nw;#2 w;sw;w;nw;#4 w;#3 wu;#2 w)
-������쵻��� kill it,
-westdown�����������գ� �����㵽����������
-ok �󣬺�������������ĸ�ף�����ĸ�ĵط��� e��һ�������� nianjing
-�����ᣡһ�����ߣ����ǲ���˵��������֮��̰�����¡�
-����ɫ���ң����������ң�������а�������ܼ�������
-�����ᣡ��������ʵ��������˵�ø��¶ࣻ�Ը����޹ʣ�����˵�ø��¶ࡣ
-�����ᣡ�����ƺΣ����������۲���
-���ǣ��������������ۡ�
-�����ᣡ�����ƺΣ����������۲���
-���ǣ��������������ۡ�
-ֱ������ʾ(��о�����ľ��Ѿ��㹻���������ˡ�),
-��ʱ���� south ��һ�������� sleep �����ϼ���������(cast save chuqiao)����(ask wang about ����),
-�͹���
+2 【双叉岭】
+(路径：从十字街头#7 w;nw;#2 w;sw;w;nw;#4 w;#3 wu;#2 w)
+见到斑斓虎后 kill it,
+westdown走遇见刘伯钦， 他请你到他家坐坐，
+ok 后，和他见到了他的母亲，在刘母的地方向 e走一步，输入 nianjing
+须菩提！一合相者，则是不可说，但凡夫之人贪著其事。
+若以色见我，以音声求我，是人行邪道，不能见如来。
+须菩提！若福德有实，如来不说得福德多；以福德无故，如来说得福德多。
+须菩提！于意云何？如来有肉眼不？
+如是，世尊！如来有肉眼。
+须菩提！于意云何？如来有天眼不？
+如是，世尊！如来有天眼。
+直到有提示(你感觉到念的经已经足够超度亡魂了。),
+此时再向 south 走一步，在那 sleep ，马上见到阎罗王(cast save chuqiao)不行(ask wang about 刘父),
+就过关
 
-//���ط�ʱ�ϳ�
+//本关费时较长
 
-3 ��ӥ���
+3 【鹰愁涧】
 
-(·������ʮ�ֽ�ͷ;#7 w;nw;#2 w;sw;w;nw;#4 w;#3 wu;#2 w;#3 wd;sw;#4 w;sw;w) �ߵ�ӥ�����ʱ��,��
-����˹�ȥ��Ȼ��dive��ȥ,Ȼ�� tang stone ע����Ѫ�ı仯����ʱ��tang��ˮ���� kill him,����tang 
-stone,ֱ����ʾ�㲻���Ѿ��˵���������Ȼ����Ĵ����߰ɣ��ҵ��� down�ĵط���ȥ,����С������kill 
-��ɱС������ʱ���������ܣ�Ȼ����С�㣬СϺʲô�ģ�ע�����ҾͿ�����
+(路径：从十字街头;#7 w;nw;#2 w;sw;w;nw;#4 w;#3 wu;#2 w;#3 wd;sw;#4 w;sw;w) 走到鹰愁陡涧的时候,你
+会昏了过去，然后dive下去,然后 tang stone 注意气血的变化，有时会tang到水妖， kill him,继续tang 
+stone,直到提示你不是已经趟到出口了吗？然后就四处走走吧，找到有 down的地方下去,看到小白龙就kill 
+，杀小白龙的时候，他会逃跑，然后变成小鱼，小虾什么的，注意找找就可以了
 
-4.���ڷ�ɽ������Ժ��
+4.【黑风山／观音院】
 
-ȥʮ�ֽ�ͷ(n;ask heshang about ȡ��).���ͻ�������֯������(Wucai jiasha)�������֯������(Wucai 
-jiasha)������������� (·����ʮ�ֽ�ͷ#7 w;nw;#2 w;sw;w;nw;#4 w;#3 wu;#2 w;#3 wd;sw;#4 w;sw;#7 
-w;#7 wu;enter;s) ask jin chi about ���ģ�Ȼ������������ĸ���������ص�����������Ϣ
-(n,n,xiuxi),��Ȼһ����𣬰���Ū����,��sһ�������ǻ���� ˵���Ĳ����ˣ���ص���ɽ��from ����
-out;#7 ed;se;s;sw;s�����������ӡ����� ��ʿ�����ֵܹ��ˣ�just kill them ������ȫ�����ˣ���ȥ���
-��س� (���˾Ͳ�Ҫ���ű������ֱ��ȫ������زű����)������ԭ����·��from ����out;#7 
-ed;se;s;sw;s)һ��s ��ȥ;�������� break door (ע��break�˺�����ȫ��0��)�󣬽�ȥ kill �����ܹ־Ϳ�
-���ˣ�Ȼ�����������
+去十字街头(n;ask heshang about 取经).他就会给你五彩织金袈裟(Wucai jiasha)有了五彩织金袈裟(Wucai 
+jiasha)你就来到方丈室 (路径：十字街头#7 w;nw;#2 w;sw;w;nw;#4 w;#3 wu;#2 w;#3 wd;sw;#4 w;sw;#7 
+w;#7 wu;enter;s) ask jin chi about 袈裟，然后把你的五彩袈裟给他接着你回到禅房里面休息
+(n,n,xiuxi),忽然一阵火起，把你弄醒了,你s一步，广智会和你 说袈裟不见了，你回到三山门from 广智
+out;#7 ed;se;s;sw;s，见到凌虚子、白衣 秀士、黑熊怪等人，just kill them ，他们全部跑了，回去变成
+金池长 (变了就不要急着变回来，直到全过了这关才变回来)。还是原来的路（from 广智out;#7 
+ed;se;s;sw;s)一个s 进去;来到洞口 break door (注意break了后内力全变0的)后，进去 kill 掉黑熊怪就可
+以了，然后必须变回来。
 
-5.������ׯ����ջ����
+5.【高老庄／云栈洞】
 
-��û������ø����򽣰ɣ����õġ����ȵ�����ׯ ask ��Ա�� about ������������һ���������·������ߵ�
-��ջ�� (·������ʮ�ֽ�ͷ#7 w;nw;#2 w;sw;w;nw;#4 w;#3 wu;#2 w;#3 wd;sw;#4 w;sw;#7 w;#7 wu;wd;#2 
-w;sw;w;wu;#3 wu) ������ bush �ĵط����õ����� kan bush���ҵ���ں��ȥ��һֱ�����ֳ������ 
-kill him,�������ֻ���һ�������ʧ�ˣ���east ��·����ͷ - ���(push stone)��������һ�����ڣ�ԭ��
-��һƬ����(out)�Թ�(n;e;n;w;w;n)������������kill him,����÷����ɣ��������xueshan��juanbi ����
-�㶨��Ȼ���ҵ��������Ѹ�Ա�������·����������������ͻ��Զ�follow�� ,�Ѵ�����������ׯ������Ա��
-,��ok�ˡ�
+最好还是先拿个刀或剑吧，有用的。首先到高老庄 ask 高员外 about 翠兰，他给你一件翠兰的衣服，你走到
+云栈洞 (路径：从十字街头#7 w;nw;#2 w;sw;w;nw;#4 w;#3 wu;#2 w;#3 wd;sw;#4 w;sw;#7 w;#7 wu;wd;#2 
+w;sw;w;wu;#3 wu) 见到有 bush 的地方，用刀或则剑 kan bush，找到入口后进去，一直等猪怪出现你就 
+kill him,但是猪怪化作一道金光消失了！走east 的路到尽头 - 你就(push stone)，发现了一个出口，原来
+是一片树林(out)迷宫(n;e;n;w;w;n)，见到猪怪了kill him,最好用法术吧，如果你是xueshan的juanbi 轻松
+搞定。然后找到翠兰，把高员外给你的衣服还给翠兰，翠兰就会自动follow你 ,把翠兰带到高老庄见到高员外
+,就ok了。
 
-6. ���Ʒ��롿
+6. 【黄风岭】
 
-��ʮ�ֽ�ͷ������#7 w;nw;#2 w;sw;w;nw;#3 w;#3 wu;#2 w;#3 wd;sw;#4 w;sw;#7 w;#7 wu;wd;#2 
-w;sw;w;wu;#3 wu;wd;#6 w;#3 wu;nd;n�ȱ����Σ�����nһ��knock door��ׯ԰��һ�����߸�����ҩ��agree��
-sleep��˯�������ٻص��Ʒ綴�ڣ�sһ�����һ������ӱ䡣���Ĳ��ǻ������Ӿ��߿�һ���ٻ��������˻���
-���Ӻ��n;nd;n;n;kill guai��ɱ�������ء�
+从十字街头出发，#7 w;nw;#2 w;sw;w;nw;#3 w;#3 wu;#2 w;#3 wd;sw;#4 w;sw;#7 w;#7 wu;wd;#2 
+w;sw;w;wu;#3 wu;wd;#6 w;#3 wu;nd;n先被吹晕，醒来n一步knock door进庄园，一个老者给你眼药，agree后
+sleep入睡。醒来再回到黄风洞口，s一步，找花脚蚊子变。来的不是花脚蚊子就走开一步再回来。变了花脚
+蚊子后就n;nd;n;n;kill guai，杀死即过关。
 
-7. ����ɳ�ӡ�
+7. 【流沙河】
 
-(·����fly huangfeng;eu;nu;wd;sw;#3 w;nw;w;wu) ���˺ӱ� dive ��ȥ��(��ȻҪ��˰����)������ɳ����
-�е�ѹ��������ˮ�����Ǳ����ߣ����������в����³���Ȼ��out���Ͽ��ҵ����ڣ�Ҫһֱ�����ߣ�ע���� ��
-��Ѫһֱ�ڼ���(faint)�������ߵ��˶��ڣ���ȥ����һ������(Yao guai)��kill him(��ó�����ɱ����),ɱ
-������ok
+(路径：fly huangfeng;eu;nu;wd;sw;#3 w;nw;w;wu) 到了河边 dive 下去，(当然要避税咒了)由于流沙河特
+有的压力，你在水底老是被冲走，你随着旋涡不断下沉，然后out，赶快找到出口，要一直向西走，注意你 的
+气血一直在减少(faint)，终于走到了洞口，进去看到一个妖怪(Yao guai)，kill him(最好出连招杀了他),杀
+死他就ok
 
-8.����ʥ�����ġ�
+8.【四圣试禅心】
 
-����ɳ��һֱ�������ߣ���ɳ��(��ô���ӱ߼�qujing -7)wu;#3 w�����nw,enter,���������ҵ�����(Woman) 
-�Ժ�(ע���Ա߲������˺�����)����������ȥɱ�� ���� "ʳ��ħ" (Shiren mo),��out;�߻ش�ڣ���#3 
-north,�ͼ��������ˡ�kill������ ��������������ȥ����Ҷ���ݣ�just do it,������ɸ㶨�ˡ� ע����Ҷ
-������penglai���ƶ��ڣ�fly penglai,nu,ɱ�����ǽ���(�����Թ��߷�enter;#3 n;#2 ne;nw;#2 n)�ͼ�����
-Գ��ɱ������north,climb ����,(����������ģ�����������������Ҷ����Ҫ�� ���Լ���������7Ҷ��then 
-(dig qiong cao) ���õ��ˡ�
+在流沙河一直再往西走，流沙边(怎么到河边见qujing -7)wu;#3 w到村口nw,enter,村子里面找到妇人(Woman) 
+以后(注意旁边不能有人和坐骑)，他会让你去杀掉 几个 "食人魔" (Shiren mo),你out;走回村口，再#3 
+north,就见到妖怪了。kill了它们 回来妇人又让你去找七叶琼草，just do it,这关轻松搞定了。 注：七叶
+琼草在penglai白云洞内，fly penglai,nu,杀了三星进洞(洞内迷宫走法enter;#3 n;#2 ne;nw;#2 n)就见到白
+猿，杀了它，north,climb 悬崖,(悬崖是两层的）见到琼草若不是七叶，就要等 它自己慢慢长成7叶，then 
+(dig qiong cao) 就拿到了。
 
-9. ����ׯ�ۣ��˲ι���
+9. 【五庄观／人参果】
 
-����һ��ֱ�ӳ�һ���˲ι�
+方法一：直接吃一个人参果
 
-�����������Ӧ����ȥ�������Ѹ���Ū�ˣ��õ������ϵľ�ƿ��Ȼ��ȥwuzhuang�������������ȥ����
-��research)�������Ժ�����������������ţ�����Թ����߷��ǰ��հ�����ʱ���ߣ�
-��nw;nw;ne;ne;se;se;sw;sw�������ߵ���ׯ�۵ĺ��ڲ��ˣ��˵������пúøߵ��������ӽ�úø�ѽ������
-�����ɣ��������ļһ����ϣ�wield jin jizi and hold danpan�����Ϳ����ң�hit�������ˣ����Ӹ���ԣ�
-û�뵽һ��Сë�������ˣ�����������һ�٣��Ż����ˣ�����һ���Ӱ������ˣ��������ˣ������˾��У���Ҳ
-�ǰ������ˣ�pour water�����ˣ����أ�
+方法二：这关应该先去蓬莱，把福星弄了，拿到他身上的净瓶，然后去wuzhuang到汉钟离的下面去摸吧
+（research)，摸到以后就往北走来到八卦桥，这个迷宫的走法是按照八卦逆时针走，
+（nw;nw;ne;ne;se;se;sw;sw），就走到五庄观的后勤部了，菜地里面有棵好高的树，果子结得好高呀，爬到
+树顶吧，把作贼的家伙拿上（wield jin jizi and hold danpan），就可以砸（hit）果树了，老子刚想吃，
+没想到一个小毛孩子来了，给老子骂了一顿，着还得了？老子一下子把树推了！他害怕了！出气了就行，俺也
+是爱树的人，pour water树活了，过关！
 
-//��ص��˲ι��Ǽٵ�
+//这关的人参果是假的
 
-10.������׹Ǿ���
+10.【三打白骨精】
 
-(·��:fly huangfeng;eu;nu;wd;sw;w;w;w;nw;w;wu;wu;w;w;w;nw;nw;wu;nw)�ͼ���һŮ�Ӿ�kill,Ȼ��һ��·
-����������,�ͷֱ����ϸ��ˡ��Ϲ���all kill ɱ�˾͹��ˡ�
+(路径:fly huangfeng;eu;nu;wd;sw;w;w;w;nw;w;wu;wu;w;w;w;nw;nw;wu;nw)就见有一女子就kill,然后一条路
+继续往里走,就分别有老妇人、老公公all kill 杀了就过了。
 
-//�ϸ�����4��������һ�����������඼�Ǻ��ˣ�ÿɱ����һ���ͼ�һ����У�
+//老妇人有4个，其中一个是妖怪其余都是好人，每杀错了一个就减一年道行！
 
-11.�������������ɽ��
+11.【宝象国／碗子山】
 
-fly baoxiang;#6 s;n;sw;#3 w;nw�����ϵĴ���������һ��
-look��������һ���ô���ɵļ��׸���(qiao),
-n;ne;nu;nw;ne;se;s;se;break shi ban;se;#6 {kill shan yao %i}kill huangpao guai��ľ����ವ������
-��ȥ����
-ask baihua xiu about king���������š�letter���ٻ��߸���һ�����š�
-nw;fly baoxiang;#6 s;#7 su;give mi xin to guo wang�Ա����о�������ǰ�ݸ���һ֧�����ơ�
-#7 nd;n;sw;#3 w;nw�����ϵĴ���������һ�𡣺�������һ���ô���ɵļ��׸���(qiao)��
-n;ne;nu;nw;ne;se;s;se;break shi ban;se�ٻ��߾�����ʼ������һ���ж���
-nw;nw;n;nw;sw;se;sd;sw�����ϵĴ���������һ�𡣺�������һ���ô���ɵļ��׸���(qiao)��s;se;#3 
-e;ne;s;#7 su�������˰ٻ���һ㶣�Ȼ�������ݺ�ؽ��ٻ�������ȥ��
-#7 nd;n���۹�����ɱ��ʱ����ɱ�ٻ��ߡ����������ɱ���ٻ���֮ǰ�ʹ�������
-bian baihua xiu;ask huangpao guai about �����ڵ��������ӡ��������ڵ����������п����õ���Ϸ�����
-�Ĳ�Ʒ���������ڵ�(Shelizi neidan)��һ�ż�������������ڵ��������������֮ĥ�ѣ����˼�ת��������
-���ɡ��Ժ�����״̬�ָ���������
+fly baoxiang;#6 s;n;sw;#3 w;nw河面上的船慢慢聚在一起。
+look河面上有一串用船搭成的简易浮桥(qiao),
+n;ne;nu;nw;ne;se;s;se;break shi ban;se;#6 {kill shan yao %i}kill huangpao guai奎木狼星嗖地向天空
+飞去……
+ask baihua xiu about king（国王、信、letter）百花羞给你一封秘信。
+nw;fly baoxiang;#6 s;#7 su;give mi xin to guo wang旁边早有军机大臣上前递给你一支军令牌。
+#7 nd;n;sw;#3 w;nw河面上的船慢慢聚在一起。河面上有一串用船搭成的简易浮桥(qiao)。
+n;ne;nu;nw;ne;se;s;se;break shi ban;se百花羞决定开始跟随你一起行动。
+nw;nw;n;nw;sw;se;sd;sw河面上的船慢慢聚在一起。河面上有一串用船搭成的简易浮桥(qiao)。s;se;#3 
+e;ne;s;#7 su国王见了百花羞一愣，然后老泪纵横地将百花羞拉过去。
+#7 nd;n黄袍怪在你杀他时他就杀百花羞。你必须在他杀死百花羞之前就打死他。
+bian baihua xiu;ask huangpao guai about 丹（内丹、舍利子、舍利子内丹），将会有可能拿到游戏中最好
+的补品－舍利子内丹(Shelizi neidan)：一颗鸡蛋大的舍利子内丹，以数年打坐功之磨难，配了几转雌雄炼就
+而成。吃后所有状态恢复并加满。
 
-12.��ƽ��ɽ����������ѹ��ɽ��ѹ������ 
-fly yalong;se;wu;sw;sw;se;s;sw;e;kill lao nainai�����̷����ڵ�������������һֻ���꾫��
-w;sw;kill huaqi dawang�����ߴ��������ڵ�������������һֻ���꾫��
+12.【平顶山／莲花洞／压龙山／压龙洞】 
+fly yalong;se;wu;sw;sw;se;s;sw;e;kill lao nainai老奶奶翻倒在地现了真身，是一只狐狸精。
+w;sw;kill huaqi dawang狐阿七大王翻倒在地现了真身，是一只狐狸精。
 ne;ne;n;nw;ne;fly pingding;nw;ne;se;se;se;s;kill jinjiao dawang
-���ͯ�����ⱼȥ������һֻ�Ͻ���«��
+金角童子往外奔去，丢下一只紫金红葫芦。
 get hu lu;n;ne;kill yinjiao dawang
-����ͯ�����ⱼȥ������һֻ��֬��ƿ��
-ɱ�˺����ߴ��������õ��Ͻ���(huangjin sheng)һ���ɳ��ɶ̵ĻϽ�����
-ɱ��Ǵ������Եõ��Ͻ���«(hu lu)һֻ����͸�ϵĽ��«��
-ɱ���Ǵ������Եõ���֬��ƿ(jing ping)һֻ����͸������֬��ƿ��
+银角童子往外奔去，丢下一只羊脂玉净瓶。
+杀了狐阿七大王可以拿到幌金绳(huangjin sheng)一根可长可短的幌金绳。
+杀金角大王可以得到紫金红葫芦(hu lu)一只红里透紫的金葫芦。
+杀银角大王可以得到羊脂玉净瓶(jing ping)一只几乎透明的羊脂玉净瓶。
 
-//����ʹ�����help ji��ȡ��·�ϵ�������ǿ����÷������ģ����������°빦������ȻҲ��Щ���ǲ�����
-�÷����ġ�����Ҳ���мٵģ�ji����ʾ
+//法宝使用详见help ji。取经路上的许多关是可以用法宝祭的，这样往往事半功倍。当然也有些关是不可以
+用法宝的。法宝也会有假的，ji会提示
 
-13.���ڼ����������¡� 
-������ҰѸ�ͷ
+13.【乌鸡国／宝林寺】 
+先随便找把斧头
 fly wuji;#5 e;eu;se;eu;n;enter;n;w;sleep
-����ɮ˵��������Ժˡ���ӿͣ���ء���
-kill shousi seng����ɮ���ˡ�
+守寺僧说道：“寺院恕不接客，请回。”
+kill shousi seng守寺僧死了。
 enter;n;w;sleep
-#wa 5000;sleep��һ��������ֻ���������档�ûһ���ˡ�
-#wa 5000;sleep���˯��һ��, �Ȼ��ɡ�
-//��ʱ�м��ʻ���ʾ��������е���������
-#wa 5000;sleepֻ������һʱ�������������ֳ�һ��ˮ���ܵ���Ӱ��
-ask ghost guo wang about ����,���һ������������Ȼ���ѣ��ڼ������Ѿ������ˡ�
-//��ʱ�����᲻���㶫�������������õ�������ȥ�ʹ�
-e;s;out;s;wd;nw;wd;#5 w;#3 n;#3 w;n;������ʿ�ȵ������У�
-kill wei shi������ʿ���ˡ�#3 w;n;look������
-e;give yu gui to wang hou�������һ���������硣
-e;#5 s;#5 e;eu;se;eu;su;give yu gui to tai zi̫�Ӹ���һСƿ�ڼ�����
-//̫�Ӻܴ���ʲ����㶫�����Ǿ�ֻ��ɱ�˵�ˢ�������������ش˴����ʱ��
-nd;wd;nw;wd;#5 w;#3 n;#3 w;n;������
-#2 e;n;enter;wield axe;#5 {kan bajiao}ֻ�����һ�����Ž������ˣ�����¶��һ�ھ���
-#2 d;w;������˫�ֱ�ȭ�����˸�Ҿ������λ�ɳ����ˣ�
-ask jing longwang about king��������������������һ���֣�ˮ�¸�����ҹ*����ʲô����̧��������apply 
-guo wang����������ʼ������һ���ж���
-#2 u;out;#2 s;kill guo wang 2����ԶԶ��������������Ц����
-#3 s;��Ǭ���㳡��������һ�ء�
+#wa 5000;sleep你一觉醒来，只觉精力充沛。该活动一下了。
+#wa 5000;sleep你刚睡过一觉, 先活动活动吧。
+//此时有几率会提示，你觉得有点忐忑不安
+#wa 5000;sleep只听风声一时过处，青烟中现出一个水淋淋的人影。
+ask ghost guo wang about 报仇,冷风一过，你像是猛然惊醒，乌鸡国王已经不见了。
+//有时国王会不给你东西，看运气。拿到东西了去皇宫
+e;s;out;s;wd;nw;wd;#5 w;#3 n;#3 w;n;护宫卫士喝道：禁行！
+kill wei shi护宫卫士死了。#3 w;n;look后宰门
+e;give yu gui to wang hou王后给你一柄金厢白玉圭。
+e;#5 s;#5 e;eu;se;eu;su;give yu gui to tai zi太子给你一小瓶乌鸡精。
+//太子很大概率不给你东西，那就只好杀了等刷新重来……本关此处最费时间
+nd;wd;nw;wd;#5 w;#3 n;#3 w;n;后宰门
+#2 e;n;enter;wield axe;#5 {kan bajiao}只听轰的一声，芭蕉树倒了，地下露出一口井。
+#2 d;w;井龙王双手抱拳，作了个揖道：各位仙长请了！
+ask jing longwang about king（国王、宝贝）井龙王一挥手，水下浮起两夜*，将什么东西抬将过来。apply 
+guo wang国王决定开始跟随你一起行动。
+#2 u;out;#2 s;kill guo wang 2天上远远传来文殊菩萨的笑声。
+#3 s;到乾坤广场继续过下一关。
 
-̫�������ɱ������ˣ�̫�����ɱ����ص�Ҫ��������̫�ӻ����һƿ�ڼ�����һСƿ�ڼ�������˵����
-(drink)��������ʩ������(apply)���Ի��ꡣ��ʵ������û��ʲô��Ч�ģ�������ֻ�ܻ������Ļꡣˮ����
-��Ҫ��һ��������С��ٹ�����ɱ��������ģ�ɱ���˾�Ҫ�����ˡ�ע��ڶ������Ǽٹ����� 
-��̫ƽʢ��������(Guo wang)��ʮ���ڼ������һ�����������������Ǭ���� 
-��̫ƽʢ��������(Guo wang)��ʮ��˳������������һ�أ�
+太子如果不杀你就行了，太子如果杀你这关得要重新来。太子会给你一瓶乌鸡精。一小瓶乌鸡精，据说服用
+(drink)可以提神，施用他人(apply)可以还魂。其实服用是没有什么疗效的，而还魂只能还国王的魂。水晶宫
+内要等一会儿在西行。假国王会杀了真国王的，杀慢了就要重来了。注意第二个才是假国王。 
+【太平盛世】国王(Guo wang)：十年乌鸡国救我回生，大灭妖道还我乾坤！ 
+【太平盛世】国王(Guo wang)：十年顺利闯过西行又一关！
 
-14. ���ɽ������ƶ�
-fly jilei;sw;s;se;sw;se;���ţħ��
-fly huoyun;n;n;nw;ne;#4 n;���ߵ���"������"�����캢���Ժ�
-ask hong about ���ȹ��� ��
-Ȼ��캢����Ҫȥ�����ȹ��������������ߵ�һ��ʱ����һ��Ҫ�������ߵĽ�ľ ˮ����������� break ����
-Ȼ���� break mu che ,�Ⱥ캢������ʱ��(��û����ǰ�㲻�ܱ�� ������
-kill honghai er,��ok
+14. 枯松涧／火云洞
+fly jilei;sw;s;se;sw;se;变成牛魔王
+fly huoyun;n;n;nw;ne;#4 n;乱走到达"火云堂"见到红孩儿以后，
+ask hong about 铁扇公主 ，
+然后红孩儿就要去把铁扇公主请来，在他走的一段时间内一定要在他身边的金木 水火土五个车给 break 掉，
+然后再 break mu che ,等红孩儿回来时候(他没回来前你不能变回 来｝，
+kill honghai er,就ok
 
-15.�����ٹ�������ۡ� 
-fly chechi;#5 s;#4 w;#2 n;#5 w;e;#4 s;#3 n;w;#3 s;#3 e;#3 nu;n�����
-bian taishang laojun;lift laojun;s;open door;e;throw laojunֻ�����̡���һ����̫���Ͼ�����һ���
-����w;n;eat zheng su�������ɾ�����ʼ������һ���ж���
-s;#3 sd;#3 e;#3 n;w;s;#2 w;#5 n������ʿ�ȵ������У�
-kill wei shi������ʿ���ˡ�
-#3 n����������ʼ������һ���ж���
-#2 s;w;��ն�ٶ���˵�������������ݣ���̨��������ʥ����climb yun chantai
-ֻ���㵹�Դ�һ��ˤ��������������ڵ��ϡ�
+15.【车迟国／三清观】 
+fly chechi;#5 s;#4 w;#2 n;#5 w;e;#4 s;#3 n;w;#3 s;#3 e;#3 nu;n三清殿
+bian taishang laojun;lift laojun;s;open door;e;throw laojun只听“嗵”地一声，太上老君溅起一阵臭
+气。w;n;eat zheng su羊力大仙决定开始跟随你一起行动。
+s;#3 sd;#3 e;#3 n;w;s;#2 w;#5 n护宫卫士喝道：禁行！
+kill wei shi护宫卫士死了。
+#3 n国王决定开始跟随你一起行动。
+#2 s;w;监斩官对你说道：“请上云梯，于台顶坐禅显圣。”climb yun chantai
+只见你倒栽葱一般摔将下来，梆地砸在地上。
 
-�����ǰһ�ڣ�����ʲôҲ��֪���ˡ�..
+你的眼前一黑，接着什么也不知道了…..
 
-������������������֪��
+慢慢地你终于又有了知觉
 exert recover;exert refresh;climb yun chantai
-�������������һ���ȵ����ڵ��ϣ�ˤ�ñ������ס�
-ֻ����Я��������������Ծֱ�£����ȵ����ڵ��ϡ�
-��ն���˷ܵص��ͷ������ݵ������룡��
+虎力大仙像秤砣一样叭地砸在地上，摔得鼻青脸肿。
+只见你携云纵身，健步飞跃直下，稳稳地落在地上。
+监斩官兴奋地点点头，向你拜道：“请！”
 
-e,��ն�ٶ���˵�����������ö���������������Ϊ�����
-guess ���£����ӣ���ͯ����ն�ٶ���˵������ˡ��һ�أ��ٲ£���
-guess ���£����ӣ���ͯ����ն��˵���������񣡡������Ӵ򿪣���Ȼ�Ǽ�ն����¶ϲɫ����������ݵ���
-���룡��
+e,监斩官对你说道：“隔板猜枚，请道出朱红柜子里为何物。”
+guess 宫衣（桃子，道童）监斩官对你说道：“恕你一回，速猜！”
+guess 宫衣（桃子，道童）监斩官说道：“开柜！”朱红柜子打开，果然是监斩官面露喜色，连声向你拜道：
+“请！”
 
-e,��ն�ٶ���˵�����������͹������ʦ˫��ϴ����enter youguo
+e,监斩官对你说道：“请下油锅，与国师双武洗。”enter youguo
 
-�����ǰһ�ڣ�����ʲôҲ��֪���ˡ�.
+你的眼前一黑，接着什么也不知道了….
 
-������������������֪��
+慢慢地你终于又有了知觉
 
 exert recover;exert refresh;enter youguo
-�������������ص��£�����һ����ɫ��ǡ���ն���˷ܵص��ͷ������ݵ������룡�����������������Ȼ��
-�޾����������ֵ��������˺�Ϳ��������Ϊ��ʦ���������������
-w;s;s;�����ż�������һ�ء�
+羊力大仙软软地倒下，留下一根灰色羊角。监斩官兴奋地点点头，向你拜道：“请！”国王大悟道：“果然是
+兽精！”国王又道：“寡人糊涂，竟尊其为国师，岂不殃民祸国！”
+w;s;s;到宫门继续过下一关。
 
-��һ����̨�������������Ṧ�Ͳ���ж��֮��û�����弶��ˤһ�ε�һ����
-�ڶ����ȸ����ö�������������¡����ӡ���ͯ��һֱ��һ������׼���С�
-����������ϴ�͹������е���200,000�б����������Ŀ���.
-//����Ҳ�ȽϷ�ʱ��
+第一个比台顶坐禅，基本轻功和拆招卸力之法没上七五级的摔一次掉一级！
+第二个比隔板猜枚，就三样，宫衣、桃子、道童，一直猜一样东西准能行。
+第三个比武洗油锅，道行低于200,000有被滚油烹死的可能.
+//本关也比较费时。
 
-16.��ͨ��ӣ��¼�ׯ��
-fly tongtian;#5 s;#2 n;e;ne;e;se;bian kid;out;w;sw;w;n;w;�������ѿ�һ���ѷ죬��һ������������
-��ˤ��ˮ�У�
-kill jinlin guai�����������ԹԵ�һ����Ť����ҡ����ͷ�����ˡ�
-u;e;���Ӷ���������һ�ء�
+16.【通天河／陈家庄】
+fly tongtian;#5 s;#2 n;e;ne;e;se;bian kid;out;w;sw;w;n;w;冰面上裂开一道裂缝，你一个趔趄不由自主
+地摔进水中！
+kill jinlin guai金鱼闻声，乖乖地一纵身扭着腰摇晃着头游走了。
+u;e;到河东继续过下一关。
 
-���ӵ�����Ҫ�б�ˮ��(Bishui zhou)����Ҫ��ú�Сͯһģһ����
+到河底身上要有避水咒(Bishui zhou)，还要变得和小童一模一样！
 
-17.����ɽ���𶵶��� 
+17.【金兜山／金兜洞】 
 fly jindou;sw;n;#2 nw;n;bian yao guai;s;se;sw;bian;s;sw;kill dujiaosi dawang
-����ţ�������Ͼ������ķ���ȥ������һֻ�������
-get jingang zhuo;ne;n;ne��ɽʯ�Լ�������һ�ء�Ҫ��ɸ����ֲ��ҵĵ����ڡ�
+大青牛沿着李老君声音的方向奔去，丢下一只金刚琢。
+get jingang zhuo;ne;n;ne到山石冈继续过下一关。要变成个妖怪才找的到洞口。
 
-18.��Ů����������ɽ�� 
-����һ����ˮ���ӣ���������ĸ��ˮ��ţ����̥���κ��˸�ˮ�м����Թ��ء�
-fly nuerguo;#2 n;#2 e;#2 s;se;e;cross river�����Ŷ��������˼�����
+18.【女儿国／解阳山】 
+方法一：涉水过河，误饮了子母河水找牛二落胎，治好了腹水孕即可以过关。
+fly nuerguo;#2 n;#2 e;#2 s;se;e;cross river你捂着肚子呻吟了几声。
 fly nuerguo;#2 n;#2 e;#2 s;se;s;su;open door;enter;give 1 gold to niuer
 
-�����������������Լ�Ϊ���Ѱ�ñ�¶��������fly nuerguo;#2 n;#2 e;w;nu;#2 n���ԣ�ask xiliang 
-princess about marriage���ɾ�����顢���ס��и���Ů�ԣ�ask xiliang princess about company������
-��answer Ը�����Ů���ǽ����������ʲô��û˵�ʹҴҵ����ˡ�W,��*������һ���������Ķ�����get 
-icedew lace;wear icedew laceֻ����¶���������������ڻ�Ϊһ����������ˮ�飬���ڵ��ϲ����ˡ����ϧ
-��ֻҪ���������ڻ��͸��;
+方法二：向公主求婚或自鉴为伴娘，寻得冰露珠项链。fly nuerguo;#2 n;#2 e;w;nu;#2 n男性：ask xiliang 
+princess about marriage（郎君、结婚、招亲、招附）女性：ask xiliang princess about company（伴娘
+）answer 愿意大胖女人们将你留在这里，什么都没说就匆匆地走了。W,绿*地上有一个亮闪闪的东西！get 
+icedew lace;wear icedew lace只见冰露珠项链在你手中融化为一串亮晶晶的水珠，滴在地上不见了。真可惜
+！只要不在手中融化就搞掂;
 
-�������������������ף����С�����Ϳ��Թ��˹ء�answer ��Ը��;fight xiliang princess
+方法三：向公主比武招亲，打败小公主就可以过此关。answer 不愿意;fight xiliang princess
 
-�����ģ��������ϸ�����ֱ��������ȡ��¶��������
-fly nuerguo;#2 n;#2 e;w;s;give 1 gold to old woman�ϸ��˾�����ʼ������һ���ж���
-n;nu;#2 n�ϸ��˸Ͻ���ͷл������ĵ�������ȥ��
+方法四：请神秘老妇出面直接向公主索取冰露珠项链。
+fly nuerguo;#2 n;#2 e;w;s;give 1 gold to old woman老妇人决定开始跟随你一起行动。
+n;nu;#2 n老妇人赶紧低头谢罪，静悄悄地向外走去。
 #2 s;sd;s;give 1 gold to old woman
 
-��Ů������������Ҫ2000�����ѡ��Ѱ��¶������������ͺ���ķ��ɿ�һ��������Թ���һ�����һֱ����
-�ߣ���һ����߳����ˡ��ĸ�������������������ս��򵥣�����skills��100�����������⡣
+过女儿国道行最少要2000。如果选择寻冰露珠项链，建议和后面的凤仙郡一起过。绿迷宫等一会儿再一直向西
+走，不一会就走出来了。四个方法还是向公主比武挑战最简单，所有skills过100打公主不是问题。
 
-19.������ɽ�����ö��� 
-fly tongtian;#5 s;#2 n;e;ne;e;n;e;ne;bian gong ji;out�������ھ�������ԣ�ҡ��һ�䣬��ú͹���
-һģһ����
+19.【毒敌山／琵琶洞】 
+fly tongtian;#5 s;#2 n;e;ne;e;n;e;ne;bian gong ji;out你手捻口诀，念动真言，摇身一变，变得和公鸡
+一模一样！
 fly dudi;nw;#2 ne;sw;se;enter;wield all
-һ����break;sw����������ס�㲻�š�#4 {kill yao jing %i}
-������break;s����������ס�㲻�š�#4 {kill yao jing %i}
-������break;se;s;kill xiezi jing
-������������ǹٵ�Ӱ�ӣ���Ы��ʰ����ƶ�ȥ��
-bian;n;nw;n;ne;out�����ڼ�������һ�ء�
+一洞门break;sw拉拉扯扯揪住你不放。#4 {kill yao jing %i}
+二洞门break;s拉拉扯扯揪住你不放。#4 {kill yao jing %i}
+三洞门break;se;s;kill xiezi jing
+天空闪过昴宿星官的影子，将蝎子拾起驾云而去。
+bian;n;nw;n;ne;out到洞口继续过下一关。
 
-Ҫ��ɼ���ȥ�򣬲�Ȼ��С�ĵ㡣 �������÷�������
+要变成鸡再去打，不然你小心点。 （可以用法宝）。
 
-20.������ɽ������ɽ�� 
-fly firemount;wu;su;wu;su;#2 e;get stone;hit doorһ����ƽ��٣���������������֡�
-ask cloud fog about princess�����ȹ�����������;fight cloud fogһ��������٣���������������֡�
-ask fog cloud about princess;fight fog cloud���⴫��{������|������}��������������ߵ��������
-koujian princessһ���ɫ��������һ�������������ȹ�����
-ask tieshan gongzhu about ����;
-fight tieshan gongzhu���ȹ�����Цһ�£��ܲ���Ը��˫���������ȣ������㡣
-out;#2 w;nd;ed;nd;ed;n;#3 nu;ed;#2 nd;#2 ne;#2 wu����ɽ
-shanֻ����ƴ�������������ֻһ�ȡ�
+20.【火焰山／翠云山】 
+fly firemount;wu;su;wu;su;#2 e;get stone;hit door一阵红云降临，云里雾在云里出现。
+ask cloud fog about princess（铁扇公主、公主）;fight cloud fog一阵红雾降临，雾里云在雾里出现。
+ask fog cloud about princess;fight fog cloud门外传来{云里雾|雾里云}的声音：别忘了叩见公主。
+koujian princess一阵红色云雾聚在一起，慢慢凝做铁扇公主。
+ask tieshan gongzhu about 铁扇;
+fight tieshan gongzhu铁扇公主苦笑一下，很不情愿地双手捧出铁扇，交给你。
+out;#2 w;nd;ed;nd;ed;n;#3 nu;ed;#2 nd;#2 ne;#2 wu火焰山
+shan只见你拼命地抡起大铁扇只一扇。
 .....
-#wa 5000;wdɲ�Ǽ����ذ�����¡¡��������֮��һ�ж�ƽ���ˣ�
+#wa 5000;wd刹那间天昏地暗，轰隆隆几声剧响之后，一切都平静了！
 
-������ס��������������һ��������Ѿ��������ˣ�
+你抑制住砰砰心跳，定睛一看：大火已经被扑灭了！
 
-���ȹ����书����������skills100�ٴ�
-//���˹ؿ��ܻᱻ�յ����ϵĶ����������ٹ�
+铁扇公主武功不弱，建议skills100再打。
+//过此关可能会被烧掉身上的东西，存了再过
 
-21.������ɽ��Ħ�ƶ��� 
+21.【积雷山／摩云洞】 
 
-����һ�صķ����������ȹ����������������ֱ�ӱ�һ�����ֽ����ȹ�������Ҽ���
+按上一关的方法见到铁扇公主，变成她；或者直接变一个名字叫铁扇公主的玩家即可
 bian tieshan gongzhu;out;fly jilei;sw;s;se;sw;se;mount jinjing shou
-������ ţħ��(Niumo wang) <���ڽ�����>
+大力王 牛魔王(Niumo wang) <骑在金睛兽上>
 
-kill yumian gongzhu���湫�������ڵ���������������һֻ���꾫��
+kill yumian gongzhu玉面公主翻倒在地现了真身，竟是一只狐狸精。
 
-kill niumo wang�������߹������ý���˩��ţ�����ϣ���ţħ��ǣ���ˡ�
+kill niumo wang李天王走过来，用金链拴在牛鼻子上，将牛魔王牵走了。
 
-nw;ne;nw��ʯ���ż�������һ�ء�
+nw;ne;nw到石洞门继续过下一关。
 
-�����Ҫ��ȽϾã�һֱ���ɱ��N���Դ��͹��ˣ�(�ȴ���ţħ���ٳ�pfm,��;���˻�������������Ҫ����)
-���ഩЩװ�������ĵ�������
+这关需要打比较久，一直坚持杀完N个脑袋就过了，(等打中牛魔王再出pfm,中途跑了或现了真身都得要从来)
+。多穿些装备，耐心点慢慢打。
 
-22.�����������̲�̶�� 
+22.【祭赛国／碧波潭】 
 fly changan;s;e;buy jiudai from er;w;n;w;w;w;w;n;ngive jiudai to yuan shoucheng;w;give jiudai to 
-yuan shoucheng;tear book��˺����������ı�ҳ��������С��������ȡ��һ��СֽƬ��
+yuan shoucheng;tear book你撕开无字天书的背页，从里面小心翼翼地取出一张小纸片。
 e;s;s;fly jisaiguo;#4 n;w;s;buy broom from huoji;n;e;#4 s;#2 w;open door;#3 n;nu;ask kusu 
-chanshi about ɨ��,������ʦ�ͳ���Կ�ף������ϵ�ͭ���򿪡�
-enter;#12 {u;shao ��}{�������|屲�����}������һ������
-#12 down;knock doorС�ű��˴��ˡ�
-out;sd;#2 s;open door;s;#2 e;#4 n;#2 w;nu;n;give shu tie to jisai guowang�������������һ������
-��
-s;sd;#4 w;sw;s;se;s;sw;su;wd;sd;se;ed;se;e;dive�����˹�����
-nu;#2 n;���������µ��������й�ͣ����������
-kill xiboer gu�����������ˡ��Ų������µ��������й�ͣ����������
-kill guboer xi�Ų��������ˡ�
-nu;#2 n;bian tianboer xiao�������ھ�������ԣ�ҡ��һ�䣬��ú��첨��Цһģһ����
-kill tianboer xiao 2,�첨��Ц���ˡ�
-kill xiaoboer tianЦ���������ˡ�
-#2 e;enter ask wansheng gongzhu about ��λ��ʥ��������Ķ�������˵�������շ�λ�ڣ���λ��
+chanshi about 扫塔,苦宿禅师掏出把钥匙，将门上的铜锁打开。
+enter;#12 {u;shao 塔}{奔波儿灞|灞波儿奔}交给你一封帖。
+#12 down;knock door小门被人打开了。
+out;sd;#2 s;open door;s;#2 e;#4 n;#2 w;nu;n;give shu tie to jisai guowang你给祭赛国国王一封书帖
+。
+s;sd;#4 w;sw;s;se;s;sw;su;wd;sd;se;ed;se;e;dive你游了过来。
+nu;#2 n;西波儿古嚷道：宫中有贵客，闲人免进！
+kill xiboer gu西波儿古死了。古波儿西嚷道：宫中有贵客，闲人免进！
+kill guboer xi古波儿西死了。
+nu;#2 n;bian tianboer xiao你手捻口诀，念动真言，摇身一变，变得和天波儿笑一模一样！
+kill tianboer xiao 2,天波儿笑死了。
+kill xiaoboer tian笑波儿天死了。
+#2 e;enter ask wansheng gongzhu about 方位万圣公主在你的耳边悄声说道：今日方位在（）位。
 
-����ͼ:
-          ��
-     ��          ��
-��                      ��
-    ��           ��
-          Ǭ
+八卦图:
+          坤
+     艮          震
+坎                      离
+    巽           兑
+          乾
 
-��ʹ��ȫ�������ƿ���ʯ����¶�������Ӳӵ�ϻ�ӡ�
-push table ,get tooth from xiazi��ӻƽ�ϻ�����ó�һ�ŷ������ӡ�
-#4 s;sd;s;sd;#2 s;up;w;nw;wu;nw;nu;eu;nd;ne;n;nw;n;ne;#4 e;nu;n;give tooth to jisai guowang���
-����������һ�ŷ������ӡ�
-enforce none;drop xiazi;s������̨��������һ�ء�
+你使尽全身力气推开了石桌，露出个金光灿灿的匣子。
+push table ,get tooth from xiazi你从黄金匣子中拿出一颗佛宝舍利子。
+#4 s;sd;s;sd;#2 s;up;w;nw;wu;nw;nu;eu;nd;ne;n;nw;n;ne;#4 e;nu;n;give tooth to jisai guowang你给
+祭赛国国王一颗佛宝舍利子。
+enforce none;drop xiazi;s到云霁台继续过下一关。
 
-����첨��Ц��Ҫ����ˣ���Ȼ�����͸�����ɱ��ġ�
-�ƽ�ϻ����û�ж����͵�ˢ�¡�
-// #n push���õ����ʻ��һЩ
+变成天波儿笑不要变错了，不然公主和附马会杀你的。
+黄金匣子内没有东西就等刷新。
+// #n push，得到几率会大一些
 
-23.�������룯ľ���֡� 
-fly jingjiling;#9 push jingji;exert recover�������Ƶ����ԣ�����һ����·��
-wu;sw;w;nw;wu;nw;wu;s;#9 push jingji;exert recover����ƺ
-su;sw;fight lingkong zi ������ʹһͦ���иֲ棬��ס�����ȥ·��
-kill guard������ʹ���ˡ�
-su;sw;fight lingkong zi����Ӷ����ʵ��������³���ɽ�����¾���ʲô��
-answer ��ã�ƺ��� �������Ӱһ�α㲻���ˡ�
-se;fight shiba gongʮ�˹������ʵ���������һ���ơ����¾���ʲô��
-answer ���������� ʮ�˹���Ӱһ�α㲻���ˡ�
-e;fight fuyun sou�����Ŷ����ʵ���������Ѱ�ɲ���Զ�����¾���ʲô��
-answer һ��������ɽ�� ��������Ӱһ�α㲻���ˡ�
-ne;fight guzhi gong��ֱ�������ʵ��������������ƺ�֮ˮ�����������¾���ʲô��
-answer ��������������;��ֱ����Ӱһ�α㲻���ˡ�
-nw;fight lingkong zi����Ӷ���һ�Ϲ���������������
-fight shiba gongʮ�˹�����һ�Ϲ���������������
-fight fuyun sou�����Ŷ���һ�Ϲ���������������
-fight guzhi gong��ֱ������һ�Ϲ���������������
+23.【荆棘岭／木仙庵】 
+fly jingjiling;#9 push jingji;exert recover荆棘被推到两旁，闪出一条道路。
+wu;sw;w;nw;wu;nw;wu;s;#9 push jingji;exert recover萝藤坪
+su;sw;fight lingkong zi 赤身鬼使一挺手中钢叉，挡住了你的去路。
+kill guard赤身鬼使死了。
+su;sw;fight lingkong zi凌空子对你问道：“明月出天山”的下句是什么？
+answer 苍茫云海间 凌空子身影一晃便不见了。
+se;fight shiba gong十八公对你问道：“花间一壶酒”的下句是什么？
+answer 独酌无相亲 十八公身影一晃便不见了。
+e;fight fuyun sou拂云叟对你问道：“五岳寻仙不辞远”的下句是什么？
+answer 一生好入名山游 拂云叟身影一晃便不见了。
+ne;fight guzhi gong孤直公对你问道：“君不见，黄河之水天上来”的下句是什么？
+answer 奔流到海不复回;孤直公身影一晃便不见了。
+nw;fight lingkong zi凌空子对你一鞠躬：不错，不错！
+fight shiba gong十八公对你一鞠躬：不错，不错！
+fight fuyun sou拂云叟对你一鞠躬：不错，不错！
+fight guzhi gong孤直公对你一鞠躬：不错，不错！
 
-��ɽ�Ĳٵ��书����������С�Ĳ�Ҫ�����ˡ��ƾ���enforce max���ƵĿ�Щ��
+深山四操的武功并不厉害，小心不要打死了。推荆棘enforce max会推的快些。
 
-24.��С���죯С�����¡� 
-fly xiaoxitian;s;e;kill huangmei laofo������������������֪������
-lookһֻ���ɰѸߵľ޴����
-out;look���󱻶������������������������˳�����
+24.【小西天／小雷音寺】 
+fly xiaoxitian;s;e;kill huangmei laofo慢慢地你终于又有了知觉　　
+look一只有丈把高的巨大金铙。
+out;look金铙被顶了起来，你从里面吃力地爬了出来。
 n;ne;e;kill huangmei laofo;ji fabao on huangmei laofo
-���շ������Ż�üСͯ���˳�ȥ������һֻ�ɰײ������
-get da bao;w;����Ժ��������һ�ء�
+弥勒佛祖领着黄眉小童走了出去，丢下一只旧白布搭包。
+get da bao;w;到寺院继续过下一关。
 
-������òʱ�װ���˽𲧾Ͳ�ͣ��out��
-��ʵ��õķ��������÷��������򵥿�ݡ�
-ɱ�˻�ü�Ϸ�����õ��ɰײ����(Da bao)һֻ�ƾɵİײ�����������ȡ��·������õķ�����
+如果不好彩被装进了金钵就不停的out，
+其实最好的方法还是用法宝祭，简单快捷。
+杀了黄眉老佛可以拿到旧白布搭包(Da bao)一只破旧的白布搭包。这可是取经路上最好用的法宝。
 
-25. �����Ϲ�������ɽ���������
-fly zhuzi;#8 n;#6 s;jiebang ����ϸ�ؽ����������
-#5 s;#2 e;ask guo wang about ���ʣ�����ҽ��ҽ�Ρ�ҽ�ơ�ҩ����ҩ��
-����˵������λ(%x)���ɷ�Ϊ��Ѱ���ڽ𵤣�
+25. 【朱紫国／麒麟山／獬豸洞】
+fly zhuzi;#8 n;#6 s;jiebang 你仔细地将榜揭下来。
+#5 s;#2 e;ask guo wang about 不适（病、医、医治、医疗、药、吃药）
+国王说道：这位(%x)，可否为朕寻得乌金丹？
 #2 w;#5 n;e;n;buy yaozhan from laotong;buy yao from laotong
-����һ��{�ۻ�|�ƻ�|��Ƥ|����|����|�Ͼ�|��ǰ|����|��β*|����|ݸ��|����|ţ��}��
-drop yao;buy yao from laotong����һ��{���|�Ͷ�|����}��
-s;#2 e;n;put yao����ƣ� in yaozhan;fill yaozhan�㽫��ҩյ����������Ķ�Ƥ���£����˼�����֭��
-put yao���Ͷ��� in yaozhan�㽫��ҩյ���ҩ�����һ�𣬽�����ȡ�
-put yao�����ƣ� in yaozhan�㽫��ҩյ���ҩ�����һ�𣬽�����ȡ�
-s;#3 w;#5 s;#2 e;get yao from yaozhan;give yao to wang���꣬�����������ؿ�̩����Ѫ����һЩ�ˡ�
-�����������˵�������˿ɷ����޾Ƚ�ʥ����ع���
+买下一包{雄黄|雌黄|陈皮|龙骨|川贝|紫荆|车前|羊须|狗尾*|蚶壳|莞根|乌竹花|牛黄}。
+drop yao;buy yao from laotong买下一包{大黄|巴豆|白芷}。
+s;#2 e;n;put yao（大黄） in yaozhan;fill yaozhan你将银药盏放在枣红马的肚皮底下，接了几滴尿汁。
+put yao（巴豆） in yaozhan你将银药盏里的药混合在一起，搅拌均匀。
+put yao（白芷） in yaozhan你将银药盏里的药混合在一起，搅拌均匀。
+s;#3 w;#5 s;#2 e;get yao from yaozhan;give yao to wang少顷，国王渐觉心胸宽泰，气血调和一些了。
+国王想想对你说道：恩人可否替朕救金圣王后回宫？
 #2 w;#2 n;fly qilin;right;climb up;right;climb up;nw;wu;ne;e;kill yao wang
-ͻȻ�����������⣬��ǧ������ӭ��������
-����ǿ���˼������˵��ڵء�
-�����ǰһ�ڣ�����ʲôҲ��֪����
-������������������֪��;
-kill yao wang��������һ���������˽�ë��ԭ�Σ���һ�������ȥ��
-nw;ne��ʥ���������뿪��
-#2 se;w;sw�����ڼ�������һ�ء� 
-���������ѧû��1000000��赹��
+突然洞里喷出烘烘火光，如千条火龙迎面扑来！
+你勉强走了几步，扑倒在地。
+你的眼前一黑，接着什么也不知道了
+慢慢地你终于又有了知觉;
+kill yao wang妖王打了一个滚，现了金毛兽原形，被一道金光罩去。
+nw;ne金圣宫往东南离开。
+#2 se;w;sw到洞口继续过下一关。 
+獬豸洞口武学没有1000000会昏倒。
 
-��ҩ��˳���Ǵ�ơ��Ͷ������ƻ�Ͷ������ơ���ƻ���ơ���ơ��Ͷ���������˳����Ķ�����ҩ��������
-Щ˳����Ķ��Ǽ�ҩ��
-//����Ҳ�ȽϷ�ʱ
+配药的顺序是大黄、巴豆、白芷或巴豆、白芷、大黄或白芷、大黄、巴豆按这三种顺序配的都是真药，不按这
+些顺序配的都是假药。
+//本关也比较费时
 
-26.����˿�룯��˿�����ƻ��ۣ�����ɽ�� 
-fly zhuzi;#8 n;#2 w;#2 nw;sw;w;wu;se;#2 w;kill yu xiang�������һ��������ͷ����֩�뾫��ԭ�Ρ�
-nw;w;kill liu mei��ü����һ��������ͷ����֩�뾫��ԭ�Ρ�
-kill hua yu�������һ��������ͷ����֩�뾫��ԭ�Ρ�
-#2 s;kill chai tou��ͷ����һ��������ͷ����֩�뾫��ԭ�Ρ�
-kill tan kou̴�ڻ���һ��������ͷ����֩�뾫��ԭ�Ρ�
-s;sw;kill mi;kill ma;kill lu;kill ban;kill meng;kill la;kill qing{��|��|¬|��|��|��|��}���һֻ
-С������ӵط����ˡ�
-ne;#3 n;e;se;e;sw;se;e;sd;kill jiang qun�ȹ����һ��������ͷ����֩�뾫��ԭ�Ρ�
-kill jin lian��������һ��������ͷ����֩�뾫��ԭ�Ρ�
-nu;w;nw;sw;ask duanchang furen about Ǯ��ֽǮ����Ǯ���ϳ����˸���һ�Ż�Ǯ��
-#2 ne;e;#3 nw;ne;ed;jump�㵨���ľ��ص��һ����ವ�һ��Ծ�˹�ȥ��
-e;nu;ne;nu;se;s;ne;e;enter�����Ÿ���һ���廨�롣��Ҳ���Բ���Ҫ���룬ֱ��ȥ�ø�����ji ��Ч��һ��
-��������
-out;w;sw;n;nw;sd;sw;sd;w;jump������۾�һ����ವ�һ��Ծ�˹�ȥ��
-wu;sw;#5 se;e;s;w;wield xiuhua zhen;kill dao shi��򼾫��Ϊһ�����������ɢ�ˡ�
-e;n;w;drop huang qian;drop xiuhua zhen;wield all����ǰ��������һ�ء�����û�л�Ǯ�����˽��ڡ�
+26.【盘丝岭／盘丝洞／黄花观／紫云山】 
+fly zhuzi;#8 n;#2 w;#2 nw;sw;w;wu;se;#2 w;kill yu xiang玉香浑身一软，攒着头现了蜘蛛精的原形。
+nw;w;kill liu mei柳眉浑身一软，攒着头现了蜘蛛精的原形。
+kill hua yu花语浑身一软，攒着头现了蜘蛛精的原形。
+#2 s;kill chai tou钗头浑身一软，攒着头现了蜘蛛精的原形。
+kill tan kou檀口浑身一软，攒着头现了蜘蛛精的原形。
+s;sw;kill mi;kill ma;kill lu;kill ban;kill meng;kill la;kill qing{蜜|蚂|卢|班|蜢|蜡|蜻}变成一只
+小虫儿嘤嘤地飞走了。
+ne;#3 n;e;se;e;sw;se;e;sd;kill jiang qun绛裙浑身一软，攒着头现了蜘蛛精的原形。
+kill jin lian金莲浑身一软，攒着头现了蜘蛛精的原形。
+nu;w;nw;sw;ask duanchang furen about 钱（纸钱、黄钱）断肠妇人给你一张黄钱。
+#2 ne;e;#3 nw;ne;ed;jump你胆颤心惊地掂脚一跳，嗖地一声跃了过去。
+e;nu;ne;nu;se;s;ne;e;enter毗蓝婆给你一根绣花针。（也可以不用要银针，直接去拿个法宝ji ，效果一样
+！！！）
+out;w;sw;n;nw;sd;sw;sd;w;jump你闭上眼睛一跳，嗖地一声跃了过去。
+wu;sw;#5 se;e;s;w;wield xiuhua zhen;kill dao shi蜈蚣精化为一股青烟噌地消散了。
+e;n;w;drop huang qian;drop xiuhua zhen;wield all到门前继续过下一关。身上没有黄钱过不了涧口。
 
-27.����������廪ׯ���廪���� 
-fly wudidong;ne;nu;ed;se;#4 e;open e long;n;open e long;w;ne;#2 e;se;s;sw;se;w;zuochan���������
-��������zuochan
-"���ߣ���Ե���ա�",
-"�����ߣ���Կա�",
-"�������У�売��ڲ���֮�ڡ�",
-"���ĬĬ����ң�ڼ���֮�С�",
-"����ն��ٶ��Σ���������ǧ���",
-"���˼��֪�����뵱ʶ�ġ�",
-"�ľ���������գ��Ĵ����򾳽��塣",
-"������Ƿ�����࣬��ǰ�ɼ���",
-"�����������л����������",
-"�й���������Ϊ�붨֮ԭ��",
-"����ʩ������������֮����",
-"������׾����֪������Ϊ��",
-"�ƼƷǳ����ͷͷ���¡�",
-"��ʹһ�Ĳ�����������ȫ��",
-"���Ʋ�����������Ϊ����������٣�ʵ����ʡ�",
-"ֻҪ����Ե����������ɫ�Կա�",
-"���ش����Ѱ�������Ȼ���������",
-���˼���꣬���������ƺ��Ѿ���
-e;nw;ne;n;nw;#2 w;sw;#2 s;sw;s;#2 w;s;kill mei hou�������ڵ�������ԭ����ԭ��һֻ���꾫��
-n;kill guo zhang����л���������ʱ��������������Ӱ��
-#2 e;fly qinghua;w;#3 turn left;#3 turn right;push treeɲ�Ǽ䣬һ���������������������ţ���һͷ
-ײ����ȥ��
-kill guo zhang���ϴ����ϼ����˵�ŭ�⣺����¹�����Ϸ�Ĺ���Ҳ͵��ȥ��
-out���廪ׯ��������һ�ء�
+27.【比丘国／清华庄／清华洞】 
+fly wudidong;ne;nu;ed;se;#4 e;open e long;n;open e long;w;ne;#2 e;se;s;sw;se;w;zuochan你坐禅完毕
+，起身。zuochan
+"求经者，万缘都罢。",
+"了性者，诸法皆空。",
+"大智闲闲，澹泊在不生之内。",
+"真机默默，消遥于寂灭之中。",
+"三界空而百端治，六根净而千种穷。",
+"若乃坚诚知觉，须当识心。",
+"心净则孤明独照，心存则万境皆清。",
+"真容无欠亦无余，生前可见。",
+"幻相有形终有坏，分外何求。",
+"行功打坐，乃为入定之原。",
+"布惠施恩，诚是修行之本。",
+"大巧若拙，还知事事无为。",
+"善计非筹，必须头头放下。",
+"但使一心不动，万行自全。",
+"若云采阴补阳，诚为谬语，服饵长寿，实乃虚词。",
+"只要尘尘缘总弃，物物色皆空。",
+"素素纯纯寡爱欲，自然享寿永无穷。",
+你沉思少顷，觉得禅意似乎已尽。
+e;nw;ne;n;nw;#2 w;sw;#2 s;sw;s;#2 w;s;kill mei hou美后扑在地上现了原身，原是一只狐狸精。
+n;kill guo zhang等你恍恍惚惚睁开眼时，国丈已无踪无影！
+#2 e;fly qinghua;w;#3 turn left;#3 turn right;push tree刹那间，一声响亮唿喇喇闪开两扇门，你一头
+撞将进去。
+kill guo zhang天上传来南极老人的怒斥：“孽鹿！连老夫的拐杖也偷了去！
+out到清华庄继续过下一关。
 
-//����ͺ���Ľ�ƽ��һ�𣬹���Ϊ������ʱ��̫�ã�����ƽ������ƿҪ��ˢ�¡�
+//建议和后面的金平府一起，过因为坐禅的时间太久，而金平府的油瓶要等刷新。
 
-28.���޵׶��������֡� 
+28.【无底洞／黑松林】 
 fly wudidong;wu;sd;sw;w;s;s;enforce 100;push statue
-������һԾ�����˽�ȥ�����漴�ֺ����ˡ�
+你纵身一跃，跳了进去，大洞随即又合上了。
 enforce none;sw;su;su;wu;dive dong
-��һ���������붴�У����²��������������������ǧ�㡣
-n;n;w;bian tian shu;e;n;n;n;ask yu shu about key��Կ�ף�;s;s;bian;unlock
-���߽�����˳�ֹ������ţ���������
+你一纵身，跳入洞中，足下彩云生万道，身边瑞气护千层。
+n;n;w;bian tian shu;e;n;n;n;ask yu shu about key（钥匙）;s;s;bian;unlock
+你走进来，顺手关上了门，上了锁。
 n
-������������Щ���ԣ�Ҳ��֪Ϊʲô���ƺ���ʲô������Ҫ��ȥ��(disarm)��
+你隐隐觉得有些不对，也不知为什么。似乎有什么机关需要你去破(disarm)。
 disarm
-��ɹ��ز���˷�����Ļ��ء���һ��Ҫ������仰��������
+你成功地拆除了房间里的机关。（一定要看见这句话！！！）
 n;#2 {kill ward %i};n
-�������ˡ�
+狱守死了。
 n
-����
-ask yuan qing about rescue����ȣ�
-ask yuan qing about tianfu���츳��
-ask yuan qing about xiugai���޸ģ�
-Բ���Ӧ��������µ����츳��
-��һ�����Ըı�����츳������ĳһ���ϼ������ټӵ���һ���ϡ�  
-����ָ�����£�  
-�����츳��subtract 
-�����츳��add 
-��������state
-�������ܣ�finalize
-����� ���츳����д��  
-������str ��ʶ��cor ���ԣ�int ���ԣ�spi  
-������cps ��ò��per ���ǣ�con ��Ե��kar  
-Բ��˵����Բ�����������̻��£�
-����ز����ñ��˱���ȥ���뼱����ɵĿ��Ա��˽�ȥ��æɱ���أ�������¾��Լ����ɣ��ٺ٣���û�о���
-���ܣ�finalize��ǰ���޸ĵ��츳��������⣬�Ͱ�Բ��ɱ�ˣ�ˢ�º����޸ġ�
+狱中
+ask yuan qing about rescue（搭救）
+ask yuan qing about tianfu（天赋）
+ask yuan qing about xiugai（修改）
+圆清答应帮助你从新调整天赋！
+你一共可以改变五点天赋，先由某一项上减掉，再加到另一项上。  
+具体指令如下：  
+降低天赋：subtract 
+增加天赋：add 
+检查情况：state
+决定接受：finalize
+这里的 是天赋的缩写：  
+膂力：str 胆识：cor 悟性：int 灵性：spi  
+定力：cps 容貌：per 根骨：con 福缘：kar  
+圆清说道：圆清老纳这就起程回寺！
+过这关不能让别人背进去，想急于求成的可以背人进去帮忙杀狱守，下面的事就自己来吧，嘿嘿！在没有决定
+接受：finalize以前，修改的天赋如果不满意，就把圆清杀了，刷新后再修改。
 
-//��#n ask yu shu about key���ͣ�#n unlock���������ӿ����Ļ��ᡣ
-//��վ��Ϊ�������3���츳�������Լ�����5���츳
+//（#n ask yu shu about key）和（#n unlock）可以增加开锁的机会。
+//本站改为随机增加3点天赋，而非自己调整5点天赋
 
-29.���շ����� 
+29.【钦法国】 
 fly putuo;open door;#2 n;w;get jingang
-���ܹ�������ס�㣺����������Ժ���߸�ʲôѽ��
+黑熊怪伸手拦住你：你往本门书院里走干什么呀？
 kill bear
-���ܹ����ˡ�
+黑熊怪死了。
 w;get jingang
-�����һ������վ�����
+你捡起一本〖金刚经〗。
 #2 w;fly wudidong;wu;sd;sw;#12 w;n;kill qian guafu
-Ǯ�Ѹ����ˡ�
+钱寡妇死了。
 get ti dao from corpse;s;w;n;#20 buy chong from guafu;s;#4 e;#2 n;#4 e;apply wang hou
-�����̲�ס����һ����Ƿ������˯�⡣
-apply��fang�� wang hou
-����������һ�꣬��һ����������������������硣
-cut��ti�� wang hou
-��ৣ������ͷ������һƬ��
+王后忍不住打了一个哈欠，满脸睡意。
+apply（fang） wang hou
+王后往被中一钻，不一会便鼾声大作，进入了梦乡。
+cut（ti） wang hou
+唰唰唰，王后的头发落下一片。
 cut wang hou
-����һ����������������ػ��һ�½�ǡ�
+王后一觉醒来，精力充沛地活动了一下筋骨。
 apply wang hou
-�����ͷ��������ˡ�
+王后的头发给剃光了。
 n;apply gong fei
-�����̲�ס����һ����Ƿ������˯�⡣
+宫妃忍不住打了一个哈欠，满脸睡意。
 apply gong fei
-����������һ�꣬��һ����������������������硣
+宫妃往被中一钻，不一会便鼾声大作，进入了梦乡。
 cut gong fei
-��ৣ�������ͷ������һƬ��
+唰唰唰，宫妃的头发落下一片。
 cut gong fei
-����һ����������������ػ��һ�½�ǡ�
+宫妃一觉醒来，精力充沛地活动了一下筋骨。
 apply gong fei
-������ͷ��������ˡ�
+宫妃的头发给剃光了。
 #2 s;apply gong fei
-�����̲�ס����һ����Ƿ������˯�⡣
+宫妃忍不住打了一个哈欠，满脸睡意。
 apply gong fei
-����������һ�꣬��һ����������������������硣
+宫妃往被中一钻，不一会便鼾声大作，进入了梦乡。
 cut gong fei
-��ৣ�������ͷ������һƬ��
+唰唰唰，宫妃的头发落下一片。
 cut gong fei
-����һ����������������ػ��һ�½�ǡ�
+宫妃一觉醒来，精力充沛地活动了一下筋骨。
 apply gong fei
-������ͷ��������ˡ�
+宫妃的头发给剃光了。
 n;w;apply guo wang
-�����̲�ס����һ����Ƿ������˯�⡣
+国王忍不住打了一个哈欠，满脸睡意。
 apply guo wang
-����������һ�꣬��һ����������������������硣
+国王往被中一钻，不一会便鼾声大作，进入了梦乡。
 cut guo wang
-��ৣ�������ͷ������һƬ��
+唰唰唰，国王的头发落下一片。
 cut guo wang
-����һ����������������ػ��һ�½�ǡ�
+国王一觉醒来，精力充沛地活动了一下筋骨。
 apply guo wang
-������ͷ��������ˡ�
-����һ��ѣ�Σ����ˤ���ڵأ����м�ͷ��һ��Ҫȫ����⣡��
+国王的头发给剃光了。
+国王一阵眩晕，差点摔倒在地！（切记头发一定要全部剃光！）
 give jingang to guo wang
-�������𡼽�վ������۾�����ض���������
-ask guo wang about buddhism��monk���𡢷�̡����С��ݷ��������� ��
-������Ĭ����������һ��ͷ��
-����˵����������ɮ�����ޣ�����ԸҪɱһ�������Բ����
-����˵�������ڽ�ҹ���������޵�Ϊɮ��
-����˵������񷢶������ˣ���Ը����š�
-������˵������������Ҳ��
+国王捧起〖金刚经〗，聚精会神地读了起来。
+ask guo wang about buddhism（monk、佛、佛教、和尚、拜佛、入佛、入佛门 ）
+国王沉默几许，点了一下头。
+国王说道：朕曾因僧谤了朕，许天愿要杀一万和尚做圆满。
+国王说道：不期今夜归依，教朕等为僧。
+国王说道：如今发都剃落了，朕愿入佛门。
+国王又说道：此乃天意也。
 drop ti dao;#3 w
-��Ǭ������������һ�ء�
+到乾坤场继续过下一关。
 
-//�˯��(chong)�����ƽ�һֻ��Ҫ�ö���ֻ�Ϳ���������ˡ����¹������������Ǹ��÷���
-//��ͷһ��ÿ������������������˾�ɱ�����Ȼָ������ꡣ
-//����վ�������Ϸ��ֻ��һ�������û�о�����˭���ˡ�
-//����Ҳ�ȽϷ�ʱ
+//瞌睡虫(chong)六两黄金一只，要用多少只就看你的运气了。用月宫大米来回梦是个好方法
+//剃头一般每次剃两刀，剃多了醒了就杀掉，等恢复了再剃。
+//〖金刚经〗在游戏中只有一本，如果没有就问问谁拿了。
+//本关也比较费时
 
-���շ�����ʡǮ�Ĺ��� 
-���շ�ʱֻ����fly chechi ȥ�������ȥ���ǵ�dao shi ti�ˣ������dao shi��auto sleep�ġ�ֻ��ti����
-����������Ҳ���������kill�����Կ��Է��ĵ�ti�ˡ�ti����������fly qinfaȥ�򼸸�chong,apply guo 
-wang;�ѹ���ͷ����������ñ���˷𷨸����͹��ء��ǲ���so easy�����ҽ�ʡ�ܶ��gold��
+【钦法国】省钱的过法 
+过钦法时只需先fly chechi 去三清观先去把那的dao shi ti了，这里的dao shi是auto sleep的。只需ti三个
+。而且醒了也不会对你下kill，所以可以放心的ti了。ti完三个后再fly qinfa去买几个chong,apply guo 
+wang;把国王头发剃光了再拿本大乘佛法给他就过关。是不是so easy，而且节省很多的gold。
 
-30.������ɽ���������� 
-fly yinwu;#4 nwɽ���������������������
+30.【隐雾山／连环洞】 
+fly yinwu;#4 nw山妖呲牙咧嘴地死活不让你过！
 kill shan yao;ji fabao on shan yao;#wa 8000;nw;nu;w;sw;sd;climb
-//����·�ڿ���1,busyסɽ����2,������3,�뷨�����ǰ���
-���ֽŲ��÷ܲ�������������ȥ��
-��������һ������ʧ�ֻ���������
-�����ǰһ�ڣ�����ʲôҲ��֪����
-������������������֪��������
-climb���ֽŲ��÷ܲ�������������ȥ��
-break door�����������һ��������ȥ��
-һ����ʯ���죬�������ͷ�ϣ�
-�����ǰһ�ڣ�����ʲôҲ��֪����
-������������������֪��
-ask tu di about fajian������;�������ظ���һ������
-fly yinwu;#3 nw;ne ɽ���������������������
-kill shan yao;ji fabao on shan yao;#wa 8000;ne;e;se;tou all from xiao yaoС������һ�����ȣ�����
-����һ��Ҳ�����ˡ�
-apply xiao yaoС������һ����һ��������ԭ�Ρ�
-look{��«��|��ʵ�|���ȹ�|������|�ϱۺ�}kill xiao yao{��«��|��ʵ�|���ȹ�|������|�ϱۺ�}���ˡ�
-tou all from xiao yaoˮ�������������۾��������˹�����
-//��վ������ô�鷳��������и�ˮ���������
-bian xiao yao;sd;dive����ˮ��һ��Ǳ����ȥ����
-bian;w;kill yao jing;ji fabao on yao jing;#wa 8000;w;kill yao wang��ͤ����һ�ѽ������ؾ�ס���
-�������
-kill yao jing;ji fabao on yao jing;#wa 8000;w;kill yao wang��Ҷ��Ƥ�������ˡ�
-drop fa jian;w;nw��ɽ�ż�������һ�ء�
+//过此路口可以1,busy住山妖，2,隐身，3,想法把他们搬走
+你手脚并用奋不顾身地向上爬去。
+……哗哗一声，你失手滑了下来。
+你的眼前一黑，接着什么也不知道了
+慢慢地你终于又有了知觉　　　
+climb你手脚并用奋不顾身地向上爬去。
+break door你憋红了脸大喝一声向门砸去！
+一阵乱石轰响，砸在你的头上！
+你的眼前一黑，接着什么也不知道了
+慢慢地你终于又有了知觉
+ask tu di about fajian（法简）;白髯土地给你一根法简。
+fly yinwu;#3 nw;ne 山妖呲牙咧嘴地死活不让你过！
+kill shan yao;ji fabao on shan yao;#wa 8000;ne;e;se;tou all from xiao yao小妖脚下一个不稳，跌在
+地上一动也不动了。
+apply xiao yao小妖浑身一软，一下子显了原形。
+look{葫芦蛇|大肥雕|短腿狗|飞蚂蚁|断臂猴}kill xiao yao{葫芦蛇|大肥雕|短腿狗|飞蚂蚁|断臂猴}死了。
+tou all from xiao yao水老鼠慢慢睁开眼睛，清醒了过来。
+//本站不用这么麻烦，那里就有个水老鼠让你变
+bian xiao yao;sd;dive你往水里一扎潜了下去……
+bian;w;kill yao jing;ji fabao on yao jing;#wa 8000;w;kill yao wang守亭妖精一把将你劈胸揪住死活不
+让你过！
+kill yao jing;ji fabao on yao jing;#wa 8000;w;kill yao wang艾叶花皮豹子死了。
+drop fa jian;w;nw到山门继续过下一关。
 
-31.�����ɿ��� 
-fly yinwu;sw;#4 w;#2 sw;s;w;#2 s;ketou�㻺��������
-ketou��ף��ϲ�������Ϸ��񴫻����������ɽȫ�����ˣ�
-#2 n;#3 w;#2 n;zhanbai�����һ������̧��ͷ����
-zhanbai��ʦ�󾪵������ϵ����Ӵ������������ɽ�����������ˣ�
-#2 s;#3 w;s;w;nianxiang����ϣ���һ���ݡ�
-nianxiang���ٴ󾪵��������׹��л������������Ѷϣ�
-e;#2 n;give 200 gold to cibei heshang;s;#3 e;#2 s;sw;se�Ϲٿ��������л��
-ne;nw;n���ֵ���������һ�ء�
+31.【凤仙郡】 
+fly yinwu;sw;#4 w;#2 sw;s;w;#2 s;ketou你缓缓起身。
+ketou庙祝狂喜道：天上风神传话：披香殿米山全都倒了！
+#2 n;#3 w;#2 n;zhanbai你呼出一口气，抬起头来。
+zhanbai法师大惊道：天上电娘子传话：披香殿面山整个儿倒掉了！
+#2 s;#3 w;s;w;nianxiang你香毕，又一俯拜。
+nianxiang祭官大惊道：天上雷公有话：披香殿金锁已断！
+e;#2 n;give 200 gold to cibei heshang;s;#3 e;#2 s;sw;se上官郡主向你道谢。
+ne;nw;n到街道继续过下一关。
 
-//��50����Ե��*5�����ȱ�����(Cibei heshang)��Ǯ��Gold��������100Gold���200Gold��������ȡ��·��
-�������ô��һ�ء�
-//��ͷ����ʲô�Ķ��ȽϷ�ʱ
+//（50－福缘）*5＝给慈悲和尚(Cibei heshang)的钱（Gold），最少100Gold最多200Gold。本关是取经路上
+真正不用打的一关。
+//磕头拈香什么的都比较费时
 
-32.�����أ���ͷɽ�����ڶ������ɽ�������̻����� 
-fly baotou;se;#2 ed;nw;nu;#3 nw;#2 nu;bian diaozuan guguai�������ھ�������ԣ�ҡ��һ�䣬��ú�
-����Ź�һģһ����
-#2 sd;#2 wu;nw;ask guguai diaozuan about dong�����ڶ�������һ���ȷ紵������е�һ��ͻ��������ͷ
-�Ρ�
-nw;n;ne;climb;get all��������ȵ��������ӣ�
-kill yao wang��ëʨ�����ˡ�
-ne;climb����ұ��ϻ���������
-kill yao guai{����|�ǹ�|���|����|���|¹��|����}���ˡ�
-climb������������
-u;#5 n;u;ask fairy girl about ��ȥ�������۾������˹�����
-get all;down��һ��������ֻ���������档�ûһ���ˡ�
-get all;down������������������֪��
+32.【玉华县／豹头山／虎口洞／竹节山／九曲盘桓洞】 
+fly baotou;se;#2 ed;nw;nu;#3 nw;#2 nu;bian diaozuan guguai你手捻口诀，念动真言，摇身一变，变得和
+刁钻古怪一模一样！
+#2 sd;#2 wu;nw;ask guguai diaozuan about dong（虎口洞）洞口一阵腥风吹来，你感到一阵突如其来的头
+晕。
+nw;n;ne;climb;get all妖王对你喝道：哪里逃！
+kill yao wang金毛狮子死了。
+ne;climb你从岩壁上滑了下来！
+kill yao guai{虎怪|狼怪|彪怪|豹怪|羊怪|鹿怪|马怪}死了。
+climb荡悠悠三更梦
+u;#5 n;u;ask fairy girl about 回去你揉揉眼睛，醒了过来。
+get all;down你一觉醒来，只觉精力充沛。该活动一下了。
+get all;down慢慢地你终于又有了知觉
 get all;down
-�����һ��С�𹿰���
-�����һ��С�����ȡ�
-�����һ��С�ų��١�
-�����һ��̫���񵶡�����������Ҫȫ���ҵ�������
-sw;s;se;fly yuhua;#7 s;#3 n;#5 e;#3 w;#2 s;e;give xiao jingu bang to da wangzi���������һ��С��
-������
-e;give xiao jiuchi pa to er wangzi���������һ��С�ų��١�
-e;give xiao xiangyao zhang to xiao wangzi���С����һ��С�����ȡ�
-#3 w;#10 n;nw;#3 ne;nu;nw;ne;nu;e;ne;nw;w;sw;w;nw;w;sw;wield taiyi zhu dao;kill jiutou shi��ͷʨ
-����һ����ƶ�ȥ��
-ne;e;se;e;ne;e;se;sw��ɽ·��������һ�ء�
+你捡起一条小金箍棒。
+你捡起一杆小降妖杖。
+你捡起一柄小九齿钯。
+你捡起一柄太乙竹刀。（几样动西要全部找到！！）
+sw;s;se;fly yuhua;#7 s;#3 n;#5 e;#3 w;#2 s;e;give xiao jingu bang to da wangzi你给大王子一条小金
+箍棒。
+e;give xiao jiuchi pa to er wangzi你给二王子一柄小九齿钯。
+e;give xiao xiangyao zhang to xiao wangzi你给小王子一杆小降妖杖。
+#3 w;#10 n;nw;#3 ne;nu;nw;ne;nu;e;ne;nw;w;sw;w;nw;w;sw;wield taiyi zhu dao;kill jiutou shi九头狮
+随着一阵彩云而去。
+ne;e;se;e;ne;e;se;sw到山路继续过下一关。
 
-//����ͷʨҧȥʯ�κ󣬿���ͨ��˯ȥ�����������ηɳ�������ji fu��ȥ(�¹ⱦ�� move��ȥ)��
-//������Ѿ�ǿ��������ɱ��ͷʨ����ô����̫����Ҳû����
+//给九头狮咬去石牢后，可以通过睡去荡悠悠三更梦飞出来或者ji fu出去(月光宝盒 move出去)。
+//如果你已经强到可以秒杀九头狮，那么不拿太乙竹刀也没问题
 
-33.����ƽ��������ɽ����Ӣ���� 
+33.【金平府／青龙山／玄英洞】 
 fly jinping;#2 s;#3 e;#2 w;s;#4 buy hulu from zhu;n;#2 e;#3 n;fill hulu;s;e;fill hulu;w;s;e;fill 
-hulu;w;s;w;n;fill hulu;s;#2 w;#3 n;#4 pour gang�ƹٸ����㣺��үҪ���ˣ�
-һ���紵������ү���֣�
-��үЯ���������գ�
-��үͻȻͣ������˳�㽫��������һ�ӣ�
-�����ǰһ�ڣ�����ʲôҲ��֪���ˡ�
-������������������֪��
-#2 ne;n;e����ţ��һ����ֻ��ţ�ǵ�ס�㣺���ﵽ�Ķ�ȥ�������һ��װ���͵� hu lu��
-give hulu to shoumen niujing����ţ��˵����лл��
-e;ne;follow pihan dawang;kill pihan dawang�ٺ������˵��ڵأ���ԭΪһͷϬţ��
-e;e;follow pishu dawang;kill pishu dawang��������˵��ڵأ���ԭΪһͷϬţ��
-e;se;follow pichen dawang;kill pichen dawang�ٳ������˵��ڵأ���ԭΪһͷϬţ��
+hulu;w;s;w;n;fill hulu;s;#2 w;#3 n;#4 pour gang灯官告诉你：佛爷要来了！
+一阵狂风吹来，佛爷出现！
+佛爷携着你飞上天空！
+佛爷突然停下来，顺便将你往地上一扔！
+你的眼前一黑，接着什么也不知道了…
+慢慢地你终于又有了知觉
+#2 ne;n;e守门牛精一晃两只大牛角抵住你：想溜到哪儿去？（多带一个装满油的 hu lu）
+give hulu to shoumen niujing守门牛精说道：谢谢！
+e;ne;follow pihan dawang;kill pihan dawang辟寒大王扑倒在地，还原为一头犀牛。
+e;e;follow pishu dawang;kill pishu dawang辟暑大王扑倒在地，还原为一头犀牛。
+e;se;follow pichen dawang;kill pichen dawang辟尘大王扑倒在地，还原为一头犀牛。
 w;s;sw
 
-//40�����츣Ե�������ֺ����͵Ĵ������м���͹�ˢ�µ�ʱ�����Ź������ذɡ��ǵ��ڵƹٸ����㣺�ٵ�һ
-�α�ɡ�֮ǰ���������еĶ���ȫ���ˣ�ǮҲ��á��������Ҫ��һ���ͣ���Ӣ��������ţ����Ҫ�ֺ�������
-��ģ����͹��ƭ��������
+//40－先天福缘数＝倒酥合香油的次数。中间等油罐刷新的时间试着过其他关吧。记得在灯官告诉你：再倒一
+次便可。之前把身上所有的东西全卖了，钱也存好。最后身上要有一灌油，玄英洞的守门牛精是要酥合香油收
+买的，空油灌可骗不了它。
 
-//��ү��Ȼ�Ǹ����ٷ����������ѹβ��������ⶪ�������������������������ֵǮ�Ķ�������Ҫ��
-1.�Լ����Ƶķ�����
-2.ĳЩNPC��װ�����磺»�ǵ������⣻
-3.���ëtransform��
-4.��NPCҪ�����������磺�ڽ�������ƽ��Ҫ��װ����
+//佛爷虽然是个抢劫犯，但他不搜刮不可以随意丢弃的物件（不包括法宝）。不值钱的东西他不要？
+1.自己炼制的法宝；
+2.某些NPC的装备，如：禄星的绿如意；
+3.买毫毛transform。
+4.向NPC要来的武器，如：在将军府秦平处要的装备。
 
-//���ϰ취���˹غܷ�ʱ�����Ѹ�λ�����Ϲ�Ҳ�����ͺ�«�������������ĺ�«������͡���
+//用老办法过此关很费时，提醒各位，朱紫国也有卖油葫芦……那里买来的葫芦里就有油……
 
-34.�����ù���ëӱɽ������Ѩ�� 
-fly tianzhu;#7 w;#4 s;#3 e��¥�����˸ߺ�������������ϣ���ף����ء���¥�������ָߺ��������ٴ���
-��Ů���򣡵����������͸����ź���������Ҳ��������Ҳ��һֻ���������ž���������ͷ�ϣ������κ�����
-�����˹����������Թ������˸����������������ȥ��
-#2 n;kill gong zhu�������Ա�һ����һת����������Ӱ��
-#4 s;fly tianzhu;#7 w;#8 s;#3 e;se;#4 s;sw;s;#2 se;sw;eu;se;se;eu;#2 se;enter������*ʯ���аǿ�һ
-���������˽�ȥ��
-kill gong zhu�������Ա�һ����һת����������Ӱ��
-nw;ne;e;se;sw;w;#9 n���ںڰ����ҵ�һ���ڣ����˳�ȥ��
-ne;eu;se;eu;#2 se;enter;kill gong zhu��������ԭ�Σ�����һֻ���á�
-nw;ne;e;se;sw;w;#9 s���ںڰ����ҵ�һ���ڣ����˳�ȥ��
-fly tianzhu;#7 w;#4 s;#3 e;#4 n;ask guo wang about princess�����������������ף�����������ʼ����
-��һ���ж���
-#4 s;#4 e;se;s;#2 se;s;#2 sw;s;#2 w���ɾ�����ʼ������һ���ж���
-e;se����С�ĵؽ�Сľ�Ŵ򿪡�
-seһ����������ȥ��
+34.【天竺国／毛颖山／三连穴】 
+fly tianzhu;#7 w;#4 s;#3 e彩楼上有人高喊：公主拈香完毕，正祝告天地。彩楼上有人又高喊：公主临窗，
+伺女备球！底下无数看客高声呐喊：抢绣球也！抢绣球也！一只绣球飞来，啪地砸在你的头上！你晕晕乎乎地
+清醒了过来。公主对国王撒了个娇，红着脸向后宫走去。
+#2 n;kill gong zhu公主往旁边一跳，一转眼已无踪无影！
+#4 s;fly tianzhu;#7 w;#8 s;#3 e;se;#4 s;sw;s;#2 se;sw;eu;se;se;eu;#2 se;enter你在蒿*石缝中扒开一
+个洞，钻了进去。
+kill gong zhu公主往旁边一跳，一转眼已无踪无影！
+nw;ne;e;se;sw;w;#9 n你在黑暗中找到一出口，挤了出去。
+ne;eu;se;eu;#2 se;enter;kill gong zhu公主现了原形，竟是一只玉兔。
+nw;ne;e;se;sw;w;#9 s你在黑暗中找到一出口，挤了出去。
+fly tianzhu;#7 w;#4 s;#3 e;#4 n;ask guo wang about princess（公主、驸马、招亲）国王决定开始跟随
+你一起行动。
+#4 s;#4 e;se;s;#2 se;s;#2 sw;s;#2 w方丈决定开始跟随你一起行动。
+e;se方丈小心地将小木门打开。
+se一行人往外走去。
 
-//�ٹ��������÷���������ս�پ����Ͼ�������Ѩ��Ƚ��鷳��
+//假公主建议用法宝祭，速战速决，毕竟在三连穴打比较麻烦。
 

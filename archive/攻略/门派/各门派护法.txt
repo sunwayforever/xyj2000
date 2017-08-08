@@ -1,54 +1,54 @@
-¸÷ÃÅÅÉ»¤·¨
+å„é—¨æ´¾æŠ¤æ³•
 
-1¡£Áú¹¬
-µÀÐÐ¡µ100kµÄÊ±ºò
-¾«Éñ1200£¬ÆøÑª1200£¬ÄÚÁ¦·¨Á¦1000
-¼ÓÁ¦10<-Õâ¸öÌ«ÉÙÁË£¬²»¹ýÊÇ¹Ì¶¨µÄ£¬ÓëÍæ¼ÒÎÞ¹Ø...
-·¨Êõ¼ÓÁ¦50
-¸ù¾ÝÍæ¼ÒµÄunarmed£¬dodge£¬parry£¬dragonfight+20£¬dragonstep+20£¬ÎäÑ§£¬µÀÐÐ ¸øÕÙ»½³öÀ´µÄÁú£¬
-Ïàµ±ÃÍµÄÁú£¡ËùÒÔÕâ¼¸¸ö¹¦·òÒ»¶¨Òª¸ß
-×¢Òâµã£ºÁú¹¬µÄÒ»¶¨ÒªÁ·×Ô¼ºµÄdragonstep£¬Òª²»È»ÕÙ»½³öÀ´µÄÁú»áºÜ´àÈõ~
+1ã€‚é¾™å®«
+é“è¡Œã€‰100kçš„æ—¶å€™
+ç²¾ç¥ž1200ï¼Œæ°”è¡€1200ï¼Œå†…åŠ›æ³•åŠ›1000
+åŠ åŠ›10<-è¿™ä¸ªå¤ªå°‘äº†ï¼Œä¸è¿‡æ˜¯å›ºå®šçš„ï¼Œä¸ŽçŽ©å®¶æ— å…³...
+æ³•æœ¯åŠ åŠ›50
+æ ¹æ®çŽ©å®¶çš„unarmedï¼Œdodgeï¼Œparryï¼Œdragonfight+20ï¼Œdragonstep+20ï¼Œæ­¦å­¦ï¼Œé“è¡Œ ç»™å¬å”¤å‡ºæ¥çš„é¾™ï¼Œ
+ç›¸å½“çŒ›çš„é¾™ï¼æ‰€ä»¥è¿™å‡ ä¸ªåŠŸå¤«ä¸€å®šè¦é«˜
+æ³¨æ„ç‚¹ï¼šé¾™å®«çš„ä¸€å®šè¦ç»ƒè‡ªå·±çš„dragonstepï¼Œè¦ä¸ç„¶å¬å”¤å‡ºæ¥çš„é¾™ä¼šå¾ˆè„†å¼±~
 
-2¡£ÆÕÍÓ
-ÆøÑª1000£¬¾«Éñ500
-ÎäÑ§100k£¬µÀÐÐ 
-skill 100¼¶
+2ã€‚æ™®é™€
+æ°”è¡€1000ï¼Œç²¾ç¥ž500
+æ­¦å­¦100kï¼Œé“è¡Œ 
+skill 100çº§
 
-3¡£µØ¸®
-1)¸´»î½©Ê¬
-ÍêÈ«¸úÍæ¼ÒÒ»Ñù...
+3ã€‚åœ°åºœ
+1)å¤æ´»åƒµå°¸
+å®Œå…¨è·ŸçŽ©å®¶ä¸€æ ·...
 
-2)¹í±ø
-¾«Éñ1000£¬ÆøÑª1000£¬ÄÚÁ¦·¨Á¦100
-ÎäÑ§£¬µÀÐÐ100k
+2)é¬¼å…µ
+ç²¾ç¥ž1000ï¼Œæ°”è¡€1000ï¼Œå†…åŠ›æ³•åŠ›100
+æ­¦å­¦ï¼Œé“è¡Œ100k
 fork 90
 parry 70
 dodge 50
 
-3)÷¼÷Ã±ø
-ÎäÑ§80~110k
-µÀÐÐ50k
+3)éª·é«…å…µ
+æ­¦å­¦80~110k
+é“è¡Œ50k
 skill 35~50
 
-4¡£ÔÂ¹¬£¬·½´ç
-¾«Éñ1000£¬ÆøÑª1000£¬ÄÚÁ¦·¨Á¦100,¼ÓÁ¦¸÷5
-ÎäÑ§£¬µÀÐÐ100k
-sword,parry,dodge 100¼¶
-¸ù¾ÝÍæ¼ÒµÄ"moonshentong" ¸ø sword£¬parry£¬dodge<-·½´çµÄ±È½ÏÓôÃÆ
+4ã€‚æœˆå®«ï¼Œæ–¹å¯¸
+ç²¾ç¥ž1000ï¼Œæ°”è¡€1000ï¼Œå†…åŠ›æ³•åŠ›100,åŠ åŠ›å„5
+æ­¦å­¦ï¼Œé“è¡Œ100k
+sword,parry,dodge 100çº§
+æ ¹æ®çŽ©å®¶çš„"moonshentong" ç»™ swordï¼Œparryï¼Œdodge<-æ–¹å¯¸çš„æ¯”è¾ƒéƒé—·
 
-5¡£Îå×¯¹Û£¬ÎÞµ×¶´
-Ã»ÓÐ
-°ËÏÉ²»Ëã»¤·¨
+5ã€‚äº”åº„è§‚ï¼Œæ— åº•æ´ž
+æ²¡æœ‰
+å…«ä»™ä¸ç®—æŠ¤æ³•
 
-6¡£Ñ©É½
-lvl=(dengxian-dafaµÈ¼¶-40)/40 lvl×î´óÈ¡4£¬Õâ¸ölvl¾ö¶¨ÕÐ³öÀ´µÄÊÇÊ²Ã´Äñ
-dengxian-dafa>=300 ÄÜÕÙ»½²»ËÀÄñ lvl=5 Ñ©É½µÄÒ»¶¨°Ñdengxian-dafaÑ§µ½300°¢£¡
-lvlËã³öÀ´ÒÔºó£¬Ëæ»ú-1£¬Ã»¹ØÏµ£¬Èç¹ûÃ»·¢»ÓºÃ£¬ÔÙÀ´Ò»´Î¾ÍÐÐ¡£
-ÆøÑª£¬¾«Éñ=lvl*1000+500;£¨²»ËÀÄñ2000£¬ÓÐµãÆæ¹Ö£©
-ÄÚÁ¦£¬·¨Á¦1000
-¼ÓÁ¦10<-¹Ì¶¨µÄ
-·¨Êõ¼ÓÁ¦50
-spells£¬force,unarmed,dodge,parry 50+lvl*40 ×î¶à250¼¶~
-ÎäÑ§£¬µÀÐÐ 100k+lvl*200k ×î¶à 1.1m
+6ã€‚é›ªå±±
+lvl=(dengxian-dafaç­‰çº§-40)/40 lvlæœ€å¤§å–4ï¼Œè¿™ä¸ªlvlå†³å®šæ‹›å‡ºæ¥çš„æ˜¯ä»€ä¹ˆé¸Ÿ
+dengxian-dafa>=300 èƒ½å¬å”¤ä¸æ­»é¸Ÿ lvl=5 é›ªå±±çš„ä¸€å®šæŠŠdengxian-dafaå­¦åˆ°300é˜¿ï¼
+lvlç®—å‡ºæ¥ä»¥åŽï¼Œéšæœº-1ï¼Œæ²¡å…³ç³»ï¼Œå¦‚æžœæ²¡å‘æŒ¥å¥½ï¼Œå†æ¥ä¸€æ¬¡å°±è¡Œã€‚
+æ°”è¡€ï¼Œç²¾ç¥ž=lvl*1000+500;ï¼ˆä¸æ­»é¸Ÿ2000ï¼Œæœ‰ç‚¹å¥‡æ€ªï¼‰
+å†…åŠ›ï¼Œæ³•åŠ›1000
+åŠ åŠ›10<-å›ºå®šçš„
+æ³•æœ¯åŠ åŠ›50
+spellsï¼Œforce,unarmed,dodge,parry 50+lvl*40 æœ€å¤š250çº§~
+æ­¦å­¦ï¼Œé“è¡Œ 100k+lvl*200k æœ€å¤š 1.1m
 
-busytime»ù±¾¶¼ÊÇ2~3Ãë¡£
+busytimeåŸºæœ¬éƒ½æ˜¯2~3ç§’ã€‚

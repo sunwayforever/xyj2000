@@ -1,19 +1,19 @@
-¹ÖÎïÊı¾İµÄ¼ÆËã
+æ€ªç‰©æ•°æ®çš„è®¡ç®—
 
 
-¹ÖµÄµÈ¼¶£ºLVL:0£­9 
+æ€ªçš„ç­‰çº§ï¼šLVL:0ï¼9 
 R=(LVL+16)/20
 
-skills(¼¼ÄÜ): ÏÈcopyÄãµÄskills£¬µÈ¼¶£½Your_max_skill_level*R
-È»ºóset¹Ö×Ô¼ºÃÅÅÉµÄskills£¬Ã¿Ò»ÏîµÈ¼¶£½Your_max_skill_level*R+Random(15)
-Force(ÄÚÁ¦)£ºÄÚÁ¦=Your_Force*R
-Mana(·¨Á¦)£º·¨Á¦=Your_Mana*R
-Enforce(¼ÓÁ¦)£º¹ÖµÄÓĞĞ§force/2
-Enchant()£º¹ÖµÄ×î´ómana/30+1
-Kee(ÆøÑª)£ºÆøÑª=Your_qx/2+Your_qx*R
-Gen(¾«Éñ)£º¾«Éñ=Your_js/2+Your_js*R
-Combat_Exp(ÎäÑ§)£ºÎäÑ§=Your_wx/100*R*100+Your_wx/50*R
-Daoxing(µÀĞĞ)£ºYour_New_Dx=(Your_dx*2+Your_wx)/3
-¹ÖµÄµÀĞĞ=Your_New_Dx/100*R*100+Your_New_Dx/50*R
+skills(æŠ€èƒ½): å…ˆcopyä½ çš„skillsï¼Œç­‰çº§ï¼Your_max_skill_level*R
+ç„¶åsetæ€ªè‡ªå·±é—¨æ´¾çš„skillsï¼Œæ¯ä¸€é¡¹ç­‰çº§ï¼Your_max_skill_level*R+Random(15)
+Force(å†…åŠ›)ï¼šå†…åŠ›=Your_Force*R
+Mana(æ³•åŠ›)ï¼šæ³•åŠ›=Your_Mana*R
+Enforce(åŠ åŠ›)ï¼šæ€ªçš„æœ‰æ•ˆforce/2
+Enchant()ï¼šæ€ªçš„æœ€å¤§mana/30+1
+Kee(æ°”è¡€)ï¼šæ°”è¡€=Your_qx/2+Your_qx*R
+Gen(ç²¾ç¥)ï¼šç²¾ç¥=Your_js/2+Your_js*R
+Combat_Exp(æ­¦å­¦)ï¼šæ­¦å­¦=Your_wx/100*R*100+Your_wx/50*R
+Daoxing(é“è¡Œ)ï¼šYour_New_Dx=(Your_dx*2+Your_wx)/3
+æ€ªçš„é“è¡Œ=Your_New_Dx/100*R*100+Your_New_Dx/50*R
 
-//À´Ô´ÓÚÍøÂç£¬²»Ò»¶¨ÊÊÓÃÓÚ±¾Õ¾¡£±¾ÈË¾õµÃ»ù±¾·ûºÏ¡£
+//æ¥æºäºç½‘ç»œï¼Œä¸ä¸€å®šé€‚ç”¨äºæœ¬ç«™ã€‚æœ¬äººè§‰å¾—åŸºæœ¬ç¬¦åˆã€‚

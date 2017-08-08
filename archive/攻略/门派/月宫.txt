@@ -1,33 +1,33 @@
-�¹����ɹ���
+月宫门派攻略
 
 
-��ʦ���¹�ֻ��Ů���ӣ��е�Ҳ�����¹�ֻ�а�����ˡ��Ȱ���ū������ʦ��������������ʦ
-�����϶�Ҫ����ò>=22�������Σ�Ҫ��Ե���>=20��һ������һ�Σ��Ժ���Ҳ���ܰ�����
-�����ٻ����ӣ�Ҫ��Ҫ̫����Խ��Խ�ã����������հݹ��϶�ĵ��ӣ�������˰���������
-�ռ�ʦ������ĸ��Ҫ����ѧ���и�100k�������о���޷�����ͽ��ʮ���Ͽ�������վ���¹���
-һ����Ҫ����ޣ���˲��ط�Ҫȥ�����ε���ɫ�ˡ���ʦ����ã���ʧ��ѧ���и�20%��
-snowsword,moonshentongȫ����������һ���ռ����ɡ����ҳ������ǽ���Ҳ����Ҫ�ٴ�ʲô��
-�ļ��ܽ����ˡ�
+拜师：月宫只收女弟子，男的也想玩月宫只有拜玩家了。先拜月奴，入门师傅无条件；二级师
+傅有嫦娥（要求容貌>=22），痴梦（要求福缘随机>=20，一旦被拒一次，以后再也不能拜她了
+），百花仙子（要求不要太美，越丑越好，另外她不收拜过嫦娥的弟子，嫉妒如此啊……）；
+终极师傅西王母，要求武学道行各100k。痴梦有绝情鞭法，收徒又十分严苛，但本站的月宫不
+一定需要绝情鞭，因此不必非要去看痴梦的脸色了。判师找麻姑，损失武学道行各20%，
+snowsword,moonshentong全部。基本是一个终极门派。而且除了两仪剑，也不需要再带什么别
+的技能进来了。
 
-�¹����ڷ������ɣ���վ��shiyue���ͣ����¹��ĸ��ͣ�����������shiyue��arrow��������
-����ɱ��
-ʴ�»��Ǹ��Ŷ�����ʽ���������һ����Ѫ������˺������᲻�����ж������ޡ�ʴ��ʧ�ܻ�
-��������Ҫexert yuanyue���нⶾ��
-cast arrow�����ƵĹ��������ˣ��˺�����bighammer����Ҳ�����еȡ�
-cast mihun���¹���busy����ȡ���ڷ�����Ч�ȼ�����ò�����Ի������ٳ�ƽ�й�������
-�����ƶ�����������perform, cast
-cast huimeng���ö�����˯��Ҫ��ϸߣ��һ���Ҫ�Ը����߲���Ч�����ڽ��ա�����ȵ��к�
-���ô���ʧ���Լ����нϳ�busy�����⣬����˯��Ҳ�Ǻ���ͨ˯��һ����ʱ�����ģ��ո�˯
-��һ�����ٴζ���cast huimeng�϶��޷���˯����ֻҪ�ж��ɹ�������Ҳ�����ɱ��
-cast invocation���ٻ�����������Ļ�����
-cast qingwang����һbusy����ʹĿ���޷�perform,cast�����mihun����ʹĿ�����볹��busy
-��
+月宫属于法术门派，本站的shiyue很猛（纯月宫的更猛）。灭妖靠着shiyue和arrow，基本都
+是秒杀。
+蚀月还是个放毒的招式，对象除了一下气血精神的伤害，还会不断因中毒掉上限。蚀月失败会
+反弹，需要exert yuanyue自行解毒。
+cast arrow是老牌的攻击法术了，伤害不如bighammer，但也属于中等。
+cast mihun，月宫的busy技，取决于法术有效等级和容貌。中迷魂后对象不再出平招攻击，且
+不能移动，但还可以perform, cast
+cast huimeng，让对象入睡，要求较高，且基本要对付弱者才有效。对于解谜、任务等等有很
+大用处。失败自己会有较长busy。另外，对象睡觉也是和普通睡觉一样有时间间隔的，刚刚睡
+完一觉的再次对其cast huimeng肯定无法入睡，但只要判定成功，对象也不会叫杀。
+cast invocation，召唤天兵，初级的护法。
+cast qingwang，另一busy技，使目标无法perform,cast，配合mihun可以使目标陷入彻底busy
+。
 
-perform wuxue���¹����Ṧ����õ��Ṧ����ѩ���Դ�������Լ�����Чdodge����Ҫ
-moondance��snowsword��ϡ�
-perform flower���¹���ͽ�ֹ���ٻ��ƣ����Է���Ůɢ������Ҫ�����л�����վΪ����õ��
-��ask yu tu about flower������pfm��busy���˺���������ϴ�
-perform huifeng���¹���ƴ����ʽ���Լ������˲����ã�ʵ���Բ
-perform diezhang����վ����ɫ����Ҫ��������ϣ���˵Ч�����á����ֻ������������ʴ�º�
-arrow��Ļ������ò��ϡ�
+perform wuxue，月宫的轻功是最好的轻功，舞雪可以大幅增加自己的有效dodge，需要
+moondance和snowsword配合。
+perform flower，月宫的徒手功夫百花掌，可以放天女散花，需要手里有花（本站为冰冻玫瑰
+，ask yu tu about flower）。此pfm无busy，伤害随机浮动较大。
+perform huifeng，月宫的拼命招式，自己重伤了才能用，实用性差。
+perform diezhang，本站的特色，需要两个号配合，据说效果很烂。如果只是灭妖，有了蚀月和
+arrow别的基本都用不上。
 

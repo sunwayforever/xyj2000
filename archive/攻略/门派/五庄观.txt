@@ -1,43 +1,43 @@
-��ׯ�����ɹ���
+五庄观门派攻略
 
-��ʦ���Ȱݰ��ɣ�80̫�Һ��ٰ�������»�����ǣ�120̫�ң�wx+dh > 600k ���ٰ��ռ�ʦ����
-Ԫ���ɡ����ɲ��ո߼�ʦ����ͽ�ܣ����ǲ�����Ԫ��ͽ�ܣ������֮������ׯ��ʦ����������
-���������ո߼�ʦ����ͽ�ܡ��������������ڳ���ʦ�����������У��Ѿ�����Ԫ��ͽ�������
-���ذ��أ��Ҹ�����������һ�¾Ϳ����ˡ�
-��ʦ����Ԫ����ʧ̫�ҡ���ѧ���и�20%����ʧ���Ǻܴ�ġ���̫����������ɶ������ǿ���
-���ߣ�ֻ�Ǵ���ȥ��̫�ҵȼ�������̫�ߡ���ׯ�ۿ������������ɣ�����̫�ң�����վ������
-Ǭ�����ֵ���ӵ��Ϸ����ܵ�һЩ���ƣ��õ����٣�������ׯ�۸��໹����Ϊ�ռ����ɡ�
+拜师：先拜八仙，80太乙后再拜蓬莱福禄寿三星，120太乙，wx+dh > 600k 后再拜终极师傅镇
+元大仙。八仙不收高级师傅的徒弟，三星不收镇元的徒弟，简而言之就是五庄观师傅都论资排
+辈，不会收高级师傅的徒弟。而奏箫又掌握在初级师傅韩湘子手中，已经是镇元的徒弟了如何
+往回拜呢？找个大米来收你一下就可以了。
+判师找镇元，损失太乙、武学道行各20%，损失还是很大的。但太乙由于有书可读，还是可以
+带走，只是带出去的太乙等级都不会太高。五庄观可以作过渡门派，带出太乙；但本站用袖里
+乾坤带怪到天河的老方法受到一些限制，用的人少；所以五庄观更多还是作为终极门派。
 
-��ׯ����һ��������ѧ���޵����ɣ�ƫ������
-cast zhenhuo��Ȼ��������bighammer�����ȼ����˹���Ҳ���ɹۡ�Ŀǰ��վ������ǿ����
-cast baxian�ǳ������ٻ������������μ��ɱ������ʱ�����𲽵ĺð취��
-cast qiankun�ɹ��ʺܸߣ��ô��ܶࣨcast qiankun on xxx��Ŀ��װ�����ӣ���cast 
-qiankun˦������װ����������޷����ѣ���NPCһ��ˢ��ʱ�����Զ���ȥ��ʹ��cast 
-qiankun��Ҫ�ʹ���Ԫ�����������ԣ�ask daxian about ����Ǭ�����������������wx 10k,
-����300����
-cast qimen��Ҫ���Է������Խ����������У��޷�pfm cast exert��Ҳ�����ӳ���finish����
-���Ŷݼ��󡣴����к������ء���
-cast sanqing�������ٻ�����NPC���������ܣ����ں��ڵĻ�����
-perform zouxiao��ר����˾��񣨱�վ������Ҳ��literate������������������ˡ�����վ
-zouxiaoĿǰ��busy���˵�Ч�����˺������ԣ�������һ�㣩��������Ҫzouxiao, literate, 
-xiaofeng-sword, zhenyuan-force��װ�����ӣ����ҵ���ҲҪ��һ����literate��������ʾ��
-ţ���١�������������ׯ�۱Ƚ�����ɫ�Ĺ����ֶΡ�
-perform staff����Ҫ��ħ�ȷ����������������������Ҳ��ܴ���WZG����ѧϵ��ׯ�۵��淨��
-��sanqing�л�������perform staffǿ���Լ��ɡ�//ò�ƻ���Ҫ���彣����������½�������
-����Ҫ��ս���вſ���ʹ��perform staff
+五庄观是一个法术武学兼修的门派，偏向法术。
+cast zhenhuo虽然威力不如bighammer，但等级高了攻击也还可观。目前本站又有所强化。
+cast baxian是初级的召唤法术；老西游记里，杀怪困难时从零起步的好办法。
+cast qiankun成功率很高，用处很多（cast qiankun on xxx将目标装进袖子，再cast 
+qiankun甩出。被装进袖子里就无法逃脱，但NPC一个刷新时间后会自动回去。使用cast 
+qiankun需要问过镇元大仙六字真言，ask daxian about 袖里乾坤。问这个的条件：wx 10k,
+法力300）。
+cast qimen需要八卦符，可以将人困在阵中，无法pfm cast exert，也很难逃出。finish结束
+奇门遁甲阵。此阵有何妙用呢……
+cast sanqing，可以召唤三个NPC出来帮你打架，属于后期的护法。
+perform zouxiao，专打敌人精神（本站的天妖也有literate，奏箫可以用于灭妖了。但本站
+zouxiao目前无busy敌人的效果，伤害还可以，命中率一般）。奏箫需要zouxiao, literate, 
+xiaofeng-sword, zhenyuan-force，装备笛子；而且敌人也要有一定的literate，否则提示对
+牛弹琴。奏箫加真火，是五庄观比较有特色的攻击手段。
+perform staff，需要伏魔杖法，增加你武器攻击力，且不能带出WZG；武学系五庄观的玩法就
+是sanqing招护法，再perform staff强化自己吧。//貌似还需要三清剑法或晓风残月剑，而且
+必须要在战斗中才可以使用perform staff
 
-�˲ι���
-�˲ι���Ȼ����ׯ���ز�������ʵ�κ����ɵ��˶��������ã���ׯ�۵���ûɶ����Ȩ��������
-��ĵ��ͤ��open door,d,mo���м���������ͭԿ�ף����ѣ�20Сʱ��һ�ѣ��������˾��߹���
-���ţ�ne,ne,nw,nw,se,se,sw)�������ϵ���open door���͵�����Ԫ���ɿ����ɡ�ask 
-zhenyuan daxian about rsg������һ�󣬴��ɾͷ������ˡ�һ�����ţ���λ���һ��һ����
-���˼�20�����������ޣ����Կ�������Ҳ���Ը�����ɽ������⨺����һ����⨺��ּǡ���
-�ɶ�spells 100-141����������⨺�һ�ΰ���PKһ����ҵĻ��ᣨ�������ðɣ���
+人参果：
+人参果虽然是五庄观特产，但其实任何门派的人都可以来拿，五庄观的人没啥优先权。方法是
+在牡丹亭处open door,d,mo，有几率摸到黄铜钥匙（很难，20小时出一把）。摸到了就走过八
+卦桥（ne,ne,nw,nw,se,se,sw)，到西瓜地里open door，就等着镇元大仙开大会吧。ask 
+zhenyuan daxian about rsg，等上一阵，大仙就发果子了。一次三颗，三位玩家一人一个。
+吃了加20内力法力上限，不吃可以卖，也可以给花果山的六耳猕猴，换得一本《猕猴手记》，
+可读spells 100-141。附送六耳猕猴一次帮你PK一个玩家的机会（还是慎用吧）。
 
-��������ask lu about �����ĵã���������Ҫ�����飬�ɶ�taiyi��41����
+找吕洞宾ask lu about 纯阳心得，可以问他要到此书，可读taiyi至41级。
 
-��ׯ�۵�����ID������������ͭԿ�׵�ͤ��������search�����Խ�����һ���ң�����̫���澭
-���ɶ�taiyi��51����
-//Ŀǰ��Ϊ��Ԫ��������Ҳ��̫���澭�ˡ�
+五庄观的掌门ID，可以在摸黄铜钥匙的亭底密室里search，可以进到另一密室，内有太乙真经
+，可读taiyi至51级。
+//目前改为镇元大仙身上也有太乙真经了。
 
-��ׯ�۵�������������赶������ɽ�������ƺ���pfm��ûʲô����֮������ѧҲ�ա�
+五庄观的其他功夫如雁歌刀法、开山锤法，似乎无pfm又没什么特殊之处，不学也罢。

@@ -1,91 +1,91 @@
-�����칬1-12�ؼ�������
+大闹天宫1-12关简明攻略
 
-��1�أ�+,8s,e,s,start,����ʯ��һֱbreak,������sd,wd,nu,nu,nu,#6 enter,nu,e,jump 
-pubu,������˾���������������ȥ������ߣ���·��λ������ߴ������Ѫ��ע��ָ���
-��ߵľ��ֶ����޺��Ĳ���ɱ���ߵ������š�open door,e,ba flag,w,jump bridge,wave 
-flag��jump pubu�����ߵ������ţ�e,�����ָ��ã�e��ɱ��mowang�͹��ء�
+第1关：+,8s,e,s,start,在仙石里一直break,出来后sd,wd,nu,nu,nu,#6 enter,nu,e,jump 
+pubu,如果晕了就醒来接着跳。进去后就乱走，出路方位随机。走错会掉气血，注意恢复。
+里边的精怪都是无害的不用杀。走到铁板桥。open door,e,ba flag,w,jump bridge,wave 
+flag。jump pubu重新走到铁板桥，e,打坐恢复好，e，杀死mowang就过关。
 
-��2�أ�fly sky,w,w,ask po about wink,yao������2�ţ�������ơ�Ϊ�˶��ñ���������
-���ؾ����٣�������ID����������fly stone,sd,wd,sd,w,s,e,s, answer 1,s,s,ji 
-feng ling fu��һ����2��,ji���Ρ��Ͽ� kun bingqi�����û����ƫ���ͻ����ˣ����ټ�
-��Ȼ��������ֱ������װ������Ϊֹ��������ɽ�̾����ҵ���������give ging qi to 
-beng,һֱ����ֱ����˵���ˡ������Լ���װ��ȥ�����Ұ��㡣ask ao guang about 
-weapon���Ⱥ���dao,cha,chui,ji��wield���ı�����ye cha�򣬴��������weapon�� ��
-������㵽�Թ���n�����ߣ�������·ʹ��С�����follow xiao jin yu��ֱ�����ء�����
-��վΪ�˷����ҹ��أ�������һ����������(Ding hai zhen)�����������������Ҫȥ
-xiao�ˡ�get zhen,wield zhen,uҪһ���ǳɣ���Ȼzhen�ͷ�����ֻ�е�ˢ�¡�u�˾͹���
-��
+第2关：fly sky,w,w,ask po about wink,yao，至少2张，多多益善。为了多拿兵器，身上
+负重尽量少，或另找ID帮你搬兵器。fly stone,sd,wd,sd,w,s,e,s, answer 1,s,s,ji 
+feng ling fu，一次跑2个,ji两次。赶快 kun bingqi。如果没捆够偏将就回来了，就再祭
+符然后再捆，直到身上装不下了为止。到花果山教军场找到崩将军，give ging qi to 
+beng,一直给，直到他说够了。穿上自己的装备去龙宫找敖广。ask ao guang about 
+weapon，先后会给dao,cha,chui,ji，wield给的兵器和ye cha打，打完后再问weapon， 龙
+王会带你到迷宫。n，乱走，看到引路使者小金鱼就follow xiao jin yu，直到海藏。在这
+个站为了方便大家过关，另设了一个定海真针(Ding hai zhen)，过关是拿这个，不要去
+xiao了。get zhen,wield zhen,u要一气呵成，不然zhen就飞走了只有等刷新。u了就过关
+。
 
-��3�أ����ϣ������ˣ�����һ�ص�������ȥ˯����ע����ˮ��Ҫ���ˣ�����Ȳ��˾ơ���
-���ߵ��󿴿�ʱ������ٿ�ʼ�Ⱦơ�ask bai wuchang about ���꣬kill wuchang, get 
-pi wen from corpse��һ��ɱ��û��������ɱ��һ���޳���l pi wen�����ϱ����ĸ���д
-���ͣ���ȥ�ҵ��Ǹ�����complain wang ����Ϊ�ظ����ɶ���ҹ����������ƣ�����ظ�ʮ
-��Ҳһ�������������̫�����ţ����Եȵ�������ȥcomplain��������������Ƥ�����
-һ����������ȥ�ҵ��Ǹ����� complain wang ����Ƥ���ߵ����ҹ�������ʱ�򣬾� 
-kill wang �����������kill�������ء�
+第3关：晚上，喝醉了，到第一关的铁板桥去睡觉。注意饮水不要满了，否则喝不了酒。最
+好走到后看看时间天黑再开始喝酒。ask bai wuchang about 勾魂，kill wuchang, get 
+pi wen from corpse。一个杀了没有批文再杀另一个无常。l pi wen，看上边是哪个王写
+的谕，就去找到那个王，complain wang 。因为地府门派都是夜间厉害白天疲软，地府十
+王也一样。所以如果不太有自信，可以等到天亮再去complain。这个王会把你踢皮球给另
+一个王，你再去找到那个王并 complain wang 。当皮球被踢到你找过的王的时候，就 
+kill wang （并不会真的kill）即过关。
 
-��4�أ�fly sky,18 n,ask dadi about ��ְ��fly stone,sd,wd,nu,ba grass����ε㣬
-С���̺��ܳԡ�fly sky,13 n,4 w,3 n,w,open door,w,w,n ȥιС���̣��ݲ�������ȥ��
-�� feed grass����Ҫ̫�죬30��ιһ�Σ�ֱ������վ����Ϊֹ���ͳ���С���ԡ�qian ma 
-ju��ͬ������ǣ��ֱ������ ���㼲�� Ϊֹ��mount ma ju, �������ŵĶ������߳�ǽ�ҷ���
-���׹�����ĸ����ͯ����������ź͵ڶ���һ��yao��������ɱ�˴�ʬ�����á����������
-��󣬴������� 6 s����ӣ�swim, xiayu,����Ԫ˧�����ˡ���������ء�
+第4关：fly sky,18 n,ask dadi about 官职。fly stone,sd,wd,nu,ba grass，多拔点，
+小马崽很能吃。fly sky,13 n,4 w,3 n,w,open door,w,w,n 去喂小马崽，草不够可再去拔
+。 feed grass，不要太快，30秒喂一次，直到它能站起来为止，就成了小马驹。qian ma 
+ju，同样慢慢牵，直到看到 奋蹄疾奔 为止。mount ma ju, 到南天门的东西两边城墙找风婆
+、雷公、电母、云童拿灵符。风婆和第二关一样yao，另三个杀了从尸体里拿。四张灵符拿
+齐后，从南天门 6 s到天河，swim, xiayu,天蓬元帅就来了。打败他过关。
 
-��5�أ�������ɽ�̾�������������sheng flag,�������ʹ��ž��������߸�������ˣ���
-�����������˵������ ���ղ����߿������Ѱ�æװ�ߡ���ܾ������ٴ����߸������
-��
+第5关：到花果山教军场崩将军处，sheng flag,李天王就带着巨灵神和哪吒来打你了，另
+有两个天兵据说打不死， 把握不大者可让朋友帮忙装走。打败巨灵神，再打败哪吒即过关
+。
 
-��6�أ�fly sky,#19 n,ask dadi about ���԰�������˵�㲻�ɿ����ͱ���quit������
-��ֱ��������ȥ�����԰��6s,4e,3n,3w, �������Լ�n��s�ĵط�����ʿ��ɱ֮��climb 
-tree,get pan tao��һ����ʳ��û��ʱ�Բſɵõ��Һˣ���û�������������������ͷ���
-���ޣ�������ò��������õ��Һˡ� �չ�7���Һˣ�2w,��������n����s�ļ����ط�������
-һ����Ů��give tao he to xiannu��Ϸ֮����Ҫ��kill������7����Ů�����ء� 
+第6关：fly sky,#19 n,ask dadi about 蟠桃园。如果他说你不可靠，就必须quit再来问
+，直到他叫你去管蟠桃园。6s,4e,3n,3w, 在这里以及n和s的地方有力士，杀之，climb 
+tree,get pan tao，一定在食物没满时吃才可得到桃核（如没打坐满还能增加内力和法力
+上限），否则得不到过关用的桃核。 凑够7个桃核，2w,在这里往n和往s的几个地方，各有
+一个仙女，give tao he to xiannu调戏之，不要下kill。打跑7个仙女即过关。 
 
-��7�أ�fly sky,4e,5n,2w,s,��������ĺ��ȱ�ɴ��ɵ������ڸ�����ask daxian about 
-pantao,pian daxian,���ɾ����ˡ���ȥ����֮ǰ�ĺ� bian daxian,4n,e,n������moon��
-�������Σ�Ҳ�����˯�����á��ɹ�˯��open door,d���ŵ����㣬�͹����ˡ�
+第7关：fly sky,4e,5n,2w,s,可用另外的号先变成大仙的样子在附近，ask daxian about 
+pantao,pian daxian,大仙就走了。再去根据之前的号 bian daxian,4n,e,n。可用moon的
+号来回梦，也可买瞌睡虫来用。仙官睡后，open door,d，闻到酒香，就过关了。
 
-��8�أ�fly sky,13n,4e,ne,����״̬���ֱ����������ĸ����򿴣��ĸ�����������ǡ�
-�ƺ���ȥ�����ʥ����·�������Ǹ������� ���粻С���ߴ�����sw���������߾��ǣ���ֱ
-�����ʹ�����Ϊֹ��n,���û���������͵�һ�¸��¡�������ת�𵤾�ɱ������ĵ�ʿ��
-get jindan��eat jindan�����ء� ��˵�Ե���Ļ��1�����٣��Ե��ٵĻ��1�����١�Ҳ
-���ܳԵ����ٲ��������ġ�
+第8关：fly sky,13n,4e,ne,醉酒状态，分别向东南西北四个方向看，哪个方向的描述是“
+似乎是去齐天大圣府的路”就往那个方向走 （如不小心走错，就sw回来重新走就是），直
+到兜率宫大门为止。n,如果没看到丹，就等一下更新。看到九转金丹就杀了那里的道士。
+get jindan，eat jindan即过关。 听说吃到真的会加1年阳寿，吃到假的会减1年阳寿。也
+可能吃到阳寿不增不减的。
 
-��9�أ�fly meishan,n,ask miao zhu about �����ף������Ҫһͷ����s,sw,w,n,n,��
-����˳�����û�˾͵ȸ��¡�give 50 silver to zhang������� ��pig�ˡ���huimeng��
-jiali 0 ���εķ�ʽ����˯���Σ�Ȼ��Ѹ�� get pig,s,s,e,ne,n,give pig to miao zhu
-������һ��Ҫ�죬��Ȼ��ĸ�����˾Ͳ����ˡ�s,e,e,ne,n,nw�� ɱ�˵�·�Ĺ����ֱ����
-2nu�Ϳ������O����ˡ�ask erlang about me������ɱ�㣬fly stone,sd,wd,3 nu,6 
-enter,nu,bian maque������ȸӥ����ע��ÿ��һ����Ҫ������������ �����ʾս���в�
-�ܷɻ�䣬��touxiang���������������ֻ�ܱ䣬�������������Ѫ�������˻�һ��Ѫ
-���ȵ���Ҳ������Ӧ�Ķ�����ٽ��ű���һ���������һֱ���ϱ䣬 ���������������
-�߶�һ�£������䡣sd,6 out,sd,w,bian ci hu�����亣�ף���swim,bian fish��������
-ӥ����bian she������Һף���swim,bian hua bao�����˹������꣬ ���Կ�����kill 
-erlang��ɱ�����͹��ء�
+第9关：fly meishan,n,ask miao zhu about 供奉，庙祝会找你要一头猪。s,sw,w,n,n,找
+到张顺，如果没人就等更新。give 50 silver to zhang，屋里就 有pig了。用huimeng或
+jiali 0 打晕的方式让猪睡或晕，然后迅速 get pig,s,s,e,ne,n,give pig to miao zhu
+，动作一定要快，不然老母猪醒了就不见了。s,e,e,ne,n,nw， 杀了挡路的郭申和直健，
+2nu就看到二郞真君了。ask erlang about me，他会杀你，fly stone,sd,wd,3 nu,6 
+enter,nu,bian maque（他变雀鹰）。注意每走一步都要等他跟上来。 如果提示战斗中不
+能飞或变，就touxiang。在这个过程中你只管变，他打就让他打，气血被砍多了回一下血
+，等到他也变了相应的动物，你再接着变下一个。如果他一直不肯变， 你可以往其他方向
+走动一下，等他变。sd,6 out,sd,w,bian ci hu（他变海鹤）。swim,bian fish（他变鱼
+鹰）。bian she（他变灰鹤）。swim,bian hua bao，至此过场走完， 可以开砍。kill 
+erlang，杀跑他就过关。
 
-��10�أ����յĵȼ���skill 240��wx 7M����������3000���ϡ�������𲻹����Ͷ��õ�
-����������㵤��ҩ��ע��һ���������������fly sky,һֱn�� ����ۣ��ᱻ�ӽ�����
-¯��������������г��������������������Ҫ����������һ�������2�֣�����һ��
-������1�֣��չ�49�֣��Ϳ��Կ���out�ĳ��ڡ�ÿ����8���� ����Ҫ��ˢ�£��������
-��ר�򻤷����򹻷ֺ�ٳٲ���ȥ��out��û�ˣ�����������³��֡������ڿ쵽49��ʱ��
-���ָ�����out�����ɱ��ʥ�����4����١���ٵ�lunhui ��������ҪС����Ѹ�ٸɵ���
-�ǡ���Ҫ�÷�����ɱ���ָ�һ�£����ñ�������n�������һս�����ֻ��һ�������ͼ�
-qing����Ҫ��ԭ�ش�̫�ã���������������ˢ�¡����� װ�������ᳬ�أ�drop������˵
-����ji���Ժ����get������������û�Թ������տ�ʼjiali�ٵ㣬���������Ա��Ѫ��ֱ
-��ɱ���ʥ����������ĸ�������5n������ۼ����ء�
+第10关：保险的等级是skill 240，wx 7M。法力必须3000以上。如果级别不够，就多拿点
+法宝，多带点丹和药。注意一定多带几把武器。fly sky,一直n见 到玉帝，会被扔进八卦
+炉。打火部神兵，他会叫出护法，护法比神兵本身要厉害。打死一个神兵得2分，打死一个
+护法得1分，凑够49分，就可以看到out的出口。每打死8个神 兵就要等刷新，如果想快可
+以专打护法。打够分后迟迟不出去，out就没了，过会儿会重新出现。建议在快到49分时打
+坐恢复满。out后就是杀佑圣真君和4个灵官。灵官的lunhui 很厉害不要小看，迅速干掉他
+们。不要用分身。杀完后恢复一下，做好别名，再n就是最后一战。如果只有一个法宝就祭
+qing。不要在原地呆太久，当心真君和灵官又刷新。法宝 装了天王会超重，drop掉（听说
+现在ji了以后可以get天王出来，我没试过）。刚开始jiali少点，保留真气以便回血。直
+到杀死翊圣真君、打跑四个天王，5n见到玉帝即过关。
 
-��11�أ�����۴�n������������˵һ����˵���䷢չ������С�ask fo about ���Ǻ���
-������˵�ϼ��䣩��say ���Ե����ʵ������������굽�Ҽ� ������˵�ϼ��䣩��say �ҵ�
-�ֶζ���������˵�ϼ��䣩��say �ã��㵽�ƺ���ͷ����Ȼ��ba haomao,zhan bi,xie 
-�����ʥ����һ��, sa niao,hui, say ���ǲ�֪����ȥ���쾡ͷ�����ͻ����ѹ��ɽ����
-����
-��ɽ��+ 12s,sw�����ߵ��ס�����ͬʱֻ��һ���˹�����ѹס�޷����ѣ��޷�quit��ֻ��
-�����˳������´�������Ȼ��ѹ��ѹ��һ��ʱ��󣬻���ʾ��Ҫ���ߵ�ĳ������������
-�����������ɮ�ˡ���������ϻ��и����������15�����������ȥ�Ҿͻ���ʧ������
-һ�ˡ�������ɮ�������������ɽ����nuһ��jie tie����������ɽ����ֹ����������jie 
-tie���ɣ�ɽ��copy��ɮ����ѧ���в�����ǿ����ɽ��������cast������ɮ���Ա�������id
-��ɽ��æɱɽ�񡣣��������󣬹���id������ʾ��enforce max������break���������ѣ�
-�Զ��ص���ջ�����������ˡ�
+第11关：在玉帝处n见到如来，你说一句他说几句发展剧情就行。ask fo about 你是何人
+（他会说上几句），say 常言道：皇帝轮流做，明年到我家 （他再说上几句），say 我的
+手段多哩（他再说上几句），say 好（便到云海尽头），然后，ba haomao,zhan bi,xie 
+齐天大圣到此一游, sa niao,hui, say 你是不知。我去到天尽头（他就会把你压到山下了
+。）
+这山在+ 12s,sw方向走到底。过关同时只能一个人过。被压住无法逃脱，无法quit，只能
+断线退出；且下次连线仍然被压。压了一段时间后，会提示需要在线的某个玩家来帮你揭
+贴，这就是唐僧了。该玩家身上会有个急急如律令，15分钟内如果不去揭就会消失，换另
+一人。扮演唐僧的玩家来到五行山处，nu一步jie tie，会跳出个山神阻止；击退他并jie 
+tie即可（山神copy唐僧的武学道行并略有强化，山顶处不能cast，但唐僧可以背着其他id
+上山帮忙杀山神。）。揭贴后，过关id会有提示，enforce max并不断break，即可逃脱，
+自动回到客栈，这就算过关了。
 
 
 

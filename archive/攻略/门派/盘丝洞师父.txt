@@ -1,42 +1,42 @@
-ÅÌË¿¶´Ê¦¸¸
+ç›˜ä¸æ´žå¸ˆçˆ¶
 
-> ´ºÈýÊ®ÄïÄ¿Ç°ËùÕÆÎÕµÄ¼¼ÄÜ£º
+> æ˜¥ä¸‰åå¨˜ç›®å‰æ‰€æŽŒæ¡çš„æŠ€èƒ½ï¼š
 
-  »ù±¾Çá¹¦ (dodge)                         - À´È¥Èç·ç  140/    0
-  ÄÚ¹¦ÐÄ·¨ (force)                         - »íÈ»¹áÍ¨  140/    0
-¡õ»ìÌìÆø¹¦ (huntian-qigong)                - ÁËÈ»ÓÚÐØ  140/    0
-  ¶ÁÊéÊ¶×Ö (literate)                      - ÖªÊé´ïÀí   50/    0
-¡õÅÌË¿´ó·¨ (pansi-dafa)                    - ³öÀà°ÎÝÍ  160/    0
-  ²ðÕÐÐ¶Á¦Ö®·¨ (parry)                     - ÁËÈ»ÓÚÐØ  140/    0
-  ·¨Êõ (spells)                            - ºô·ç»½Óê  160/    0
-  »ù±¾½£Êõ (sword)                         - ÁËÈ»ÓÚÐØ  140/    0
-¡õ×ÏÇà½£ (ziqing-sword)                    - ÁËÈ»ÓÚÐØ  140/    0
+  åŸºæœ¬è½»åŠŸ (dodge)                         - æ¥åŽ»å¦‚é£Ž  140/    0
+  å†…åŠŸå¿ƒæ³• (force)                         - è±ç„¶è´¯é€š  140/    0
+â–¡æ··å¤©æ°”åŠŸ (huntian-qigong)                - äº†ç„¶äºŽèƒ¸  140/    0
+  è¯»ä¹¦è¯†å­— (literate)                      - çŸ¥ä¹¦è¾¾ç†   50/    0
+â–¡ç›˜ä¸å¤§æ³• (pansi-dafa)                    - å‡ºç±»æ‹”èƒ  160/    0
+  æ‹†æ‹›å¸åŠ›ä¹‹æ³• (parry)                     - äº†ç„¶äºŽèƒ¸  140/    0
+  æ³•æœ¯ (spells)                            - å‘¼é£Žå”¤é›¨  160/    0
+  åŸºæœ¬å‰‘æœ¯ (sword)                         - äº†ç„¶äºŽèƒ¸  140/    0
+â–¡ç´«é’å‰‘ (ziqing-sword)                    - äº†ç„¶äºŽèƒ¸  140/    0
 
-> °×¾§¾§Ä¿Ç°ËùÕÆÎÕµÄ¼¼ÄÜ£º
+> ç™½æ™¶æ™¶ç›®å‰æ‰€æŽŒæ¡çš„æŠ€èƒ½ï¼š
 
-¡õ°×¹Ç±Þ (baigu-whip)                      - ³öÀà°ÎÝÍ  160/    0
-  »ù±¾Çá¹¦ (dodge)                         - µÇÆ¼¶ÉË®  120/    0
-  ÄÚ¹¦ÐÄ·¨ (force)                         - »íÈ»¹áÍ¨  140/    0
-  ¶ÁÊéÊ¶×Ö (literate)                      - ²©Ñ§¶à²Å   80/    0
-¡õÅÌË¿´ó·¨ (pansi-dafa)                    - ÁËÈ»ÓÚÐØ  140/    0
-  ²ðÕÐÐ¶Á¦Ö®·¨ (parry)                     - ¼ÝÇá¾ÍÊì  120/    0
-  ·¨Êõ (spells)                            - ÃîÁìÌì»ú  140/    0
-  »ù±¾½£Êõ (sword)                         - ¼ÝÇá¾ÍÊì  120/    0
-¡õÉãÆø¾÷ (tonsillit)                       - ¼ÝÇá¾ÍÊì  120/    0
-  ÆË»÷¸ñ¶·Ö®¼¼ (unarmed)                   - ¼ÝÇá¾ÍÊì  120/    0
-  »ù´¡±ÞÊõ (whip)                          - ³öÀà°ÎÝÍ  160/    0
-¡õÒõ·ç×¦ (yinfeng-zhua)                    - ¼ÝÇá¾ÍÊì  120/    0
-¡õ×ÏÇà½£ (ziqing-sword)                    - ¼ÝÇá¾ÍÊì  120/    0
+â–¡ç™½éª¨éž­ (baigu-whip)                      - å‡ºç±»æ‹”èƒ  160/    0
+  åŸºæœ¬è½»åŠŸ (dodge)                         - ç™»èæ¸¡æ°´  120/    0
+  å†…åŠŸå¿ƒæ³• (force)                         - è±ç„¶è´¯é€š  140/    0
+  è¯»ä¹¦è¯†å­— (literate)                      - åšå­¦å¤šæ‰   80/    0
+â–¡ç›˜ä¸å¤§æ³• (pansi-dafa)                    - äº†ç„¶äºŽèƒ¸  140/    0
+  æ‹†æ‹›å¸åŠ›ä¹‹æ³• (parry)                     - é©¾è½»å°±ç†Ÿ  120/    0
+  æ³•æœ¯ (spells)                            - å¦™é¢†å¤©æœº  140/    0
+  åŸºæœ¬å‰‘æœ¯ (sword)                         - é©¾è½»å°±ç†Ÿ  120/    0
+â–¡æ‘„æ°”è¯€ (tonsillit)                       - é©¾è½»å°±ç†Ÿ  120/    0
+  æ‰‘å‡»æ ¼æ–—ä¹‹æŠ€ (unarmed)                   - é©¾è½»å°±ç†Ÿ  120/    0
+  åŸºç¡€éž­æœ¯ (whip)                          - å‡ºç±»æ‹”èƒ  160/    0
+â–¡é˜´é£Žçˆª (yinfeng-zhua)                    - é©¾è½»å°±ç†Ÿ  120/    0
+â–¡ç´«é’å‰‘ (ziqing-sword)                    - é©¾è½»å°±ç†Ÿ  120/    0
 
 
-> ×ÏÏ¼Ä¿Ç°ËùÕÆÎÕµÄ¼¼ÄÜ£º
+> ç´«éœžç›®å‰æ‰€æŽŒæ¡çš„æŠ€èƒ½ï¼š
 
-  »ù±¾Çá¹¦ (dodge)                         - ÒÆÐÎ»»Ó°  180/    0
-  ÄÚ¹¦ÐÄ·¨ (force)                         - Õð¹Åîå½ñ  180/    0
-  ¶ÁÊéÊ¶×Ö (literate)                      - ±¥Ñ§ºèÈå  120/    0
-¡õÁ«Ì¨ÐÄ·¨ (lotusforce)                    - ÉñºõÆä¼¼  180/    0
-¡õÅÌË¿´ó·¨ (pansi-dafa)                    - ³öÉñÈë»¯  200/    0
-  ²ðÕÐÐ¶Á¦Ö®·¨ (parry)                     - ÉñºõÆä¼¼  180/    0
-  ·¨Êõ (spells)                            - ¸ºº£µ£É½  200/    0
-  »ù±¾½£Êõ (sword)                         - ÉñºõÆä¼¼  180/    0
-¡õ×ÏÇà½£ (ziqing-sword)                    - ³öÉñÈë»¯  200/    0
+  åŸºæœ¬è½»åŠŸ (dodge)                         - ç§»å½¢æ¢å½±  180/    0
+  å†…åŠŸå¿ƒæ³• (force)                         - éœ‡å¤é“„ä»Š  180/    0
+  è¯»ä¹¦è¯†å­— (literate)                      - é¥±å­¦é¸¿å„’  120/    0
+â–¡èŽ²å°å¿ƒæ³• (lotusforce)                    - ç¥žä¹Žå…¶æŠ€  180/    0
+â–¡ç›˜ä¸å¤§æ³• (pansi-dafa)                    - å‡ºç¥žå…¥åŒ–  200/    0
+  æ‹†æ‹›å¸åŠ›ä¹‹æ³• (parry)                     - ç¥žä¹Žå…¶æŠ€  180/    0
+  æ³•æœ¯ (spells)                            - è´Ÿæµ·æ‹…å±±  200/    0
+  åŸºæœ¬å‰‘æœ¯ (sword)                         - ç¥žä¹Žå…¶æŠ€  180/    0
+â–¡ç´«é’å‰‘ (ziqing-sword)                    - å‡ºç¥žå…¥åŒ–  200/    0

@@ -1,83 +1,83 @@
-½«¾ü¸®×æÊ¦¼¼ÄÜ
+å°†å†›åºœç¥–å¸ˆæŠ€èƒ½
 
-ÂÞ³ÉÄ¿Ç°ËùÕÆÎÕµÄ¼¼ÄÜ£º
+ç½—æˆç›®å‰æ‰€æŽŒæ¡çš„æŠ€èƒ½ï¼š
 
-  »ù±¾¹­¼ý (archery)                       - ³öÀà°ÎÝÍ  150/    0
-¡õ°ÔÍõÇ¹·¨ (bawang-qiang)                  - ³öÀà°ÎÝÍ  150/    0
-¡õ³¤È­ (changquan)                         - ÒÑÓÐÐ¡³É  100/    0
-  »ù±¾Çá¹¦ (dodge)                         - À´È¥Èç·ç  150/    0
-  ÄÚ¹¦ÐÄ·¨ (force)                         - Õð¹Åîå½ñ  180/    0
-¡õÀäÈªÉñ¹¦ (lengquan-force)                - ÉñºõÆä¼¼  180/    0
-  ¶ÁÊéÊ¶×Ö (literate)                      - ²©Ñ§¶à²Å   80/    0
-  »ù±¾ïµ·¨ (mace)                          - ÒÑÓÐÐ¡³É  100/    0
-  ²ðÕÐÐ¶Á¦Ö®·¨ (parry)                     - ÉñºõÆä¼¼  180/    0
-  »ù±¾Ç¹·¨ (spear)                         - ÉñºõÆä¼¼  180/    0
-  ÆË»÷¸ñ¶·Ö®¼¼ (unarmed)                   - ³öÀà°ÎÝÍ  150/    0
-¡õÎÞË½ïµ·¨ (wusi-mace)                     - ÂíÂí»¢»¢   80/    0
-¡õÑãÐÐ²½·¨ (yanxing-steps)                 - ¼ÝÇá¾ÍÊì  120/    0
-
-
-ÇØÇíÄ¿Ç°ËùÕÆÎÕµÄ¼¼ÄÜ£º
-
-  »ù±¾¹­¼ý (archery)                       - ³öÀà°ÎÝÍ  150/    0
-¡õ°ÔÍõÇ¹·¨ (bawang-qiang)                  - ÒÑÓÐÐ¡³É  100/    0
-¡õ³¤È­ (changquan)                         - ¼ÝÇá¾ÍÊì  120/    0
-  »ù±¾Çá¹¦ (dodge)                         - ÒÆÐÎ»»Ó°  180/    0
-  ÄÚ¹¦ÐÄ·¨ (force)                         - Í¨¹ØÔÚ¼´  120/    0
-¡õÀäÈªÉñ¹¦ (lengquan-force)                - ¼ÝÇá¾ÍÊì  120/    0
-  ¶ÁÊéÊ¶×Ö (literate)                      - ÎÄ²Éì³È»   60/    0
-  »ù±¾ïµ·¨ (mace)                          - ³öÉñÈë»¯  200/    0
-  ²ðÕÐÐ¶Á¦Ö®·¨ (parry)                     - ³öÀà°ÎÝÍ  150/    0
-  »ù±¾Ç¹·¨ (spear)                         - ¼ÝÇá¾ÍÊì  120/    0
-  ÆË»÷¸ñ¶·Ö®¼¼ (unarmed)                   - ³öÀà°ÎÝÍ  160/    0
-¡õÎÞË½ïµ·¨ (wusi-mace)                     - ÉñºõÆä¼¼  180/    0
-¡õÑãÐÐ²½·¨ (yanxing-steps)                 - ³öÀà°ÎÝÍ  150/    0
+  åŸºæœ¬å¼“ç®­ (archery)                       - å‡ºç±»æ‹”èƒ  150/    0
+â–¡éœ¸çŽ‹æžªæ³• (bawang-qiang)                  - å‡ºç±»æ‹”èƒ  150/    0
+â–¡é•¿æ‹³ (changquan)                         - å·²æœ‰å°æˆ  100/    0
+  åŸºæœ¬è½»åŠŸ (dodge)                         - æ¥åŽ»å¦‚é£Ž  150/    0
+  å†…åŠŸå¿ƒæ³• (force)                         - éœ‡å¤é“„ä»Š  180/    0
+â–¡å†·æ³‰ç¥žåŠŸ (lengquan-force)                - ç¥žä¹Žå…¶æŠ€  180/    0
+  è¯»ä¹¦è¯†å­— (literate)                      - åšå­¦å¤šæ‰   80/    0
+  åŸºæœ¬é”æ³• (mace)                          - å·²æœ‰å°æˆ  100/    0
+  æ‹†æ‹›å¸åŠ›ä¹‹æ³• (parry)                     - ç¥žä¹Žå…¶æŠ€  180/    0
+  åŸºæœ¬æžªæ³• (spear)                         - ç¥žä¹Žå…¶æŠ€  180/    0
+  æ‰‘å‡»æ ¼æ–—ä¹‹æŠ€ (unarmed)                   - å‡ºç±»æ‹”èƒ  150/    0
+â–¡æ— ç§é”æ³• (wusi-mace)                     - é©¬é©¬è™Žè™Ž   80/    0
+â–¡é›è¡Œæ­¥æ³• (yanxing-steps)                 - é©¾è½»å°±ç†Ÿ  120/    0
 
 
-³ÌÒ§½ðÄ¿Ç°ËùÕÆÎÕµÄ¼¼ÄÜ£º
+ç§¦ç¼ç›®å‰æ‰€æŽŒæ¡çš„æŠ€èƒ½ï¼š
 
-  »ù±¾¸«·¨ (axe)                           - ÒÑÓÐÐ¡³É  100/    0
-¡õ°ËØÔÖä (baguazhou)                       - ´ÖÍ¨Æ¤Ã«   40/    0
-  »ù±¾Çá¹¦ (dodge)                         - ¼²Èô·Éºè   80/    0
-  ÄÚ¹¦ÐÄ·¨ (force)                         - ÉúÉú²»¾ø   90/    0
-¡õÀäÈªÉñ¹¦ (lengquan-force)                - ÂÔÖªÒ»¶þ   50/    0
-  ²ðÕÐÐ¶Á¦Ö®·¨ (parry)                     - ÂíÂí»¢»¢   80/    0
-¡õÐû»¨Èý¸« (sanban-axe)                    - ¼ÝÇá¾ÍÊì  120/    0
-  ·¨Êõ (spells)                            - ÂÔÏþ±ä»¯   40/    0
-  ÆË»÷¸ñ¶·Ö®¼¼ (unarmed)                   - ÒÑÓÐÐ¡³É  100/    0
-¡õÑãÐÐ²½·¨ (yanxing-steps)                 - ´ÖÍ¨Æ¤Ã«   40/    0
-
-
-Î¾³Ù¹§Ä¿Ç°ËùÕÆÎÕµÄ¼¼ÄÜ£º
-
-¡õ°ÔÍõÇ¹·¨ (bawang-qiang)                  - ÒÑÓÐÐ¡³É  100/    0
-¡õ³¤È­ (changquan)                         - ÒÑÓÐÐ¡³É  100/    0
-  »ù±¾Çá¹¦ (dodge)                         - À´È¥Èç·ç  150/    0
-  ÄÚ¹¦ÐÄ·¨ (force)                         - »íÈ»¹áÍ¨  150/    0
-¡õ¾ªÀ×±Þ·¨ (jinglei-mace)                  - ³öÀà°ÎÝÍ  150/    0
-¡õÀäÈªÉñ¹¦ (lengquan-force)                - ³öÀà°ÎÝÍ  150/    0
-  »ù±¾ïµ·¨ (mace)                          - ÉñºõÆä¼¼  180/    0
-  ²ðÕÐÐ¶Á¦Ö®·¨ (parry)                     - ¼ÝÇá¾ÍÊì  120/    0
-  »ù±¾Ç¹·¨ (spear)                         - ¼ÝÇá¾ÍÊì  120/    0
-  ÆË»÷¸ñ¶·Ö®¼¼ (unarmed)                   - ¼ÝÇá¾ÍÊì  120/    0
-¡õÑãÐÐ²½·¨ (yanxing-steps)                 - ¼ÝÇá¾ÍÊì  120/    0
+  åŸºæœ¬å¼“ç®­ (archery)                       - å‡ºç±»æ‹”èƒ  150/    0
+â–¡éœ¸çŽ‹æžªæ³• (bawang-qiang)                  - å·²æœ‰å°æˆ  100/    0
+â–¡é•¿æ‹³ (changquan)                         - é©¾è½»å°±ç†Ÿ  120/    0
+  åŸºæœ¬è½»åŠŸ (dodge)                         - ç§»å½¢æ¢å½±  180/    0
+  å†…åŠŸå¿ƒæ³• (force)                         - é€šå…³åœ¨å³  120/    0
+â–¡å†·æ³‰ç¥žåŠŸ (lengquan-force)                - é©¾è½»å°±ç†Ÿ  120/    0
+  è¯»ä¹¦è¯†å­— (literate)                      - æ–‡é‡‡æ–ç„¶   60/    0
+  åŸºæœ¬é”æ³• (mace)                          - å‡ºç¥žå…¥åŒ–  200/    0
+  æ‹†æ‹›å¸åŠ›ä¹‹æ³• (parry)                     - å‡ºç±»æ‹”èƒ  150/    0
+  åŸºæœ¬æžªæ³• (spear)                         - é©¾è½»å°±ç†Ÿ  120/    0
+  æ‰‘å‡»æ ¼æ–—ä¹‹æŠ€ (unarmed)                   - å‡ºç±»æ‹”èƒ  160/    0
+â–¡æ— ç§é”æ³• (wusi-mace)                     - ç¥žä¹Žå…¶æŠ€  180/    0
+â–¡é›è¡Œæ­¥æ³• (yanxing-steps)                 - å‡ºç±»æ‹”èƒ  150/    0
 
 
-°×·¢ÀÏÈËÄ¿Ç°ËùÕÆÎÕµÄ¼¼ÄÜ£º
+ç¨‹å’¬é‡‘ç›®å‰æ‰€æŽŒæ¡çš„æŠ€èƒ½ï¼š
 
-  »ù±¾¸«·¨ (axe)                           - ³öÀà°ÎÝÍ  150/    0
-¡õ°ËØÔÖä (baguazhou)                       - ³öÀà°ÎÝÍ  160/    0
-  »ù±¾Çá¹¦ (dodge)                         - Ì¤Ñ©ÎÞºÛ  100/    0
-  ÄÚ¹¦ÐÄ·¨ (force)                         - Ó¢»ªÄÚÁ²  100/    0
-¡õÀäÈªÉñ¹¦ (lengquan-force)                - ÒÑÓÐÐ¡³É  100/    0
-  ¶ÁÊéÊ¶×Ö (literate)                      - Ñ§¹á¹Å½ñ  150/    0
-  ²ðÕÐÐ¶Á¦Ö®·¨ (parry)                     - ÒÑÓÐÐ¡³É  100/    0
-¡õÐû»¨Èý¸« (sanban-axe)                    - ÉñºõÆä¼¼  180/    0
-  ·¨Êõ (spells)                            - ºô·ç»½Óê  160/    0
-  »ù±¾½£Êõ (sword)                         - ÒÑÓÐÐ¡³É  100/    0
-  ÆË»÷¸ñ¶·Ö®¼¼ (unarmed)                   - ÒÑÓÐÐ¡³É  100/    0
-¡õÏþ·ç²ÐÔÂ½£ (xiaofeng-sword)              - ÒÑÓÐÐ¡³É  100/    0
-¡õÑãÐÐ²½·¨ (yanxing-steps)                 - ÒÑÓÐÐ¡³É  100/    0
+  åŸºæœ¬æ–§æ³• (axe)                           - å·²æœ‰å°æˆ  100/    0
+â–¡å…«å¦å’’ (baguazhou)                       - ç²—é€šçš®æ¯›   40/    0
+  åŸºæœ¬è½»åŠŸ (dodge)                         - ç–¾è‹¥é£žé¸¿   80/    0
+  å†…åŠŸå¿ƒæ³• (force)                         - ç”Ÿç”Ÿä¸ç»   90/    0
+â–¡å†·æ³‰ç¥žåŠŸ (lengquan-force)                - ç•¥çŸ¥ä¸€äºŒ   50/    0
+  æ‹†æ‹›å¸åŠ›ä¹‹æ³• (parry)                     - é©¬é©¬è™Žè™Ž   80/    0
+â–¡å®£èŠ±ä¸‰æ–§ (sanban-axe)                    - é©¾è½»å°±ç†Ÿ  120/    0
+  æ³•æœ¯ (spells)                            - ç•¥æ™“å˜åŒ–   40/    0
+  æ‰‘å‡»æ ¼æ–—ä¹‹æŠ€ (unarmed)                   - å·²æœ‰å°æˆ  100/    0
+â–¡é›è¡Œæ­¥æ³• (yanxing-steps)                 - ç²—é€šçš®æ¯›   40/    0
+
+
+å°‰è¿Ÿæ­ç›®å‰æ‰€æŽŒæ¡çš„æŠ€èƒ½ï¼š
+
+â–¡éœ¸çŽ‹æžªæ³• (bawang-qiang)                  - å·²æœ‰å°æˆ  100/    0
+â–¡é•¿æ‹³ (changquan)                         - å·²æœ‰å°æˆ  100/    0
+  åŸºæœ¬è½»åŠŸ (dodge)                         - æ¥åŽ»å¦‚é£Ž  150/    0
+  å†…åŠŸå¿ƒæ³• (force)                         - è±ç„¶è´¯é€š  150/    0
+â–¡æƒŠé›·éž­æ³• (jinglei-mace)                  - å‡ºç±»æ‹”èƒ  150/    0
+â–¡å†·æ³‰ç¥žåŠŸ (lengquan-force)                - å‡ºç±»æ‹”èƒ  150/    0
+  åŸºæœ¬é”æ³• (mace)                          - ç¥žä¹Žå…¶æŠ€  180/    0
+  æ‹†æ‹›å¸åŠ›ä¹‹æ³• (parry)                     - é©¾è½»å°±ç†Ÿ  120/    0
+  åŸºæœ¬æžªæ³• (spear)                         - é©¾è½»å°±ç†Ÿ  120/    0
+  æ‰‘å‡»æ ¼æ–—ä¹‹æŠ€ (unarmed)                   - é©¾è½»å°±ç†Ÿ  120/    0
+â–¡é›è¡Œæ­¥æ³• (yanxing-steps)                 - é©¾è½»å°±ç†Ÿ  120/    0
+
+
+ç™½å‘è€äººç›®å‰æ‰€æŽŒæ¡çš„æŠ€èƒ½ï¼š
+
+  åŸºæœ¬æ–§æ³• (axe)                           - å‡ºç±»æ‹”èƒ  150/    0
+â–¡å…«å¦å’’ (baguazhou)                       - å‡ºç±»æ‹”èƒ  160/    0
+  åŸºæœ¬è½»åŠŸ (dodge)                         - è¸é›ªæ— ç—•  100/    0
+  å†…åŠŸå¿ƒæ³• (force)                         - è‹±åŽå†…æ•›  100/    0
+â–¡å†·æ³‰ç¥žåŠŸ (lengquan-force)                - å·²æœ‰å°æˆ  100/    0
+  è¯»ä¹¦è¯†å­— (literate)                      - å­¦è´¯å¤ä»Š  150/    0
+  æ‹†æ‹›å¸åŠ›ä¹‹æ³• (parry)                     - å·²æœ‰å°æˆ  100/    0
+â–¡å®£èŠ±ä¸‰æ–§ (sanban-axe)                    - ç¥žä¹Žå…¶æŠ€  180/    0
+  æ³•æœ¯ (spells)                            - å‘¼é£Žå”¤é›¨  160/    0
+  åŸºæœ¬å‰‘æœ¯ (sword)                         - å·²æœ‰å°æˆ  100/    0
+  æ‰‘å‡»æ ¼æ–—ä¹‹æŠ€ (unarmed)                   - å·²æœ‰å°æˆ  100/    0
+â–¡æ™“é£Žæ®‹æœˆå‰‘ (xiaofeng-sword)              - å·²æœ‰å°æˆ  100/    0
+â–¡é›è¡Œæ­¥æ³• (yanxing-steps)                 - å·²æœ‰å°æˆ  100/    0
 
 
 

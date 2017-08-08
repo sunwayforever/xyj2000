@@ -1,50 +1,50 @@
-NKָ��
+NK指南
 
-//����֪ʶ�������磬Դ���ϵ�xyj2000����վ��������ݣ�һ����ݾ���30������ѧ����˼�����
-����������ݵ�ID������������һЩNK�����Ѿ������á����������Ϊ����ԭ��û�й��������ѧ
-�������NK����������ˡ�
-//��ͨ����ݱ�ҵID��ֻ��ֱ��ȥNKС����Сͯ��250�����Ҽ��ɽ���NK���ġ�
+//以下知识来自网络，源自老的xyj2000。本站由于有武馆，一出武馆就是30多万武学，因此假如正
+常挂满了武馆的ID，下述初级的一些NK对象已经不适用。但如果你因为种种原因没有挂满武馆武学
+，下面的NK对象就有用了。
+//普通的武馆毕业ID，只需直接去NK小西天小童至250年左右即可结束NK生涯。
 
 
-��xyj2000���棬nkҲ����һ����Ҫ�Ļ�õ��еİ취��һ����˵NK�����¼����취��
-1.Ӳ�������Ҳ�����۵�
-2.��dengxian-dafa,��juanbi��juanbi��һ���ǳ�������NK�ķ�������Ϊ���ǵ������ж��У�
-���������غܴ󣬶�һЩnpc�����ܵͻ��߸���û�з����� ����juanbi����NK������������Сͯ��
-�����ˡ�
-3.�и�wx id��æbusy npc,�����Ҫ����ɱ�޺���juanbi�����������޺�����������޺����������
-����취��
+在xyj2000里面，nk也算是一个重要的获得道行的办法，一般来说NK有以下几个办法：
+1.硬砍，这个也是最累的
+2.有dengxian-dafa,用juanbi，juanbi是一个非常有利于NK的法术，因为卷鼻的命中判定中，
+法力的因素很大，而一些npc法力很低或者根本没有法力， 所以juanbi就是NK利器，用来卷小童最
+合适了。
+3.有高wx id帮忙busy npc,这个主要用于杀罗汉，juanbi很难用来打罗汉，所以想吃罗汉，最好是用
+这个办法。
 
-NK��һЩ˵��:
-1.ɱ�����Լ�wx+dh��3�����ϵ�npc���ܼӵ���
-2.����������ɣ�ƽ�����NK��û�е����õ�
+NK的一些说明:
+1.杀死比自己wx+dh高3倍以上的npc才能加道行
+2.必须拜了门派，平民百姓NK是没有道行拿的
 
-���ˣ����������ͷϷ��������Щnpc���������Ե��С�(�������δ˵����һ����wx+dh)
-1.hell_bing,�����ר��Ϊ����׼���ģ�ע�⣬��hell_bing������wx������3700���ϣ��Եİ취�ǣ�
-��qilin,������ȷ����ȥ�ĵط�������hell_bing������Ȼ��whisper hell_bing climb�������Զ�����
-�����־Ϳ��Գ��ˡ�hell_bing���Գ�wx+dh��26.7k���ҡ�
-ע�⣺��һ��hell_bing��Ҫ1goldŶ��ϵͳ�Զ���Ǯׯ�ۡ�
+好了，下面才是重头戏，看看那些npc可以用来吃道行。(数字如果未说明，一律是wx+dh)
+1.hell_bing,这个是专门为新手准备的，注意，吃hell_bing的新手wx必须在3700以上，吃的办法是，
+在qilin,不是正确爬上去的地方，先招hell_bing出来，然后whisper hell_bing climb，他就自动晕了
+，新手就可以吃了。hell_bing可以吃wx+dh到26.7k左右。
+注意：招一个hell_bing需要1gold哦，系统自动从钱庄扣。
 
-2.���ֻ����Գ�changan��һЩnpc,�ɵ͵��߷ֱ��� monk,seng ren,zhangsun wuji,������long 
-po,gui badou,gui badou�ϱߵ�2��npc, jingwudi���ߵ�2��npc,������4���Ƚ���ɱ��û��һ����
-skill�ͱ�ɱ�ˣ������Ǿ����б��������д���
-npc ���ԳԵ�����wx+dh
+2.新手还可以吃changan的一些npc,由低到高分别是 monk,seng ren,zhangsun wuji,龙宫的long 
+po,gui badou,gui badou南边的2个npc, jingwudi北边的2个npc,不过这4个比较难杀，没有一定的
+skill就别杀了，下面是具体列表，可能有错误。
+npc 可以吃到多少wx+dh
 sengren 30k
-�����޼� 83k
+长孙无忌 83k
 gui badou 233k
-���ܱ� 266k
+鲤总兵 266k
 long po 109k
-�붼˾ 100k
-��̫ξ 100k
-*����Ů 55k
+鲭都司 100k
+鲻太尉 100k
+*贝宫女 55k
 
-3.�ã��ܷ��ˣ����Գ������ط����ˡ�pansi���߸�֩�뾫���ԳԵ�210��k,ע�⣺�⼸��Ҳ���ô�
-������˾ͱ����ˡ�
-pingding��gui,chong���ԳԵ�wx+dh 300k,long,hu���ԳԵ�wx+dh 333k��pansi��shuizi jing��
-�ԳԵ�413k,nuerguo��niuer���ԳԵ�433k,xiaoxitian��xiaotong(�����Ϸ����ߵ�3��)�����ԳԵ�
-600k���ţ���Щ����Σ�ղ���ģ�ֻҪ�㹦��һֱѧ�ţ���Щ��һ�㶼�ܶԸ���
+3.好，能飞了，可以吃其他地方的了。pansi的七个蜘蛛精可以吃到210多k,注意：这几个也不好打，
+功夫低了就别惹了。
+pingding的gui,chong可以吃到wx+dh 300k,long,hu可以吃到wx+dh 333k，pansi的shuizi jing可
+以吃到413k,nuerguo的niuer可以吃到433k,xiaoxitian的xiaotong(除了老佛身边的3个)，可以吃到
+600k。嗯，这些都是危险不大的，只要你功夫一直学着，这些你一般都能对付。
 
-4.����ĿɾͱȽ�Σ����Ŷ�����û�и�wx id��æ���ǾͱȽ�������,hell��10������ɱ��800��k, 
-putuo�����������luohan, ���ӡ����硢��ׯ�۵�IDɱ �޺�û���У�ѩɽ���޵׶�ɱһ���޺�125
-�죬�ظ����������¹���ɱһ��83�졣luohan���ԳԵ�1450k���ң�û�и�wx��æ �޺��������Ǻ�
-��ɱ�ģ���������򻹲���ȥ��������luohan֮���������,star�ˣ�����Ѷȸ��󣬺Ǻ�
+4.下面的可就比较危险了哦，如果没有高wx id帮忙，那就比较困难了,hell的10王可以杀到800多k, 
+putuo紫竹林里面的luohan, 普陀、方寸、五庄观的ID杀 罗汉没道行；雪山、无底洞杀一个罗汉125
+天，地府、龙宫和月宫的杀一个83天。luohan可以吃到1450k左右，没有高wx帮忙 罗汉基本上是很
+难杀的，费这个功夫还不如去做做任务。luohan之后就是天王,star了，这个难度更大，呵呵
 

@@ -1,25 +1,25 @@
-xyj2000µÄ×øÆï
+xyj2000çš„åéª‘
 
-×øÆï¿ÉÒÔÓÃÀ´¼Ódodge µÄÓĞĞ§µÈ¼¶£¬¶ÔĞÂÊÖÀ´ËµºÜÓĞÓÃ£¬ÏÂÃæÊÇÎÒ¸ù¾İÔ´ÂëÕûÀíµÄ£¬¹©´ó¼Ò²Î¿¼£º
-ÀÏÅ£(Niu)£º set("ride/dodge", 10);
-¿ª·âµÄÇà××Âí(horse)µÈ£º set("ride/dodge", 10+random(6));
-Ó¥³î½§µÄ°×ÁúÂí(bailong ma)£º set("ride/dodge", 10+random(10));
-Ğ¡Ã«Â¿/»¨Ã«Â¿(mao lu)£º set("ride/dodge", 10+random(10));
-½ğ±³º£Âí(hai ma)£º set("ride/dodge", 15);¿ÉÒÔÏÂË®
-½«¾ü¸®µÄ»Æ±ìÂí(huangbiao ma)£º set("ride/dodge", 18);
-ºôÀ×±ª(Hulei bao)£º set("ride/dodge", 18);
-Ğ¡Ã«Â¿(xiao maolu)£º set("ride/dodge", 20);
-ÌìÍ¥µÄ³àÍÃÂí(horse)µÈ£º set("ride/dodge", 20+random(6));
-Pet£º set("ride/dodge", 35);
-±ÜË®½ğ¾¦ÊŞ(jinjing shou)£º set("ride/dodge", 35);¿ÉÒÔÏÂË®
+åéª‘å¯ä»¥ç”¨æ¥åŠ dodge çš„æœ‰æ•ˆç­‰çº§ï¼Œå¯¹æ–°æ‰‹æ¥è¯´å¾ˆæœ‰ç”¨ï¼Œä¸‹é¢æ˜¯æˆ‘æ ¹æ®æºç æ•´ç†çš„ï¼Œä¾›å¤§å®¶å‚è€ƒï¼š
+è€ç‰›(Niu)ï¼š set("ride/dodge", 10);
+å¼€å°çš„é’é¬ƒé©¬(horse)ç­‰ï¼š set("ride/dodge", 10+random(6));
+é¹°æ„æ¶§çš„ç™½é¾™é©¬(bailong ma)ï¼š set("ride/dodge", 10+random(10));
+å°æ¯›é©´/èŠ±æ¯›é©´(mao lu)ï¼š set("ride/dodge", 10+random(10));
+é‡‘èƒŒæµ·é©¬(hai ma)ï¼š set("ride/dodge", 15);å¯ä»¥ä¸‹æ°´
+å°†å†›åºœçš„é»„è†˜é©¬(huangbiao ma)ï¼š set("ride/dodge", 18);
+å‘¼é›·è±¹(Hulei bao)ï¼š set("ride/dodge", 18);
+å°æ¯›é©´(xiao maolu)ï¼š set("ride/dodge", 20);
+å¤©åº­çš„èµ¤å…”é©¬(horse)ç­‰ï¼š set("ride/dodge", 20+random(6));
+Petï¼š set("ride/dodge", 35);
+é¿æ°´é‡‘ç›å…½(jinjing shou)ï¼š set("ride/dodge", 35);å¯ä»¥ä¸‹æ°´
 
-ĞèÒªTrainµÄ£º
-Çàğ½(qing luan)£º set("ride/dodge", 25);Ö»ÄÜÅ®ĞÔ×ø£¬¿ÉÒÔÉÏÔÂ¹¬
-ºèğÀ(hong hu)£º set("ride/dodge", 25);Ö»ÄÜÅ®ĞÔ×ø£¬¿ÉÒÔÉÏÔÂ¹¬
-Ã·»¨Â¹(meihua lu)£º set("ride/dodge", 26);
-½ğÑÛÍÕ(jinyan tuo)£º set("ride/dodge", 27);
-»¨°ß±ª(huaban bao)£º set("ride/dodge", 28);
-Ä«÷è÷ë(mo qilin)£º set("ride/dodge", 29);
-ÇàÃ«Ê¨(qingmao shi)£º set("ride/dodge", 30);
+éœ€è¦Trainçš„ï¼š
+é’é¸¾(qing luan)ï¼š set("ride/dodge", 25);åªèƒ½å¥³æ€§åï¼Œå¯ä»¥ä¸Šæœˆå®«
+é¸¿é¹„(hong hu)ï¼š set("ride/dodge", 25);åªèƒ½å¥³æ€§åï¼Œå¯ä»¥ä¸Šæœˆå®«
+æ¢…èŠ±é¹¿(meihua lu)ï¼š set("ride/dodge", 26);
+é‡‘çœ¼é©¼(jinyan tuo)ï¼š set("ride/dodge", 27);
+èŠ±æ–‘è±¹(huaban bao)ï¼š set("ride/dodge", 28);
+å¢¨éº’éºŸ(mo qilin)ï¼š set("ride/dodge", 29);
+é’æ¯›ç‹®(qingmao shi)ï¼š set("ride/dodge", 30);
 
-//±¾Õ¾ÎŞpet£¬Òò´Ë×ÛÉÏËùÊö£¬×îºÃµÄ×øÆïÊÇ±ÜË®½ğ¾¦ÊŞ
+//æœ¬ç«™æ— petï¼Œå› æ­¤ç»¼ä¸Šæ‰€è¿°ï¼Œæœ€å¥½çš„åéª‘æ˜¯é¿æ°´é‡‘ç›å…½

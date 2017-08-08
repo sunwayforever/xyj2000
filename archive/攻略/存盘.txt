@@ -1,36 +1,36 @@
-start room¿ÉÒÔ´æÅÌµÄµØ·½
+start roomå¯ä»¥å­˜ç›˜çš„åœ°æ–¹
 
-1. ºèÃÉÖ®Íâ |/d/death/block.c | ÕâÀïÊÇ´ó¼ÒÊÙÖÕÕıÇŞµÄµØ·½¡£
-2. ·î¼À³¡ |/d/death/new-walk2.c | µØ¸®ÓĞÕÆÃÅµÄÎ»ÖÃ¡£
-3. Ó­¿ÍÌü |/d/wiz/guest.c | Î×Ê¦Ó­¿ÍÌü£¬¹À¼Æ¶¼²»ÏëÈ¥¡£
-4. ËÀÀÎ |/d/wiz/punish.c | ËÀÀÎ¡£Ã»ÈËÏëÈ¥µÄÆÆµØ·½¡£
-5. ĞİÏ¢ÊÒ |/d/xueshan/restroom.c | Ñ©É½ĞİÏ¢ÊÒ¡£
-6. ½²¾­ÌÃ |/d/lingtai/jingtang.c | ·½´çÓĞÕÆÃÅµÄÎ»ÖÃ¡£
-7. Ìì¾® |/d/moon/courtyard.c | ÔÂ¹¬ÓĞÇàğ½µÄµØ·½¡£
-8. Àé°ÊĞ¡Ôº |/d/moon/xiaoyuan.c | ÔÂ¹¬ÓĞBOARDµÄµØ·½¡£
-9. Áú¹¬Ç°Ìü |/d/sea/yuejie2.c | Áú¹¬ÓĞBOARDµÄµØ·½¡£
-10.É½ÃÅ |/d/nanhai/gate.c | ÆÕÛçÉ½µÄÉ½ÃÅ¡£
-11.ÂäåÈÑÒ |/d/nanhai/guangchang.c | ÆÕÛçÓĞÕÆÃÅµÄµØ·½¡£
-12.Õıµî |/d/qujing/wuzhuang/zhengdian.c| Îå×¯¹ÛÓĞ²Ü¹ú¾ËµÄµØ·½¡£ 
-13.ÂíÕ» |/d/qujing/baoxiang/mazhan.c | ±¦Ïó¹úµÄÂíÕ»¡£
-14.½ğÍ¤¹İ |/d/qujing/biqiu/jinting.c | ±ÈÇğ¹úµÄ½ğÍ¤¹İ¡£
-15.·ï¸ó |/d/qujing/chechi/feng.c | ³µ³Ù¹úµÄ·ï¸ó¡£
-16.ÁúÂ¥ |/d/qujing/chechi/long.c | ³µ³Ù¹úµÄÁúÂ¥¡£
-17.Õ«Õ» |/d/qujing/fengxian/zhaizhan.c | ·ïÏÉ¿¤µÄÕ«Õ»¡£
-18.Ğ¡µê |/d/qujing/firemount/xiaodian.c| »ğÑæÉ½µÄĞ¡µê¡£
-19.¿Íµê |/d/qujing/jinping/kedian.c | ½ğÆ½¸®µÄ¿Íµê¡£
-20.ÔÆö«Ì¨ |/d/qujing/jisaiguo/yunqi.c | ¼ÀÈü¹úµÄÔÆö«Ì¨¡£
-21.âÖÄÚ |/d/qujing/nuerguo/annei.c | Å®¶ù¹úµÄÅ£¶şÏÈÉú´¦¡£
-22.ÂÌÃÔ¹¬ |/d/qujing/nuerguo/greenyard.c | Å®¶ù¹úµÄÂÌÃÔ¹¬¡£
-23.Ğ¡¶şµê |/d/qujing/qinfa/xiaoer.c | ÇÕ·¨¹úµÄĞ¡¶şµê¡£
-24.¿Íµê |/d/qujing/tianzhu/kedian.c | ÌìóÃ¹úµÄ¿Íµê¡£
-25.³ø·¿ |/d/qujing/wudidong/kitchen.c | ÎŞµ×¶´µÄ³ø·¿¡£
-26.ÕÅ¼ÒÀÏµê |/d/qujing/wudidong/shop.c | ÎŞµ×¶´µÄÕÅ¼ÒÀÏµê¡£
-27.ÕôÁı |/d/qujing/wudidong/steammer.c | ÕôÁı¡£:D
-28.À¤Ôª¿ÍÕ» |/d/qujing/wuji/kezhan.c | ÎÚ¼¦¹úµÄ¿ÍÕ»¡£
-29.´ı¿Í¹İ |/d/qujing/yuhua/daike.c | Óñ»ªÏØµÄ´ı¿Í¹İ¡£
-30.»áÍ¬¹İ |/d/qujing/zhuzi/huitong.c | Öì×Ï¹úµÄ»áÍ¬¹İ¡£
-31.Çô¶´ |/d/qujing/baihuling/jail.c | ´ó¼Ò¾­³£ÓÃBUGµÄÇô¶´¡£
-32.ÕıÌü |/d/jjf/keting.c | ½«¾ü¸®µÄÕıÌü¡£
-33.ÄÏ³Ç¿ÍÕ» |/d/city/kezhan.c | Õâ¸ö¾Í²»ÓÃËµÁË°É¡£:)
-34.´º´¼²èÕ» |/d/kaifeng/chunchun.c | ¿ª·â³ÇµÄ´º´¼²èÕ»¡£
+1. é¸¿è’™ä¹‹å¤– |/d/death/block.c | è¿™é‡Œæ˜¯å¤§å®¶å¯¿ç»ˆæ­£å¯çš„åœ°æ–¹ã€‚
+2. å¥‰ç¥­åœº |/d/death/new-walk2.c | åœ°åºœæœ‰æŒé—¨çš„ä½ç½®ã€‚
+3. è¿å®¢å… |/d/wiz/guest.c | å·«å¸ˆè¿å®¢å…ï¼Œä¼°è®¡éƒ½ä¸æƒ³å»ã€‚
+4. æ­»ç‰¢ |/d/wiz/punish.c | æ­»ç‰¢ã€‚æ²¡äººæƒ³å»çš„ç ´åœ°æ–¹ã€‚
+5. ä¼‘æ¯å®¤ |/d/xueshan/restroom.c | é›ªå±±ä¼‘æ¯å®¤ã€‚
+6. è®²ç»å ‚ |/d/lingtai/jingtang.c | æ–¹å¯¸æœ‰æŒé—¨çš„ä½ç½®ã€‚
+7. å¤©äº• |/d/moon/courtyard.c | æœˆå®«æœ‰é’é¸¾çš„åœ°æ–¹ã€‚
+8. ç¯±ç¬†å°é™¢ |/d/moon/xiaoyuan.c | æœˆå®«æœ‰BOARDçš„åœ°æ–¹ã€‚
+9. é¾™å®«å‰å… |/d/sea/yuejie2.c | é¾™å®«æœ‰BOARDçš„åœ°æ–¹ã€‚
+10.å±±é—¨ |/d/nanhai/gate.c | æ™®å¨å±±çš„å±±é—¨ã€‚
+11.è½è¿¦å²© |/d/nanhai/guangchang.c | æ™®å¨æœ‰æŒé—¨çš„åœ°æ–¹ã€‚
+12.æ­£æ®¿ |/d/qujing/wuzhuang/zhengdian.c| äº”åº„è§‚æœ‰æ›¹å›½èˆ…çš„åœ°æ–¹ã€‚ 
+13.é©¬æ ˆ |/d/qujing/baoxiang/mazhan.c | å®è±¡å›½çš„é©¬æ ˆã€‚
+14.é‡‘äº­é¦† |/d/qujing/biqiu/jinting.c | æ¯”ä¸˜å›½çš„é‡‘äº­é¦†ã€‚
+15.å‡¤é˜ |/d/qujing/chechi/feng.c | è½¦è¿Ÿå›½çš„å‡¤é˜ã€‚
+16.é¾™æ¥¼ |/d/qujing/chechi/long.c | è½¦è¿Ÿå›½çš„é¾™æ¥¼ã€‚
+17.æ–‹æ ˆ |/d/qujing/fengxian/zhaizhan.c | å‡¤ä»™éƒ¡çš„æ–‹æ ˆã€‚
+18.å°åº— |/d/qujing/firemount/xiaodian.c| ç«ç„°å±±çš„å°åº—ã€‚
+19.å®¢åº— |/d/qujing/jinping/kedian.c | é‡‘å¹³åºœçš„å®¢åº—ã€‚
+20.äº‘éœå° |/d/qujing/jisaiguo/yunqi.c | ç¥­èµ›å›½çš„äº‘éœå°ã€‚
+21.åºµå†… |/d/qujing/nuerguo/annei.c | å¥³å„¿å›½çš„ç‰›äºŒå…ˆç”Ÿå¤„ã€‚
+22.ç»¿è¿·å®« |/d/qujing/nuerguo/greenyard.c | å¥³å„¿å›½çš„ç»¿è¿·å®«ã€‚
+23.å°äºŒåº— |/d/qujing/qinfa/xiaoer.c | é’¦æ³•å›½çš„å°äºŒåº—ã€‚
+24.å®¢åº— |/d/qujing/tianzhu/kedian.c | å¤©ç«ºå›½çš„å®¢åº—ã€‚
+25.å¨æˆ¿ |/d/qujing/wudidong/kitchen.c | æ— åº•æ´çš„å¨æˆ¿ã€‚
+26.å¼ å®¶è€åº— |/d/qujing/wudidong/shop.c | æ— åº•æ´çš„å¼ å®¶è€åº—ã€‚
+27.è’¸ç¬¼ |/d/qujing/wudidong/steammer.c | è’¸ç¬¼ã€‚:D
+28.å¤å…ƒå®¢æ ˆ |/d/qujing/wuji/kezhan.c | ä¹Œé¸¡å›½çš„å®¢æ ˆã€‚
+29.å¾…å®¢é¦† |/d/qujing/yuhua/daike.c | ç‰åå¿çš„å¾…å®¢é¦†ã€‚
+30.ä¼šåŒé¦† |/d/qujing/zhuzi/huitong.c | æœ±ç´«å›½çš„ä¼šåŒé¦†ã€‚
+31.å›šæ´ |/d/qujing/baihuling/jail.c | å¤§å®¶ç»å¸¸ç”¨BUGçš„å›šæ´ã€‚
+32.æ­£å… |/d/jjf/keting.c | å°†å†›åºœçš„æ­£å…ã€‚
+33.å—åŸå®¢æ ˆ |/d/city/kezhan.c | è¿™ä¸ªå°±ä¸ç”¨è¯´äº†å§ã€‚:)
+34.æ˜¥é†‡èŒ¶æ ˆ |/d/kaifeng/chunchun.c | å¼€å°åŸçš„æ˜¥é†‡èŒ¶æ ˆã€‚

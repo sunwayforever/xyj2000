@@ -1,43 +1,43 @@
 
-¼¸¸öĞ¡»úÆ÷
+å‡ ä¸ªå°æœºå™¨
 
 
-µô¿İ¹Ç¶´·½°¸£º
+æ‰æ¯éª¨æ´æ–¹æ¡ˆï¼š
 
 #ALIAS move {last_move=%param1;#t- kugu;#wa 2000;#t+ kugu;%param1} {kugu}
-#ALIAS show_dummy_1 {count=2;#show ÕâÀïÃ÷ÏÔµÄ³ö¿ÚÊÇ %param1 ºÍ %param2¡£} {kugu}
-#ALIAS show_dummy_2 {count=3;#show ÕâÀïÃ÷ÏÔµÄ³ö¿ÚÊÇ %param2 ºÍ %param3¡£} {kugu}
+#ALIAS show_dummy_1 {count=2;#show è¿™é‡Œæ˜æ˜¾çš„å‡ºå£æ˜¯ %param1 å’Œ %param2ã€‚} {kugu}
+#ALIAS show_dummy_2 {count=3;#show è¿™é‡Œæ˜æ˜¾çš„å‡ºå£æ˜¯ %param2 å’Œ %param3ã€‚} {kugu}
 #ALIAS move_2 {last_move=%param2;#t- kugu;#wa 2000;#t+ kugu;%param2} {kugu}
 #ALIAS move_3 {last_move=%param3;#t- kugu;#wa 2000;#t+ kugu;%param3} {kugu}
 #ALIAS init {count=1;last_move=%null} {kugu}
-#ALIAS show_dummy_3 {count=1;#show ÕâÀïÃ÷ÏÔµÄ³ö¿ÚÊÇ %param3 ºÍ %param1¡£} {kugu}
+#ALIAS show_dummy_3 {count=1;#show è¿™é‡Œæ˜æ˜¾çš„å‡ºå£æ˜¯ %param3 å’Œ %param1ã€‚} {kugu}
 #VAR last_move {east} {_nodef} {kugu}
 #VAR count {1} {1} {kugu}
 #VAR rev {%if(%concat(%1,%2)=eastwest | %concat(%1,%2)=southnorth | %concat(%1,%2)=westeast | %concat(%1,%2)=northsouth | %concat(%1,%2)=updown | %concat(%1,%2)=downup, 1, 0)} {_nodef} {kugu}
-#TRIGGER {{ÕâÀïÃ÷ÏÔµÄ³ö¿ÚÊÇ }(*){¡¢}(*){ ºÍ }(*){¡£}} {%if(%1=out, out,);%if(%2=out, out,);%if(%3=out, out,);show_dummy_@count} {kugu} 645
-#TRIGGER {{ÕâÀïÃ÷ÏÔµÄ³ö¿ÚÊÇ }(*){ ºÍ }(*){¡£}} {%if(@rev(%1, @last_move)=0 | %1=out, move, move_2)} {kugu} 645
-#TRIGGER {{ÕâÀïÎ¨Ò»µÄ³ö¿ÚÊÇ }(*){¡£}} {move} {kugu} 645
-#TRIGGER {{ÄãÖ»¾õµÃÌìµØ·Â·ğ¶¼ËúÏİÏÂÀ´|ÄãÒ»¸ö¸úÍ·´ÓÔÓ²İÖĞ·ÉÁË¹ıÀ´£¬ÂúÁ³µÄÃÔÃ£¡£}} {look} {kugu} 645
-#TRIGGER {^{> ºöÈ»|ºöÈ»}{Ò»Õó»Æ·çºôĞ¥¶øÀ´£¬ÄãÉí²»ÓÉ¼º±»¾íÁË½øÈ¥£¡}} {#wa 5000;zuan;#t+ kugu;look} {} 645
+#TRIGGER {{è¿™é‡Œæ˜æ˜¾çš„å‡ºå£æ˜¯ }(*){ã€}(*){ å’Œ }(*){ã€‚}} {%if(%1=out, out,);%if(%2=out, out,);%if(%3=out, out,);show_dummy_@count} {kugu} 645
+#TRIGGER {{è¿™é‡Œæ˜æ˜¾çš„å‡ºå£æ˜¯ }(*){ å’Œ }(*){ã€‚}} {%if(@rev(%1, @last_move)=0 | %1=out, move, move_2)} {kugu} 645
+#TRIGGER {{è¿™é‡Œå”¯ä¸€çš„å‡ºå£æ˜¯ }(*){ã€‚}} {move} {kugu} 645
+#TRIGGER {{ä½ åªè§‰å¾—å¤©åœ°ä»¿ä½›éƒ½å¡Œé™·ä¸‹æ¥|ä½ ä¸€ä¸ªè·Ÿå¤´ä»æ‚è‰ä¸­é£äº†è¿‡æ¥ï¼Œæ»¡è„¸çš„è¿·èŒ«ã€‚}} {look} {kugu} 645
+#TRIGGER {^{> å¿½ç„¶|å¿½ç„¶}{ä¸€é˜µé»„é£å‘¼å•¸è€Œæ¥ï¼Œä½ èº«ä¸ç”±å·±è¢«å·äº†è¿›å»ï¼}} {#wa 5000;zuan;#t+ kugu;look} {} 645
 
 
-ºº×Ö×ª»»ÎªÊı×Ö£º
+æ±‰å­—è½¬æ¢ä¸ºæ•°å­—ï¼š
 
-#tri ^ÄãÃğÑıµÃµ½ÁË(*)µãÇ±ÄÜ£¡
+#tri ^ä½ ç­å¦–å¾—åˆ°äº†(*)ç‚¹æ½œèƒ½ï¼
 {convertnumber %1
 #add reward_qn %number(@in_chinese_number)
-#say ´Ë´ÎÁ¬ÏßÃğÑı¹²»ñµÃ@reward_qnµãÇ±ÄÜ,¹²@reward_guai¸ö¹Ö,Æ½¾ùÃ¿¸ö¹Ö[@reward_qn/@reward_guai]µãÇ±ÄÜ
+#say æ­¤æ¬¡è¿çº¿ç­å¦–å…±è·å¾—@reward_qnç‚¹æ½œèƒ½,å…±@reward_guaiä¸ªæ€ª,å¹³å‡æ¯ä¸ªæ€ª[@reward_qn/@reward_guai]ç‚¹æ½œèƒ½
 #color white}
-Ïà¹Øalias¶¨Òå£º
+ç›¸å…³aliaså®šä¹‰ï¼š
 #alias reward_init {#var reward_guai 0;#var reward_wx 0;#var reward_qn 0;#var reward_time {%time()} {%time()}
-#alias reward {#say ´Ë´ÎÁ¬ÏßµÇÂ½Ê±¼ä@reward_time,ÃğÑı¹²@reward_guai¸ö¹Ö,,¹²»ñµÃ@reward_qnµãÇ±ÄÜ,Æ½¾ùÃ¿¸ö¹Ö[@reward_qn/@reward_guai]µãÇ±ÄÜ,¹²»ñµÃ@reward_wxµãÎäÑ§,Æ½¾ùÃ¿¸ö¹Ö[@reward_wx/@reward_guai]µãÎäÑ§}
+#alias reward {#say æ­¤æ¬¡è¿çº¿ç™»é™†æ—¶é—´@reward_time,ç­å¦–å…±@reward_guaiä¸ªæ€ª,,å…±è·å¾—@reward_qnç‚¹æ½œèƒ½,å¹³å‡æ¯ä¸ªæ€ª[@reward_qn/@reward_guai]ç‚¹æ½œèƒ½,å…±è·å¾—@reward_wxç‚¹æ­¦å­¦,å¹³å‡æ¯ä¸ªæ€ª[@reward_wx/@reward_guai]ç‚¹æ­¦å­¦}
 #alias convertnumber {#var in_chinese_number %1;#read cmd_digit.txt;#var in_chinese_number @out_number;#say @in_chinese_number}
-²âÊÔ£º
-convertnumber Ò»ÍòÁãÎå°Ù¶şÊ®Ò»
-½«ÏÔÊ¾ 10521
-×îÖ÷ÒªµÄcmd_digit.txtÊµÏÖÓÉÓÚ4.62ºÍ5.55°æ±¾º¯ÊıµÄ²îÒì·Ö±ğÊµÏÖ£º
-4.62°æ±¾ cmd_digit.txt
-#var chinese_number_list {Áã|Ò»|¶ş|Èı|ËÄ|Îå|Áù|Æß|°Ë|¾Å|Ê®|°Ù|Ç§|Íò}
+æµ‹è¯•ï¼š
+convertnumber ä¸€ä¸‡é›¶äº”ç™¾äºŒåä¸€
+å°†æ˜¾ç¤º 10521
+æœ€ä¸»è¦çš„cmd_digit.txtå®ç°ç”±äº4.62å’Œ5.55ç‰ˆæœ¬å‡½æ•°çš„å·®å¼‚åˆ†åˆ«å®ç°ï¼š
+4.62ç‰ˆæœ¬ cmd_digit.txt
+#var chinese_number_list {é›¶|ä¸€|äºŒ|ä¸‰|å››|äº”|å…­|ä¸ƒ|å…«|ä¹|å|ç™¾|åƒ|ä¸‡}
 #var number_list {|1|2|3|4|5|6|7|8|9|A|B|C|D}
 #var ix 0
 #alias item {#var tmp_n 0;#ForAll %1 {#add tmp_n 1;#if (@tmp_n=%2) {#var myitem %i}}}
@@ -53,15 +53,15 @@ convertnumber Ò»ÍòÁãÎå°Ù¶şÊ®Ò»
 #unvar number_list
 #unvar ix
 
-µôÏß×Ô¶¯ÖØÁª£º
-ÔÚzmud4.62ÉÏĞèÒª×Ô¼º¶¨ÒåÒ»¸öalias
-#alias atconnect {g;n;YOURID;IDPASSWORD;yes;#say ¹Ø±ÕÆäËûtrigger;#t+ @mytrigger;dazuo 20}
-zmud5.55ÓĞÕâ¸öÏµÍ³alias£¬Ö»ĞèÒª°ÑÄÚÈİÌî³äÒ»ÏÂ¼´¿É¡£
-ÊÂÊµÉÏÖ´ĞĞ #conn»á×Ô¶¯Ö´ĞĞÕâ¸öatconnect¡£
+æ‰çº¿è‡ªåŠ¨é‡è”ï¼š
+åœ¨zmud4.62ä¸Šéœ€è¦è‡ªå·±å®šä¹‰ä¸€ä¸ªalias
+#alias atconnect {g;n;YOURID;IDPASSWORD;yes;#say å…³é—­å…¶ä»–trigger;#t+ @mytrigger;dazuo 20}
+zmud5.55æœ‰è¿™ä¸ªç³»ç»Ÿaliasï¼Œåªéœ€è¦æŠŠå†…å®¹å¡«å……ä¸€ä¸‹å³å¯ã€‚
+äº‹å®ä¸Šæ‰§è¡Œ #connä¼šè‡ªåŠ¨æ‰§è¡Œè¿™ä¸ªatconnectã€‚
 
-²è²©Ê¿¶ÔÊ«£º
-#tri {²è²©Ê¿Ìá±ÊÔÚÇ½ÉÏĞ´µÀ£º(*)} {poem_word=%1;#read cmd_poem.txt;}
-cmd_poem.txtµÄÄÚÈİÎª(Õâ¸öÎÄ¼ş·ÅÔÚzmud.exeËùÔÚÄ¿Â¼ÏÂ):
+èŒ¶åšå£«å¯¹è¯—ï¼š
+#tri {èŒ¶åšå£«æç¬”åœ¨å¢™ä¸Šå†™é“ï¼š(*)} {poem_word=%1;#read cmd_poem.txt;}
+cmd_poem.txtçš„å†…å®¹ä¸º(è¿™ä¸ªæ–‡ä»¶æ”¾åœ¨zmud.exeæ‰€åœ¨ç›®å½•ä¸‹):
 #file 1 poem.txt;
 exert recover;
 exert refresh;

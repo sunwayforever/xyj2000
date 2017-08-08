@@ -1,87 +1,87 @@
-¸÷ÃÅÅÉ°ÝÊ¦Ìõ¼þ¼°ÅÑÊ¦ËðÊ§
+å„é—¨æ´¾æ‹œå¸ˆæ¡ä»¶åŠå›å¸ˆæŸå¤±
 
-//ÕûºÏ×ÔÈºÄÚ£¬by raul£¬ÍáÍá²¹³ä
+//æ•´åˆè‡ªç¾¤å†…ï¼Œby raulï¼Œæ­ªæ­ªè¡¥å……
 
-ÁéÌ¨·½´çÉ½
-puti         ÐèÒª1.350ÄêµÀÐÐ,2.120¼¶dao,3.35µÄµ±Ç°ÎòÐÔ,4.Î´´Ó·½´çÅÐ¹ýÊ¦
-yunyang      100ÄêµÀÐÐ
+çµå°æ–¹å¯¸å±±
+puti         éœ€è¦1.350å¹´é“è¡Œ,2.120çº§dao,3.35çš„å½“å‰æ‚Ÿæ€§,4.æœªä»Žæ–¹å¯¸åˆ¤è¿‡å¸ˆ
+yunyang      100å¹´é“è¡Œ
 guang yunzi  wx+dh>30k
-yun×Ö±²ÎÞÌõ¼þ
-ÅÐÊ¦£ºÕÒÔÆÑô£¬¼¼ÄÜËðÊ§£ºdaoÈ«²¿,ÎäÑ§£¬µÀÐÐ¸÷¶ª20£¥
+yunå­—è¾ˆæ— æ¡ä»¶
+åˆ¤å¸ˆï¼šæ‰¾äº‘é˜³ï¼ŒæŠ€èƒ½æŸå¤±ï¼šdaoå…¨éƒ¨,æ­¦å­¦ï¼Œé“è¡Œå„ä¸¢20ï¼…
 
-À¥ÂØÉ½ÔÂ¹¬
-ËùÓÐÊ¦¸¸¶¼Ö»ÊÕÅ®ÐÔµÜ×Ó
-change      ÈÝÃ²´óÓÚµÈÓÚ22
-chimeng     ¸£ÔµµÄËæ»úÊý´óÓÚµÈÓÚ20
-xiwangmu    ÎäÑ§100k£¬µÀÐÐ100Äê
-baihua      ²»ÊÕ°Ý¹ýæÏ¶ðµÄµÜ×Ó
-yue nuÎÞÌõ¼þ
-ÅÐÊ¦£ºÕÒÂé¹Ã£¬¼¼ÄÜËðÊ§£ºsnowsword,moonshentongÈ«²¿,ÎäÑ§£¬µÀÐÐ¸÷¶ª20£¥
+æ˜†ä»‘å±±æœˆå®«
+æ‰€æœ‰å¸ˆçˆ¶éƒ½åªæ”¶å¥³æ€§å¼Ÿå­
+change      å®¹è²Œå¤§äºŽç­‰äºŽ22
+chimeng     ç¦ç¼˜çš„éšæœºæ•°å¤§äºŽç­‰äºŽ20
+xiwangmu    æ­¦å­¦100kï¼Œé“è¡Œ100å¹´
+baihua      ä¸æ”¶æ‹œè¿‡å«¦å¨¥çš„å¼Ÿå­
+yue nuæ— æ¡ä»¶
+åˆ¤å¸ˆï¼šæ‰¾éº»å§‘ï¼ŒæŠ€èƒ½æŸå¤±ï¼šsnowsword,moonshentongå…¨éƒ¨,æ­¦å­¦ï¼Œé“è¡Œå„ä¸¢20ï¼…
 
-ÄÏº£ÆÕÍÓÉ½
-heshang          ÎÞÌõ¼þ
-guanyin pusa     ³ö¼ÒÈË£¬100 buddhism
-huian            ³ö¼ÒÈË£¬60 buddhism
-bear             putuoµÜ×Ó
-xingzhe          ÎÞÌõ¼þ
-ÅÐÊ¦£ºÕÒÌê¶ÈÉ®£¬¼¼ÄÜËðÊ§£ºbuddhismÈ«²¿,ÎäÑ§£¬µÀÐÐ¸÷¶ª20£¥
+å—æµ·æ™®é™€å±±
+heshang          æ— æ¡ä»¶
+guanyin pusa     å‡ºå®¶äººï¼Œ100 buddhism
+huian            å‡ºå®¶äººï¼Œ60 buddhism
+bear             putuoå¼Ÿå­
+xingzhe          æ— æ¡ä»¶
+åˆ¤å¸ˆï¼šæ‰¾å‰ƒåº¦åƒ§ï¼ŒæŠ€èƒ½æŸå¤±ï¼šbuddhismå…¨éƒ¨,æ­¦å­¦ï¼Œé“è¡Œå„ä¸¢20ï¼…
 
-Òõ²ÜµØ¸®
-Íõ·½Æ½ Òõ³¤Éú ÎÞÌõ¼þ
-ÑÖÂÞÍõ        hellµÜ×Ó,50k wx
-dizhang       hellµÜ×Ó£¬350k wx
-ÅÐÊ¦£ºÕÒÑÖÂÞÍõ£¬¼¼ÄÜËðÊ§£ºgouhunshuÈ«²¿,wx 5%   
+é˜´æ›¹åœ°åºœ
+çŽ‹æ–¹å¹³ é˜´é•¿ç”Ÿ æ— æ¡ä»¶
+é˜Žç½—çŽ‹        hellå¼Ÿå­,50k wx
+dizhang       hellå¼Ÿå­ï¼Œ350k wx
+åˆ¤å¸ˆï¼šæ‰¾é˜Žç½—çŽ‹ï¼ŒæŠ€èƒ½æŸå¤±ï¼šgouhunshuå…¨éƒ¨,wx 5%   
 
-Áú¹¬
-longnu,jingwudi  ÎÞÌõ¼þ
-ÁúÉÙÒ¯        Ö»ÊÕÅ®ÐÔ
+é¾™å®«
+longnu,jingwudi  æ— æ¡ä»¶
+é¾™å°‘çˆ·        åªæ”¶å¥³æ€§
 ao guang      50 dragonforce,50 seashentong
-ÅÐÊ¦£ºÕÒao guang,¼¼ÄÜËðÊ§£ºdragonforceÒ»°ë£¬dragonfight 2/3,ÇÒÒÔºó²»ÄÜ¿¿Á·Ï°Éý¼¶£¬
-ÎäÑ§£¬µÀÐÐ¸÷¶ª20£¥
+åˆ¤å¸ˆï¼šæ‰¾ao guang,æŠ€èƒ½æŸå¤±ï¼šdragonforceä¸€åŠï¼Œdragonfight 2/3,ä¸”ä»¥åŽä¸èƒ½é ç»ƒä¹ å‡çº§ï¼Œ
+æ­¦å­¦ï¼Œé“è¡Œå„ä¸¢20ï¼…
 
-ÏÝ¿ÕÉ½ÎÞµ×¶´
-Çîºº         ask qiong han about ÎÞµ×¶´ ¼´¿É
-tianshu      wx+dh>400k,³Ô°ü×ÓÊÕ»ñ´óÓÚ1000£¨Ó¦¸ÃÊÇ1ÄêµÀÐÐ£©
-yushu        ³Ô°ü×ÓËùµÃµÀÐÐ´óÓÚ×Ô¼ºÎäÑ§µÄ1/20£¬»òÕß¸øÒ»¸öÕË±¾¸øËü
-nezha        1m wx,1000y dh,ÎÞyaofa
-ÅÐÊ¦£ºÕÒÌïÊó£¬¼¼ÄÜËðÊ§£ºyaofaÈ«²¿,huntian-qigongÈ«²¿£¬ÎäÑ§£¬µÀÐÐ¸÷¶ª20£¥
+é™·ç©ºå±±æ— åº•æ´ž
+ç©·æ±‰         ask qiong han about æ— åº•æ´ž å³å¯
+tianshu      wx+dh>400k,åƒåŒ…å­æ”¶èŽ·å¤§äºŽ1000ï¼ˆåº”è¯¥æ˜¯1å¹´é“è¡Œï¼‰
+yushu        åƒåŒ…å­æ‰€å¾—é“è¡Œå¤§äºŽè‡ªå·±æ­¦å­¦çš„1/20ï¼Œæˆ–è€…ç»™ä¸€ä¸ªè´¦æœ¬ç»™å®ƒ
+nezha        1m wx,1000y dh,æ— yaofa
+åˆ¤å¸ˆï¼šæ‰¾ç”°é¼ ï¼ŒæŠ€èƒ½æŸå¤±ï¼šyaofaå…¨éƒ¨,huntian-qigongå…¨éƒ¨ï¼Œæ­¦å­¦ï¼Œé“è¡Œå„ä¸¢20ï¼…
 
-´óÑ©É½
-wuya,shizhe,yingwu  ²»ÊÕ¸ß¼¶Ê¦¸¸µÄÍ½µÜ
-°×Ïó        ±ÛÁ¦´óÓÚµÈÓÚ20£¬²»ÊÕ¸ß¼¶Ê¦¸¸µÄÍ½µÜ£¬ÊÕ3´úµÜ×Ó
-ÍºÓ¥        wx 150k,²»ÊÕ¸ß¼¶Ê¦¸¸µÄÍ½µÜ£¬ÊÕ3´úµÜ×Ó
-ÇàÊ¨        wx 200k,²»ÊÕ¸ß¼¶Ê¦¸¸µÄÍ½µÜ£¬ÊÕ3´úµÜ×Ó
-¿×È¸        wx 200k,²»ÊÕ¸ß¼¶Ê¦¸¸µÄÍ½µÜ£¬ÊÕ3´úµÜ×Ó
-´óÅôÃ÷Íõ    wx 500k,ËÄ´ó»¤·¨µÄµÜ×Ó£¬²»ÊÕÄÐÐÔ³ö¼ÒÈË
-ÅÐÊ¦£ºÕÒÍºÓ¥£¬¼¼ÄÜËðÊ§£ºningxie-forceÈ«²¿, ÎäÑ§£¬µÀÐÐ¸÷¶ª20£¥
+å¤§é›ªå±±
+wuya,shizhe,yingwu  ä¸æ”¶é«˜çº§å¸ˆçˆ¶çš„å¾’å¼Ÿ
+ç™½è±¡        è‡‚åŠ›å¤§äºŽç­‰äºŽ20ï¼Œä¸æ”¶é«˜çº§å¸ˆçˆ¶çš„å¾’å¼Ÿï¼Œæ”¶3ä»£å¼Ÿå­
+ç§ƒé¹°        wx 150k,ä¸æ”¶é«˜çº§å¸ˆçˆ¶çš„å¾’å¼Ÿï¼Œæ”¶3ä»£å¼Ÿå­
+é’ç‹®        wx 200k,ä¸æ”¶é«˜çº§å¸ˆçˆ¶çš„å¾’å¼Ÿï¼Œæ”¶3ä»£å¼Ÿå­
+å­”é›€        wx 200k,ä¸æ”¶é«˜çº§å¸ˆçˆ¶çš„å¾’å¼Ÿï¼Œæ”¶3ä»£å¼Ÿå­
+å¤§é¹æ˜ŽçŽ‹    wx 500k,å››å¤§æŠ¤æ³•çš„å¼Ÿå­ï¼Œä¸æ”¶ç”·æ€§å‡ºå®¶äºº
+åˆ¤å¸ˆï¼šæ‰¾ç§ƒé¹°ï¼ŒæŠ€èƒ½æŸå¤±ï¼šningxie-forceå…¨éƒ¨, æ­¦å­¦ï¼Œé“è¡Œå„ä¸¢20ï¼…
 
-Îå×¯¹Û
-°ËÏÉ       ²»ÊÕ¸ß¼¶Ê¦¸¸µÄÍ½µÜ
-ÈýÐÇ       80 taiyi»ò3´úµÜ×Ó,²»ÊÕÕòÔªµÄÍ½µÜ
-zhenyuan   120 taiyi,wx+dh 600k,ÈýÐÇÍ½µÜ
-ÅÐÊ¦£ºÕÒzhenyuan,¼¼ÄÜËðÊ§£ºtaiyiÈ«²¿,ÎäÑ§£¬µÀÐÐ¸÷¶ª20£¥
+äº”åº„è§‚
+å…«ä»™       ä¸æ”¶é«˜çº§å¸ˆçˆ¶çš„å¾’å¼Ÿ
+ä¸‰æ˜Ÿ       80 taiyiæˆ–3ä»£å¼Ÿå­,ä¸æ”¶é•‡å…ƒçš„å¾’å¼Ÿ
+zhenyuan   120 taiyi,wx+dh 600k,ä¸‰æ˜Ÿå¾’å¼Ÿ
+åˆ¤å¸ˆï¼šæ‰¾zhenyuan,æŠ€èƒ½æŸå¤±ï¼štaiyiå…¨éƒ¨,æ­¦å­¦ï¼Œé“è¡Œå„ä¸¢20ï¼…
 
-½«¾ü¸®
-°×·¢ÀÏÈË ³ÂÒ§½ðµÄµÜ×Ó£¬ask cheng about ÓÐÔµ£¬½ÓÏÂ³ÌÒ§½ðµÄÈý°å¸«³ÉÎªÓÐÔµÈË£¬ÔÚ½«¾ü
-¸®ÀïË¯¾õÓÐ¼¸ÂÊÃÎ¼ûËû¡£
-ÇØÇí     ÎäÑ§´óÓÚ£¿
-Î¾³Ù¹§   ÎäÑ§´óÓÚ£¿
-ÂÞ³É     ´ò°ÜËû
-³ÌÒ§½ð   ÒªÇóµ¨Ê¶ºÜ¸ß,Í¨¹ýºÈºìµ¤Æ¿ÕÇÉ±Æø£¬»òÕßÄÃ°Ñ½ðµ¶×°±¸×Å£¬¿ÉÒÔÌá¸ßµ¨Ê¶¡£
-Ô¬Ììî¸   ²»ÄÜ°ÝÊ¦£¬°Ñ+w;w;w;s;e;ÀîÓñÄïÊÖÀïµÄ·¹ºÐËÍ¸øËû£¬¾Í¿ÉÒÔÕÒËûÑ§°ËØÔÖäºÍspells£¬
-ÅÑÊ¦ºóÈÔ¿ÉÒÔ¼ÌÐøÕÒËûÑ§Ï°¡£
-ÅÑÊ¦ÕÒÇØÇí£¬¶ª20%ÎäÑ§¡£
+å°†å†›åºœ
+ç™½å‘è€äºº é™ˆå’¬é‡‘çš„å¼Ÿå­ï¼Œask cheng about æœ‰ç¼˜ï¼ŒæŽ¥ä¸‹ç¨‹å’¬é‡‘çš„ä¸‰æ¿æ–§æˆä¸ºæœ‰ç¼˜äººï¼Œåœ¨å°†å†›
+åºœé‡Œç¡è§‰æœ‰å‡ çŽ‡æ¢¦è§ä»–ã€‚
+ç§¦ç¼     æ­¦å­¦å¤§äºŽï¼Ÿ
+å°‰è¿Ÿæ­   æ­¦å­¦å¤§äºŽï¼Ÿ
+ç½—æˆ     æ‰“è´¥ä»–
+ç¨‹å’¬é‡‘   è¦æ±‚èƒ†è¯†å¾ˆé«˜,é€šè¿‡å–çº¢ä¸¹ç“¶æ¶¨æ€æ°”ï¼Œæˆ–è€…æ‹¿æŠŠé‡‘åˆ€è£…å¤‡ç€ï¼Œå¯ä»¥æé«˜èƒ†è¯†ã€‚
+è¢å¤©ç½¡   ä¸èƒ½æ‹œå¸ˆï¼ŒæŠŠ+w;w;w;s;e;æŽçŽ‰å¨˜æ‰‹é‡Œçš„é¥­ç›’é€ç»™ä»–ï¼Œå°±å¯ä»¥æ‰¾ä»–å­¦å…«å¦å’’å’Œspellsï¼Œ
+å›å¸ˆåŽä»å¯ä»¥ç»§ç»­æ‰¾ä»–å­¦ä¹ ã€‚
+å›å¸ˆæ‰¾ç§¦ç¼ï¼Œä¸¢20%æ­¦å­¦ã€‚
 
-»ðÔÆ¶´
-¼±Èç»ð     ÆôÃÉÊ¦¸¸ÎÞÌõ¼þ
-¾ÅÍ·æâÂí   ¼±Èç»ðµÄµÜ×Ó£¬ÆäËûÌõ¼þ²»Ã÷
-Å£Ä§Íõ     Ò»¶¨µÈ¼¶µÄÆ½Ìì´ó·¨
-ºìº¢¶ù     Ò»¶¨µÈ¼¶µÄ»ðÄ§ÐÄ·¨
-ÅÑÊ¦£ºÕÒ¼±Èç»ð£¬ËðÊ§5%ÎäÑ§
+ç«äº‘æ´ž
+æ€¥å¦‚ç«     å¯è’™å¸ˆçˆ¶æ— æ¡ä»¶
+ä¹å¤´é©¸é©¬   æ€¥å¦‚ç«çš„å¼Ÿå­ï¼Œå…¶ä»–æ¡ä»¶ä¸æ˜Ž
+ç‰›é­”çŽ‹     ä¸€å®šç­‰çº§çš„å¹³å¤©å¤§æ³•
+çº¢å­©å„¿     ä¸€å®šç­‰çº§çš„ç«é­”å¿ƒæ³•
+å›å¸ˆï¼šæ‰¾æ€¥å¦‚ç«ï¼ŒæŸå¤±5%æ­¦å­¦
 
-ÅÌË¿¶´
-´ºÈýÊ®Äï   ½øÅÌË¿¶´¼´¿É
-°×¾§¾§     ½øÅÌË¿¶´¼´¿É
-×ÏÏ¼       400ÄêµÀÐÐ
-ÅÑÊ¦ÕÒ×ÏÏ¼£¬ask ... leave,agree£¬ÎÞËðÊ§£¡
+ç›˜ä¸æ´ž
+æ˜¥ä¸‰åå¨˜   è¿›ç›˜ä¸æ´žå³å¯
+ç™½æ™¶æ™¶     è¿›ç›˜ä¸æ´žå³å¯
+ç´«éœž       400å¹´é“è¡Œ
+å›å¸ˆæ‰¾ç´«éœžï¼Œask ... leave,agreeï¼Œæ— æŸå¤±ï¼
 
