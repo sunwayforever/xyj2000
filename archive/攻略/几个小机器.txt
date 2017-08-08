@@ -1,0 +1,78 @@
+
+几个小机器
+
+
+掉枯骨洞方案：
+
+#ALIAS move {last_move=%param1;#t- kugu;#wa 2000;#t+ kugu;%param1} {kugu}
+#ALIAS show_dummy_1 {count=2;#show 这里明显的出口是 %param1 和 %param2。} {kugu}
+#ALIAS show_dummy_2 {count=3;#show 这里明显的出口是 %param2 和 %param3。} {kugu}
+#ALIAS move_2 {last_move=%param2;#t- kugu;#wa 2000;#t+ kugu;%param2} {kugu}
+#ALIAS move_3 {last_move=%param3;#t- kugu;#wa 2000;#t+ kugu;%param3} {kugu}
+#ALIAS init {count=1;last_move=%null} {kugu}
+#ALIAS show_dummy_3 {count=1;#show 这里明显的出口是 %param3 和 %param1。} {kugu}
+#VAR last_move {east} {_nodef} {kugu}
+#VAR count {1} {1} {kugu}
+#VAR rev {%if(%concat(%1,%2)=eastwest | %concat(%1,%2)=southnorth | %concat(%1,%2)=westeast | %concat(%1,%2)=northsouth | %concat(%1,%2)=updown | %concat(%1,%2)=downup, 1, 0)} {_nodef} {kugu}
+#TRIGGER {{这里明显的出口是 }(*){、}(*){ 和 }(*){。}} {%if(%1=out, out,);%if(%2=out, out,);%if(%3=out, out,);show_dummy_@count} {kugu} 645
+#TRIGGER {{这里明显的出口是 }(*){ 和 }(*){。}} {%if(@rev(%1, @last_move)=0 | %1=out, move, move_2)} {kugu} 645
+#TRIGGER {{这里唯一的出口是 }(*){。}} {move} {kugu} 645
+#TRIGGER {{你只觉得天地仿佛都塌陷下来|你一个跟头从杂草中飞了过来，满脸的迷茫。}} {look} {kugu} 645
+#TRIGGER {^{> 忽然|忽然}{一阵黄风呼啸而来，你身不由己被卷了进去！}} {#wa 5000;zuan;#t+ kugu;look} {} 645
+
+
+汉字转换为数字：
+
+#tri ^你灭妖得到了(*)点潜能！
+{convertnumber %1
+#add reward_qn %number(@in_chinese_number)
+#say 此次连线灭妖共获得@reward_qn点潜能,共@reward_guai个怪,平均每个怪[@reward_qn/@reward_guai]点潜能
+#color white}
+相关alias定义：
+#alias reward_init {#var reward_guai 0;#var reward_wx 0;#var reward_qn 0;#var reward_time {%time()} {%time()}
+#alias reward {#say 此次连线登陆时间@reward_time,灭妖共@reward_guai个怪,,共获得@reward_qn点潜能,平均每个怪[@reward_qn/@reward_guai]点潜能,共获得@reward_wx点武学,平均每个怪[@reward_wx/@reward_guai]点武学}
+#alias convertnumber {#var in_chinese_number %1;#read cmd_digit.txt;#var in_chinese_number @out_number;#say @in_chinese_number}
+测试：
+convertnumber 一万零五百二十一
+将显示 10521
+最主要的cmd_digit.txt实现由于4.62和5.55版本函数的差异分别实现：
+4.62版本 cmd_digit.txt
+#var chinese_number_list {零|一|二|三|四|五|六|七|八|九|十|百|千|万}
+#var number_list {|1|2|3|4|5|6|7|8|9|A|B|C|D}
+#var ix 0
+#alias item {#var tmp_n 0;#ForAll %1 {#add tmp_n 1;#if (@tmp_n=%2) {#var myitem %i}}}
+#FORALL @chinese_number_list {#add ix 1;item @chinese_number_list @ix;#var tmp_chinese @myitem;item @number_list @ix;#var tmp_number @myitem;#var in_chinese_number %replace(@in_chinese_number,@tmp_chinese,@tmp_number);}
+#if !%isnumber(%copy(@in_chinese_number,1,1)) {#var in_chinese_number %insert(1,@in_chinese_number,1)}
+#var tmp_len %len(@in_chinese_number);
+#var out_number 0;
+#Loop @tmp_len {#var tmp_word %copy(@in_chinese_number,%{i},1);#if (%isnumber(@tmp_word)) {#if (%i<@tmp_len) {#var tmp_n %copy(@in_chinese_number,(%i+1),1);#if (@tmp_n=A) {#var tmp_n 1};#if (@tmp_n=B) {#var tmp_n 2};#if (@tmp_n=C) {#var tmp_n 3};#if (@tmp_n=D) {#var tmp_n 4};#case (%eval(@tmp_n)) {#add out_number (%number(@tmp_word)*10)} {#add out_number (%number(@tmp_word)*100)} {#add out_number (%number(@tmp_word)*1000)} {#add out_number (%number(@tmp_word)*10000)}} {#add out_number %number(@tmp_word)}}};
+#var in_chinese_number @out_number
+#say @in_chinese_number
+#unvar tmp_len
+#unvar chinese_number_list
+#unvar number_list
+#unvar ix
+
+掉线自动重联：
+在zmud4.62上需要自己定义一个alias
+#alias atconnect {g;n;YOURID;IDPASSWORD;yes;#say 关闭其他trigger;#t+ @mytrigger;dazuo 20}
+zmud5.55有这个系统alias，只需要把内容填充一下即可。
+事实上执行 #conn会自动执行这个atconnect。
+
+茶博士对诗：
+#tri {茶博士提笔在墙上写道：(*)} {poem_word=%1;#read cmd_poem.txt;}
+cmd_poem.txt的内容为(这个文件放在zmud.exe所在目录下):
+#file 1 poem.txt;
+exert recover;
+exert refresh;
+#var poem_word_len %len(@poem_word);
+poem_word1=%left(@poem_word,2);
+poem_word2=%copy(@poem_word,3,2);
+poem_word3=%copy(@poem_word,5,2);
+poem_word4=%copy(@poem_word,7,2);
+#var match_words %grep(1,@poem_word1);
+#For @match_words { poem_word=%i;#if (%pos(@poem_word2,@poem_word)>0) {#if (%pos(@poem_word3,@poem_word)>0) {#var poem_word %Replace(@poem_word," ","");#say @poem_word;answer @poem_word;#say %copy(@poem_word,1,@poem_word_len);#say %copy(@poem_word,@poem_word_len+1,@poem_word_len);answer %copy(@poem_word,1,@poem_word_len);answer %copy(@poem_word,@poem_word_len+1,@poem_word_len);}}}
+exert recover;
+exert refresh;
+hp;
+#close 1;

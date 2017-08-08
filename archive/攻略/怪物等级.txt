@@ -1,0 +1,19 @@
+怪物数据的计算
+
+
+怪的等级：LVL:0－9 
+R=(LVL+16)/20
+
+skills(技能): 先copy你的skills，等级＝Your_max_skill_level*R
+然后set怪自己门派的skills，每一项等级＝Your_max_skill_level*R+Random(15)
+Force(内力)：内力=Your_Force*R
+Mana(法力)：法力=Your_Mana*R
+Enforce(加力)：怪的有效force/2
+Enchant()：怪的最大mana/30+1
+Kee(气血)：气血=Your_qx/2+Your_qx*R
+Gen(精神)：精神=Your_js/2+Your_js*R
+Combat_Exp(武学)：武学=Your_wx/100*R*100+Your_wx/50*R
+Daoxing(道行)：Your_New_Dx=(Your_dx*2+Your_wx)/3
+怪的道行=Your_New_Dx/100*R*100+Your_New_Dx/50*R
+
+//来源于网络，不一定适用于本站。本人觉得基本符合。

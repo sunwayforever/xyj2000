@@ -1,0 +1,25 @@
+xyj2000的坐骑
+
+坐骑可以用来加dodge 的有效等级，对新手来说很有用，下面是我根据源码整理的，供大家参考：
+老牛(Niu)： set("ride/dodge", 10);
+开封的青鬃马(horse)等： set("ride/dodge", 10+random(6));
+鹰愁涧的白龙马(bailong ma)： set("ride/dodge", 10+random(10));
+小毛驴/花毛驴(mao lu)： set("ride/dodge", 10+random(10));
+金背海马(hai ma)： set("ride/dodge", 15);可以下水
+将军府的黄膘马(huangbiao ma)： set("ride/dodge", 18);
+呼雷豹(Hulei bao)： set("ride/dodge", 18);
+小毛驴(xiao maolu)： set("ride/dodge", 20);
+天庭的赤兔马(horse)等： set("ride/dodge", 20+random(6));
+Pet： set("ride/dodge", 35);
+避水金睛兽(jinjing shou)： set("ride/dodge", 35);可以下水
+
+需要Train的：
+青鸾(qing luan)： set("ride/dodge", 25);只能女性坐，可以上月宫
+鸿鹄(hong hu)： set("ride/dodge", 25);只能女性坐，可以上月宫
+梅花鹿(meihua lu)： set("ride/dodge", 26);
+金眼驼(jinyan tuo)： set("ride/dodge", 27);
+花斑豹(huaban bao)： set("ride/dodge", 28);
+墨麒麟(mo qilin)： set("ride/dodge", 29);
+青毛狮(qingmao shi)： set("ride/dodge", 30);
+
+//本站无pet，因此综上所述，最好的坐骑是避水金睛兽

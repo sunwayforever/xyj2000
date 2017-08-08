@@ -1,0 +1,31 @@
+方寸门派攻略
+
+拜师：先拜云清或云静，拜广筠子要10年道行，拜云阳真人要100年道行，拜菩提要350年道行
+、悟性35、道家仙法120级、未在方寸判过师。
+判师找云阳，掉20%武学道行，掉道家仙法。方寸的两仪剑法用处巨大，判师流基本必带两仪
+；一般也顺道带上千钧棒。现在本站增加了领悟，两仪剑的必要性降低了一些。
+
+两仪剑法可以让你单倍潜能升级force，后期节省大量潜能。练两仪剑就可以增加force经验。
+从而让你的force技能等级上升。
+具体方法：
+1，enable sword liangyi-sword，不管你有没有基本sword技能
+2，有基本sword可以enable起来lian sword，没有就enable parry liangyi-sword再lian 
+parry，但必须你练的项目的有效等级超过force的有效等级（以练parry为例，你的有效
+parry等级必须超过force有效等级）。为此你可以enable force none来降低force有效等级。
+3，你基本force的技能等级必须低于enable 起来的liangyi sword有效等级，才能练两仪剑升
+级force。（同样以练parry为例，你的有效parry等级必须超过force技能等级）
+4，最好liangyi-sword等级低于你要练的基本功夫等级（sword或parry），这才是有效练习。
+
+千钧棒的perform qiankun, perform pili都是无busy perform，但这两个pfm实际都是强化了
+的平招，因此perform pili三连击中间可能会被对手反击。qiankun也可能没打中反而挨了对
+手一下。
+
+本站纯方寸的id，perform qiankun有特殊效果，可以busy对手。
+
+道家仙法不受spells等级限制。
+cast light和thunder是攻击力中等的法术，一个打气血一个打精神。
+cast dingshen，成功率较低，但一旦成功，定住的时间很长。
+cast fenshen，是方寸法术比较实用的东西，招出的分身和你的能力一样，装备也和你一样，
+会放乾坤一棒。只是分身存在时间比较短，一会就消失。分身能力和你的道家仙法等级紧密相
+关。
+

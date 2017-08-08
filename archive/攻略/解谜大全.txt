@@ -1,0 +1,1003 @@
+
+解谜大全
+
+本篇介绍开封解谜任务的具体解法，不一定注明具体路径。有些物品的获得需要特殊方法，可参见各地地图的
+秘密，或门派的秘密。解谜要求物品或NPC的中文名与id都与任务要求的一致才算完成。
+解谜任务种类繁多十分复杂，以下内容还有很多错漏，发现请群内@歪歪，以便及时修正，谢谢！
+
+
+
+
+#“金”项链--无解
+#乌绫巾--无解
+#单刀--dan dao--无底洞，兵器架
+#猪头肉--长安乐坊二楼，四个玩家一起玩拱猪可以获得。
+//目前本站“金”项链、乌绫巾、猪头肉都已CUT，解谜不再出现。
+#鳌精、鲞精、鳖精--yao jing--通天，三个怪名字差不多，看清楚
+#鲤鱼精、鲶鱼精、鲫鱼精、鲇鱼精、水螺精、蚌壳精、水鲑精、河鳗精--yaojing--通天河--
+以上小妖精通天河底随机出现
+#金鳞怪--jinling guai--通天河--河底BOSS，变小童，带避水咒，站在冰道上发呆；过会掉到
+河底即可见到
+#熟铜锏--copper mace--天宫--杀魔礼寿
+#李靖--li jing--sky--天宫，fly sky;#4 e;#5 n;#2 w;#2 s;#2 e;n;u
+#〖道德经〗--daodejing--chechi--车池国三清观里找
+#〖拳经〗--quan jing--长安城--小酒馆里买肉包，给武馆里范青屏，或直接杀范
+#〖女儿经〗--book--月宫可捡
+#〖三字经〗--book--长安--书店有售
+#〖刀法入门〗 (blade-book)--长安书店有售
+#〖拳法入门〗--book--长安--书店有售
+#〖千字文〗--qian--方寸--方寸弟子找广曦子要
+#〖风水〗--book--傲来，打晕老母鸡交给阿七婆即得
+#〖金刚经〗--jingang--putuo--普陀可捡
+#枪法简介--spear book--将军府(密室)--
+#太乙真经---需要WZG的掌门id去五庄观亭底密室search，可以摸到
+#青莲剑谱--book--长安--多买几个桂花酒袋给李白即得
+#青缎袄--qingduan ao--高老庄--高婆身上
+#罗春--luo chun--比武--长安城--将军府
+#罗成--luo cheng--比武--长安城--将军府，要杀拦路的罗春
+#齐眉棍--qimeigun--方寸山拣树枝给樵夫
+#长袍--changpao--长安--杀秀才
+#软香鞋--shoes--长安城--杀二姨太
+#戒尺--ruler--高老庄--杀教书先生匡文正
+#风回雪舞剑--snowsword--月宫可捡
+#青髯老人--lao ren--长安西--去五庄观的路上有个山洞，小心滑出去，多进几次即可
+#杨中顺--yang zhongshun--长安--药铺掌柜
+#敖广--ao guang--龙宫
+#粉红绸衫--pink cloth--changan--开封杀小丫环，或长安杀民居里女孩
+#天师法冠--bonnet--方寸山--杀张道陵，本站也可客栈S直接领
+#灰羽鹤氅--leather coat--方寸--杀张道陵，注意他是神仙死了没尸体，尽量打晕了拿
+#龙泉剑--dragon sword--龙宫--杀椒图
+#赤龙斩--dragon blade--狴犴龙宫--
+#龙骨枪--dragon spear--蒲牢长安--
+#龙齿钯--dragon rake--螭吻龙宫--
+#龙角叉--dragon fork--睚眦龙宫--
+#龙头杖--dragon staff--饕餮龙宫--
+#盘龙棍--dragon stick--蚣蝮泾水桥--
+#软龙筋--dragon whip--金猊火焰山--本站也可客栈S直接领
+#乌龙锏--dragon mace--霸下龙宫--
+#霸下--ba xia--龙宫--dive;#wa 2000;e;e;e;ne--sw;w;w;u
+#金猊--jin ni--火焰山--fly firemount;w;w;nd;ed;nd;ed;n;nu;nu;nu;nu;ed;nd;nd;nd;nd;#5 ne;wu
+#饕餮--tao tie--龙宫--dive;#wa 2000;e;e;e;ne;e;e;eu;e;s;s;se;e--w;nw;n;n;w;w;wd;se;se
+#椒图--shu tu--龙宫--站龙婆身边
+#狴犴--bi an--龙宫--dive;#wa 2000;e;e;ne;e;e;ne;ne;e--
+#蒲牢--pu lao--长安--fly changan;#16 s;#2 e
+#螭吻--chi wen--龙宫--dive;#wa 2000;e;e;e;ne;e;e;se;se;e
+#睚眦--ya zi--龙宫--dive;#wa 2000;e;e;e;ne;e;e;ne;ne;n--s;sw;sw;se;se
+#蚣蝮--gong fu--泾水桥--fly changan;#7 s;jump bridge
+#橙龙珠--cheng longzhu--霸下，龙宫--
+#赤龙珠--chi longzhu--睚眦，龙宫--
+#黄龙珠--huang longzhu--螭吻，龙宫--
+#金龙珠--jin longzhu--蒲牢，长安--
+#蓝龙珠--lan longzhu--金猊，火焰山--
+#绿龙珠--lu longzhu--饕餮，龙宫--
+#青龙珠--qing longzhu--蚣蝮，泾水桥--
+#银龙珠--yin longzhu--狴犴，龙宫--
+#紫龙珠--zi longzhu--椒图，龙宫--
+#九彩云龙珠--long zhu--收集九颗龙珠合并combine
+#绸袍--choupao--高老庄--很多NPC身上都有，比如高老庄高员外
+#知客僧--zhike seng--putuo--普陀
+#剃度僧--tidu seng--putuo--普陀
+#掌厨僧--zhangchu seng-普陀
+#掌禅僧--zhangchan seng--修禅--普陀
+#护法袈裟--jia sha--很多和尚身上都有，杀凤仙的慈悲和尚，或者长安的法明长老等
+#戒刀--jie dao--fengxian--杀凤仙的慈悲和尚，小西天的老佛身边的小童身上也可能有
+#金刀--jin dao--乌鸡国--杀乌鸡太子，本站客栈s可以直接fetch
+#坊主--fang zhu--订购家什--宝象国
+#叶大嫂--ye dasao--园艺--乌鸡国
+#白金项圈、紫金戒指、鎏金腕链----比丘国--金器店找拉苏律司(Lasu lusi)买，或者杀美后可得
+#青鬏龟童--gui tong--讲授龟艺--长安城--乐坊
+#白髯鸡仙--ji xian--斗鸡术--长安城--乐坊
+#公孙大娘--gongsun daniang--歌艺舞艺--长安城--乐坊
+#国王--guo wang--派使来访--朱紫国、钦法国、宝象国、天竺、乌鸡等等都有
+#金箍棒--jingubang--龙宫，必须过完DNTG第二关，问敖广weapon
+#黄金匣子--xiazi--bibotan ，按取经流程走，碧波潭推石桌有机会得
+#佛宝舍利子--tooth--bibotan，按取经的流程走一遍，有机会获得。难度较大
+#蓝色冰块--lan bingkuai--雪山，fly xueshan, 3 nu,e,拿把刀或者剑dig cao，挖到蓝色小草，
+再拣个冰块，再去月宫捡雪莲，mix xuelian即得
+#江湖骗子--jianghu pianzi--比丘国，随机出现
+#黄门官--huangmen guan--来访水陆大会--祭赛国
+#赵二哥、赵三哥、赵二叔、赵三叔、赵二伯、赵三伯--lie hu--
+#钱二哥、钱三哥、钱二叔、钱三叔、钱二伯、钱三伯--lie hu-
+#孙二哥、孙三哥、孙二叔、孙三叔、孙二伯、孙三伯--lie hu-
+#李二哥、李三哥、李二叔、李三叔、李二伯、李三伯--lie hu--筋骨粉、跌打丸、金创药--这些猎户
+随机出现在荆棘岭，一次三个，难度较大
+#黑鼠怪、黄犰怪、灰狨怪、白猁怪、赤狻怪、土猬怪、石猊怪、木猱怪、水獾怪--yaojing--小西天-
+-叫杀小西天小童，随机出现。本站小童数量增加，因此出现几率不低
+#蓝玫瑰、黑郁金香、薄雪花、玉白露、野风信子、睡芙蓉、睡莲、紫蔷薇、大丽花、勿忘我、白玫瑰、
+翡翠绿、雪腊梅、曼陀罗--flower--随机出现在江州山路，一次两朵。拿花籽来种也可以获得，只是很
+慢。长安黑市可能有售
+#美后--mei hou--比丘国--
+#宫女--girl--宫中舞艺--女儿国-
+#花籽--seed--红楼梦可捡
+#灵宝道君--lingbao daojun--主持道场--车迟国--
+#太上老君--taishang laojun--主持道场--车迟国--
+#元始天尊--yuanshi tianzun--主持道场--车迟国--
+#道童--dao tong--清理道场--车迟国--这些人都在车池三清观
+#蟹螯钳--xieao qian--tongtian--
+#锋蚌刀--fengbeng dao--通天
+#鳗尾鞭--manwei bian--通天河
+#石牡锤--shimu chui--通天河底小怪身上武器，随机出
+#巨蟹壳、千鳞甲、王八甲、乌龟甲---tongtian-- 通天河底小怪身上，随机出
+#孤直公--guzhi gong--诗歌--荆棘岭
+#凌空子--lingkong zi--诗歌--荆棘岭
+#十八公--shiba gong--诗歌--荆棘岭
+#拂云叟--fuyun sou--诗歌--荆棘岭
+#杏仙--xing xian--讲习成精法术--荆棘岭，这些人都要拨荆棘进去可见
+#柳树精--liushu jing--碧波潭--fly bibotan;w;nw此处发呆会出现
+#水蛇怪--shuishe guai--碧波潭，fly bibotan,w此处发呆会出现
+#老虎精--laohu jing--碧波潭--fly bibotan,ne此处发呆会出现
+#圆清--yuan qing--讲授佛学--无底洞(过关后在小庙前殿knock wall可见)
+#龙女--long nu--龙宫--
+#桂花雪莲羹--guihua geng--月宫可捡
+#雪莲--xue lian--月宫可捡
+#雪饮杯--Snowglass--月宫可捡，需要装袋子里才能拿走
+#吕洞宾--lu dongbin--普陀山，紫竹林里
+#韩湘子--han xiangzi--五庄观--
+#铁拐李--tieguai li--五庄观--
+#蓝采和--lan caihe--五庄观--
+#曹国舅--cao guojiu--五庄观--
+#何仙姑--he xiangu--五庄观--
+#汉钟离--han zhongli--五庄观--
+#张果老--zhang guolao--长安--fly changan
+#官客--guan ke--官僚术--乌鸡国
+#月下老人--yuexia laoren--姻缘术--月宫--
+#井龙王--jing longwang--治水术--乌鸡国，进皇宫，拿斧子砍倒芭蕉树，到井底随便走一会
+即可见到
+#奔波儿灞、灞波儿奔--祭赛国，佛塔最顶端
+#妇女--fu nu--粉红绸衫--pink cloth--宝象国
+#绣花针--xiuhua zhen--盘丝岭，紫云山千花洞里等毗蓝婆，很难拿到。本站可以去长安进士林里
+打进士获得。不是让你自己去当进士！想办法打下进士手里拿的武器即可。
+#金睛兽--jinjing shou--积雷山，全名避水金睛兽
+#老狼--wolf--fangcun--方寸山
+#俗家僧人、修禅僧人、诵经僧人、传法僧人、出勤僧人--he shang--佛学--天竺，布金禅寺，随机
+出现，一次三个。
+#葡萄干--putao gan--火焰山--小贩出售。本站长安乐坊也有出售
+#鼹鼠精--yan shu--无底洞--
+#小流氓--xiao liumang--长安城--
+#宫妃--gong fei--宫中舞艺--朱紫国等很多国家都有
+#桂树枝--guishuzhi--月宫可捡
+#浣衣女--girl--银子--silver--长安城--仙泉边
+#鹿皮鞋--pi xie--天竺--杀黛姐
+#江米酒、年糕、盐---朱紫国--米铺，有售。米铺另有油葫芦youhulu、饭fan、粽子zongzi
+#木棒--mu bang--高老庄--杀家丁
+#宫裙--chechi-宫妃--杀宫妃，朱紫国、车池国、宝象国等都有
+#小童--kid--book--通天河--
+#公鸡--gong ji--通天河--
+#陈康、陈禄、陈溯、陈鸠、陈蜀、陈焘、陈戛、陈笮--chen--捕鱼术--通天河
+#陈子虬、陈龙大、陈大头、陈小个、陈老大、陈老二、陈老三、陈老四--chen--捕鱼术--通天河
+#陈大伯、陈大叔、陈大舅、陈大哥、陈大爷--chen--捕鱼术--通天河
+#陈二伯、陈二叔、陈二舅、陈二哥、陈二爷--chen--捕鱼术--通天河
+#陈三伯、陈三叔、陈三舅、陈三哥、陈三爷--chen--捕鱼术--通天河
+#陈四伯、陈四叔、陈四舅、陈四哥、陈四爷--chen--捕鱼术--通天河
+#陈娘、陈氏、陈婆、陈妈、陈嫂、陈婶--chen--烹鱼技艺--通天河
+#陈大娘、陈大婆、陈大妈、陈大嫂、陈大婶--chen--烹鱼技艺--通天河
+#陈二娘、陈二婆、陈二妈、陈二嫂、陈二婶--chen--烹鱼技艺--通天河
+#陈三娘、陈三婆、陈三妈、陈三嫂、陈三婶--chen--烹鱼技艺--通天河
+#陈四娘、陈四婆、陈四妈、陈四嫂、陈四婶--chen--烹鱼技艺--通天河，以上陈姓人物通天随机出现，
+本站还有陈长老，也算作普通的陈家庄人物。
+#陈长老--chen zhanglao--祭祀术--tongtian--本站也作为一个普通陈家庄NPC随机出现
+#比丘僧--biqiu seng--取经--灵山
+#比丘尼--biqiu ni--取经--灵山
+#槐刺叉--huaici cha--隐雾
+#雉尾剑(Zhiwei jian)--隐雾
+#柳叶刀(Liuye dao)--隐雾
+#鹿皮鞭(Lupi bian)--隐雾
+#枯松杖(Kusong zhang)--隐雾，小妖、妖精的随机武器
+#狼皮裤--langpi qun--隐雾
+#牛皮衣--niupi yi--隐雾
+#犀皮背心--xipi beixin--隐雾
+#熊皮短袍(Xiongpi duanpao)--隐雾
+#虎皮裙--hupi qun--隐雾，小妖、妖精身上的随机装备
+#青贝宫女、黄贝宫女、白贝宫女、紫贝宫女、银贝宫女、金贝宫女--gong nu--采贝术--龙宫--
+这些宫女在龙宫随机出现，一次4个。
+#青鳝力士、乌鳅力士、赤鲤力士、黄鲳力士、白鲨力士、紫鲭力士、金鳌力士、银蛎力士--li shi
+--潜海术--龙宫--这些力士在龙宫随机出现，一次2个。
+#花皮鲨、绿背鲨、双头鲨、虎齿鲨--shark--龙宫，随机出现，一次两条
+#琥色毫毛--amber hair--长安城--
+#黑色毫毛--black hair--长安城--
+#蓝色毫毛--blue hair--长安城--
+#棕色毫毛--brown hair--长安城--
+#绿色毫毛--green hair--长安城--
+#靛色毫毛--indigo hair--长安城--
+#绛色毫毛--magenta hair--长安城--
+#栗色毫毛--maroon hair--长安城--
+#橙色毫毛--orange hair--长安城--
+#粉色毫毛--pink hair--长安城--
+#赤色毫毛--red hair--长安城--
+#绯色毫毛--scarlet hair--长安城--
+#紫色毫毛--violet hair--长安城--
+#白色毫毛--white hair--长安城--
+#黄色毫毛--yellow hair--长安城--以上毫毛长安老孙皮货店里有售
+#庙祝--miao zhu--黄金--gold--长安城--
+#孔方兄--kong fang--送经书--changan--长安书店
+#戴文重--dai wenzhong--changan--长安
+#游侠儿--youxia er--changan--长安
+#慈恩法师--cien fashi--chagnan--长安
+#癞头和尚--laitou heshang--changan--长安
+#疥癞和尚--jielai heshang--changan--长安
+#小毛驴--xiao maolu--changan--长安
+#李白--li bai--changan-长安
+#铁算盘--tie suanpan--changan--长安
+#法明长老--faming zhanglao--changan--长安
+#疥顶小僧(Jieding xiaoseng)----长安
+#花忍(Hua ren)----长安
+#李玉娘--li yuniang--changan--长安民居
+#袁天罡--yuan tiangang--法术--长安
+#袁守诚(Yuan shoucheng)---长安
+#锦镧袈裟--jinlan jiasha--普陀，杀观音菩萨
+#红烧茯苓猪--pig--长安城--乐坊有售
+#云南白药--yunnan baiyao--普陀，普陀弟子找掌厨僧要，本站一般聚宝盆里有
+#毡帽--hat--长安城--衣帽店有售
+#包子--bao--方寸可要，新人在长安醉星楼可领
+#中年妇女、老妇人、少妇--woman--银子--silver--女儿国
+#女孩、男孩--girl--无底洞
+#小青菜--xqc--putuo--普陀厨房
+#碧水霓裳--nichang--长安城杀二姨太，盘丝杀蜘蛛精
+#捣药杵--yao chu--月宫可捡，玉兔身上也有
+#豆斋果、面斋果、梨斋果、桃斋果、杏斋果--zhai guo--小西天可捡，随机出现
+#鹿力大仙、虎力大仙、羊力大仙----chechi--车池三清观，按过关顺序做即可见到
+#黄虎皮--huang hupi--车池，按过关流程，杀虎力大仙即得
+#白鹿头--bai lutou--车池，按过关流程，杀鹿力大仙即得
+#灰羊角--车池，按过关流程，杀羊力大仙即得
+#茶壶、 茶干----开封--春醇茶栈有售
+#烤鸡--钦法国--酒铺--有售
+#王后--wang hou--宫事--钦法国--
+#牛皮靴、皮背心、皮袍----钦法国--有售
+#狐阿七大王--huaqi dawang--yalong--压龙山
+#老奶奶--lao nainai--压龙山洞内
+#素菜馅包子、海鲜味包子、猪肉馅包子---长安城--小酒馆有售
+#锡匠--xi jiang--宝象国--
+#竹筐--kuang--钦法国、朱紫国杂货铺都有售
+#供果、小供果----车池国，三清观可捡
+#金项链--xiang lian--女儿国--杀公主
+#白披毯、彩色披毯、雕木斜靠椅、挂毯、镂空木桌----宝象国--有售
+#阿拉伯长袍--chang pao--jisaiguo--祭赛国，杀萨米儿大叔(Uncle samui)
+#运水力士、锄树力士、培土力士、施肥力士、剪枝力士、打扫力士、修桃力士--li shi--
+邀请观礼水陆大会--天宫--蟠桃园里
+#菩萨--pu sa--取经--灵山
+#阿罗--a luo--佛学--灵山
+#金刚--jin gang--取经--灵山--
+#揭谛--jie di--取经--灵山--
+#仙童--xian tong--佛学--灵山
+#如来佛--rulai fo--取经--灵山，以上灵山雷音寺内NPC，没取完经的要弄走两个看门的尊者才能进去
+#迦叶尊者、阿傩尊者----lingshan--取经--灵山门口哼哈二将
+#轿夫头、唢呐手、锣鼓手、轿夫----银子--月宫
+#酸秀才--suan xiucai--银子--silver--长安乐坊
+#金圣宫--jinsheng gong--避妖术--麒麟洞内
+#苦力--kuli--长安，背阴巷
+#独角兕大王--dujiaosi dawang--金兜山，洞内
+#牛皮酒袋--jiudai--钦法国有售，龙宫可捡
+#锡碗、锡壶、锡盆----baoxiang--宝象，有售
+#兽皮--shou pi--压龙洞--可捡
+#兽皮披风--shoupi pifeng--压龙洞--杀老奶奶
+#剃刀--ti dao--钦法国--杀杂货铺寡妇
+#五色梅浅红裙--Pink skirt--龙宫--杀龙女
+#银叉--silver fork--龙宫--杀龙女
+#天兵战甲--armor--天宫--杀天兵
+#羊脂玉净瓶--jing ping--平顶山-- 杀银角大王
+#紫金红葫芦--平顶山杀金角大王
+#净瓶--jingping--普陀山--杀净瓶使者
+#苹果apple、草莓strawberry、水晶葡萄grape、哈密瓜mellon、雪梨pear----乌鸡--有售
+#芭蕉鞭、芭蕉裙---火焰山--杀芭蕉怪
+#芭蕉怪--bajiao guai--火焰山--
+#八瓣梅花锤--meihua hammer--龙宫--拿腰牌，假山insert yao pai进北边密室可捡
+#九股托天叉--tuotian fork--龙宫--拿腰牌，假山insert yao pai进南边密室可捡
+#红丹瓶--龙宫--拿腰牌，假山insert yao pai进北边密室可捡
+#绿丹瓶--龙宫--拿腰牌，假山insert yao pai进南边密室可捡
+#碧水丹--bishui dan--龙宫--拿腰牌，假山insert yao pai进南边密室，从绿丹瓶中拿
+#美味豆腐羹、卤味干、香油臭干、绿茶、红茶、油炸干---tianzhu--天竺客店有售
+#小煎酥、五香炒豆、小蛋糕、香瓜子----天竺，小吃店有售
+#竹耙、竹鞭、竹剑、竹刀、烫花竹篮、细条竹篓---tianzhu--天竺，竹器店有售
+#铁盔、凤冠、龙冠、黑丝帽、硬木盔---tianzhu--天竺，帽店里买。本站铁盔可在客栈S领
+#筋骨粉、养身丹、济神丸----天竺--药店有售
+#牛皮帽、厚牛皮盾、犀牛皮衣----天竺--皮店有售
+#白布、花布、披毯、布头巾----tianzhu--天竺，布店有售
+#白瓷花盆、青石花瓶---tianzhu--天竺，有售
+#白兰瓜、番木瓜、柑子、桔子、木瓜、柚子-----tianzhu--天竺，水果店有售
+#豆芽、黑木耳、野蘑菇、红苋菜、花菜、山笋----tianzhu--天竺，蔬菜店有售
+#白袍、大花袍、虎皮大氅、水印花裙、翡红裙、紫绒披风----tianzhu--天竺，成衣店有售
+#水牛皮靴、登山屐、云靴--天竺--鞋店有售
+#白果仁脆酥、黑松子饼、清烧地龙衣、野栗子糕、油焖山笋尖、炖汤蘑菇-food-压龙洞可捡，随机出现
+#白菊花、矢车菊、野菊花--Ju hua--月宫--可捡，随机出
+#白罗袍--baipao--蓬莱--fly penglai;nu;kill xing
+#白面馍馍、菜馅馍馍、葱花馍馍、邓沙馍馍、豆沙馍馍、薯面馍馍、笋馅馍馍、香油馍馍、玉米馍馍-
+-mo mo--毒敌山，洞里面蝎子精身边可捡，随机出现，一次两只
+#镂花灌铅甲、镂花龟纹甲、镂花虎竹甲、镂花坚木甲、镂花龙骨甲、镂花硬藤甲--armor--积雷山-- 
+#玉柄灌铅甲、玉柄龟纹甲、玉柄虎竹甲、玉柄坚木甲、玉柄龙骨甲、玉柄硬藤甲--armor--积雷山--
+#压花灌铅甲、压花龟纹甲、压花虎竹甲、压花坚木甲、压花龙骨甲、压花硬藤甲--armor--积雷山-- 
+#镶边灌铅甲、镶边龟纹甲、镶边虎竹甲、镶边坚木甲、镶边龙骨甲、镶边硬藤甲--armor--积雷山-- 
+#乌心灌铅甲、乌心龟纹甲、乌心虎竹甲、乌心坚木甲、乌心龙骨甲、乌心硬藤甲--armor--积雷山-- 
+以上为积雷山妖怪随机穿的甲
+#牛头刀--niutou dao--积雷山--
+#牛尾锏--niuwei jian--积雷山-
+#牛腿杖(Niutui zhang)
+#牛皮鞭(Niupi bian)
+#牛角刃--niujiao ren--积雷山妖怪随机武器
+#白铁甲、白铜甲、黑铁甲、黑铜甲、灰铁甲、灰铜甲、青铁甲、青铜甲、乌铁甲、乌铜甲、锈铁甲、锈
+铜甲--armor--平顶山、压龙山小妖装甲，随机出
+#石铲刀、鹿角叉、花竺剑、剥皮鞭、开山斧、青石锤、打狗棍、浑铁杖、筑山耙、牛角刃---平顶山--
+洞内小妖随机武器，此鹿角叉id为lujiao cha
+#刺槐锏、红缨枪---压龙山洞内小妖随机武器
+#白泽狮、狻猊狮、伏狸狮、抟狮、猱狮、雪狮、白毛虎、八脚虎、大王虎、花斑虎、双尾虎、青面虎、
+云豹、水豹、花豹、石豹、草豹、山豹--yaojing--zhujie--竹节山，洞内小怪，随机出现
+#筑星耙、双头矛、葛剑、新月刀--zhujie--竹节，洞内小怪随机武器
+#猛犸皮、水牛皮、黑罴皮、青狈皮、公鹿皮、野象皮、棕熊皮、牦牛皮、豺皮---竹节山洞内小怪身上，
+随机出
+#青毛狮--Qingmao shi--zhujie--山路上
+#棕熊怪--yao guai--火云洞 
+#花虎怪--yao guai--火云洞
+#黑蟒怪--yao guai--火云洞
+#狐头怪--yao guai--火云洞--
+#马头怪--yao guai--火云洞--
+#兔头怪--yaojing--火云洞--麒麟也可能有
+#鹿头怪--yao guai--火云洞--麒麟也可能有
+#羊头怪--yao guai--火云洞--麒麟也可能有
+#苍狼怪--yao guai--火云洞--麒麟也可能有
+#野猪怪--yao guai--火云洞--
+#山猫怪--火云洞--
+#巨猿怪--火云洞--以上火云洞小怪随机出现
+#蚂蟥怪、蝙蝠精----火云洞--这是火云洞里两个必定出现的小怪
+#狐狸精、香麝精、花獐精、彩蝶精、野鸡精--yaojing--麒麟山
+#獭象怪--yaojing--麒麟山
+#虎将--yaojing--麒麟山
+#熊师--yaojing--麒麟山
+#豹头--yaojing--麒麟山
+#彪帅--yao guai--麒麟山--
+#羊头怪--yaojing--麒麟山，火云洞也可能有
+#兔头怪--yaojing--麒麟山，火云洞也可能有
+#鹿头怪--yao guai--麒麟山，火云洞也可能有
+#苍狼怪--yaojing--麒麟山，火云洞也可能有
+#乖獐怪--yaojing--麒麟山
+#狡兔怪--yaojing--麒麟山
+#狒狒怪--yaojing--麒麟山
+#蟒蛇怪--yao guai--麒麟山--
+#长蛇怪--yao guai--麒麟山--以上麒麟小怪洞内随机出现，进洞1m武学以下会晕
+#象牙剑、虎头刀、龙须叉、猪獠牙、凤尾鞭、鸳鸯棍----麒麟山，洞内小怪随机武器
+#青萝藤盾、樟木盾、紫萝藤盾、楠木盾----麒麟山-- 小怪身上，随机带
+#单刃匕、鹰嘴斧、百节链、磬石锤----豹头山洞内小怪武器，随机出
+#白虎皮、黑虎皮、山猫皮、金狮皮、花豹皮、卷毛狮皮----baotou--豹头洞内小怪装甲，随机出
+#黄牛精、野牛精、短尾牛精、牦牛精、牛精、水牛精、山牛精、独角牛精--yao jing--青龙山，随机
+出现，一次三只
+#棠花剑、狮腿骨、狐骨刺、梅花鹿角、砍山刀、牛尾、虎尾鞭---青龙山，洞内三个牛精的武器，随机
+出现。虎尾鞭似乎不会有
+#彩蛛精、花姐精、蝴蝶精、麻蚊精、细腰蜂精--yaojing--dudi--毒敌山，洞内随机出现
+#鹿角叉、牛角叉、犀角叉、羊角叉--cha--毒敌山，洞内小怪随机武器，id均为cha
+#猴怪、兔怪、獭怪、猪怪、蟒怪、狒怪、羊怪、鹿怪、狗怪--yao guai--金兜小怪，随机出现，
+猪怪也可能出现在积雷
+#虎怪、糜怪、狼怪、骡怪、犊怪、獾怪、狐怪、獐怪、熊怪、牛怪、狈怪--yao guai--积雷山小怪，
+随机出现 
+#彪怪、豹怪、马怪--yao guai--豹头山洞内小怪，随机出现
+#薄罗袄、薄罗裤、薄麻袄、薄麻裤、薄棉袄、薄棉裤、薄丝袄、薄丝裤--cloth--tongtian--
+#粗罗袄、粗罗裤、粗麻袄、粗麻裤、粗棉袄、粗棉裤、粗丝袄、粗丝裤--cloth--tongtian--  
+#厚罗袄、厚罗裤、厚麻袄、厚麻裤、厚棉袄、厚棉裤、厚丝袄、厚丝裤--cloth--tongtian-- 
+#细罗袄、细罗裤、细麻袄、细麻裤、细棉袄、细棉裤、细丝袄、细丝裤--cloth--tongtian-- 
+#花缎薄裙、花缎长裙、花缎短裙、花锦薄裙、花锦长裙、花锦短裙--skirt--tongtian-- 
+#花棉薄裙、花棉长裙、花棉短裙、花纱薄裙、花纱长裙、花纱短裙--skirt--tongtian-- 
+#软缎薄裙、软缎长裙、软缎短裙、软锦薄裙、软锦长裙、软锦短裙--skirt--tongtian-- 
+#软棉薄裙、软棉长裙、软棉短裙、软纱薄裙、软纱长裙、软纱短裙--skirt--tongtian-- 
+#素缎薄裙、素缎长裙、素缎短裙、素锦薄裙、素锦长裙、素锦短裙--skirt--tongtian-- 
+#素棉薄裙、素棉长裙、素棉短裙、素纱薄裙、素纱长裙、素纱短裙--skirt--tongtian--
+#细缎薄裙、细缎长裙、细缎短裙、细锦薄裙、细锦长裙、细锦短裙--skirt--tongtian-- 
+#细棉薄裙、细棉长裙、细棉短裙、细纱薄裙、细纱长裙、细纱短裙--skirt--tongtian-- 以上衣服都
+出自通天陈家庄陈姓NPC身上
+#宝石戒指、银戒指、钻石戒指、金戒指、白金戒指、描龙玉佩---tianzhu--天竺，首饰店有售，其中
+银戒指本店的id为yinjie，金戒指本店的id 为jinjie。银戒指祭赛国也有售id为ring的，金戒指还有
+可杀长安当铺老板得id为jin jiezhi的
+#碧玉双枪--jade spear--天宫--杀时值功曹
+#无常棒--wuchang bang--sky--天宫，杀日值功曹
+#玻璃盘子--panzi--祭赛国--出东门，杀凌虚子
+#彩贝甲--color shell--龙宫--随意杀个x贝宫女
+#菜刀--cai dao--天竺肉铺--杀乔老板
+#菜刀--blade--长安的民居--
+#菜糠团子、糙米饭----车迟国--智渊寺里可捡
+#茶盏--cha zhan--盘丝岭--可捡
+#牛皮盾--shield--长安--
+#钢叉--fork--长安
+#钢刀--blade--长安
+#铁锤--hammer--长安--
+#铁斧--axe--长安--
+#匕首--dagger--长安--
+#镔铁棍--tiegun--长安--
+#禅杖--staff--长安--
+#长剑--sword--长安
+#铁链--tielian--长安--
+#长枪--spear--长安--以上基础武器，长安兵器铺有售
+#长寿面、卤味面、刀削面、老家招牌面、海鲜面、阳春面、细面、钢丝面、鸡丝面、牛肉丝面、盖浇面
+、车仔面、排骨面、羊杂碎面、馄饨面、豆丝面、肉煮面--miantiao--朱紫--面馆有售，随机买到
+#爆炒腰花、脆皮烤鸭、宫保鸡丁、红烧素鹅、红油肺片、火腿竹笙羹、京酱肉丝、麻辣肚丝、嫩汆猪肝、
+皮蛋瘦肉粥、青丝熏鱼、三鲜腐竹、时鲜蔬菜、糖醋排骨、五花焖肉、细扒头肉、熏腊肠、油炝大虾、
+醉子鸡、翡翠豆腐、麝香冬笋、走油脆肠----朱紫国--饭楼有售
+#朝阳灯、荷花灯、画屏灯、桔花灯、金凤灯、金鱼灯、兰花灯、莲花灯、梅花灯、梦幻灯、仙鹤灯、
+绣屏灯、雪花灯、玉兔灯、云雾灯、走马灯、翡翠灯、麒麟灯、青龙灯--deng long--金平，NPC身上随机带
+#杨树叉、杨树桩、杨树拐、柳条鞭----清华庄--洞里小怪的随机武器
+#紫柳藤甲--ziliu teng jia--
+#黑柳藤甲--heiliu teng jia--
+#青柳藤甲--qingliu teng jia--
+#赤柳藤甲--chiliu teng jia--清华庄，洞内小怪，随机带
+#赤身鬼使--guard--荆棘岭
+#楚妃剑--chufei sword--月宫杀嫦娥，唯一物品
+#瓷酒盅、清白老酒壶、水酒罐、五香花生----天竺--酒馆有售
+#粗瓷茶碗--fengxian--酒馆--
+#大红蟒袍--mangpao--yuhua--杀玉华的几个王子
+#大黄瓜--dhg--五庄观--菜地--可捡，普陀厨房也有
+#葫芦--hulu--五庄观--菜地--可捡
+#淡黄柳絮护裙、淡黄罗纱护裙、淡黄麻纱护裙、淡黄丝绒护裙、淡黄细纱护裙、
+#淡黄柳絮战裙、淡黄罗纱战裙、淡黄麻纱战裙、淡黄丝绒战裙、淡黄细纱战裙、 
+#鹅黄柳絮护裙、鹅黄柳絮战裙、鹅黄罗纱护裙、鹅黄罗纱战裙、鹅黄麻纱护裙、 
+#鹅黄麻纱战裙、鹅黄丝绒护裙、鹅黄丝绒战裙、鹅黄细纱护裙、鹅黄细纱战裙、 
+#粉色柳絮护裙、粉色柳絮战裙、粉色罗纱护裙、粉色罗纱战裙、粉色麻纱护裙、
+#粉色麻纱战裙、粉色丝绒护裙、粉色丝绒战裙、粉色细纱护裙、粉色细纱战裙、 
+#紫花柳絮护裙、紫花柳絮战裙、紫花罗纱护裙、紫花罗纱战裙、紫花麻纱护裙、 
+#紫花麻纱战裙、紫花丝绒护裙、紫花丝绒战裙、紫花细纱护裙、紫花细纱战裙、
+#翡红柳絮护裙、翡红柳絮战裙、翡红罗纱护裙、翡红罗纱战裙、翡红麻纱护裙、 
+#翡红麻纱战裙、翡红丝绒护裙、翡红丝绒战裙、翡红细纱护裙、翡红细纱战裙--skirt--dudi--
+以上衣服毒敌山洞内小怪随机装备
+#道人--dao ren--做道场--车池
+#读书人--dushu ren--车池
+#点钢枪--diangang qiang--金兜，杀boss大王
+#跌打丸--wan--jisaiguo--祭赛国有售
+#短袍裙、宽身素长裙、水染彩裙、束腰筒裙、印花裙---skirt--nuerguo----女儿国
+#短软狼牙棒--langya bang--小西天，黄眉老佛身上，杀他没尸体，也不会晕，怎么拿呢？
+#五彩天衣--tian yi--月宫--王母身上
+#短铁爪--tie zhua--金兜小怪，本站客栈s可领
+#长铁爪--tie zhua--金兜小怪武器，随机出
+#铁链--tielian--金兜小怪武器，也可长安买
+#铁球--tie qiu--金兜小怪武器，随机出
+#铁荆棘(Tie jingji)--金兜小怪武器，随机出
+#铁护肩、铁护腕、铁护腰、铁手套、铁头盔、铁头靴、铁爪套----jindou 
+#铜护肩、铜护腕、铜护腰、铜手套、铜头盔、铜头靴、铜爪套----jindou 金兜小怪的全套装备，随机
+#短弯刀、长弯刀、月牙弯刀----tianzhu--天竺，城门小兵身上随机
+#守寺僧--shousi seng---乌鸡国，宝林寺
+#断肠妇人--duanchang furen--盘丝岭
+#蜜、蚂、卢、班、蜢、蜡、蜻---pansi--盘丝岭
+#法锤--fa chui--xiaoxitian--小西天杀老佛旁小童
+#紫云剑---ziyun jian--xiaoxitian--小西天杀老佛旁小童
+#烧火棍--shaohuo gun--xiaoxitian--小西天杀老佛旁小童
+#青铜叉--qingtong cha--xiaoxitian--小西天杀老佛旁小童
+#七齿耙--qichi pa--小西天杀老佛旁小童
+#歌女--ge nu--来唐唱歌--yuhua--玉华
+#宫袍--朱紫--zhuzi--fly zhuzi;#10 s;kill gong fei
+#古藤杖--guteng zhang--荆棘岭，杀四操之一即可
+#葛布长袍--cloth--jingjiling--杀四操之一即得
+#官袍--guan pao--tianzhu--天竺或其他地方皇宫里杀太监
+#官人--guan ren--互访--宝象
+#观音菩萨--guanyin pusa--大乘佛法--putuo--普陀
+#桂花--Gui hua--moon--月宫，树上可捡
+#国丈--guo zhang--biqiu--比丘国，没能秒杀他就会逃去清华洞里
+#烤肉巴子、烤肉块、烤头肉、烤腿子肉、烤胸脯肉、烤坐臀肉--积雷山--餐厅可捡
+#豹肉、虎肉、狮肉、鹫肉、野鸡肉、野狸肉、野鹿肉、野兔肉、野羊肉、獐子肉、狍子肉、
+蟒蛇肉、狼肉--rou--麒麟山，洞内可捡，随机出现
+#虎唇、狼肝、鹿脯、驴肺、马腿、狮鼻、蛇肉、驼峰、狍肉、熊掌、豹舌--rou--jindou--
+金兜山，洞内可捡，随机出现。其中熊掌区别于天上蟠桃会的熊掌，id不同
+#黑狐肉巴、黑狐肉板、黑狐肉饼、黑狐肉干、黑狐肉条--rou--yinwu
+#花蛇肉巴、花蛇肉板、花蛇肉饼、花蛇肉干、花蛇肉条--rou--yinwu
+#灰兔肉巴、灰兔肉板、灰兔肉饼、灰兔肉干、灰兔肉条--rou--yinwu
+#羚羊肉巴、羚羊肉板、羚羊肉饼、羚羊肉干、羚羊肉条--rou--yinwu
+#山鼠肉巴、山鼠肉板、山鼠肉饼、山鼠肉干、山鼠肉条--rou--yinwu
+#山驼肉巴、山驼肉板、山驼肉饼、山驼肉干、山驼肉条--rou--yinwu
+#树鸦肉巴、树鸦肉板、树鸦肉饼、树鸦肉干、树鸦肉条--rou--yinwu
+#土狍肉巴、土狍肉板、土狍肉饼、土狍肉干、土狍肉条--rou--yinwu
+#猩猩肉巴、猩猩肉板、猩猩肉饼、猩猩肉干、猩猩肉条--rou--yinwu
+#野鹿肉巴、野鹿肉板、野鹿肉饼、野鹿肉干、野鹿肉条--rou--yinwu
+#野驴肉巴、野驴肉板、野驴肉饼、野驴肉干、野驴肉条--rou--yinwu
+#野马肉巴、野马肉板、野马肉饼、野马肉干、野马肉条--rou--yinwu----隐雾肉库，随机出
+#黑熊怪--bear monster--比武--普陀
+#拂尘--fuchen--江州--有售
+#侯郎中--hou langzhong--西域药理--天竺药铺老板
+#象皮盾--xiangpi dun-- 
+#犀牛皮盾--xiniupi dun--
+#熊皮盾--xiongpi dun--xiaoxitian
+#虎皮盾--hupi dun--小西天，小童身上，随机出现
+#护殿妖--hudian yao--无底洞
+#花钿、香玉、珠怜、小真--ban niang--长安，喜福会开宴就出现
+#黄袍怪--huangpao guai--baoxiang--宝象国，波月洞内
+#皇宫伺卫--si wei--交流武艺--tianzhu--fly lingshan;#3 w;#7 e;n;n
+#祭刀--ji dao--jinping--金平，杀灯官
+#灯官--deng guan--制灯术--jinping--金平
+#祭官--ji guan--祭祀术--fengxian--凤仙郡
+#监斩官--jianzhan guan--讲授西域律法--车池，皇宫内
+#煎豆腐、烧面筋--jian doufu--盘丝洞--厨廊可捡
+#降魔袍--xiangmo pao--fangcun--方寸，杀云阳真人
+#脚夫--jiao fu--比丘
+#金顶大仙--jinding daxian--取经--灵山
+#金瓜--golden hammer--长安，杀卫士
+#熟铜甲--bronze armor--长安皇宫--杀金甲卫士-
+#八宝铜锤--hammer--龙宫，杀鲸无敌
+#金环锁子甲--golden armor--乌鸡杀太子等等，很多NPC身上都有
+#金厢白玉圭--yu gui--乌鸡，按过关流程，宝林寺睡觉见到国王鬼魂，问他报仇即有几率获得
+#乌鸡精-乌鸡，按过关流程得到金厢白玉圭后，去皇宫交给王后，还给你后再去交给太子，有几率获得
+#九齿钉钯--ding pa--kaifeng，开封，猪八戒所持，看看长安进士身上有没有
+#酒保--jiu bao--传授酿酒术--车池
+#旧白布搭包--da bao--小西天，杀掉黄眉老佛即可
+#居民、街人、送油客、挑灯夫、路人、和尚----金平NPC，随机出现
+#军机大臣--jun ji--访问大唐国--天竺皇宫内
+#看门妖--kanmen yao--无底洞
+#烤全羊、烤乳猪---玉华县--有售
+#烤羊腿、羊皮大酒囊、羊肉饼----祭赛国--有售
+#知书和尚、尚礼和尚、俗家和尚、穷和尚、瘦和尚、老和尚--he shang--佛学--车池，智渊寺，随机出现
+#书院和尚、客家和尚、修行和尚--he shang--佛学--金平，慈云寺，随机出现
+#胖和尚、笑和尚、大和尚--he shang--佛学--乌鸡国宝林寺
+#老和尚、大和尚、小和尚--he shang--佛学--祭赛国
+#苦行僧--kuxing sen--比丘
+#拉苏律司--lasu lusi--金银匠艺--比丘
+#辣味牛汤、牛肉汤面----比丘国--牛肉馆有售
+#绿袍怪、蓝袍怪、青袍怪、紫袍怪----baoxiang--宝象国，碗子山
+#烂银匕首、银戒指、银项链、银手镯---祭赛国--有售，本店的银戒指id为ring
+#狼力大仙、犸力大仙、狈力大仙、豺力大仙----chechi--车池国，三清观，藏经楼spell shugui可见
+#狼皮裙--wolf skirt--longgong--龙宫，杀个小夜叉
+#老妇人-fu ren-长安西--在宝象国与长安西之间，有四个，杀错了减一年道行！
+#老公公-gong gong-长安西--fly pingding;se;n;#2 nw;sw;s;se;sw;se;s;#2 ed;se;#2 ne;#3 se;
+nu;ed;#2 e;#4 ne 三打白骨精的三位NPC之一，其他两个就在附近
+#女子-nu zi-长安西--三打白骨精的三位NPC之一
+#龙头拐--long tou guai--长安西--杀老公公
+#米饭、面筋----长安西--杀女子
+#竹杖--zhu zhang--长安西--杀老妇人
+#乐老板--le laoban--商务--tianzhu--天竺
+#李寡妇--li guafu--宣传佛教--qinfa--钦法
+#陈小二--chen xiaoer--宣传佛教--qinfa--钦法国
+#周小二--zhou xiaoer--宣传佛教--钦法
+#孙小二--sun xiaoer--宣传佛教--qinfa--钦法
+#钱寡妇--qian guafu--宣传佛教--qinfa--钦法
+#郑寡妇--qian guafu--宣传佛教--qinfa--
+#军士--jun shi--qinfa--
+#王小二--wang xiaoer--qinfa--
+#刘老板--liu laoban--西域商事--jisaiguo--祭赛国
+#柳眉、花语、玉香、绛裙、金莲、檀口、钗头----pansi--盘丝岭，7个蜘蛛精
+#猩唇--xing chun--天宫
+#熊掌--xiong zhang--天宫
+#醍醐--ti hu--天宫
+#瑶露--yao lu--天宫
+#琼浆--qiong jiang--天宫
+#玉液--yu ye--天宫
+#仙酒--xian jiu-天宫
+#仙桃--xian tao--天宫
+#凤髓--feng sui-天宫
+#龙肝--long gan--天宫，蟠桃大会上的食物，难拿
+#火枣--huo zao--蓬莱问福星，打架可得
+#碧藕--bi ou--蓬莱问寿星，打架可得
+#交梨--jiao li--蓬莱问禄星，打架可得
+#芦花草--luhua cao--碧波潭--杀芦娘
+#卤花生、炒花生、煮花生、烘花生、盐水花生、细糖花生、油炸花生、五香花生-huasheng--nuerguo--女儿国
+有售，随机买到。其中五香花生天竺酒馆可捡
+#钺斧--yue fu--青龙山--
+#大棍--da gun--青龙山--
+#大刀--dadao--qinglong--青龙山三大王的兵器
+#马老板--ma laoban--马术--tianzhu--天竺
+#男仆、女仆--nan pu--钦法国
+#牛二先生--niuer--nuerguo--女儿国
+#牛头--niu tou--积雷山--变铁扇公主，再打一会牛魔王即得
+#农妇、农人、香客、村民----〖金刚经〗--jingang--灵山，随机出现，也可能进天竺西门
+#男佣、女佣---车池
+#胖店主、瘦店娘----商务--zhuzi--朱紫国，杂货铺
+#店主--dian zhu--烹调术--jinping--金平
+#毗蓝婆--pilan po--讲授佛学--pansi--盘丝岭，紫云山，千花洞里发呆，难见一面
+#菩提杖--puti zhang--方寸，杀菩提老祖
+#千面怪--qianmian guai--长安南，会随机走动，杀他会copy你的能力，要小心
+#蔷薇花--Rose--moon--月宫可捡
+#黄衣仙女、紫衣仙女、绿衣仙女、青衣仙女、红衣仙女、皂衣仙女、素衣仙女--xian nu--天宫，
+蟠桃园内
+#青竹筒--qingzhu tong--jisaiguo--祭赛国，可捡
+#琼瑶豆腐--doufu--nuerguo--女儿国，有售
+#肉夹馍、牛百叶、酒壶、酱牛肉---车迟国--有售
+#三齿钢叉--sanchi gangcha--毒敌，最里面boss蝎子精的武器
+#上官仪--shangguan yi--祈雨术--fengxian--凤仙郡
+#烧龙虾、熏鱼、蒸螃蟹、醉泥螺----tongtian--通天，有售
+#舍利子内丹--shelizi neidan--宝象，碗子山，波月洞内，变百花羞，ask guai about 舍利子内丹，
+就有机会获得
+#摄魂匣、镇妖锤----红楼梦，有售
+#狮子头--shizi tou--zhujie--竹节，杀boss九头狮，要装备太乙竹刀。打一会就可以砍下
+#瘦老头--lao tou--长安，背阴巷
+#乞丐--qi gai--fengxian--
+#穷人--qiong ren--fengxian--
+#饥民--ji min--fengxian--
+#瘦子--shou zi--凤仙郡，记住穷苦人都在凤仙
+#兽皮裙--shoupi qun--pingding--很多小妖身上都有，比如平顶山
+#书生--shu sheng--祭赛国
+#水罐、油饼、油豆腐、油糕、油葫芦、油面筋、油炸鸡----金平府--有售
+#四明铲--siming chan--豹头，洞内妖王武器
+#伺卫官--siwei guan--交流武艺--wuji--乌鸡国
+#索哈娜--suo hana--比丘国金亭馆--
+#太极道袍、八卦道袍----fangcun--方寸NPC身上找
+#糖糕--祭赛国--金光寺--可捡
+#香酥--xiangsu--祭赛国--金光寺--可捡
+#油食--youshi--祭赛国--金光寺--可捡
+#陶娘子--tao niangzi--西域服装--tianzhu--天竺
+#田鼠精--tian shu--wudidong--无底洞
+#甜妞--tian niu--西域服装--tianzhu--天竺
+#铁匠--tie jiang--yuhua--玉华
+#铁扇--tie shan--火焰山，按取经过关流程，打赢铁扇公主记得
+#铁杖--tie zhang--putuo--普陀，杀游方行者
+#铁钥匙--tie yaoshi--无底洞，先变田鼠，再问玉鼠要；注意玉鼠可能会看破你的变化，武学1m
+以下的要小心
+#万口福--wan koufu--烹饪术--zhuzi--朱紫
+#魏大嫂--wei dasao--种植园艺--tianzhu--天竺
+#文官--wen guan--西域国政--yuhua--玉华县
+#乌凤锏--wufeng jian--积雷山--公主的武器，注意要变铁扇公主去杀，否则牛魔王顶你
+#五味烧鹅、粗磁酒瓶、香汁蒸鸭----比丘国--有售
+#五爪金龙--golden dragon--碧波潭，先杀万圣龙王，它就出来了
+#雾里云、云里雾----firemount--火焰山，芭蕉洞口get stone,hit door就有机会出来
+#稀饭、小菜--fengxian--斋室--可捡
+#仙官、仙女、仙妃、仙子、仙将、仙卿--xian----天宫--蟠桃园附近，随机出现
+#大姑奶、二姑奶、小姑奶、大嫂子、小嫂子、小妾、二妾、大小姐、二小姐、花姐儿、小姐--捐助水陆大会-
+-chechi--凤楼，随机出现
+#大少爷、二少爷、小少爷、大痞子、小痞子、小官人、大公子、二公子、少公子、花公子、浪公子、公子、王孙
+----捐助水陆大会--chechi--车池，龙楼，随机出现。其中小痞子在长安也有 
+#小降妖杖、小金箍棒、小九齿耙、太乙竹刀----豹头山洞内随机爬密洞获得
+#蝎子精--xiezi jing--dudi--毒敌山洞内老boss，杀他最好变成公鸡
+#辛儿娘--xiner niang--烹饪术--tianzhu--天竺客店
+#杏花枝--xinghua zhi--荆棘岭杀杏仙
+#烟里火比甲--smoky armor--荆棘岭，杀杏仙
+#雪山白袍--baipao--xueshan--雪山，杀冰谷巡使
+#熏羊头、羊肉泡馍、羊肉杂碎--yangtou--baoxiang--有售
+#古怪刁钻、刁钻古怪--豹头--守洞口的哼哈二将
+#妖精--yao jing--隐雾，洞内守亭子的
+#妖王--yao wang--麒麟山--洞内
+#银药盏--yaozhan--zhuzi--有售
+#油瓶--youping--长安--吉祥杂货铺--杀老头
+#游方僧人--seng ren--changan--长安
+#游方僧人--monk--aolai--傲来国
+#吴本钱--wu benqian--aolai--傲来
+#浴巾--yu jin--chechi--车池可捡
+#圆口布鞋--buxie--钦法布铺--有售，长安也有
+#踏云靴--cloudy shoes--方寸杀菩提，本站客栈s可领
+#皂罗袍--purple cloth--方寸杀菩提
+#斩头刀--zhantou dao--chechi--车池皇宫杀监斩官
+#张妈--zhang ma--烹饪术--tianzhu--天竺
+#赵寡妇--zhao guafu--宣传佛教--钦法
+#珍珠--pearl--龙宫，杀宫女，彩贝甲里get all from shell
+#竹篓、竹扫帚----祭赛国--有售
+#醉方休--zui fangxiu--酿酒术--tianzhu--天竺
+#陈三鲜--chen sanqian--tongtian--通天
+#金创药、混元丹、猕猴桃干----长安--changan--药铺有售
+#猕猴桃--mihou tao--stone--花果山，杀马流二帅，六耳猕猴身边可捡
+#渌水罗衣--fancy skirt--moon--月宫随便杀个NPC就有
+#茗烟--ming yan--moon--月宫
+#抱琴--bao qin--moon--月宫
+#蝶衣--butterfly--moon--月宫
+#菊影--shade--moon--月宫
+#扫红--shao hong--moon--月宫
+#锄药--chu yao--moon--月宫
+#月奴--yue nu--moon--月宫
+#西王母--xi wangmu--moon--月宫
+#痴梦仙姑--chi meng--moon--月宫
+#嫦娥--chang e--moon--月宫
+#蟒龙袍--long pao--朱紫--杀国王，钦法等很多国王身上都有
+#蟠龙拐--panlong guai--biqiu--比丘国丈的武器，打他没死就会逃去清华庄
+#袈裟--jia sha--lingshan--灵山随便杀个NPC
+#臣子--chen zi--官僚术--wuji--乌鸡国
+#蓝色小草--xiao cao--xueshan--fly xueshan;3 nu;e，此处装备刀或剑，dig cao即得
+#金刚琢--jingang zhuo--金兜山--洞内杀大王即得
+#醋坛子、铁盒、桃符纸、布袋----长安--杂货铺有售
+#阿依娜--a yina--金银匠艺--jisaiguo--祭赛国
+#茶花娘子--chahua niangzi--茶道--zhuzi--朱紫国
+#凌虚子--lingxu zi--jisaiguo--祭赛国，东门外
+#库司库司--kusi kusi--烹饪术--biqiu--比丘
+#福嫂--fu sao--烹饪术--tianzhu--天竺
+#白髯土地--tu di--西域民俗--隐雾，通过小妖拦路的路口，先去左边悬崖处climb，掉到山门了
+再climb，他就有机会出现。这也是取经过关流程
+#布道法师--budao fashi--来唐布道--fengxian--凤仙郡
+#锦花袍--jinhua pao--龙宫--杀龙婆
+#银簪--clasp--bibotan--碧波潭，杀万圣公主
+#战袍--zhan pao--qinfa--钦法杀个军士，本站客栈s可领
+#大板斧--bigaxe--qinfa--钦法杀军士，或者月宫杀吴刚
+#铁甲--iron armor--qinfa--钦法杀军士，或者龙宫杀鲸无敌
+#舒老板--shu laoban--tianzhu--西域服装--天竺
+#坎都力--kan duli--biqiu--烹饪术--比丘
+#说书老--shuoshu lao--chechi--来大唐说书--车池
+#戏子--xi zi--来大唐唱戏--车池
+#金钗女--jinchai nu--chechi--车池
+#江湖艺人--yi ren--aolai--傲来
+#小男孩、小女孩----aolai--傲来
+#老齐--guard--aolai--傲来
+#老头--laotou--aolai--傲来
+#阿七婆--aqi po--aolai--傲来
+#东方聪--dongfang cong--aolai--傲来
+#孙管事--sun guanshi--aolai--傲来
+#东方小二姐--dongfang sister--aolai--傲来
+#东方英--dongfang ying--aolai--傲来
+#王厨子--wang chuzi--aolai--傲来
+#蓝图郁--lan yutu--aolai--傲来
+#花匠--huan jiang--aolai--傲来
+#竹老大、竹小弟--bamboo man--aolai--傲来国
+#万圣龙王--wansheng longwang--碧波潭--
+#饭盒--fan he--changan--杀李玉娘
+#鹤发老童--hefa laotong--zhuzi--西域药理--朱紫国
+#府官--fu guan--jinping--西域民法--金平
+#百花仙子-baihua xiangzi--penglai--蓬莱
+#萨米儿大叔--uncle samui--jisaiguo--烹饪术--祭赛国
+#武馆弟子--aolai--傲来，长安都有
+#芦娘--lu niang--碧波潭--芦苇荡里
+#泥娃娃--mud baby--aolai--傲来，土地庙里push statue
+#石头精--shitou jing--碧波潭--荆棘岭往下走，见到一块顽石kick stone就出来
+#上官申尜--shangguan shenga--祈雨术--凤仙
+#乔老板--qiao laoban--tianzhu--商务--天竺
+#小公主--xiliang princess--nuerguo--比武--女儿国
+#柳妙手--liu miaoshou--jisaiguo--医术--祭赛国
+#太子--tai zi--wuji--宫亭内政--乌鸡国，山上
+#红木道冠--bonnet--fangcun--方寸，杀广筠子
+#青木道冠--bonnet--fangcun--方寸，杀云静，本站这些bonnet可以出售
+#五福道长--dao zhang--chechi--传授道教--车池三清观
+#道士--dao shi--chechi--做道场--车池，三清观
+#祭赛国武士--wu shi--jisaiguo--交流武艺--看名字显然是在祭赛国了
+#亮银甲--silver armor--sky--天宫，随意杀个大力天丁，或者杀个龙子，多的很
+#碧奴慕伊--binu muyi--biqiu--比丘
+#季梅儿--ji meier--tianzhu--西域服装--天竺
+#水蛭精--shuizhi jing--盘丝岭--
+#流元帅、马元帅-----stone--花果山
+#苦宿禅师--kusu chanshi--jisaiguo--传授佛教--祭赛国
+#冰露珠项链--icedew lace--女儿国，绿迷宫里发呆半天，再一路向西狂奔，可捡；拿手里久了要化
+#大鹏明王--dapeng mingwang--xueshan--雪山，孔雀公主处down，本站一般有人在地下室常年敲墙，
+站公主身边等一会就会有路下去
+#慈悲和尚--cibei heshango--fengxian--凤仙
+#●金丹砂●--jindan sha--金兜的洞内最南端dig，有机会挖到
+#虎皮披风--tiger surcoat--fly bibotan,ne，此处发呆，有机会跳出老虎精，杀它即得。本站不知为何，
+老虎精很难跳出来
+#风婆、云童、雷公、电母---sky--天宫
+#上官阿人--shangguan aren--fengxian--祈雨术--凤仙
+#守门牛精--shoumen niujing--qinglong--青龙
+#狗不理、狗肉汤----jiangzhou--江州，有售
+#精细鬼、伶俐虫、倚海龙、巴山虎----pingding--平顶山
+#万圣公主--wansheng gongzhu--碧波潭
+#老婆婆--old woman--nuerguo--茅屋--女儿国
+#府令--fu ling--jinping--金平
+#妇人--woman--黄金--gold--长安民居就有
+#灯官--deng guan--jinping--金平
+#粗布衣--linen-长安，杀个打手就有
+#偏将--pian jiang--aolai--傲来
+#老者--oldman--避火法--火焰山--
+#大王子、二王子、小王子----yuhua--玉华
+#老王爷--lao wangye-yuhua--玉华
+#辟寒大王、辟暑大王、辟尘大王----青龙山-洞内三大王
+#公主--gong zhu--tianzhu--天竺
+#天波儿笑、笑波儿天---bibotan-碧波潭第二道门卫
+#古波儿西、西波儿古---bibotan--碧波潭第一道门卫
+#长腿虾婆、大肚虾婆--xia po--碧波潭-
+#路人--luren--changan--长安
+#游客--you ke--tianzhu--
+#市民--shi min--tianzhu--天竺NPC
+#学童--xue tong--tianzhu--
+#元先生--yuan xiansheng--来大唐教外语--tianzhu--天竺
+#吴老板--wu laoban--tianzhu--fly tianzhu;#8 w;#8 s;e;e;s--
+#郭三娘--guo sanniang--西域服装--tianzhu--fly tianzhu;#8 e;w;#8 s;w;n--
+#司徒晋宝--situ jinbao--tianzhu--fly lingshan;#3 w;#8 e;s
+#瓜果店老板--ma laoban--tianzhu--fly lingshan;#3 w;#7 e;s;w
+#阿福嫂--fusao--tianzhu--小吃店--fly lingshan;#3 w;#4 e;#5 s
+#黄汤--huang tang--酿酒术--tianzhu--fly tianzhu;#8 w;s;e--
+#黛姐--dai jie--花艺--tianzhu--fly tianzhu;#8 w;e;e;n;ask dai jie about 花艺;s
+#商人--shang ren--chechi--
+#小贩--xiao fan--chechi--车池NPC
+#庸医--yong yi--zhuzi--
+#奸商-jian shang--zhuzi--
+#吃客--chi ke--zhuzi--
+#茶客--cha ke-zhuzi
+#农家女--nongjia nu--zhuzi--
+#书呆子--shudai zi--zhuzi--朱紫NPC
+#僧侣--seng lu--chehci/zhuzi--
+#樵夫--qiao fu--baoxiang--
+#渔夫--yu fu--baoxiang--
+#街头小商人--shang ren--baoxiang
+#艺人-yi ren--baoxiang--宝象NPC
+#六耳猕猴--liuer mihou--花果山，杀马流二元帅，往东可见
+#牛头鬼、马面鬼----hell--地府
+#黑无常、白无常----hell--地府
+#断足鬼、打更鬼----hell-地府
+#神荼--shen tu--hell--比武--地府
+#郁垒--yu lei--hell--地府
+#桥梁使者--bridge guard--hell--
+#勾司人--gousi ren--hell--
+#紫衣童子--tongzi--hell--
+#阴长生、王方平---hell--地府
+#阎罗王、轮转王、卞城王、都市王、泰山王、仵官王、平等王、宋帝王、楚江王、秦广王----hell-
+此为地府十王
+#地藏王菩萨--dizang pusa--hell--地府
+#九头驸马--jiutou fuma--bibotan--碧波潭
+#锦绣战袍--zhanpao--bibotan--碧波潭，杀九头驸马可得
+#月牙铲--moon fork--bibotan--碧波潭，杀九头驸马可得，本站也可客栈S直接领
+#黄铜禅杖--huangtong chanzhang-普陀山/梅山--普陀杀惠岸，本站可客栈S直接领
+#宣花斧--xuanhua fu--天宫、长安程咬金--本站可客栈S直接领
+#恶龙--无底洞，取经过关后小庙前殿knock wall到圆清住处，后院dive well下井可见
+#捆仙索--kunxian suo--无底洞-过关后进圆清处，下井杀恶龙即得
+#大使--da shi--baoxiang--宝象
+#山姬--shan ji--乌鸡国--
+#山鸡--shan ji--乌鸡国--山路上，杀山姬即见
+#年值功曹、时值功曹、日值功曹、月值功曹----天宫城墙四个角上站着
+#邓国岩、辛酒泉、张学松、张学松、陶昕岗、庞进阁、刘晚旗、苟余阳、毕岩庭---天宫城墙上站着
+#魔礼寿--moli shou--东天门
+#魔礼青--moli qing--南天门
+#魔礼红--moli hong--西天门
+#魔礼海--moli hai--北天门
+#赤脚大仙--chijiao daxian--天宫
+#药叉将--yaocha jiang--天宫
+#鱼师将--yushi jiang--天宫
+#哪吒--nezha santaizi--天宫
+#优婆塞--youpo sai--lingshan--灵山
+#优婆夷--youpo yi--lingshan--灵山
+#接引佛祖--jieyin fuzu--lingshan--灵山
+#烧香老太太--lao taitai--meishan--fly meishan
+#渔姑--yu gu--meishan--fly meishan;sw;w--
+#二妞--er niu--meishan--fly meishan;sw;w;n--
+#张顺--zhang shun--meishan--fly meishan;sw;w;n;n--
+#二郎真君--erlang zhenjun--得道秘法--梅山，最高处
+#康安裕--kang anyu--比武--梅山--fly meishan;e;e;ne;se
+#张伯时--zhang boshi--比武--梅山--fly meishan;e;e;ne
+#姚公麟--yao gonglin--比武--梅山--fly meishan;e;e;ne;nu
+#李焕章--li huanzhang--比武--梅山--fly meishan;e;e;ne;nu
+#郭申--guo shen--梅山--
+#直健--zhi jian--梅山--fly meishan;#2 e;ne;nu;nw
+#青锋剑--qingfeng sword--方寸杀张道陵
+#土地--tudi--火焰山--土地庙里多push几下泥像
+#梅鸳鸯--mei yuanyan--来访水陆大会--nuerguo--女儿国
+#青虹剑--qinghong sword--nuerguo--女儿国杀公主，本站客栈S可直接领
+#花褶靴--flower boots--nuerguo--女儿国杀公主
+#芭将军、崩将军----花果山--
+#方丈--fang zhang--传授佛学--tianzhu--天竺，布金禅寺
+#匡文正--kuang wenzheng--高老庄(书堂)--
+#吴文--wu we--高老庄(村口)--
+#小白菜、豆豆、胡萝卜----高老庄(农舍)--
+#农夫--farmert--高老庄(农舍)--
+#老牛--niu--高老庄(农舍)--
+#土匪头目--bandit leader--高老庄--翻墙进后院
+#夏鹏展--xia pengzhan--高老庄--翻墙进后院,climb wall
+#玉佩--yu pei--高老庄--夏鹏展处open door有密室
+#木叉--fork--longgong--龙宫，可捡
+#鳊提督--bian tidu--比武--longgong--
+#鲸无敌--jing wudi--比武--longgong--
+#龙表弟--long biaodi--比武--longgong--
+#鲤总兵--li zongbing--比武--longgong--
+#鲭都司--qing dusi--比武--longgong--
+#鲻太尉--zi taiwei--比武--longgong--
+#龟八斗--gui badou--比武--longgong--
+#龙少爷--long shaoye--比武--longgong--龙宫NPC
+#马褂--magua--龙宫--龙宫杀龟八斗，长安也有售
+#饭--fan--tianzhu--天竺有售
+#校尉--xiao wei--交流武艺--zhuzi--
+#太监--tai jian--讲授宫政--zhuzi--朱紫
+#护宫卫士--wei shi--交流武艺--乌鸡国、车池国
+#兵器--bingqi--aolai--傲来
+#兵服--cloth--长安--杀小兵
+#卢生--lu sheng--长安南--fly changan;#6 s;#3 w
+#黄粱枕--huangliang zhen--红楼梦有售，或长安南杀卢生，本站长安徐小二也有售
+#张梢--fisher-长安南--fly changan;#6 s;#2 e
+#李定--qiaofu-长安南--fly changan;#6 s;#2 e
+#神鹰使者--shenying shizhe-长安南--品棋亭
+#乌鸦先生--wuya xiansheng--比武--雪山--fly changan;#7 w;nw;ne;#3 nw;n;n
+#小钻风--xiao zuanfeng--雪山--fly changan;#7 w;nw;ne;#2 nw
+#冰谷巡使--xunshi--xueshan--fly xueshan;#3 nu;n;jump shi bi;n
+#鹦鹉将军--yingwu jiangjun--xueshan--fly xueshan;#3 nu;n;jump shi bi;n
+#白象尊者--baixiang zunzhe--xueshan--fly xueshan;#3 nu;n;jump shi bi;n;e
+#秃鹰尊者--tuying zunzhe--xueshan--fly xueshan;#3 nu;n;jump shi bi;n;e
+#孔雀公主--kongque gongzhu--xueshan--fly xueshan;#3 nu;e;e;s--n
+#浣花--huan hua--xueshan--fly xueshan;#3 nu;n;jump shi bi;#3 n;jump shi bi;w;s
+#雪梨--xue li--xueshan--雪山厨房可捡，月宫也有
+#粽子--zongzi--xueshan--雪山
+#柳月刀、紫金刀、孔雀翎----xueshan--雪山兵器架rack上拿 
+#佩剑--pei jian--xueshan--雪山杀侍女
+#银针--yin zhen--雪山--找小钻风买
+#小狼--wolf--雪山--fly changan;#7 w;nw;ne;nw
+#野狗--dog--雪山--fly changan;#7 w;nw;ne;nw
+#蜘蛛、蟾蜍、蝴蝶、双尾蝎----xueshan--雪山毒物
+#青狮老魔--qingshi laomo--fangcun-方寸
+#皤不分--bo bufen--fangcun--方寸
+#差官--chai guan--玉华
+#殿官--dian guan--玉华
+#衙役服--yayi cloth--jiangzhou--江州
+#杀威大棒--shawei bang--jiangzhou--江州，杀衙役
+#赵秀才、钱秀才、孙秀才、李秀才、周秀才、吴秀才、郑秀才、王秀才--xiucai--长安，随机出，一次俩
+#柳光头--liu boss--烹饪术--zhuzi--fly zhuzi;#10 s;#6 n;w;n
+#米老板--mi laoban--商务--zhuzi--fly zhuzi;#10 s;#6 n;w;w;s
+#蟋蟀--xishuai--zhuzi--fly zhuzi;#10 n;#6 s;e;e;n--
+#大茶壶--teapot--zhuzi--朱紫，可捡可买
+#枣红马--zaohong ma--zhuzi--fly zhuzi;#10 n;#6 s;#3 e;n--
+#山妖-shan yao--yinwu--隐雾
+#老妇--lao fu--yinwu--隐雾
+#上官郡主--shangguan junzhu--祈雨术--fengxian--
+#上官曲岸--shangguan quan--fengxian--凤仙
+#车夫--che fu--yuhua--
+#士兵--shi bing--yuhua--玉华
+#摇铃水客--yaoling shuike--biqiu 
+#卖菜妇女--maicai funu--biqiu 
+#水晶腰牌--yao pai--龙宫，龙宫弟子可直接问鲸无敌要，其他门派的则只有杀而取之了。其实
+也可以用龙宫大米去要来放在bag里，主号要用时连打get yao pai from bag;give ....即可
+#张弟宝--zhang dibao--wudidong--无底洞
+#张铁臂--blacksmith--wudidong--无底洞
+#镰刀、铡刀、长柄镰刀、锄头、犁头----wudidong--无底洞有售
+#张小二--waiter--wudidong--
+#张及第--xiucai--wudidong--
+#小娃娃--kid--wudidong--无底洞
+#花生豆、炸鸡腿、红烧狗肉、下棋指南、水晶球、挑战金牌、桂花酒袋---长安城--客栈有售
+#禹王爷--yuwang ye--kaifeng--
+#禹王卒--yuwang zu--kaifeng--
+#茶娘子--chaniang zi--kaifeng--开封
+#辟谷丸、瞌睡虫、野参果----qinfa--钦法药铺有售
+#素煎饺、面片、面汤、鲜肉水饺---zhuzi--朱紫有售
+#瓜子、五香茶干、花生米---zhuzi--朱紫有售
+#史老板--shi laoban--竹器编制工艺--天竺
+#积雷山的牛魔王--niumo wang--积雷山--
+#避水金睛兽--jinjing shou--积雷山--
+#玉面公主--yumian gongzhu--积雷山--打她要变铁扇公主
+#花雕酒袋--jiudai--高老庄--有售
+#摊贩--tan fan--长安城西--fly changan;#7 w;nw
+#水煮蛋--egg--长安城西--fly changan;#7 w;nw;ne;buy egg from tan fan
+#急如火--jiru huo--长安城西--fly changan;#7 w;nw;w
+#马盗--ma dao--长安城西--fly changan;#7 w;nw;w;w;sw;w
+#张道陵--zhang daoling--方寸山--
+#管家--guan jia--车迟国--
+#小管家--guan jia--车迟国--
+#净瓶使者--shizhe--putuo--普陀
+#惠岸行者--huian xingzhe--putuo--普陀
+#青葫芦--hulu--fangcun--方寸厨房，需要装bag带走
+#晚风--wan feng--fangcun--方寸厨子
+#云阳真人--master yunyang--方寸-fly lingtai;#2 n;nu
+#菩提祖师--master puti--方寸山
+#广羲子--guang xizi--fangcun--
+#广筠子--guang yunzi--fangcun--
+#云静--yun jing--fangcun--方寸几位师父
+#碎布头--piece--fangcun--方寸杀老道
+#小妖--xiao yao--平顶山
+
+
+///////////////////////////////////
+
+
+以下一些物品，似乎并不会出现在解谜中，但也列出，以备查询
+
+#金银花、玄黄果、七星草、何首乌----火云洞--jump down下去可捡
+#兰花--lan hua--江州城--
+#雪梅--xue mei--江州城--
+#紫罗兰--purple--江州城--
+#白牡丹--mu dan--江州城--鲜花店有售
+#杜鹃--flower--种
+#灵芝--flower--种
+#海棠--flower--种--
+#腊梅--flower--种--
+#芙蓉--flower--种--
+#茉莉--flower--种--
+#蓝菊--flower--种--
+#丁香--flower--种--
+#菊花--flower--种--
+#梨花--flower--种--
+#莲花--flower--种--
+#紫薇--flower--种--
+#瑞香--flower--种--
+#苹花--flower--种--
+#芍药--flower--种
+#杏花--flower--种
+#水仙--flower--种--
+#菱花--flower--种--
+#木香--flower--种--
+#玉兰--flower--种
+#昙花--flower--种--
+#罂粟花--flower--种--
+#秋海棠--flower--种--
+#铁树花--flower--种--
+#玫瑰--flower--种--
+#石榴花--flower--种--
+#蔷薇--flower--种
+#山茶--flower--种--
+#青囊花--flower--种
+#牡丹--flower--种--
+#月季--flower--种--
+#夜来香--flower--种--
+#碧桃--flower--百花谷找花仙子打架
+#冰糖葫芦、大海碗----江州--有售
+#红枣汤圆、绿茶汤圆、黄姜汤圆、黑芝麻汤圆----江州--有售
+#齿阙环----火云洞内杀蚂蝗怪
+#太白刺--taibai ci--火云洞内杀蝙蝠精
+#豹精、狮精、狼精、虎精、狈精、狗精、猴精、驴精、狐精、鹿精----花果山--跳下瀑布随机乱走
+，DNTG第一关的流程
+#蛟魔王、牛魔王、蛟魔王、鹏魔王、狮驼王、猕猴王、犭禺狨王、美猴王--da sheng--stone--花果山
+#冰冻玫瑰--ice rose--月宫ID问玉兔要
+#小蛇、鲺鱼、小虾米、小蝌蚪、贝壳、红鲤鱼、鲢鱼、小鱼苗、小乌贼、鲶鱼、草鱼、蓟鱼、黑鱼、
+小鱼--江洲钓鱼--
+#卖鱼竿的--seller--江洲--fly changan;#16 s;#3 w;#4 s
+#铁刃斧--iron axe--huoyun--
+#铁柄剑--iron sword--huoyun--
+#铁板刀--iron blade--huoyun--
+#铁索链--iron whip--huoyun--
+#钢头叉--iron fork--huoyun--火云洞小怪的随机武器
+#丹丸，长安西掉进铁笼子，进山洞杀大王获得，每次刷新出两颗，一真一假，减少mudage
+#百花酿，蓬莱的仙子往s一步可捡
+#龙头拐杖、乾坤袋、绿如意，蓬莱三老出产
+#情丝，月宫痴梦仙姑的武器
+
+
