@@ -2,41 +2,49 @@
 #var du_book book;
 #alias {du.start} {
     du.setup;
-    get_book;
+    check_and_restart_du;
 };
 
 #alias {du.stop} {
-    stop_du;
+    stop_dushu;
     #class du.inner kill;
 };
 
 #alias {du.setup} {
     #class du.inner open;
-    #action {GOT_BOOK} {
+    #alias {start_du} {
         gt ${shifu_pos};
         on_there {
-            start_du;
+            start_dushu;
         };
     };
-    #alias {do_du} {
-        du ${du_book};
-    };
-    #alias {start_du} {
+
+    #alias {start_dushu} {
         #ticker {du} {
-            do_du;  
+            du ${du_book};
         } {1};
     };
-    #alias {stop_du} {
+    
+    #alias {stop_dushu} {
         #unticker {du};
     };
 
+    #alias {check_and_restart_du} {
+        chifan {
+            start_du;
+        };
+    };
+    
     #action {你现在过于疲倦，无法专心下来研读新知。} {
-        on_sleep {
-            gt ${shifu_pos};
-            on_there {
-                start_du;
+        #if {${nl_percent} > 30} {
+            yun refresh;    
+        };
+        #else {
+            stop_dushu;
+            on_sleep {
+                check_and_restart_du;
             };
-        };        
+        };
     };
 
     #class du.inner close;
