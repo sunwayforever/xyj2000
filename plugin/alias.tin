@@ -592,10 +592,10 @@ walk_to east;
         #var basic_skill_level %%6;
         record_level_a  ${basic_skill_en} ${basic_skill_level};
         #if {"${basic_skill_en}" == "force"} {
-            #math limit_nl_a ${basic_skill_level}*5;
+            #math limit_nl_a (${basic_skill_level}/2)*10;
         };
         #if {"${basic_skill_en}" == "spells"} {
-            #math limit_fl_a ${basic_skill_level}*5;
+            #math limit_fl_a (${basic_skill_level}/2)*10;
         };
     } {3};
 

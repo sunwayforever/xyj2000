@@ -45,7 +45,7 @@
 #alias {do_dazuo} {
     #alias dazuo_action #cr;
     #alias dazuo_action %1;
-    #if {${limit_nl} < ${max_nl} + 5} {
+    #if {${limit_nl} < ${max_nl} + 1} {
         #delay {1} {
             #showme DAZUO_DONE;            
             dazuo_action;
@@ -104,7 +104,7 @@
     #class dz.inner open;
     #action {DAZUO_DONE} {
         wd.kick;
-        #if {${limit_nl} < ${max_nl} + 5} {
+        #if {${limit_nl} < ${max_nl} + 1} {
             dz.stop;
             #return;
         };
@@ -134,7 +134,7 @@
 };
 
 #alias {do_mingsi} {
-    #if {${limit_fl} < ${max_fl} + 5} {
+    #if {${limit_fl} < ${max_fl} + 1} {
         #delay {1} {
             #showme MINGSI_DONE;            
         };
@@ -182,7 +182,7 @@
     #class ms.inner open;
     #action {MINGSI_DONE} {
         wd.kick;
-        #if {${limit_fl} < ${max_fl} + 5} {
+        #if {${limit_fl} < ${max_fl} + 1} {
             ms.stop;
             #return;
         };
@@ -214,10 +214,10 @@
 
     #action {MINGSI_DONE} {
         wd.kick;
-        #if {${limit_fl} < ${max_fl} + 5} {
+        #if {${limit_fl} < ${max_fl} + 1} {
             xl.stop;
         };
-        #if {${limit_nl} < ${max_nl} + 5} {
+        #if {${limit_nl} < ${max_nl} + 1} {
             on_sleep {
                 do_mingsi;
             };  

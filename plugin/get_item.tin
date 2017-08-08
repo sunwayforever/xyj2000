@@ -131,4 +131,21 @@
 
     checkitem {newbie gift};
 };
+
+#alias {get_qian} {
+    #alias qian_action #cr;
+    #alias qian_action %1;
+    #class get_qian.inner open;
+    #action {你从银号里取出一两黄金。} {
+        #class get_qian.inner kill;
+        #showme GOT_QIAN;
+        qian_action;
+    };
+    #class get_qian.inner close;
+
+    gt 相记钱庄;
+    on_there {
+        qu 1 gold;
+    };
+};
 #class get_item close;
