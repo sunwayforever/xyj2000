@@ -5,7 +5,7 @@
 #var dazuo_count 20;
 #var dz_total_count 0;
 #var ms_total_count 0;
-#var dz_max 95;
+#var dz_max 90;
 
 #alias {dz.cancel} {
     #class dz.full.inner kill;
@@ -29,12 +29,12 @@
                 #unticker {dz};
                 #class dz.full.inner kill;
                 #delay {dz_delay} {
+                    #showme DZ_FULL;
                     tmp_dz;
-                    #showme dz.full;
                 } {3};
             };
-        } {1};
-    }{1};
+        } {3};
+    } {1};
 };
 
 #alias {cancel_dazuo} {
@@ -214,19 +214,19 @@
 
     #action {MINGSI_DONE} {
         wd.kick;
-        #if {${limit_fl} < ${max_fl} + 1} {
-            xl.stop;
-        };
-        #if {${limit_nl} < ${max_nl} + 1} {
-            on_sleep {
-                do_mingsi;
-            };  
-        };
-        #else {
+        #if {${max_nl} + 1 < ${limit_nl}} {
             on_sleep {
                 do_dazuo;
+            };  
+        };
+        #elseif {${max_fl} + 1 < ${limit_fl}} {
+            on_sleep {
+                do_mingsi;
             };
-        }
+        };
+        #else {
+            xl.stop;
+        };
     };
     #class xiulian.inner close;
     wd.start {

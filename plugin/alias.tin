@@ -573,6 +573,7 @@ walk_to east;
     #action {  %S (%*)%s： %S%s有效等级：} {
         #var basic_skill_en %%2;
         #var special_skill_zh %%4;
+        #tab ${basic_skill_en};
         #list special_skills find ${special_skill_zh} tmp;
         #if {${tmp} != 0} {
             #list special_skills_level get ${tmp} tmp_level;
@@ -602,6 +603,7 @@ walk_to east;
     #action {┃□%S (%S)%s - %S%s%d/} {
         #var special_skill_zh %%1;
         #var special_skill_en %%2;
+        #tab ${special_skill_en};
         #var special_skill_level %%6;
         #list special_skills add ${special_skill_zh};
         #list special_skills_level add ${special_skill_level};
@@ -648,6 +650,16 @@ walk_to east;
     #send {skills};
     #send {jifa};
     #send {ok};
+};
+
+#alias {gift.start} {
+    #ticker {gift} {
+        play; place; play; yun refresh;
+    } {2};
+};
+
+#alias {gift.stop} {
+    #unticker {gift};
 };
 
 #alias {yun} {exert};

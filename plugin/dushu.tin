@@ -2,12 +2,14 @@
 #var du_book book;
 #alias {du.start} {
     du.setup;
-    check_and_restart_du;
+    chain chifan start_du;
+    show_to_info 读书;
 };
 
 #alias {du.stop} {
-    stop_dushu;
+    stop_du_ticker;
     #class du.inner kill;
+    show_to_info 读书结束;
 };
 
 #alias {du.setup} {
@@ -15,35 +17,27 @@
     #alias {start_du} {
         gt ${shifu_pos};
         on_there {
-            start_dushu;
+            start_du_ticker;
         };
     };
 
-    #alias {start_dushu} {
+    #alias {start_du_ticker} {
         #ticker {du} {
             du ${du_book};
         } {1};
     };
     
-    #alias {stop_dushu} {
+    #alias {stop_du_ticker} {
         #unticker {du};
-    };
-
-    #alias {check_and_restart_du} {
-        chifan {
-            start_du;
-        };
     };
     
     #action {你现在过于疲倦，无法专心下来研读新知。} {
         #if {${nl_percent} > 30} {
-            yun refresh;    
+            yun refresh;
         };
         #else {
-            stop_dushu;
-            on_sleep {
-                check_and_restart_du;
-            };
+            stop_du_ticker;
+            chain on_sleep chifan start_du;
         };
     };
 
