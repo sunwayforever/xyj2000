@@ -1,15 +1,16 @@
 #class dushu open;
 #var du_book book;
 #alias {du.start} {
+    #var du_book %1;
     du.setup;
     chain chifan start_du;
-    show_to_info 读书;
+    show_to_quest 读书;
 };
 
 #alias {du.stop} {
     stop_du_ticker;
     #class du.inner kill;
-    show_to_info 读书结束;
+    show_to_quest 读书结束;
 };
 
 #alias {du.setup} {
@@ -30,7 +31,10 @@
     #alias {stop_du_ticker} {
         #unticker {du};
     };
-    
+
+    #action {没有学到任何东西} {
+        du.stop;
+    };
     #action {你现在过于疲倦，无法专心下来研读新知。} {
         #if {${nl_percent} > 30} {
             yun refresh;
