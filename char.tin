@@ -1,0 +1,10 @@
+#class char open;
+#if {"${sleep_pos}z" == "z"} {
+    #var sleep_pos 264;
+};
+
+#if {"${weapon_to_wield}z" == "z"} {
+    #var weapon_to_wield hammer;
+};
+
+#class char close;

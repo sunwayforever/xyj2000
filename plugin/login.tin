@@ -1,15 +1,11 @@
 #class login open;
 #action {«Î ‰»Îœ‡”¶√‹¬Î} {
     #delay {2} {
-        login;
+        xmpp.start;
+        init_set;
+        #send {score};
+        check_gongfu;
     };
-};
-
-#alias {login} {
-    xmpp.start;
-    init_set;
-    #send {score};
-    check_gongfu;
 };
 
 #alias {init_set} {
@@ -22,14 +18,17 @@
 };
 
 #action {°æ%*°ø%* %*(%*)} {
+    #unaction {°æ%*°ø%* %*(%*)};
     #var char_name %3;
     #var char_id @lower{%4};
-    #class login kill;
     #send {hp};
-    #class login kill;
+    post_login;
     #delay {2} {
         show.init;        
     };
 };
 
+#alias {post_login} {
+    chain equip save_qn get_qian chifan;
+};
 #class login close;

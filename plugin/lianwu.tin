@@ -1,0 +1,45 @@
+#class lianwu open;
+#alias {lianwu.start} {
+    lianwu.setup;
+    chain chifan start_lianwu;
+    show_to_quest Á·Îä;
+};
+
+#alias {lianwu.stop} {
+    stop_lianwu_ticker;
+    #class lianwu.inner kill;
+    show_to_quest Á·Îä½áÊø;
+};
+
+#alias {lianwu.setup} {
+    #class lianwu.inner open;
+    #alias {start_lianwu} {
+        gt ÔÆ·¿;
+        on_there {
+            start_lianwu_ticker;
+        };
+    };
+
+    #alias {start_lianwu_ticker} {
+        #ticker {lianwu} {
+            lianwu;
+        } {3};
+    };
+    
+    #alias {stop_lianwu_ticker} {
+        #unticker {lianwu};
+    };
+
+    #action {ÄãÏÖÔÚºÜÀÛ£¬ÐªÐª°É£¡} {
+        #if {${nl_percent} > 30} {
+            yun recover;
+        };
+        #else {
+            stop_lianwu_ticker;
+            chain on_sleep chifan start_lianwu;
+        };
+    };
+    #class lianwu.inner close;
+};
+
+#class lianwu close;

@@ -138,8 +138,10 @@
     #class get_qian.inner open;
     #action {你从银号里取出一两黄金。} {
         #class get_qian.inner kill;
-        #showme GOT_QIAN;
-        qian_action;
+        #delay {2} {
+            #showme GOT_QIAN;
+            qian_action;
+        };
     };
     #class get_qian.inner close;
 

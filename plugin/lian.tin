@@ -1,0 +1,74 @@
+#class lian open;
+#alias {lian.start} {
+    lian.setup;
+    chain chifan start_lian;
+    show_to_quest 练武;
+};
+
+#alias {lian.stop} {
+    stop_lian_ticker;
+    #class lian.inner kill;
+    show_to_quest 练武结束;
+};
+
+#alias {lian.setup} {
+    #class lian.inner open;
+    #var lian_index 0;
+    #alias {get_next_to_lian} {
+        #list skills_to_lian size lian_size;
+        #math lian_index ${lian_index}+1;
+        #if {${lian_index} > ${lian_size}} {
+            lian.stop;
+        };
+        #else {
+            #list skills_to_lian get ${lian_index} skill_to_lian;
+        };
+    };
+    
+    #alias {start_lian} {
+        gt ${shifu_pos};
+        on_there {
+            start_lian_ticker;
+        };
+    };
+
+    #alias {start_lian_ticker} {
+        #ticker {lian} {
+            lian ${skill_to_lian};
+        } {1};
+    };
+    
+    #alias {stop_lian_ticker} {
+        #unticker {lian};
+    };
+
+    #action {必须空手} {
+        unwield all;
+    };
+
+    #alias {on_low_qx} {
+        #if {${nl_percent} > 30} {
+            yun recover;
+        };
+        #else {
+            stop_lian_ticker;
+            chain on_sleep chifan start_lian;
+        };  
+    };
+    #action {你的内力或气不够，没有办法练习风回雪舞剑法。} {
+        on_low_qx;
+    };
+    #action {你的内力不够了。} {
+        stop_lian_ticker;
+        chain on_sleep chifan start_lian;
+    };
+    
+    #action {休息一下再练吧。} {
+        on_low_qx;
+      
+    };
+    #class lian.inner close;
+    get_next_to_lian;
+};
+
+#class lian close;

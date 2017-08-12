@@ -526,14 +526,19 @@ walk_to east;
 };
 
 #alias {save_qn} {
+    #alias save_qn_action #cr;
+    #alias save_qn_action %1;
+    
     #class save_qn open;
     #action {你储存%*点潜能！} {
         #class save_qn kill;
         #showme SAVE_QN_DONE;
+        save_qn_action;
     };
     #action {你想耍我啊？} {
         #class save_qn kill;
         #showme SAVE_QN_DONE;
+        save_qn_action;
     };
     #class save_qn close;
     gt 潜能银行;
@@ -542,10 +547,15 @@ walk_to east;
     };
 };
 
+#action {你储存了%*点潜能！} {
+    #math saved_qn %1/1000;
+};
+
 #alias {qu_qn} {
     gt 潜能银行;
     on_there {
         withdraw %1;
+        account;
     };
 };
 
@@ -553,12 +563,14 @@ walk_to east;
     gt 潜能银行;
     on_there {
         deposit %1;
+        account;
     };
 };
 
 #alias {check_gongfu} {
-    #list skills create {force;spells;cuff;strike;staff;sword;parry;blade;spear;dodge;hammer};
+    #list skills create {force;spells;unarmed;staff;sword;parry;blade;spear;dodge;hammer;stick};
     #list skills size skill_size;
+    #list skills_to_lian create {};
     #list special_skills create {};
     #list special_skills_level create {};
     #list level_a create {};
@@ -574,9 +586,14 @@ walk_to east;
         #var basic_skill_en %%2;
         #var special_skill_zh %%4;
         #tab ${basic_skill_en};
+        #list skills find ${basic_skill_en} tmp2;
+        #list level_a get ${tmp2} tmp_level_a;
         #list special_skills find ${special_skill_zh} tmp;
         #if {${tmp} != 0} {
             #list special_skills_level get ${tmp} tmp_level;
+            #if {${tmp_level} < ${tmp_level_a} && "${basic_skill_en}" != "force" && "${basic_skill_en}" != "spells"} {
+                #list skills_to_lian add ${basic_skill_en};
+            };
             record_level_b ${basic_skill_en} ${tmp_level};
             #if {"${basic_skill_en}" == "force"} {
                 #math limit_nl_b ${tmp_level}*10;

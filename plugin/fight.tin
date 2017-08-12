@@ -165,6 +165,14 @@
 };
 
 #alias {equip} {
+    #alias equip_action #cr;
+    #alias equip_action %1;
+    #alias {equip_all}  {
+        remove all;
+        unwield all;
+        wear all;
+        wield all;
+    };
     #alias {do_equip} {
         gt 281;
         on_there {
@@ -174,9 +182,10 @@
             drop bonnet;
             drop yupei;
             drop ring;
-            drop hammer;
+            drop ${weapon_to_wield};
             drop pifeng;
             drop armor;
+            drop fist;
             yao pifeng;
             yao shield;
             yao armor;
@@ -185,24 +194,26 @@
             yao bonnet;
             yao yupei;
             yao ring;
-            yao hammer;
-            remove all;
-            wear all;
-            wield hammer;
+            yao fist;
+            yao ${weapon_to_wield};
+            equip_all;
             #class equip kill;
-            #showme EQUIP_DONE;            
+            #showme EQUIP_DONE;
+            equip_action;
         };        
     };
     #class equip open;
     #action {ITEM_FOUND} {
+        equip_all;
         #class equip kill;
         #showme EQUIP_DONE;
+        equip_action;
     };
     #action {ITEM_NOT_FOUND} {
         do_equip;
     };
     #class equip close;
-    checkitem {meihua hammer};
+    checkitem {quan tao};
 };
 
 #class war close;
