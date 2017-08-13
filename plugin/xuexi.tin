@@ -50,7 +50,7 @@
         wd.kick;
         #unticker {xue};
         #delay {1} {
-            chain chifan do_dazuo on_sleep restart_xue;            
+            chain chifan on_sleep restart_xue;            
         };
     };
     #class xue.inner close;

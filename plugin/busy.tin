@@ -35,20 +35,7 @@
     #alias tmp_unbusy #cr;
     #alias tmp_unbusy %0;
     #class unbusy.inner open;
-    #action {禁止练功} {
-        #class unbusy.inner kill;
-        #undelay {delay_unbusy};
-        tmp_unbusy;
-    };
-    #action {你最少要花 20 点「气」才能练功。} {
-        #class unbusy.inner kill;
-        #undelay {delay_unbusy};
-        tmp_unbusy;
-    } {1};
-    #ticker {checkbusy} {
-        dazuo 1;
-    } {0.5};
     #class unbusy.inner close;
-    dazuo 1;
+    tmp_unbusy;
 };
 #class busy close;

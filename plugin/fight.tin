@@ -137,7 +137,7 @@
 #alias {prepare} {
     #class prepare open;
     #action {EQUIP_DONE} {
-        save_qn;
+        cun_qn;
     };
     #action {SAVE_QN_DONE} {
         chifan;

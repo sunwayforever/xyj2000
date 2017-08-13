@@ -8,3 +8,4 @@
 #var dot .;
 #var percent %%;
 #read char/${char}${dot}tin
+#read char/${char}_env${dot}tin

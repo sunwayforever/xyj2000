@@ -90,7 +90,7 @@
     
     #alias {ytg.bl} {
         wd.kick;
-        bl.start ${ytg_target};
+        bl.start {${ytg_target}};
     };
 
     #action {　　近有%*(%*)在%*出没，为害不小，请速去收服！} {

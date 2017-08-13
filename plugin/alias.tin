@@ -525,44 +525,33 @@ walk_to east;
     #send {hp};
 };
 
-#alias {save_qn} {
+#action {你储存了%*点潜能！} {
+    #math saved_qn %1/1000;
+    @setenv{qn;${saved_qn}};
+};
+
+#alias {cun_qn} {
     #alias save_qn_action #cr;
     #alias save_qn_action %1;
-    
-    #class save_qn open;
-    #action {你储存%*点潜能！} {
-        #class save_qn kill;
-        #showme SAVE_QN_DONE;
-        save_qn_action;
+
+    #alias {cun_qn_done} {
+        #delay {3} {
+            #showme SAVE_QN_DONE;
+            save_qn_action;
+        };
     };
-    #action {你想耍我啊？} {
-        #class save_qn kill;
-        #showme SAVE_QN_DONE;
-        save_qn_action;
-    };
-    #class save_qn close;
     gt 潜能银行;
     on_there {
         deposit ${qn};
+        account;
+        cun_qn_done;
     };
-};
-
-#action {你储存了%*点潜能！} {
-    #math saved_qn %1/1000;
 };
 
 #alias {qu_qn} {
     gt 潜能银行;
     on_there {
         withdraw %1;
-        account;
-    };
-};
-
-#alias {cun_qn} {
-    gt 潜能银行;
-    on_there {
-        deposit %1;
         account;
     };
 };
@@ -682,3 +671,15 @@ walk_to east;
 #alias {yun} {exert};
 #alias {cun} {deposit};
 #alias {qu} {withdraw};
+
+#function {getenv} {
+    #var result @mapget{env;%1};
+};
+
+#function {setenv} {
+    @mapset{env;%1;%2};
+    #var result #cr;
+    #delay {set_env_delay} {
+        #class env write char/${char}_env${dot}tin;
+    }{3};
+};
