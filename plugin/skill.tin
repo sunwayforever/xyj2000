@@ -1,0 +1,110 @@
+#class skill open;
+#list skills create {force;spells;staff;sword;parry;blade;spear;dodge;hammer;stick;unarmed};
+#list skills size skills_size;
+
+#alias {check_gongfu} {
+    #list skills_to_lian create {};
+    #list special_skills create {};
+    #list special_skills_level create {};
+    #list level_a create {};
+    #list level_b create {};
+    #list level_a clear;
+    #list level_b clear;
+    #class check_gongfu open;
+    #loop 1 $skills_size tmp {#list level_b add 0;#list level_a add 0};
+    #var skill_index 1;
+    #list skills get $skill_index skill;
+
+    #action {  %S (%*)%s： %S%s有效等级：} {
+        #var basic_skill_en %%2;
+        #var special_skill_zh %%4;
+        #tab ${basic_skill_en};
+        #list skills find ${basic_skill_en} tmp2;
+        #list level_a get ${tmp2} tmp_level_a;
+        #list special_skills find ${special_skill_zh} tmp;
+        #if {${tmp} != 0} {
+            #list special_skills_level get ${tmp} tmp_level;
+            #if {${tmp_level} < ${tmp_level_a} && "${basic_skill_en}" != "force" && "${basic_skill_en}" != "spells"} {
+                #list skills_to_lian add ${basic_skill_en};
+            };
+            record_level_b ${basic_skill_en} ${tmp_level};
+            #if {"${basic_skill_en}" == "force"} {
+                #math limit_nl_b ${tmp_level}*10;
+            };
+            #if {"${basic_skill_en}" == "spells"} {
+                #math limit_fl_b ${tmp_level}*10;
+            };
+        };
+    } {2};
+
+    #action {┃  %S (%S)%s- %S%s%d/} {
+        #var basic_skill_zh %%1;
+        #var basic_skill_en %%2;
+        #var basic_skill_level %%6;
+        record_level_a  ${basic_skill_en} ${basic_skill_level};
+        #if {"${basic_skill_en}" == "force"} {
+            #math limit_nl_a (${basic_skill_level}/2)*10;
+        };
+        #if {"${basic_skill_en}" == "spells"} {
+            #math limit_fl_a (${basic_skill_level}/2)*10;
+        };
+    } {3};
+
+    #action {┃□%S (%S)%s - %S%s%d/} {
+        #var special_skill_zh %%1;
+        #var special_skill_en %%2;
+        #tab ${special_skill_en};
+        #var special_skill_level %%6;
+        #list special_skills add ${special_skill_zh};
+        #list special_skills_level add ${special_skill_level};
+    } {2};
+    
+    #alias {record_level_a} {
+        #list skills find %%1 tmp_index;
+        #if {$tmp_index != 0} {
+            #list level_a set $tmp_index %%2;
+        };
+    };
+
+    #alias {record_level_b} {
+        #list skills find %%1 tmp_index;
+        #if {$tmp_index != 0} {
+            #list level_b set $tmp_index %%2;
+        };
+    };
+
+    #action {你歪头想了会，说道：好吧！} {
+        #math limit_nl ${limit_nl_a}+${limit_nl_b};
+        #math limit_fl ${limit_fl_a}+${limit_fl_b};
+        #class check_gongfu kill;
+    };
+    #class check_gongfu close;
+    #send {skills};
+    #send {jifa};
+    #send {ok};
+};
+
+#function {get_level_a} {
+    #var result 0;
+    #list skills find %1 tmp_index;
+    #if {$tmp_index != 0} {
+        #list level_a get $tmp_index tmp;
+        #var result $tmp;
+    };
+};
+
+#function {get_level_b} {
+    #var result 0;
+    #list skills find %1 tmp_index;
+    #if {$tmp_index != 0} {
+        #list level_b get $tmp_index tmp;
+        #var result $tmp;
+    };
+};
+
+#alias {sk} {
+    #send {skills %0};
+    lock 你目前所掌握的技能;
+};
+
+#class skill close;

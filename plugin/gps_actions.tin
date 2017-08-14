@@ -49,7 +49,16 @@
             dive;
         };
     };
+    
+    #delay {gps_longgong_delay} {
+        #class longgong kill;
+        #delay {1} {
+            gps.retry;
+        };
+    } {5};
+    
     #action {º£µ× -} {
+        #undelay {gps_longgong_delay};
         #class longgong kill;
         #delay {1} {
             gps.retry;
@@ -68,7 +77,12 @@
             sleep;
         };
     };
+    #delay {gps_honglou_delay} {
+        #class honglou kill;
+        gps.retry;
+    } {5};
     #action {µ´ÓÆÓÆÈý¸üÃÎ -} {
+        #undelay {gps_honglou_delay};
         #class honglou kill;
         gps.retry;
     };
