@@ -1,0 +1,7 @@
+#class erq open;
+#var shifu_pos ÂäåÈÑÒ;
+#var sleep_pos 581;
+#var shifu huian;
+#var shortcut nil;
+#var weapon_to_wield staff;
+#class erq close;

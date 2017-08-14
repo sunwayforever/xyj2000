@@ -29,6 +29,6 @@
 };
 
 #alias {post_login} {
-    chain equip cun_qn get_qian chifan;
+    chain equip qu_qn get_qian chifan;
 };
 #class login close;

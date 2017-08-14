@@ -607,7 +607,7 @@ load gps_actions;
         #class record.inner kill;
         #var pos.area {};
         tmp_get_area;
-    } {1};
+    } {3};
     #class record.inner close;
     map;
 };

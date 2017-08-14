@@ -526,7 +526,7 @@ walk_to east;
 };
 
 #action {你储存了%*点潜能！} {
-    #math saved_qn %1/1000;
+    #math saved_qn %1;
     @setenv{qn;${saved_qn}};
 };
 
@@ -549,10 +549,20 @@ walk_to east;
 };
 
 #alias {qu_qn} {
+    #alias qu_qn_action #cr;
+    #alias qu_qn_action %1;
+
+    #alias {qu_qn_done} {
+        #delay {3} {
+            #showme QU_QN_DONE;
+            qu_qn_action;
+        };
+    };
     gt 潜能银行;
     on_there {
         withdraw %1;
         account;
+        qu_qn_done;
     };
 };
 

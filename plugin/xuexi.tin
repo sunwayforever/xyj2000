@@ -1,4 +1,5 @@
 #class xuexi open;
+#var xue_count 5;
 #alias {xue.start} {
     #var xue_jineng %1;
     show_to_quest 学习: ${xue_jineng};
@@ -20,7 +21,10 @@
 #alias {xue.setup} {
     #class xue.inner open;
     #alias {do_xue} {
-        xue ${xue_jineng} from ${shifu};
+        xue ${xue_jineng} from ${shifu} for ${xue_count};
+    };
+    #action {和你切磋了一会儿} {
+        xue.stop;
     };
     #action {你的潜能不足！} {
         show_to_quest 潜能不足;
