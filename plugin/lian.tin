@@ -1,4 +1,5 @@
 #class lian open;
+#var lian_count 20;
 #alias {lian.start} {
     lian.setup;
     chain chifan start_lian;
@@ -13,15 +14,16 @@
 
 #alias {lian.setup} {
     #class lian.inner open;
-    #var lian_index 0;
+    #var lian_index 2;
     #alias {get_next_to_lian} {
-        #list skills_to_lian size lian_size;
         #math lian_index ${lian_index}+1;
-        #if {${lian_index} > ${lian_size}} {
+        #if {${lian_index} > ${skills_size}} {
             lian.stop;
+            #return;
         };
-        #else {
-            #list skills_to_lian get ${lian_index} skill_to_lian;
+        #list skills get ${lian_index} skill_to_lian;
+        #if {@get_level_a{${skill_to_lian}} <= @get_level_b{${skill_to_lian}}} {
+            get_next_to_lian;
         };
     };
     
@@ -34,7 +36,7 @@
 
     #alias {start_lian_ticker} {
         #ticker {lian} {
-            lian ${skill_to_lian};
+            lian ${skill_to_lian} ${lian_count};
         } {1};
     };
     
@@ -42,6 +44,13 @@
         #unticker {lian};
     };
 
+    #action {你的「%*」进步了！} {
+        #if {@get_level_a{${skill_to_lian}} <= @get_level_b{${skill_to_lian}}} {
+            stop_lian_ticker;
+            get_next_to_lian;
+            start_lian_ticker;
+        };
+    };
     #action {必须空手} {
         unwield all;
     };
@@ -65,7 +74,7 @@
     
     #action {休息一下再练吧。} {
         on_low_qx;
-      
+        
     };
     #class lian.inner close;
     get_next_to_lian;

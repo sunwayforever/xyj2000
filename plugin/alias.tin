@@ -566,9 +566,10 @@ walk_to east;
     };
 };
 
+#list skills create {force;spells;staff;sword;parry;blade;spear;dodge;hammer;stick;unarmed};
+#list skills size skills_size;
+
 #alias {check_gongfu} {
-    #list skills create {force;spells;unarmed;staff;sword;parry;blade;spear;dodge;hammer;stick};
-    #list skills size skill_size;
     #list skills_to_lian create {};
     #list special_skills create {};
     #list special_skills_level create {};
@@ -577,7 +578,7 @@ walk_to east;
     #list level_a clear;
     #list level_b clear;
     #class check_gongfu open;
-    #loop 1 $skill_size tmp {#list level_b add 0;#list level_a add 0};
+    #loop 1 $skills_size tmp {#list level_b add 0;#list level_a add 0};
     #var skill_index 1;
     #list skills get $skill_index skill;
 
@@ -624,25 +625,7 @@ walk_to east;
         #list special_skills add ${special_skill_zh};
         #list special_skills_level add ${special_skill_level};
     } {2};
-
-    #alias {get_level_a} {
-        #var skill_level_a 0;
-        #list skills find %%1 tmp_index;
-        #if {$tmp_index != 0} {
-            #list level_a get $tmp_index tmp;
-            #var skill_level_a $tmp;
-        };
-    };
-
-    #alias {get_level_b} {
-        #var skill_level_b 0;
-        #list skills find %%1 tmp_index;
-        #if {$tmp_index != 0} {
-            #list level_b get $tmp_index tmp;
-            #var skill_level_b $tmp;
-        };
-    };
-
+    
     #alias {record_level_a} {
         #list skills find %%1 tmp_index;
         #if {$tmp_index != 0} {
@@ -668,9 +651,27 @@ walk_to east;
     #send {ok};
 };
 
+#function {get_level_a} {
+    #var result 0;
+    #list skills find %1 tmp_index;
+    #if {$tmp_index != 0} {
+        #list level_a get $tmp_index tmp;
+        #var result $tmp;
+    };
+};
+
+#function {get_level_b} {
+    #var result 0;
+    #list skills find %1 tmp_index;
+    #if {$tmp_index != 0} {
+        #list level_b get $tmp_index tmp;
+        #var result $tmp;
+    };
+};
+
 #alias {gift.start} {
     #ticker {gift} {
-        play; place; play; yun refresh;
+        play; place; play; yun refresh; yun recover;
     } {2};
 };
 
