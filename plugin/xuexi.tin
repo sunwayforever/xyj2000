@@ -53,8 +53,14 @@
     #action {你今天太累了，结果什么也没有学到。} {
         wd.kick;
         #unticker {xue};
-        #delay {1} {
-            chain chifan on_sleep restart_xue;            
+        #delay {3} {
+            #if {${nl_percent} > 30} {
+                yun refresh;
+                start_xue;
+            };
+            #else {
+                chain chifan on_sleep restart_xue;
+            };              
         };
     };
     #class xue.inner close;
