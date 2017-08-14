@@ -22,7 +22,9 @@
             #return;
         };
         #list skills get ${lian_index} skill_to_lian;
-        #if {@get_level_a{${skill_to_lian}} <= @get_level_b{${skill_to_lian}}} {
+        #var x @get_level_a{${skill_to_lian}};
+        #var y @get_level_b{${skill_to_lian}};
+        #if {${x} <= ${y} || ${x} ==0 || ${y} == 0} {
             get_next_to_lian;
         };
     };
@@ -65,7 +67,7 @@
             chain on_sleep chifan start_lian;
         };  
     };
-    #action {你的内力或气不够，没有办法练习风回雪舞剑法。} {
+    #action {你的内力或气不够，没有办法练习} {
         on_low_qx;
     };
     #action {你的内力不够了。} {
