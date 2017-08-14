@@ -24,10 +24,6 @@
     };
 };
 
-#ticker {gongfu} {
-    check_gongfu;
-} {300};
-
 #ticker hp {
     #send {hp};
 } {5};

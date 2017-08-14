@@ -107,4 +107,11 @@
     lock 你目前所掌握的技能;
 };
 
+#ticker {gongfu} {
+    check_gongfu;
+} {180};
+
+#action {你的「%*」进步了！} {
+    check_gongfu;
+};
 #class skill close;

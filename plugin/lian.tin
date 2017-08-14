@@ -1,5 +1,5 @@
 #class lian open;
-#var lian_count 20;
+#var lian_count 10;
 #alias {lian.start} {
     lian.setup;
     chain chifan start_lian;
@@ -44,13 +44,14 @@
         #unticker {lian};
     };
 
-    #action {你的「%*」进步了！} {
+    #ticker {check_level} {
         #if {@get_level_a{${skill_to_lian}} <= @get_level_b{${skill_to_lian}}} {
             stop_lian_ticker;
             get_next_to_lian;
             start_lian_ticker;
-        };
-    };
+        };        
+    } {60};
+    
     #action {必须空手} {
         unwield all;
     };
