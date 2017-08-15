@@ -4,12 +4,14 @@
     lian.setup;
     chain chifan start_lian;
     show_to_quest 练武;
+    wd.start {lian.start};
 };
 
 #alias {lian.stop} {
     stop_lian_ticker;
     #class lian.inner kill;
     show_to_quest 练武结束;
+    wd.stop;
 };
 
 #alias {lian.setup} {
@@ -64,7 +66,9 @@
         };
         #else {
             stop_lian_ticker;
-            chain on_sleep chifan start_lian;
+            #delay {lian_delay} {
+                chain on_sleep chifan start_lian;                
+            } {30};
         };  
     };
     #action {你的内力或气不够，没有办法练习} {
@@ -77,7 +81,9 @@
     
     #action {休息一下再练吧。} {
         on_low_qx;
-        
+    };
+    #action {你的%*进步了} {
+        wd.kick;
     };
     #class lian.inner close;
     get_next_to_lian;

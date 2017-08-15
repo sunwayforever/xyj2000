@@ -220,7 +220,7 @@ load gps_actions;
             #var is_break 1;
             #break;
         };
-        #elseif {"${gps.run.mode}" == "NORMAL" && ${accu} > 10} {
+        #elseif {"${gps.run.mode}" == "NORMAL" && ${accu} > 5} {
             gps.delay 0.5;
             #var is_break 1;
             #break;
