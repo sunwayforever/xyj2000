@@ -71,14 +71,24 @@
             } {30};
         };  
     };
+
+    #alias {on_low_js} {
+        #if {${nl_percent} > 30} {
+            yun refresh;
+        };
+        #else {
+            stop_lian_ticker;
+            chain on_sleep chifan start_lian;
+        };  
+    };
+    
     #action {你的内力或气不够，没有办法练习} {
         on_low_qx;
     };
-    #action {你的内力不够了。} {
-        stop_lian_ticker;
-        chain on_sleep chifan start_lian;
-    };
     
+    #action {你的精神太差了，不能练} {
+        on_low_js;
+    };
     #action {休息一下再练吧。} {
         on_low_qx;
     };
