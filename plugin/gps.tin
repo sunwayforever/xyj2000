@@ -8,7 +8,6 @@ load gps_actions;
 #var gps_path_size 0;
 
 #alias {on_there} {
-    #alias on_there_${dst_roomno} #cr;
     #alias on_there_${dst_roomno} %0;
 };
 
@@ -24,7 +23,6 @@ load gps_actions;
             #delay {1} {
                 #showme {GPS: 抵达目的地};
                 on_there_${dst_roomno};
-                #alias on_there_${dst_roomno} #cr;
             };
         };
         #else {
@@ -101,7 +99,6 @@ load gps_actions;
                 #delay {1} {
                     #showme {GPS: 抵达目的地};
                     on_there_${dst_roomno};
-                    #alias on_there_${dst_roomno} #cr;
                 };
             };
             #else {
@@ -117,9 +114,6 @@ load gps_actions;
                     #delay {1} {
                         #showme GPS: 目标房间不可达, 无法行走;
                         notify GPS: 目标房间不可达, 无法行走: ${gps_gt_dest};
-                    };
-                    on_there {
-                        #cr;
                     };
                 };
                 #else {

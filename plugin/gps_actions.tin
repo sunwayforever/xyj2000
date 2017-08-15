@@ -90,6 +90,16 @@
     get_pillow;
 };
 
+#alias {gps.hongloub} {
+    #class hongloub open;
+    #action {ƒ„»‡»‡—€æ¶£¨–—¡Àπ˝¿¥°£} {
+        #class hongloub kill;
+        gps.retry;
+    };
+    #class hongloub close;
+    ask girl about back;
+};
+
 #alias {gps.bgz} {
     #2 ne;
     #2 nw;
