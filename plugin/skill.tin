@@ -59,16 +59,16 @@
     } {2};
     
     #alias {record_level_a} {
-        #list skills find %%1 tmp_index;
-        #if {$tmp_index != 0} {
-            #list level_a set $tmp_index %%2;
+        #list skills find %%1 record_a_tmp_index;
+        #if {$record_a_tmp_index != 0} {
+            #list level_a set $record_a_tmp_index %%2;
         };
     };
 
     #alias {record_level_b} {
-        #list skills find %%1 tmp_index;
-        #if {$tmp_index != 0} {
-            #list level_b set $tmp_index %%2;
+        #list skills find %%1 record_b_tmp_index;
+        #if {$record_b_tmp_index != 0} {
+            #list level_b set $record_b_tmp_index %%2;
         };
     };
 
@@ -86,20 +86,22 @@
 };
 
 #function {get_level_a} {
-    #var result 0;
-    #list skills find %1 tmp_index;
-    #if {$tmp_index != 0} {
-        #list skills_level_a get $tmp_index tmp;
-        #var result $tmp;
+    #list skills find %1 get_a_tmp_index;
+    #if {$get_a_tmp_index != 0} {
+        #list skills_level_a get $get_a_tmp_index result;
     };
+    #else {
+        #var result 0;
+    }
 };
 
 #function {get_level_b} {
-    #var result 0;
-    #list skills find %1 tmp_index;
-    #if {$tmp_index != 0} {
-        #list skills_level_b get $tmp_index tmp;
-        #var result $tmp;
+    #list skills find %1 get_b_tmp_index;
+    #if {$get_b_tmp_index != 0} {
+        #list skills_level_b get $get_b_tmp_index result;
+    };
+    #else {
+        #var result 0;
     };
 };
 

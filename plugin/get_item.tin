@@ -136,7 +136,7 @@
     #alias qian_action #cr;
     #alias qian_action %1;
     #class get_qian.inner open;
-    #action {你从银号里取出一两黄金。} {
+    #action {你从银号里取出} {
         #class get_qian.inner kill;
         #delay {2} {
             #showme GOT_QIAN;
@@ -147,7 +147,7 @@
 
     gt 相记钱庄;
     on_there {
-        qu 1 gold;
+        qu 10 silver;
     };
 };
 #class get_item close;
