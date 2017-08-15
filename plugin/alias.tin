@@ -520,20 +520,22 @@ walk_to east;
 };
 
 #alias {cun_qn} {
-    #alias save_qn_action #cr;
-    #alias save_qn_action %1;
+    #alias cun_qn_action #cr;
+    #alias cun_qn_action %1;
 
-    #alias {cun_qn_done} {
-        #delay {3} {
-            #showme SAVE_QN_DONE;
-            save_qn_action;
-        };
+    #class cun_qn.inner open;
+    #action {你歪头想了会，说道：好吧！} {
+        #class cun_qn.inner kill;
+        #showme CUN_QN_DONE;
+        cun_qn_action;
     };
+    #class cun_qn.inner close;
+
     gt 潜能银行;
     on_there {
         deposit ${qn};
         account;
-        cun_qn_done;
+        #send {ok};
     };
 };
 
@@ -541,17 +543,18 @@ walk_to east;
     #alias qu_qn_action #cr;
     #alias qu_qn_action %1;
 
-    #alias {qu_qn_done} {
-        #delay {3} {
-            #showme QU_QN_DONE;
-            qu_qn_action;
-        };
+    #class qu_qn.inner open;
+    #action {你歪头想了会，说道：好吧！} {
+        #class qu_qn.inner kill;
+        #showme QU_QN_DONE;
+        qu_qn_action;
     };
+    #class qu_qn.inner close;
     gt 潜能银行;
     on_there {
         withdraw %1;
         account;
-        qu_qn_done;
+        #send {ok};
     };
 };
 

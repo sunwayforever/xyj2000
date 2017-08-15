@@ -139,7 +139,7 @@
     #action {EQUIP_DONE} {
         cun_qn;
     };
-    #action {SAVE_QN_DONE} {
+    #action {CUN_QN_DONE} {
         chifan;
     };
     #action {CHIFAN_DONE} {

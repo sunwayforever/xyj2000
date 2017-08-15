@@ -88,21 +88,25 @@
 #function {get_level_a} {
     #list skills find %1 get_a_tmp_index;
     #if {$get_a_tmp_index != 0} {
-        #list skills_level_a get $get_a_tmp_index result;
+        #list skills_level_a get $get_a_tmp_index level_a_result;
     };
     #else {
-        #var result 0;
-    }
+        #var level_a_result 0;
+    };
+    #echo get_level_a:%1:${get_a_tmp_index}:${skills_level_a}:${level_a_result};
+    #return ${level_a_result};
 };
 
 #function {get_level_b} {
     #list skills find %1 get_b_tmp_index;
     #if {$get_b_tmp_index != 0} {
-        #list skills_level_b get $get_b_tmp_index result;
+        #list skills_level_b get $get_b_tmp_index level_b_result;
     };
     #else {
-        #var result 0;
+        #var level_b_result 0;
     };
+    #echo get_level_b:%1:${get_b_tmp_index}:${skills_level_b}:${level_b_result};
+    #return ${level_b_result};
 };
 
 #alias {sk} {
