@@ -519,11 +519,6 @@ walk_to east;
     #send {hp};
 };
 
-#action {Äã´¢´æÁË%*µãÇ±ÄÜ£¡} {
-    #math saved_qn %1;
-    @setenv{qn;${saved_qn}};
-};
-
 #alias {cun_qn} {
     #alias save_qn_action #cr;
     #alias save_qn_action %1;

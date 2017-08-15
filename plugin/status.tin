@@ -3,8 +3,9 @@
 #var health_info nil;
 #var exp_info  nil;
 #var saved_qn @getenv{qn};
+#var money @getenv{money};
 #alias {update_status} {
-    #var status_content ${char_name}: 道行: ${dh}年 潜能: ${qn}/${saved_qn} 武学: ${wx} 杀气: ${sq} 冥思: @eval{(${max_fl}*100+100)/(${limit_fl}+1)}${percent} 打坐: @eval{(${max_nl}*100+100)/(${limit_nl}+1)}${percent};
+    #var status_content ${char_name}: 道行: ${dh}年 潜能: ${qn}/${saved_qn} 黄金: ${money} 武学: ${wx} 杀气: ${sq} 冥思: @eval{(${max_fl}*100+100)/(${limit_fl}+1)}${percent} 打坐: @eval{(${max_nl}*100+100)/(${limit_nl}+1)}${percent};
     show_to_status ${status_content};
     drawhp;
 };
@@ -132,4 +133,13 @@
     #var result <099>%1;
 };
 
+#action {你储存了%*点潜能！} {
+    #math saved_qn %1;
+    @setenv{qn;${saved_qn}};
+};
+
+#action {您在敝银庄共存有%*两黄金} {
+    #var money @ctd{%1};
+    @setenv{money;${money}};
+};
 #class status close
