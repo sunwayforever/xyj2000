@@ -1,7 +1,0 @@
-#class erq open;
-#var shifu_pos ≥±“Ù∂¥;
-#var sleep_pos 581;
-#var shifu guanyin;
-#var shortcut nil;
-#var weapon_to_wield staff;
-#class erq close;

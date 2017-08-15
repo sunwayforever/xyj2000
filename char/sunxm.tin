@@ -1,7 +1,0 @@
-#class sunxm open;
-#var shifu_pos ÎÔÔÆÐù;
-#var sleep_pos 950;
-#var shifu xi;
-#var shortcut nil;
-#var weapon_to_wield sword;
-#class sunxm close;

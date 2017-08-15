@@ -1,7 +1,0 @@
-#class erq open;
-#var shifu_pos Ω≤æ≠Ã√;
-#var sleep_pos 264;
-#var shifu master;
-#var shortcut nil;
-#var weapon_to_wield stick;
-#class erq close;

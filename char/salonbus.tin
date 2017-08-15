@@ -1,6 +1,0 @@
-#class salonbus open;
-#var shifu_pos 953;
-#var sleep_pos 953;
-#var shifu {wuya};
-#var shortcut nil;
-#class salonbus close;
