@@ -1,10 +1,16 @@
 #class lian open;
 #var lian_count 10;
 #alias {lian.start} {
-    lian.setup;
-    chain chifan start_lian;
     show_to_quest 练武;
-    wd.start {lian.start};
+    lian.setup;
+    get_next_to_lian;
+    #if {"${skill_to_lian}" != "nil"} {
+        chain chifan start_lian;
+        wd.start {lian.start};
+    };
+    #else {
+        lian.stop;
+    };
 };
 
 #alias {lian.stop} {
@@ -20,7 +26,7 @@
     #alias {get_next_to_lian} {
         #math lian_index ${lian_index}+1;
         #if {${lian_index} > ${skills_size}} {
-            lian.stop;
+            #var skill_to_lian nil;
             #return;
         };
         #list skills get ${lian_index} skill_to_lian;
@@ -52,7 +58,12 @@
         #if {@get_level_a{${skill_to_lian}} <= @get_level_b{${skill_to_lian}}} {
             stop_lian_ticker;
             get_next_to_lian;
-            start_lian_ticker;
+            #if {"${skill_to_lian}" != "nil"} {
+                start_lian_ticker;
+            };
+            #else {
+                lian.stop;
+            };
         };        
     } {60};
     
@@ -90,17 +101,22 @@
         on_low_qx;
     };
 
+    #action {你的内力不够了} {
+        dazuo ${dazuo_count};
+    };
+    
     #action {你的精神太差了，不能练} {
         on_low_js;
     };
-    #action {休息一下再练吧。} {
-        on_low_qx;
+
+    #action {你的精神无法集中} {
+        on_low_js;
     };
+
     #action {你的%*进步了} {
         wd.kick;
     };
     #class lian.inner close;
-    get_next_to_lian;
 };
 
 #class lian close;

@@ -596,12 +596,12 @@ load gps_actions;
     #action {q АлїЄ} {
         #send {q};
     };
-    
+
     #delay get_area_delay {
         #class record.inner kill;
         #var pos.area {};
         tmp_get_area;
-    } {3};
+    } {1.5};
     #class record.inner close;
     map;
 };

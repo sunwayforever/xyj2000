@@ -4,16 +4,14 @@
 
 #list skills_level_a create {};
 #list skills_level_b create {};
+#list level_a create {};
+#list level_b create {};
+#loop 1 $skills_size tmp {#list level_b add 0;#list level_a add 0};
 
 #alias {check_gongfu} {
     #list special_skills create {};
     #list special_skills_level create {};
-    #list level_a create {};
-    #list level_b create {};
-    #list level_a clear;
-    #list level_b clear;
     #class check_gongfu open;
-    #loop 1 $skills_size tmp {#list level_b add 0;#list level_a add 0};
     #var skill_index 1;
     #list skills get $skill_index skill;
 
@@ -93,7 +91,6 @@
     #else {
         #var level_a_result 0;
     };
-    #echo get_level_a:%1:${get_a_tmp_index}:${skills_level_a}:${level_a_result};
     #return ${level_a_result};
 };
 
@@ -105,7 +102,6 @@
     #else {
         #var level_b_result 0;
     };
-    #echo get_level_b:%1:${get_b_tmp_index}:${skills_level_b}:${level_b_result};
     #return ${level_b_result};
 };
 
