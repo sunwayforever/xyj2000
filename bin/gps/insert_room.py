@@ -12,10 +12,10 @@ def insert_room(conn, room, desc, exits, zone):
         room, desc, exits, zone)
     conn.execute(sql)
     conn.commit()
-    sql = "select roomno from mud_room where zone = '%s' and roomname = '%s' and description = '%s' and exits = '%s'" % (
+    sql = "select max(roomno) from mud_room where zone = '%s' and roomname = '%s' and description = '%s' and exits = '%s'" % (
         zone, room, desc, exits)
     row = conn.execute(sql).fetchone()
-    if row:
+    if row and row[0]:
         return row[0]
     return -1
 
