@@ -25,18 +25,21 @@
     #var pfming 0;
     #unticker {fighting};
     @stackcreate{pfm};
-    #class war.inner kill;
+    #class war.monior kill;
     #class attack.inner kill;
-    #undelay {attack.delay};
-    attack.end;
     #var enemy nil;
     #var enemy_menpai nil;
 };
 
 #alias {war.monitor} {
-    #class war.inner open;
-
-    #class war.inner close;
+    #class war.monitor open;
+    #action {ÄãÈ«Éí·ÅËÉ} {
+        raw;
+    };
+    #ticker {fighting} {
+        yun heal;
+    } {2};
+    #class war.monitor close;
 };
 
 #alias {war} {
@@ -44,7 +47,6 @@
     attack;
 };
 
-#alias {attack.end} {#cr};
 #alias {attack} {#cr};
 
 #var enemy nil;
