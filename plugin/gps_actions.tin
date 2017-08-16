@@ -100,6 +100,15 @@
     ask girl about back;
 };
 
+#alias {gps.fly} {
+    #class gps_fly open;
+    #action {到了！你按下云头跳了下来。} {
+        #class gps_fly kill;
+        gps.retry;
+    };
+    #class gps_fly close;
+    fly %1;
+};
 #alias {gps.bgz} {
     #2 ne;
     #2 nw;
