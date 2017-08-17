@@ -38,7 +38,7 @@
     };
     #ticker {fighting} {
         yun heal;
-    } {3};
+    } {5};
     #class war.monitor close;
 };
 

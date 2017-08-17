@@ -56,6 +56,9 @@ load gps_actions;
 };
 
 #alias {gps.retry} {
+    #if {${gps_stop} == 1} {
+        #return;
+    };
     #var tmp @stackpop{gt};
     #if {"${tmp}" == "nil"} {
         #cr;

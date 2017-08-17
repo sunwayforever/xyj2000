@@ -46,6 +46,10 @@
         lj.prepare;
     };
 
+    #action {李靖对手中照妖镜一看，说：%*妖魔已除尽,不妨先去歇息。} {
+        lj.wait;
+    };
+    
     #action {李靖说道：老夫不是派你去} {
         lj.wait;
     };
@@ -67,10 +71,11 @@
         kill @lower{${lj_target}};        
     };
 
-    #action {看起来%*想杀死你！} {
-        kill @lower{${lj_target}};        
+    #action {落荒而逃了。} {
+        #delay {follow_kill_delay} {
+            kill @lower{${lj_target}};            
+        } {2};
     };
-    
     #action {你灭妖有功} {
         wd.kick;
         show_to_quest 灭妖: 完成;
