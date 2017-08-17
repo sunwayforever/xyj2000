@@ -37,34 +37,40 @@
     #action {PREPARE_DONE} {
         lj.q;
     };
+    
     #action {慢慢地你终于又有了知觉．．．} {
         lj.prepare;
     };
+    
     #action {看来该找机会逃跑了．．．} {
         lj.prepare;
     };
 
-    #action {袁天罡说道：在下不是请您去收服} {
+    #action {李靖说道：老夫不是派你去} {
         lj.wait;
     };
 
     #alias {lj.wait} {
         wd.kick;
         #delay {lj.delay} {
-            ask yuan about kill;   
+            ask li about kill;   
         } {20};
         show_to_quest 灭妖: 等待;
-    };
-    
-    #action {袁天罡将手中桃木剑缓缓放下} {
-        lj.wait;
     };
 
     #action {找到目标} {
         wd.kick;
-        kill @lower{${lj_target}};
+        follow @lower{${lj_target}};
     };
 
+    #action {你决定开始跟随%*一起行动。} {
+        kill @lower{${lj_target}};        
+    };
+
+    #action {看起来%*想杀死你！} {
+        kill @lower{${lj_target}};        
+    };
+    
     #action {你灭妖有功} {
         wd.kick;
         show_to_quest 灭妖: 完成;
@@ -78,7 +84,7 @@
     #action {GPS: 遍历完成} {
         wd.kick;
         show_to_info 没有找到怪: ${lj_area};
-        lj.prepare;
+        #nop lj.prepare;
     };
     
     #alias {lj.bl} {

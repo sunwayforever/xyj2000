@@ -37,5 +37,5 @@ trap "restart" 30
 while [[ ${restart} -eq 1 ]]; do
     restart=0
     login
-    sleep 5
+    sleep 3
 done
