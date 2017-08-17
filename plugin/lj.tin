@@ -1,0 +1,101 @@
+#class lj open;
+#var lj_stopped 1;
+#alias {lj.start} {
+    #var lj_stopped 0;
+    wd.start {lj.start};
+    lj.setup;
+    lj.prepare;
+};
+
+#alias {lj.stop} {
+    wd.stop;
+    #var lj_stopped 1;
+    #undelay {lj.delay};
+    lj.teardown;
+};
+
+#alias {lj.prepare} {
+    wd.kick;
+    prepare;
+};
+
+#alias {lj.q} {
+    wd.kick;
+    gt lj;
+    on_there {
+        ask li about kill;
+    };
+};
+
+#alias {lj.teardown} {
+    #class lj.inner kill;
+    cancel_prepare;
+};
+
+#alias {lj.setup} {
+    #class lj.inner open;
+    #action {PREPARE_DONE} {
+        lj.q;
+    };
+    #action {慢慢地你终于又有了知觉．．．} {
+        lj.prepare;
+    };
+    #action {看来该找机会逃跑了．．．} {
+        lj.prepare;
+    };
+
+    #action {袁天罡说道：在下不是请您去收服} {
+        lj.wait;
+    };
+
+    #alias {lj.wait} {
+        wd.kick;
+        #delay {lj.delay} {
+            ask yuan about kill;   
+        } {20};
+        show_to_quest 灭妖: 等待;
+    };
+    
+    #action {袁天罡将手中桃木剑缓缓放下} {
+        lj.wait;
+    };
+
+    #action {找到目标} {
+        wd.kick;
+        kill @lower{${lj_target}};
+    };
+
+    #action {你灭妖有功} {
+        wd.kick;
+        show_to_quest 灭妖: 完成;
+        show_to_info 完成: ${lj_area};
+        
+        #if {${lj_stopped} == 0} {
+            lj.prepare;
+        };
+    };
+
+    #action {GPS: 遍历完成} {
+        wd.kick;
+        show_to_info 没有找到怪: ${lj_area};
+        lj.prepare;
+    };
+    
+    #alias {lj.bl} {
+        wd.kick;
+        bl.start {${lj_target}};
+    };
+
+    #action {李靖对你说道：近有%*(%*)在%*为非作歹，请速去降服！}{
+        wd.kick;
+        show_to_quest 灭妖: %%1 @ %%3;
+        #var lj_target %%2;
+        #var lj_area %%3;
+        gt %%3;
+        on_there {
+            lj.bl;
+        };
+    };
+    #class lj.inner close;    
+};
+#class lj close;
