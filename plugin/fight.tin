@@ -1,19 +1,15 @@
 #class war open;
 
 #alias {re} {
+    #alias re_action #cr;
+    #alias re_action %0;
     yun recover;
     yun refresh;
-};
-
-#action {你对%*说道：%*领教%*高招！} {
-    war;
-};
-
-#action {你对%*大喝一声：看招！} {
-    war;
+    re_action;
 };
 
 #action {看起来%1想杀死你} {
+    attack.prepare;
     war;
 };
 
@@ -48,6 +44,7 @@
 };
 
 #alias {attack} {#cr};
+#alias {attack.prepare} {#cr};
 
 #var enemy nil;
 #alias {perform} {
@@ -86,21 +83,25 @@
 };
 
 #alias {kill} {
+    attack.prepare;
     #send kill %0;
     war;
 };
 
 #alias {killall} {
+    attack.prepare;
     #send killall %0;
     war;
 };
 
 #alias {hit} {
+    attack.prepare;
     #send hit %0;
     war;
 };
 
 #alias {fight} {
+    attack.prepare;
     #send fight %0;
     war;
 };

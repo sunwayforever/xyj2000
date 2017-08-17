@@ -175,7 +175,7 @@
 #alias {health} {
     #alias tmp_health #cr;
     #alias tmp_health %0;
-    chain chifan dz.full ms.full qx.full js.full tmp_health;
+    chain chifan dz.full ms.full qx.full js.full re tmp_health;
 };
 
 #alias {on_sleep} {

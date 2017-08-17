@@ -71,9 +71,7 @@
     };
 
     #action {落荒而逃了。} {
-        #delay {follow_kill_delay} {
-            kill @lower{${lj_target}};            
-        } {0.6};
+        follow @lower{${lj_target}};
     };
     #action {你灭妖有功} {
         wd.kick;
