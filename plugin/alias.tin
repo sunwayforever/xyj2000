@@ -109,7 +109,7 @@
     #class health.inner kill;
     #alias tmp_health #cr;
     dz.full.cancel;
-    tn.full.cancel;
+    ms.full.cancel;
     qx.full.cancel;
     js.full.cancel;
 };
@@ -127,9 +127,9 @@
     #alias qx_full_action %0;
     #alias {check_qx} {
         #if {${eff_qx_percent} < 70} {
-            buy 5 yao;
+            buy 5 yao from boss;
             eat 5 yao;
-            #delay {0.5} {
+            #delay {2} {
                 check_qx;
             };
         };
@@ -152,9 +152,9 @@
     #alias js_full_action %0;
     #alias {check_js} {
         #if {${eff_js_percent} < 70} {
-            buy 5 dan;
+            buy 5 dan from boss;
             eat 5 dan;
-            #delay {0.5} {
+            #delay {2} {
                 check_js;
             };
         };
