@@ -97,6 +97,10 @@
         on_low_qx;
     };
 
+    #action {你的体力太弱} {
+        on_low_qx;
+    };
+
     #action {你的气或内力不够} {
         on_low_qx;
     };
