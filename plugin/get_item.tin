@@ -147,7 +147,7 @@
 
     gt Ïà¼ÇÇ®×¯;
     on_there {
-        qu 10 silver;
+        qu 20 silver;
         account;
     };
 };
