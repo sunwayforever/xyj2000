@@ -215,8 +215,8 @@
 
 #alias {load} {
     #var v %1;
-    #if {"${v}" == "spec"} {
-        #read plugin/spec/${char_menpai}${dot}tin;
+    #if {"${v}" == "char"} {
+        #read char/${char}${dot}tin;
     };
     #else {
         #read plugin/%1.tin;

@@ -71,16 +71,18 @@
 
 #alias {gps.honglou} {
     #class honglou open;
+    #action {不一会儿，你就进入了梦乡。} {
+        #delay {gps_honglou_delay} {
+            #class honglou kill;
+            gps.retry;
+        } {20};
+    };
     #action {GOT_PILLOW} {
         gt ${sleep_pos};
         on_there {
             sleep;
         };
     };
-    #delay {gps_honglou_delay} {
-        #class honglou kill;
-        gps.retry;
-    } {5};
     #action {荡悠悠三更梦 -} {
         #undelay {gps_honglou_delay};
         #class honglou kill;

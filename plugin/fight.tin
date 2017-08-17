@@ -105,28 +105,51 @@
     war;
 };
 
-#var pfming 0;
-#alias {pfm.inner} {
-    #var pfm_action @stackpoll{pfm};
-    #if {"${pfm_action}" != "nil"} {
-        #var pfming 1;
-        on_unbusy {
-            ${pfm_action};
-            #var pfming 0;
-            pfm.inner;
-        };
+#gag 战斗中运功疗伤？找死吗？;
+#gag 你上一个动作还没有完成;
+#gag 你上一个动作还没有完成，不能念咒文;
+#gag 你现在不能用魔法;
+
+#var casting 0;
+#alias {do_cast} {
+    #class do_cast open;
+    #alias {retry_cast} {
+        #delay {do_cast_delay} {
+            ${cast_action};
+        } {0.5};
+        #delay {cast_delay} {
+            #class do_cast kill;
+            cast.next;
+        } {1};  
+    };
+    #action {( 你上一个动作还没有完成，不能念咒文。)} {
+        retry_cast;
+    };
+    #action {你现在不能用魔法！} {
+        retry_cast;
+    };
+    #class do_cast close;
+    retry_cast;
+};
+
+#alias {cast.next} {
+    #var cast_action @stackpoll{cast};
+
+    #if {"${cast_action}" != "nil"} {
+        #var casting 1;
+        do_cast;
     };
     #else {
-        #var pfming 0;
+        #var casting 0;
     };
 };
 
-@stackcreate{pfm};
-#alias {pfm} {
-    #if {@stackismember{pfm;%1} == 0} {
-        @stackpush{pfm;%1};
-        #if {${pfming} == 0} {
-            pfm.inner;
+@stackcreate{cast};
+#alias {cst} {
+    #if {@stackismember{cast;%1} == 0} {
+        @stackpush{cast;%1};
+        #if {${casting} == 0} {
+            cast.next;
         };
     };
 };
