@@ -15,8 +15,8 @@
     #alias tmp_ms #cr;
     #alias tmp_ms %1;
     #class ms.full.inner open;
-    #action {你现在精不够} {
-        heal 1;
+    #action {你现在神智不清,不能再想入非非了。} {
+        yun refresh;
     };
     #class ms.full.inner close;
     #if {${fl_percent} >= 190} {
