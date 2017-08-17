@@ -29,6 +29,7 @@
 };
 
 #alias {post_login} {
+    jiali max;
     chain equip qu_qn get_qian chifan;
 };
 #class login close;

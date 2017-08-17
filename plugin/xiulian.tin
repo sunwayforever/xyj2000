@@ -5,9 +5,44 @@
 #var dazuo_count 20;
 #var dz_total_count 0;
 #var ms_total_count 0;
-#var dz_max 90;
 
-#alias {dz.cancel} {
+#alias {ms.full.cancel} {
+    #class ms.full.inner kill;
+    #unticker {ms};
+};
+
+#alias {ms.full} {
+    #alias tmp_ms #cr;
+    #alias tmp_ms %1;
+    #class ms.full.inner open;
+    #action {你现在精不够} {
+        heal 1;
+    };
+    #class ms.full.inner close;
+    #if {${fl_percent} >= 190} {
+        #class ms.full.inner kill;
+        tmp_ms;
+    };
+    #else {
+        #delay {ms_delay} {
+            #ticker {ms} {
+                #if {${fl_percent} < 190} {
+                    mingsi ${dazuo_count};
+                };
+                #else {
+                    #unticker {ms};
+                    #class ms.full.inner kill;
+                    #delay {ms_delay} {
+                        tmp_ms;
+                        #showme ms.full;
+                    } {1};
+                };
+            } {3};
+        }{1};
+    };
+};
+
+#alias {dz.full.cancel} {
     #class dz.full.inner kill;
     #unticker {dz};
 };
@@ -20,21 +55,26 @@
         heal 1;
     };
     #class dz.full.inner close;
-    #delay {dz_delay} {
-        #ticker {dz} {
-            #if {${nl_percent} < ${dz_max}} {
-                yun recover; dazuo ${dazuo_count};
-            };
-            #else {
-                #unticker {dz};
-                #class dz.full.inner kill;
-                #delay {dz_delay} {
-                    #showme DZ_FULL;
-                    tmp_dz;
-                } {3};
-            };
-        } {3};
-    } {1};
+    #if {${nl_percent} >= 190} {
+        #class dz.full.inner kill;
+        tmp_dz;
+    };
+    #else {
+        #delay {dz_delay} {
+            #ticker {dz} {
+                #if {${nl_percent} < 190} {
+                    yun recover; dazuo ${dazuo_count};
+                };
+                #else {
+                    #unticker {dz};
+                    #class dz.full.inner kill;
+                    #delay {dz_delay} {
+                        tmp_dz;
+                    } {1};
+                };
+            } {3};
+        } {1};
+    };
 };
 
 #alias {cancel_dazuo} {

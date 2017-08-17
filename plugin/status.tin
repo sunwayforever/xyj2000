@@ -27,24 +27,26 @@
 
 #ticker hp {
     #send {hp};
-} {5};
+} {2};
 
-#action { 气血：%s%d/%s%d (%*)%s内力：%s%d /%s%d (%*) (%*)} {
+#action { 气血：%s%d/%s%d (%s%*%%)%s内力：%s%d /%s%d (%*) (%*)} {
     #var curr_qx %2;
     #var max_qx %4;
     #math qx_percent ${curr_qx}*100/${max_qx};
-    #var curr_nl %8;
-    #var max_nl %10;
+    #var curr_nl %9;
+    #var max_nl %11;
     #math nl_percent ${curr_nl}*100/${max_nl};
+    #var eff_qx_percent %6;
 };
 
-#action { 精神：%s%d/%s%d (%*)%s法力：%s%d /%s%d (%*) (%*)} {
+#action { 精神：%s%d/%s%d (%s%*%%)%s法力：%s%d /%s%d (%*) (%*)} {
     #var curr_js %2;
     #var max_js %4;
     #math js_percent ${curr_js}*100/${max_js};
-    #var curr_fl %8;
-    #var max_fl %10;
+    #var curr_fl %9;
+    #var max_fl %11;
     #math fl_percent ${curr_fl}*100/${max_fl};
+    #var eff_js_percent %6;
 };
 
 #var food 0;
@@ -75,7 +77,7 @@
 };
 
 #alias {drawhp} {
-    #echo {{<099>@hpcolor{气血[;$curr_qx}@hpdraw{$curr_qx;$max_qx}@hpcolor{];$curr_qx} @hpcolor{精神[;$curr_js}@hpdraw{$curr_js;$max_js}@hpcolor{];$curr_js} @hpcolor{法力[;$curr_fl}@hpdraw{$curr_fl;$max_fl}@hpcolor{];$curr_fl} @hpcolor{内力[;$curr_nl}@hpdraw{$curr_nl;$max_nl}@hpcolor{];$curr_nl} @hpcolor{食物[;$food}@hpdraw{$food;$maxfood}@hpcolor{];$food} @hpcolor{饮水[;$water}@hpdraw{$water;$maxwater}@hpcolor{];$water}<099>} {${show_status_pos}}};
+    #echo {{<099>@hpcolor{气血[;$curr_qx}@hpdraw{$curr_qx;$max_qx}@hpcolor{];$curr_qx}@hpcolor{[;$eff_qx_percent}@hpdraw{$eff_qx_percent;100}@hpcolor{];$eff_qx_percent} @hpcolor{精神[;$curr_js}@hpdraw{$curr_js;$max_js}@hpcolor{];$curr_js}@hpcolor{[;$eff_js_percent}@hpdraw{$eff_js_percent;100}@hpcolor{];$eff_js_percent} @hpcolor{法力[;$curr_fl}@hpdraw{$curr_fl;$max_fl}@hpcolor{];$curr_fl} @hpcolor{内力[;$curr_nl}@hpdraw{$curr_nl;$max_nl}@hpcolor{];$curr_nl} @hpcolor{食物[;$food}@hpdraw{$food;$maxfood}@hpcolor{];$food} @hpcolor{饮水[;$water}@hpdraw{$water;$maxwater}@hpcolor{];$water}<099>} {${show_status_pos}}};
 };
 
 #function {hpdraw}

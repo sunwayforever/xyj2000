@@ -44,19 +44,17 @@
 #alias {gps.longgong} {
     #class longgong open;
     #action {GOT_BISHUIZHOU} {
+        #delay {gps_longgong_delay} {
+            #class longgong kill;
+            #delay {1} {
+                gps.retry;
+            };
+        } {5};
         gt 东海之滨;
         on_there {
             dive;
         };
     };
-    
-    #delay {gps_longgong_delay} {
-        #class longgong kill;
-        #delay {1} {
-            gps.retry;
-        };
-    } {5};
-    
     #action {海底 -} {
         #undelay {gps_longgong_delay};
         #class longgong kill;

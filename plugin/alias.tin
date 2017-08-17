@@ -108,33 +108,37 @@
 #alias {health.cancel} {
     #class health.inner kill;
     #alias tmp_health #cr;
-    dz.cancel;
-    tn.cancel;
+    dz.full.cancel;
+    tn.full.cancel;
 };
 
-#alias {on_health} {
+#alias {health} {
     #alias tmp_health #cr;
     #alias tmp_health %0;
     #class health.inner open;
     #alias {check_qx} {
-        #if {${qx_percent} < 99} {
-            #if {${qx_percent} < 50} {
-                yun lifeheal ${char_id};
-            };
-            #else {
-                yun heal;
-            }
+        #if {${eff_qx_percent} < 70} {
+            yun heal;
             #delay {0.5} {
                 check_qx;
             };
         };
         #else {
-            check_js;
+            #if {${js_percent} < 70} {
+                gt »Ø´ºÒ©ÆÌ;
+                on_there {
+                    check_js;
+                };
+            };
+            #else {
+                check_js;
+            };
         };
     };
     #alias {check_js} {
-        #if {${js_percent} < 99} {
-            yun inspire;
+        #if {${js_percent} < 90} {
+            buy 5 dan;
+            eat 5 dan;
             #delay {0.5} {
                 check_js;
             };
@@ -142,23 +146,12 @@
         #else {
             #class health.inner kill;
             re;
-            chifan;
-            #delay {0.5} {
-                tmp_health;
-            };
+            tmp_health;
         };
     };
-
-    #alias {check_all} {
-        dz.full {
-            tn.full {
-                check_qx;
-            };
-        };
-    };
-
+    
     #class health.inner close;
-    check_all;
+    chain chifan dz.full ms.full check_qx;
 };
 
 #alias {on_sleep} {
@@ -504,19 +497,15 @@ walk_to east;
         #showme CHIFAN_DONE;
         chifan_action;
     };
-    #action {STATUS_UPDATED} {
-        #unaction {STATUS_UPDATED};
-        #if {${food_percent} < 20 || ${water_percent} < 20} {
-            eat wan;
-        };
-        #else {
-            #class chifan kill;
-            #showme CHIFAN_DONE;
-            chifan_action;
-        };
-    };
     #class chifan close;
-    #send {hp};
+    #if {${food_percent} < 20 || ${water_percent} < 20} {
+        eat wan;
+    };
+    #else {
+        #class chifan kill;
+        #showme CHIFAN_DONE;
+        chifan_action;
+    };
 };
 
 #alias {cun_qn} {

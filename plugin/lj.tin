@@ -11,12 +11,15 @@
     wd.stop;
     #var lj_stopped 1;
     #undelay {lj.delay};
+    health.cancel;
     lj.teardown;
 };
 
 #alias {lj.prepare} {
     wd.kick;
-    prepare;
+    health {
+        lj.q;
+    };
 };
 
 #alias {lj.q} {
@@ -34,10 +37,6 @@
 
 #alias {lj.setup} {
     #class lj.inner open;
-    #action {PREPARE_DONE} {
-        lj.q;
-    };
-    
     #action {慢慢地你终于又有了知觉．．．} {
         lj.prepare;
     };
@@ -74,13 +73,12 @@
     #action {落荒而逃了。} {
         #delay {follow_kill_delay} {
             kill @lower{${lj_target}};            
-        } {2};
+        } {0.6};
     };
     #action {你灭妖有功} {
         wd.kick;
         show_to_quest 灭妖: 完成;
         show_to_info 完成: ${lj_area};
-        
         #if {${lj_stopped} == 0} {
             lj.prepare;
         };
