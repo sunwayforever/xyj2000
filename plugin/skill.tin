@@ -1,5 +1,5 @@
 #class skill open;
-#list skills create {force;spells;staff;sword;parry;blade;spear;dodge;hammer;stick;unarmed};
+#list skills create {force;spells;staff;sword;fork;blade;sprear;hammer;parry;dodge;stick;unarmed};
 #list skills size skills_size;
 
 #list skills_level_a create {};
