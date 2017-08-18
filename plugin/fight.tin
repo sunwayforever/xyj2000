@@ -242,4 +242,76 @@
     checkitem {quan tao};
 };
 
+#alias {health.cancel} {
+    #class health.inner kill;
+    #alias tmp_health #cr;
+    dz.full.cancel;
+    ms.full.cancel;
+    qx.full.cancel;
+    js.full.cancel;
+};
+
+#alias {qx.full.cancel} {
+    #alias {check_qx} {#cr};
+};
+
+#alias {js.full.cancel} {
+    #alias {check_js} {#cr};
+};
+
+#alias {qx.full} {
+    #alias qx_full_action #cr;
+    #alias qx_full_action %0;
+    #alias {check_qx} {
+        #if {${eff_qx_percent} < 70} {
+            buy 5 yao from boss;
+            eat 5 yao;
+            #delay {2} {
+                check_qx;
+            };
+        };
+        #else {
+            qx_full_action;
+        };
+    };
+    #if {${eff_qx_percent} >= 70} {
+        qx_full_action;
+        #return;
+    };
+    gt »Ø´ºÒ©ÆÌ;
+    on_there {
+        check_qx;
+    };
+};
+
+#alias {js.full} {
+    #alias js_full_action #cr;
+    #alias js_full_action %0;
+    #alias {check_js} {
+        #if {${eff_js_percent} < 70} {
+            buy 5 dan from boss;
+            eat 5 dan;
+            #delay {2} {
+                check_js;
+            };
+        };
+        #else {
+            js_full_action;
+        };
+    };
+    #if {${eff_js_percent} >= 70} {
+        js_full_action;
+        #return;
+    };
+    gt »Ø´ºÒ©ÆÌ;
+    on_there {
+        check_js;
+    };    
+};
+
+#alias {health} {
+    #alias tmp_health #cr;
+    #alias tmp_health %0;
+    chain chifan dz.full ms.full qx.full js.full re tmp_health;
+};
 #class war close;
