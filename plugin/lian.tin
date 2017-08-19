@@ -1,7 +1,7 @@
 #class lian open;
 #var lian_count 10;
 #alias {lian.start} {
-    show_to_quest Á·Îä;
+    show_to_quest Á·Ï°;
     lian.setup;
     get_next_to_lian;
     #if {"${skill_to_lian}" != "nil"} {
@@ -16,7 +16,7 @@
 #alias {lian.stop} {
     stop_lian_ticker;
     #class lian.inner kill;
-    show_to_quest Á·Îä½áÊø;
+    show_to_quest Á·Ï°½áÊø;
     wd.stop;
 };
 
@@ -30,11 +30,19 @@
             #return;
         };
         #list skills get ${lian_index} skill_to_lian;
+        #var lian_level_up 0;
+        show_to_quest Á·Ï°: ${skill_to_lian};
         #var x @get_level_a{${skill_to_lian}};
         #var y @get_level_b{${skill_to_lian}};
         #if {${x} <= ${y} || ${x} ==0 || ${y} == 0} {
             get_next_to_lian;
-        };
+        }; 
+    };
+
+    #var lian_level_up 0;
+    #action {ÄãµÄ¡¸%*¡¹½ø²½ÁË£¡} {
+        #math lian_level_up ${lian_level_up}+1;
+        show_to_info %%1 +${lian_level_up};
     };
     
     #alias {start_lian} {
