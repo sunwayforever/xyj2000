@@ -80,7 +80,8 @@ def traverse_dfs(mud, roomno, location, candidate=None):
                 last_room_no = dst_room_no
 
         visited.add(dst_room_no)
-
+        if dst_room_no not in mud.neighbours:
+            continue;
         for link in mud.neighbours[dst_room_no]:
             if link.is_boundary == 1 or link.linkroomno in visited:
                 continue

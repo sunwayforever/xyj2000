@@ -157,4 +157,11 @@
     };
 };
 
+#alias {gps.xiezhidong} {
+    #send {northeast};
+    #action {慢慢地你终于又有了知觉．．．} {
+        #unaction {慢慢地你终于又有了知觉．．．};
+        gps.run;
+    };
+};
 #class gps_actions close;

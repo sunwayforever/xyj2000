@@ -58,7 +58,7 @@ load gps_actions;
 #alias {gps.retry} {
     #var tmp @stackpop{gt};
     #if {"${tmp}" == "nil"} {
-        #cr;
+        gps.run;
     };
     #else {
         gps.gt $tmp;

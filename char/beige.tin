@@ -1,0 +1,56 @@
+#class beige open;
+#var shifu_pos ≥±“Ù∂¥;
+#var sleep_pos 581;
+#var shifu guanyin;
+#var weapon_to_wield staff;
+#var shortcut F1: hammer F2: jingang F3: lianhua;
+
+#alias {hammer} {
+    enchant 10;cast bighammer;
+};
+
+#alias {diyu} {
+    perform diyu;
+};
+
+#alias {lianhua} {
+    cast lianhua;
+};
+
+#alias {jinguzhou} {
+    cast jinguzhou;
+};
+
+#alias {jingang} {
+    cast jingang;
+};
+
+#macro {\eOP} {
+    hammer;
+};
+
+#macro {\eOQ} {
+    jingang;
+};
+
+#macro {\eOR} {
+    buff;
+};
+
+#alias {attack.prepare} {
+    cst lianhua;
+};
+
+#alias {attack} {
+    #class attack.inner open;
+    #ticker {hammer} {
+        cst hammer;
+    } {3};
+    #ticker {jinguzhou} {
+        cst jinguzhou;
+    } {5};
+    #class attack.inner close;
+    cst jingang;
+    cst hammer;
+};
+#class beige close;

@@ -1,0 +1,52 @@
+#class sunxm open;
+#var shifu_pos ÎÔÔÆÐù;
+#var sleep_pos 950;
+#var shifu xi;
+#var shortcut F1: arrow F2: mihun F3: wuxue F4: fenghui;
+#var weapon_to_wield sword;
+
+#alias {arrow} {
+    enchant 10;cast arrow;
+};
+
+#alias {shiyue} {
+    enchant 10;cast shiyue;
+};
+
+#alias {mihun} {
+    cast mihun;
+};
+
+#alias {wuxue} {
+    perform wuxue;
+};
+
+#macro {\eOP} {
+    arrow;
+};
+
+#macro {\eOQ} {
+    mihun;
+};
+
+#macro {\eOR} {
+    wuxue;
+};
+
+#macro {\eOS} {
+    perform fenghuixuewu;
+};
+
+#alias {attack.prepare} {
+    jiali 10;
+    cst wuxue;
+};
+#alias {attack} {
+    #class attack.inner open;
+    #ticker {mihun} {
+        cst mihun;
+    } {3};
+    #class attack.inner close;
+    cst mihun;
+};
+#class sunxm close;

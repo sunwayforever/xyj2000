@@ -1,0 +1,7 @@
+#class milli open;
+#var shifu_pos Áú¹¬Õýµî;
+#var sleep_pos 952;
+#var shifu ao;
+#var shortcut nil;
+#var weapon_to_wield fork;
+#class milli close;

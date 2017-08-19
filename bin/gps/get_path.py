@@ -88,6 +88,8 @@ class MudRoom:
 
         while len(pq) != 0:
             i = heapq.heappop(pq)[1]
+            if i not in self.neighbours:
+                continue
             for link in self.neighbours[i]:
                 d = link.linkroomno
                 weight = self.weights_info[(i,link.linkroomno)]

@@ -1,0 +1,53 @@
+#class erq open;
+#var shifu_pos Ω≤æ≠Ã√;
+#var sleep_pos 264;
+#var shifu master;
+#var shortcut nil;
+#var weapon_to_wield stick;
+#var shortcut F1: pili F2: light F3: fenshen;
+
+#alias {pili} {
+    perform pili;
+};
+
+#alias {qiankun} {
+    perform qiankun;
+};
+
+#alias {fenshen} {
+    cast fenshen;
+};
+
+#alias {light} {
+    cast light;
+};
+
+#alias {thunder} {
+    cast thunder;
+};
+
+#macro {\eOP} {
+    pili;
+};
+
+#macro {\eOQ} {
+    light;
+};
+
+#macro {\eOR} {
+    fenshen;
+};
+
+#alias {attack} {
+    #class attack.inner open;
+    #ticker {pili} {
+        pili;
+    } {6};
+    #ticker {thunder} {
+        cst thunder;
+    } {3};
+    #class attack.inner close;
+    cst fenshen;
+    pili;
+};
+#class erq close;
