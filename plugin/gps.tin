@@ -303,12 +303,12 @@ load gps_actions;
 };
 
 #alias {gps.get_path} {
-    #nop about type: 1. gps.clear 2. gps.guohe 3. gps.delay 4. gps.zuoche 5. gps.goto_bt 6. gps.long_delay 7. shudong 8. ½­ºÓ;
+    #nop about type: 1. gps.clear 2. gps.delay 3. gps.fly
     #nop weight > 0: there is a weight;
     #nop weight = 0: there is no weight;
     #nop weight < 0: the path is disabled;
 
-    #var DEFAULT_GPS_WEIGHT "50,100,10,50,100,80,1,150";
+    #var DEFAULT_GPS_WEIGHT "50,100,1";
     INVOKE gps.get_path %1 %2 ${DEFAULT_GPS_WEIGHT};
 };
 
