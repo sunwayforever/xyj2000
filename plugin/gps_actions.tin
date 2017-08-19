@@ -116,4 +116,47 @@
     se;n;
     gps.run;
 };
+
+#alias {gps.yuntouqiao_n} {
+    #alias {yuntouqiao_check_exits} {
+        #list yuntouqiao_exits create ${pos.exits};
+        #if {@ismember{north;yuntouqiao_exits} != 0} {
+            #send {north};
+            gps.run;
+        };
+        #else {
+            #echo 过不去...等桥降下来;
+            #action {慢慢聚在一起} {
+                #unaction {慢慢聚在一起};
+                #send {north};
+                gps.run;
+            };
+        };
+    };
+    get_pos {
+        yuntouqiao_check_exits;
+    };
+};
+
+#alias {gps.yuntouqiao_s} {
+    #alias {yuntouqiao_check_exits} {
+        #list yuntouqiao_exits create ${pos.exits};
+        #if {@ismember{south;yuntouqiao_exits} != 0} {
+            #send {south};
+            gps.run;
+        };
+        #else {
+            #echo 过不去...等桥降下来;
+            #action {慢慢聚在一起} {
+                #unaction {慢慢聚在一起};
+                #send {south};
+                gps.run;
+            };
+        };
+    };
+    get_pos {
+        yuntouqiao_check_exits;
+    };
+};
+
 #class gps_actions close;

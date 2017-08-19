@@ -1,7 +1,5 @@
 #class status open
 
-#var health_info nil;
-#var exp_info  nil;
 #var saved_qn @getenv{qn};
 #var money @getenv{money};
 #alias {update_status} {
