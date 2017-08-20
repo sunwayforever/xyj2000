@@ -15,11 +15,6 @@
     } {${gps_delay}};
 };
 
-#alias {gps.enter_home} {
-    enter ${char_id};
-    gps.run;
-};
-
 #alias {gps.zuo_mufa} {
     #class zuo_mufa open;
     #ticker {mufa} {
@@ -163,5 +158,28 @@
         #unaction {慢慢地你终于又有了知觉．．．};
         gps.run;
     };
+};
+
+#alias {gps.baidujing} {
+    #class gps_baigujing open;
+    #alais {baigujing_clear_next} {
+        #list baigujing_targets get ${baigujing_index} baigujing_target;
+        clear ${baigujing_target};
+    };
+    
+    #action {CLEAR_DONE} {
+        #math baigujing_index ${baigujing_index}+1;
+        #if {${baigujing_index} >= 4} {
+            #class gps_baigujing kill;
+            gps.run;
+        };
+        #else {
+            baigujing_clear_next;
+        };
+    };
+    #class gps_baigujing close;
+    #list baigujing_targets create {nu;fu;gong};
+    #var baigujing_index 1;
+    baigujing_clear_next;
 };
 #class gps_actions close;

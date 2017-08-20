@@ -302,13 +302,21 @@ load gps_actions;
     };
 };
 
+#var DEFAULT_GPS_WEIGHT "50,100,1";
+#alias {gps.enable_fly} {
+    #var DEFAULT_GPS_WEIGHT "50,100,1";
+};
+
+#alias {gps.disable_fly} {
+    #var DEFAULT_GPS_WEIGHT "50,100,-1";
+};
+
 #alias {gps.get_path} {
     #nop about type: 1. gps.clear 2. gps.delay 3. gps.fly
     #nop weight > 0: there is a weight;
     #nop weight = 0: there is no weight;
     #nop weight < 0: the path is disabled;
-
-    #var DEFAULT_GPS_WEIGHT "50,100,1";
+    
     INVOKE gps.get_path %1 %2 ${DEFAULT_GPS_WEIGHT};
 };
 
@@ -619,7 +627,7 @@ load gps_actions;
         #var current_room %%1;
     } {1};
 
-    #action {你歪头想了会，说道：好吧！} {
+    #action {你双手拼命地鼓掌，好！干得好！} {
         get_exits_done;
     };
     
@@ -707,7 +715,7 @@ load gps_actions;
     } {5};
     #class record.inner close;
     #send {l};
-    #send {ok};
+    #send {good};
 };
 
 #alias {do_random_walk} {
