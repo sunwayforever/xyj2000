@@ -627,10 +627,6 @@ load gps_actions;
         #var current_room %%1;
     } {1};
 
-    #action {你双手拼命地鼓掌，好！干得好！} {
-        get_exits_done;
-    };
-    
     #action {    「%*」: %*} {
         #delay {look_delay} {
             get_exits_done;
@@ -715,7 +711,6 @@ load gps_actions;
     } {5};
     #class record.inner close;
     #send {l};
-    #send {good};
 };
 
 #alias {do_random_walk} {

@@ -8,7 +8,7 @@ from logging.handlers import RotatingFileHandler
 logger = logging.getLogger()
 logger.setLevel(logging.NOTSET)
 
-_handler = RotatingFileHandler('/tmp/pkuxkx.log', maxBytes=10*1024*1024,backupCount=5)
+_handler = RotatingFileHandler('/tmp/xyj.log', maxBytes=10*1024*1024,backupCount=5)
 _handler.setFormatter(logging.Formatter("%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s"))
 logger.addHandler(_handler)
 
@@ -21,12 +21,10 @@ class Tintin:
     def __init__ (self):
         self._file_name = "/tmp/pkuxkx_"+uuid.uuid4().hex
         self._tmpfile = open(self._file_name, "w")
-        
+
     def write (self, command):
         self._tmpfile.write(command)
 
     def __del__ (self):
         self._tmpfile.close();
         print (self._file_name)
-
-        

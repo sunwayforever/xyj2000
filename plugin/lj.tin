@@ -40,6 +40,15 @@
     #action {慢慢地你终于又有了知觉．．．} {
         lj.prepare;
     };
+
+    #action {你得到了%*和%*点潜能！} {
+        wd.kick;
+        show_to_quest 灭妖: 完成;
+        show_to_info 完成: ${lj_area}, 获得 @ctd{%%2} 点潜能;
+        #if {${lj_stopped} == 0} {
+            lj.prepare;
+        };
+    };
     
     #action {看来该找机会逃跑了．．．} {
         lj.prepare;
@@ -74,12 +83,6 @@
         follow @lower{${lj_target}};
     };
     #action {你灭妖有功} {
-        wd.kick;
-        show_to_quest 灭妖: 完成;
-        show_to_info 完成: ${lj_area};
-        #if {${lj_stopped} == 0} {
-            lj.prepare;
-        };
     };
 
     #action {GPS: 遍历完成} {

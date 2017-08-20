@@ -29,6 +29,9 @@
 
 #alias {war.monitor} {
     #class war.monitor open;
+    #action {你气血圆满，不需要疗伤。} {
+        raw;
+    };
     #action {你全身放松} {
         raw;
     };
@@ -273,7 +276,10 @@
             };
         };
         #else {
-            qx_full_action;
+            gt ct;
+            on_there {
+                qx_full_action;
+            };
         };
     };
     #if {${eff_qx_percent} >= 70} {
@@ -298,7 +304,10 @@
             };
         };
         #else {
-            js_full_action;
+            gt ct;
+            on_there {
+                js_full_action;    
+            };
         };
     };
     #if {${eff_js_percent} >= 70} {
