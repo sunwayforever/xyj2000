@@ -13,6 +13,10 @@
     enchant 10;cast shiyue;
 };
 
+#alias {fenghui} {
+    perform fenghuixuewu;
+};
+
 #alias {mihun} {
     cast mihun;
 };
@@ -34,19 +38,24 @@
 };
 
 #macro {\eOS} {
-    perform fenghuixuewu;
+    fenghui;
 };
 
 #alias {attack.prepare} {
     jiali 10;
     cst wuxue;
 };
+
 #alias {attack} {
     #class attack.inner open;
     #ticker {mihun} {
         cst mihun;
     } {3};
+    #ticker {fenghui} {
+        fenghui;
+    } {7};
     #class attack.inner close;
     cst mihun;
+    fenghui;
 };
 #class sunxm close;

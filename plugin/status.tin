@@ -13,14 +13,9 @@
 #var nl_percent 0;
 #var fl_percent 0;
 
-#gag STATUS_UPDATED;
 #alias {hp} {
-    #send {hp};
-    #action {STATUS_UPDATED} {
-        #unaction {STATUS_UPDATED};
-        #showme 气血:${curr_qx}/${max_qx} 精神:${curr_js}/${max_js};
-        #showme 法力:${curr_fl}/${max_fl} 内力:${curr_nl}/${max_nl};
-    };
+    #showme 气血:${curr_qx}/${max_qx} 精神:${curr_js}/${max_js};
+    #showme 法力:${curr_fl}/${max_fl} 内力:${curr_nl}/${max_nl};
 };
 
 #ticker hp {
@@ -70,7 +65,6 @@
     #math water_percent ${water}*100/${maxwater};
     #var dh %7;
     #regexp $dh {{.*}年} {#var dh @ctd{&1}} {#var dh 0};
-    #showme STATUS_UPDATED;
     update_status;
 };
 

@@ -43,7 +43,11 @@
     #action {你的「%*」进步了！} {
         #math lian_level_up ${lian_level_up}+1;
         show_to_info %%1 +${lian_level_up};
-    };
+    } {1};
+
+    #action {你的%*进步了} {
+        wd.kick;
+    } {2};
     
     #alias {start_lian} {
         gt ${shifu_pos};
@@ -125,9 +129,6 @@
         on_low_js;
     };
 
-    #action {你的%*进步了} {
-        wd.kick;
-    };
     #class lian.inner close;
 };
 

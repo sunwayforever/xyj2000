@@ -84,7 +84,7 @@ load gps_actions;
         #var src_roomno ${gps.roomno};
         #var dst_roomno @stacktop{gt};
         
-        #if {${gps.roomno} == -1} {
+        #if {${gps.roomno} == -1 && ${gps_stop} == 0} {
             #delay {1} {
                 #showme {GPS: 当前房间未记录, 无法行走};
                 random_walk {
@@ -612,15 +612,19 @@ load gps_actions;
     #var record_state 0;
     #var current_room {};
     #var description {};
+    #var exits_list  {};
     #class record.inner open;
     #action {^%* - $} {
         #var record_state 1;
         #var current_room %%1;
     } {1};
 
+    #action {你歪头想了会，说道：好吧！} {
+        get_exits_done;
+    };
+    
     #action {    「%*」: %*} {
         #delay {look_delay} {
-            #var exits_list  {};
             get_exits_done;
         } {1};
     } {6};
@@ -699,9 +703,11 @@ load gps_actions;
 
     #ticker {ticker_get_position_look} {
         #send {l};
-    } {3};
+        #send {ok};
+    } {5};
     #class record.inner close;
     #send {l};
+    #send {ok};
 };
 
 #alias {do_random_walk} {
