@@ -303,12 +303,12 @@ load gps_actions;
 };
 
 #var DEFAULT_GPS_WEIGHT "50,100,1";
-#alias {gps.enable_fly} {
-    #var DEFAULT_GPS_WEIGHT "50,100,1";
+#alias {gps.fly.on} {
+    #var DEFAULT_GPS_WEIGHT "50,10,1";
 };
 
-#alias {gps.disable_fly} {
-    #var DEFAULT_GPS_WEIGHT "50,100,-1";
+#alias {gps.fly.off} {
+    #var DEFAULT_GPS_WEIGHT "50,10,-1";
 };
 
 #alias {gps.get_path} {
