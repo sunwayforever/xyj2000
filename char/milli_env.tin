@@ -1,6 +1,6 @@
 #CLASS {env} OPEN
 
 #VARIABLE         {map_env_keys}  {{1}{qn}{2}{money}}
-#VARIABLE         {map_env_values}  {{1}{10668}{2}{25}}
+#VARIABLE         {map_env_values}  {{1}{10668}{2}{24}}
 
 #CLASS {env} CLOSE

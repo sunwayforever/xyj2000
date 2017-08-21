@@ -1,4 +1,27 @@
 #class get_item open;
+#alias get_penglai {
+    #alias penglai_action #cr;
+    #alias penglai_action %1;
+    #class get_penglai.inner open;
+    #action {ITEM_FOUND} {
+        #class get_penglai.inner kill;
+        penglai_action;
+    };
+    #action {ITEM_NOT_FOUND} {
+        gt 礼品店;
+        on_there {
+            yao tu;
+        };
+    };
+    #action {〖东海仙山图〗交给你,并告诉你:带好，别乱丢哦！} {
+        #class get_penglai.inner kill;
+        penglai_action;
+    };
+    #class get_penglai.inner close;
+
+    checkitem {eastsea map};
+};
+
 #alias get_bishuizhou {
     #alias bishuizhou_action #cr;
     #alias bishuizhou_action %1;

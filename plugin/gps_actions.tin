@@ -182,4 +182,11 @@
     #var baigujing_index 1;
     baigujing_clear_next;
 };
+
+#alias {gps.penglai} {
+    get_penglai {
+        fly penglai;
+        gps.retry;
+    };
+};
 #class gps_actions close;
