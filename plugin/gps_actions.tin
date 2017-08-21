@@ -189,4 +189,14 @@
         gps.retry;
     };
 };
+
+#alias {gps.cross_river} {
+    #class cross_river open;
+    #action {ƒ„¡‹¿Ï¿Ïµÿ≈¿…œ¡À∞∂°£} {
+        #class cross_river kill;
+        gps.run;
+    };
+    #class cross_river close;
+    cross river;
+};
 #class gps_actions close;
