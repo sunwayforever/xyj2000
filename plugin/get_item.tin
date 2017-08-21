@@ -122,8 +122,11 @@
     gt 回春药铺;
     #action {你向杨中顺买下%*辟谷丸。} {
         #unaction {你向杨中顺买下%*辟谷丸。};
-        #showme GOT_WAN;
-        wan_action;
+        gt ct;
+        on_there {
+            #showme GOT_WAN;
+            wan_action;
+        };
     };
     on_there {
         buy wan from boss;
