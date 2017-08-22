@@ -4,7 +4,10 @@
     #var lj_stopped 0;
     wd.start {lj.start};
     lj.setup;
-    lj.prepare;
+    quest.start {
+        wd.kick;
+        lj.q;
+    };
 };
 
 #alias {lj.stop} {

@@ -298,9 +298,4 @@
     check_js;
 };
 
-#alias {health} {
-    #alias tmp_health #cr;
-    #alias tmp_health %0;
-    chain chifan dz.full ms.full qx.full js.full re tmp_health;
-};
 #class war close;

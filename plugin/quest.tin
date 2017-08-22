@@ -1,0 +1,32 @@
+#class quest open;
+#alias {quest.start} {
+    #alias quest_before_action #cr;
+    #alias quest_before_action %1;
+    chain buji health daoju quest_before_action;
+};
+
+#alias {quest.prepare} {
+    #alias quest_after_action #cr;
+    #alias quest_after_action %1;
+    chain health buiji quest_after_action;
+};
+
+#alias {buji} {
+    #alias buji_action #cr;
+    #alias buji_action %1;
+     chain equip get_qian get_yao get_dan buji_action;
+};
+
+#alias {health} {
+    #alias tmp_health #cr;
+    #alias tmp_health %0;
+    chain qx.full js.full chifan dz.full ms.full re tmp_health;
+};
+
+#alias {daoju} {
+    #alias daoju_action #cr;
+    #alias daoju_action %1;
+    chain get_bishuizhou get_shutie get_penglai daoju_action;
+};
+
+#class quest close;

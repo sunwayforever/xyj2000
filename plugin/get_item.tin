@@ -5,7 +5,7 @@
     #class get_penglai.inner open;
     #action {ITEM_FOUND} {
         #class get_penglai.inner kill;
-        #delay {1} {
+        #delay {2} {
             penglai_action;    
         };
     };
@@ -38,13 +38,15 @@
 
     #action {ITEM_FOUND} {
         #class bishuizhou kill;
-        #showme GOT_BISHUIZHOU;
-        bishuizhou_action;
+        #delay {2} {
+            #showme GOT_BISHUIZHOU;
+            bishuizhou_action;
+        };
     };
 
     #action {你撕开无字天书的背页，从里面小心翼翼地取出一张小纸片。} {
         #class bishuizhou kill;
-        #delay {1} {
+        #delay {2} {
             #showme GOT_BISHUIZHOU;
             bishuizhou_action;            
         };
@@ -53,7 +55,7 @@
         gt 袁氏草堂;
         on_there {
             give jiudai to yuan;
-            #delay {1} {
+            #delay {2} {
                 tear book;
             };
         };
@@ -76,8 +78,10 @@
 
     #action {ITEM_FOUND} {
         #class bishuizhou kill;
-        #showme GOT_BOOK;
-        book_action;
+        #delay {2} {
+            #showme GOT_BOOK;
+            book_action;
+        };
     };
 
     #action {你向店小二买下一个桂花酒袋} {
@@ -109,7 +113,9 @@
         };
     };
     #action {ITEM_FOUND} {
-        got_pillow;
+        #delay {2} {
+            got_pillow;    
+        };
     };
     #action {你向店小二买下一只黄粱枕。} {
         got_pillow;
@@ -150,7 +156,7 @@
     #class get_qian.inner open;
     #alias {got_qian} {
         #class get_qian.inner kill;
-        #delay {1} {
+        #delay {2} {
             #showme GOT_QIAN;
             qian_action;
         };    
@@ -189,7 +195,7 @@
     #class get_yao.inner open;
     #alias {got_yao} {
         #class get_yao.inner kill;
-        #delay {1} {
+        #delay {2} {
             #showme GOT_YAO;
             yao_action;
         };    
@@ -226,7 +232,7 @@
     #class get_dan.inner open;
     #alias {got_dan} {
         #class get_dan.inner kill;
-        #delay {1} {
+        #delay {2} {
             #showme GOT_DAN;
             dan_action;
         };    
@@ -263,7 +269,7 @@
     #class get_wan.inner open;
     #alias {got_wan} {
         #class get_wan.inner kill;
-        #delay {1} {
+        #delay {2} {
             #showme GOT_WAN;
             wan_action;
         };    
@@ -295,7 +301,7 @@
     #class get_shutie.inner open;
     #action {ITEM_FOUND} {
         #class get_shutie.inner kill;
-        #delay {1} {
+        #delay {2} {
             shutie_action;    
         };
     };
