@@ -51,9 +51,12 @@
     #ticker {mihun} {
         cst mihun;
     } {3};
+    #ticker {arrow} {
+        cst arrow;
+    } {5};
     #ticker {fenghui} {
         fenghui;
-    } {7};
+    } {8};
     #class attack.inner close;
     cst mihun;
     fenghui;

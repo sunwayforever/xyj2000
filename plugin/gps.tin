@@ -625,8 +625,11 @@ load gps_actions;
     #action {^%* - $} {
         #var record_state 1;
         #var current_room %%1;
+        #if {"${current_room}" == "Çô¶´"} {
+            get_exits_done;
+        };
     } {1};
-
+    
     #action {    ¡¸%*¡¹: %*} {
         #delay {look_delay} {
             get_exits_done;
