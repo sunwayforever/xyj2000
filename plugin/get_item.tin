@@ -19,10 +19,10 @@
     };
     #class get_penglai.inner close;
 
-    checkitem {eastsea map};
+    checkitem {〖东海仙山图〗};
 };
 
-#alias get_bishuizhou {
+#alias {get_bishuizhou} {
     #alias bishuizhou_action #cr;
     #alias bishuizhou_action %1;
     
@@ -55,7 +55,7 @@
         };
     };
     #class bishuizhou close;
-    checkitem {bishui zhou};
+    checkitem {避水咒};
 };
 
 #alias {get_book} {
@@ -85,7 +85,7 @@
         };
     };
     #class bishuizhou close;
-    checkitem {book};    
+    checkitem {无字天书};    
 };
 
 #alias get_pillow {
@@ -112,7 +112,7 @@
     };
     #class get_pillow close;
     
-    checkitem huangliang zhen;
+    checkitem 黄粱枕;
 };
 
 #alias {get_wan} {
@@ -155,27 +155,116 @@
     };
     #class gift.inner close;
 
-    checkitem {newbie gift};
+    checkitem {新手宝贝};
 };
 
 #alias {get_qian} {
     #alias qian_action #cr;
     #alias qian_action %1;
     #class get_qian.inner open;
-    #action {你从银号里取出} {
+    #alias {got_qian} {
         #class get_qian.inner kill;
         #delay {2} {
             #showme GOT_QIAN;
             qian_action;
+        };    
+    };
+    #alias {qu_qian} {
+        gt 相记钱庄;
+        on_there {
+            qu 5 gold;
+            account;
         };
+    };
+    #action {%*_ITEM_FOUND} {
+        #if {%%1 > 5} {
+            got_qian;
+        };
+        #else {
+            qu_qian;
+        };
+    };
+    #action {ITEM_NOT_FOUND} {
+        qu_qian;
+    };
+    #action {你从银号里取出} {
+        got_qian;
     };
     #class get_qian.inner close;
 
-    gt 相记钱庄;
-    on_there {
-        qu 20 silver;
-        account;
+    checkitem 黄金;
+};
+
+#alias {get_yao} {
+    #alias yao_action #cr;
+    #alias yao_action %1;
+    #class get_yao.inner open;
+    #alias {got_yao} {
+        #class get_yao.inner kill;
+        #delay {2} {
+            #showme GOT_YAO;
+            yao_action;
+        };    
     };
+    #alias {qu_yao} {
+        gt 回春药铺;
+        on_there {
+            buy 10 yao from boss;
+        };
+    };
+    #action {%*_ITEM_FOUND} {
+        #if {%%1 > 20} {
+            got_yao;
+        };
+        #else {
+            qu_yao;
+        };
+    };
+    #action {ITEM_NOT_FOUND} {
+        qu_yao;
+    };
+    #action {你向杨中顺买下一些金创药。} {
+        got_yao;
+    };
+    #class get_yao.inner close;
+
+    checkitem 金创药;
+};
+
+#alias {get_dan} {
+    #alias dan_action #cr;
+    #alias dan_action %1;
+    #class get_dan.inner open;
+    #alias {got_dan} {
+        #class get_dan.inner kill;
+        #delay {2} {
+            #showme GOT_DAN;
+            dan_action;
+        };    
+    };
+    #alias {qu_dan} {
+        gt 回春药铺;
+        on_there {
+            buy 10 dan from boss;
+        };
+    };
+    #action {%*_ITEM_FOUND} {
+        #if {%%1 > 20} {
+            got_dan;
+        };
+        #else {
+            qu_dan;
+        };
+    };
+    #action {ITEM_NOT_FOUND} {
+        qu_dan;
+    };
+    #action {你向杨中顺买下一些混元丹。} {
+        got_dan;
+    };
+    #class get_dan.inner close;
+
+    checkitem 混元丹;
 };
 
 #alias {get_shutie} {
@@ -195,10 +284,10 @@
     };
     #class get_shutie.inner close;
 
-    checkitem {shu tie};    
+    checkitem {书帖};    
 };
 
 #alias {quest.prepare} {
-    chain equip health get_bishuizhou get_shutie get_penglai;
+    chain equip get_yao get_dan health get_bishuizhou get_shutie get_penglai;
 };
 #class get_item close;

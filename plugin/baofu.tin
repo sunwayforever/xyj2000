@@ -4,17 +4,18 @@
     #var check_item @lower{%0};
     
     @mapcreate{burden};
+    #unvar burden_all;
     #class burden.check.inner open;
     #var burden_start_cap 0;
     #action {¡õ%S(%*)} {
         #if {${burden_start_cap} == 1} {
-            @mapset{burden;@lower{%%2};1}
+            #var burden_all ${burden_all} %%1;
         }
     };
 
     #action {  %S(%*)} {
         #if {${burden_start_cap} == 1} {
-            @mapset{burden;@lower{%%2};1}
+            #var burden_all ${burden_all} %%1;
         }
     };
 
@@ -24,8 +25,11 @@
     
     #action {×Ü¼Æ%*ÖÖ¡£} {
         #class burden.check.inner kill;
-        #if {@ismember{${check_item};map_burden_keys}!=0} {
-            #showme ITEM_FOUND;
+        INVOKE burden "${burden_all}";
+        #var count @mapget{burden;%1};
+        #var count @ctd{$count};
+        #if {${count} != 0} {
+            #showme ${count}_ITEM_FOUND;
         };
         #else {
             #showme ITEM_NOT_FOUND;
