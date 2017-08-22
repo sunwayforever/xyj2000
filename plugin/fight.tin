@@ -197,7 +197,7 @@
 
 #alias {equip} {
     #alias equip_action #cr;
-    #alias equip_action %1;
+    #alias equip_action %0;
     #alias {equip_all}  {
         wear all;
         wield all;

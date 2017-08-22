@@ -13,7 +13,7 @@
 
 #alias {ms.full} {
     #alias tmp_ms #cr;
-    #alias tmp_ms %1;
+    #alias tmp_ms %0;
     #class ms.full.inner open;
     #action {你现在神智不清,不能再想入非非了。} {
         yun refresh;
@@ -49,7 +49,7 @@
 
 #alias {dz.full} {
     #alias tmp_dz #cr;
-    #alias tmp_dz %1;
+    #alias tmp_dz %0;
     #class dz.full.inner open;
     #action {你现在精不够} {
         heal 1;
@@ -84,7 +84,7 @@
 
 #alias {do_dazuo} {
     #alias dazuo_action #cr;
-    #alias dazuo_action %1;
+    #alias dazuo_action %0;
     #if {${limit_nl} < ${max_nl} + 1} {
         #delay {1} {
             #showme DAZUO_DONE;            

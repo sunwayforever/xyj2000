@@ -1,19 +1,19 @@
 #class quest open;
 #alias {quest.start} {
     #alias quest_before_action #cr;
-    #alias quest_before_action %1;
+    #alias quest_before_action %0;
     chain buji health daoju quest_before_action;
 };
 
 #alias {quest.prepare} {
     #alias quest_after_action #cr;
-    #alias quest_after_action %1;
+    #alias quest_after_action %0;
     chain health buji quest_after_action;
 };
 
 #alias {buji} {
     #alias buji_action #cr;
-    #alias buji_action %1;
+    #alias buji_action %0;
     chain equip get_qian get_yao get_dan buji_action;
 };
 
@@ -25,8 +25,7 @@
 
 #alias {daoju} {
     #alias daoju_action #cr;
-    #alias daoju_action %1;
+    #alias daoju_action %0;
     chain get_bishuizhou get_shutie get_penglai daoju_action;
 };
-
 #class quest close;

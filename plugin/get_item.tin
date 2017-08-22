@@ -1,7 +1,7 @@
 #class get_item open;
 #alias {get_penglai} {
     #alias penglai_action #cr;
-    #alias penglai_action %1;
+    #alias penglai_action %0;
     #class get_penglai.inner open;
     #action {ITEM_FOUND} {
         #class get_penglai.inner kill;
@@ -26,7 +26,7 @@
 
 #alias {get_bishuizhou} {
     #alias bishuizhou_action #cr;
-    #alias bishuizhou_action %1;
+    #alias bishuizhou_action %0;
     
     #class bishuizhou open;
     #action {ITEM_NOT_FOUND} {
@@ -66,7 +66,7 @@
 
 #alias {get_book} {
     #alias book_action #cr;
-    #alias book_action %1;
+    #alias book_action %0;
     
     #class bishuizhou open;
     #action {ITEM_NOT_FOUND} {
@@ -98,7 +98,7 @@
 
 #alias get_pillow {
     #alias pillow_action #cr;
-    #alias pillow_action %1;
+    #alias pillow_action %0;
     
     #class get_pillow open;
     #alias {got_pillow} {
@@ -127,7 +127,7 @@
 
 #alias {get_gift} {
     #alias gift_action #cr;
-    #alias gift_action %1;
+    #alias gift_action %0;
     #class gift.inner open;
     #action {ITEM_FOUND} {
         #class gift.inner kill;
@@ -152,7 +152,7 @@
 
 #alias {get_qian} {
     #alias qian_action #cr;
-    #alias qian_action %1;
+    #alias qian_action %0;
     #class get_qian.inner open;
     #alias {got_qian} {
         #class get_qian.inner kill;
@@ -191,7 +191,7 @@
 
 #alias {get_yao} {
     #alias yao_action #cr;
-    #alias yao_action %1;
+    #alias yao_action %0;
     #class get_yao.inner open;
     #alias {got_yao} {
         #class get_yao.inner kill;
@@ -228,7 +228,7 @@
 
 #alias {get_dan} {
     #alias dan_action #cr;
-    #alias dan_action %1;
+    #alias dan_action %0;
     #class get_dan.inner open;
     #alias {got_dan} {
         #class get_dan.inner kill;
@@ -265,7 +265,7 @@
 
 #alias {get_wan} {
     #alias wan_action #cr;
-    #alias wan_action %1;
+    #alias wan_action %0;
     #class get_wan.inner open;
     #alias {got_wan} {
         #class get_wan.inner kill;
@@ -297,7 +297,7 @@
 
 #alias {get_shutie} {
     #alias shutie_action #cr;
-    #alias shutie_action %1;
+    #alias shutie_action %0;
     #class get_shutie.inner open;
     #action {ITEM_FOUND} {
         #class get_shutie.inner kill;

@@ -191,71 +191,6 @@ walk_to east;
     on_unbusy {%1 {on_unbusy {%2 {on_unbusy {%3 {on_unbusy {%4 {on_unbusy {%5 {on_unbusy {%6 {on_unbusy {%7 {on_unbusy {%8 {on_unbusy {%9 {on_unbusy {%10 {on_unbusy {%11 {on_unbusy {%12;};};};};};};};};};};};};};};};};};};};};};};};
 };
 
-#alias {sell.all} {
-    #alias tmp_sell #cr;
-    #alias tmp_sell %1;
-    #alias {sell_weapon} {
-        on_there {
-            sell all;
-            #delay {3} {
-                sell_other;
-            };
-        };
-        gt rbz;
-    };
-
-    #alias {sell_other} {
-        #class sell_other.inner open;
-        #action {你身上没有puti zi} {
-            #ticker {sell_other} {
-                sell baicao dan;
-            } {1};
-        };
-        #action {你身上没有baicao dan} {
-            #class sell_other.inner kill;
-            #unticker {sell_other};
-            #delay {3} {
-                tmp_sell;
-            };
-        };
-        #class sell_other.inner close;
-        on_there {
-            #ticker {sell_other} {
-                sell puti zi;
-            } {1};
-        };
-        gt 扬州当铺;
-    };
-    sell_weapon;
-};
-
-#alias {repair} {
-    #alias tmp_repair #cr;
-    #alias tmp_repair %1;
-    #if {${min_naijiu} < 350} {
-        #action {抵达目的地} {
-            #unaction {抵达目的地};
-            e;ne;
-            #delay {2} {
-                #foreach {${my_weapons}[%*]} {weapon} {
-                    fix ${weapon};
-                };
-                play repair.wav;
-                #delay {3} {
-                    sw;w;
-                    #delay {3} {
-                        tmp_repair;
-                    };
-                };
-            };
-        };
-        gt ly;
-    };
-    #else {
-        tmp_repair;
-    };
-};
-
 #function {py} {
     INVOKE pinyin %0;
 };
@@ -416,7 +351,7 @@ walk_to east;
 
 #alias walk {
     #alias tmp_walk_to #cr;
-    #alias tmp_walk_to %1;
+    #alias tmp_walk_to %0;
 
     #class on_walk open;
     #action {^%S - } {
@@ -435,7 +370,7 @@ walk_to east;
 
 #alias {chifan} {
     #alias chifan_action #cr;
-    #alias chifan_action %1;
+    #alias chifan_action %0;
     #class chifan open;
     #alias {chifan_done} {
         #class chifan kill;
@@ -462,7 +397,7 @@ walk_to east;
 
 #alias {cun_qn} {
     #alias cun_qn_action #cr;
-    #alias cun_qn_action %1;
+    #alias cun_qn_action %0;
 
     #class cun_qn.inner open;
     #action {你歪头想了会，说道：好吧！} {
@@ -482,7 +417,7 @@ walk_to east;
 
 #alias {qu_qn} {
     #alias qu_qn_action #cr;
-    #alias qu_qn_action %1;
+    #alias qu_qn_action %0;
 
     #class qu_qn.inner open;
     #action {你歪头想了会，说道：好吧！} {
@@ -523,10 +458,4 @@ walk_to east;
     #delay {set_env_delay} {
         #class env write char/${char}_env${dot}tin;
     }{3};
-};
-
-#alias {quest.prepare} {
-    #alias quest_prepare_action #cr;
-    #alias quest_prepare_action %1;
-    chain equip get_qian get_yao get_dan health quest_prepare_action;
 };

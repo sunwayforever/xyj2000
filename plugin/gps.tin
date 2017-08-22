@@ -330,7 +330,7 @@ load gps_actions;
 
 #alias {gps.check_room} {
     #alias tmp_check_room #cr;
-    #alias tmp_check_room %1;
+    #alias tmp_check_room %0;
     #alias {get_pos_done} {
         INVOKE gps.check_room "${pos.area}" "${pos.room}" "${pos.desc}" "${pos.exits}";
         tmp_check_room;
@@ -550,7 +550,7 @@ load gps_actions;
 
 #alias {get_area} {
     #alias tmp_get_area #cr;
-    #alias tmp_get_area %1;
+    #alias tmp_get_area %0;
     #var pos.area {};
     #class record.inner open;
     
@@ -616,7 +616,7 @@ load gps_actions;
 
 #alias {get_pos} {
     #alias tmp_get_pos #cr;
-    #alias tmp_get_pos %1;
+    #alias tmp_get_pos %0;
     #var record_state 0;
     #var current_room {};
     #var description {};
@@ -752,7 +752,7 @@ load gps_actions;
 
 #alias {random_walk} {
     #alias tmp_random_walk #cr;
-    #alias tmp_random_walk %1;
+    #alias tmp_random_walk %0;
     
     #class random_walk open;
     #action {ROOM_CHANGED} {
