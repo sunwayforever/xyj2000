@@ -26,6 +26,6 @@
 #alias {daoju} {
     #alias daoju_action #cr;
     #alias daoju_action %0;
-    chain get_bishuizhou get_shutie get_penglai daoju_action;
+    chain get_bishuizhou get_shutie get_penglai get_huangqian daoju_action;
 };
 #class quest close;

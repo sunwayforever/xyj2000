@@ -317,4 +317,30 @@
     checkitem {书帖};    
 };
 
+#alias {get_huangqian} {
+    #alias huangqian_action #cr;
+    #alias huangqian_action %0;
+    #class get_huangqian.inner open;
+    #action {ITEM_FOUND} {
+        #class get_huangqian.inner kill;
+        #delay {2} {
+            huangqian_action;    
+        };
+    };
+    #action {ITEM_NOT_FOUND} {
+        gt 南波;
+        on_there {
+            ask furen about 黄钱;
+        }
+    };
+    #action {断肠妇人给你一张黄钱。} {
+        #class get_huangqian.inner kill;
+        huangqian_action;
+    };
+    #class get_huangqian.inner close;
+
+    checkitem {黄钱};    
+};;
+
+
 #class get_item close;
