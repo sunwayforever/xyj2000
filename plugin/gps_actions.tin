@@ -186,7 +186,7 @@
 #alias {gps.penglai} {
     get_penglai {
         fly penglai;
-        gps.retry;
+        gps.run;
     };
 };
 
@@ -217,5 +217,24 @@
     };
     #class gps_wudidong close;
     jiali max; push statue;
+};
+
+#alias {gps.baiyundong} {
+    #3 n; ne;ne;nw;n;n;
+    gps.run;
+};
+
+#alias {gps.cliff} {
+    #class gps_cliff open;
+    #ticker {climb} {
+        climb cliff;
+    } {10};
+    #action {你慢慢的爬了上来。} {
+        #unticker {climb};
+        #class gps_cliff kill;
+        gps.run;
+    };
+    #class gps_cliff close;
+    climb cliff;
 };
 #class gps_actions close;

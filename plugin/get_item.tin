@@ -328,7 +328,7 @@
         };
     };
     #action {ITEM_NOT_FOUND} {
-        gt ÄÏ²¨;
+        gt ÄÏÆÂ;
         on_there {
             ask furen about »ÆÇ®;
         }
