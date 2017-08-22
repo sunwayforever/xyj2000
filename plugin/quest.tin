@@ -8,13 +8,13 @@
 #alias {quest.prepare} {
     #alias quest_after_action #cr;
     #alias quest_after_action %1;
-    chain health buiji quest_after_action;
+    chain health buji quest_after_action;
 };
 
 #alias {buji} {
     #alias buji_action #cr;
     #alias buji_action %1;
-     chain equip get_qian get_yao get_dan buji_action;
+    chain equip get_qian get_yao get_dan buji_action;
 };
 
 #alias {health} {
