@@ -528,5 +528,5 @@ walk_to east;
 #alias {quest.prepare} {
     #alias quest_prepare_action #cr;
     #alias quest_prepare_action %1;
-    chain equip get_qian get_yao get_dan get_wan health get_bishuizhou get_shutie get_penglai quest_prepare_action;
+    chain equip get_qian get_yao get_dan health get_bishuizhou get_shutie get_penglai quest_prepare_action;
 };
