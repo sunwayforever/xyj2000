@@ -1,5 +1,5 @@
 #class get_item open;
-#alias get_penglai {
+#alias {get_penglai} {
     #alias penglai_action #cr;
     #alias penglai_action %1;
     #class get_penglai.inner open;
@@ -176,5 +176,29 @@
         qu 20 silver;
         account;
     };
+};
+
+#alias {get_shutie} {
+    #alias shutie_action #cr;
+    #alias shutie_action %1;
+    #class get_shutie.inner open;
+    #action {ITEM_FOUND} {
+        #class get_shutie.inner kill;
+        shutie_action;
+    };
+    #action {ITEM_NOT_FOUND} {
+        gt ÁğÁ§ËşÊ®Èı²ã;
+    };
+    #action {±¼²¨¶ùå±½»¸øÄãÒ»·âÌû¡£} {
+        #class get_shutie.inner kill;
+        shutie_action;
+    };
+    #class get_shutie.inner close;
+
+    checkitem {shu tie};    
+};
+
+#alias {quest.prepare} {
+    chain equip health get_bishuizhou get_shutie get_penglai;
 };
 #class get_item close;
