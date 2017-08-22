@@ -130,8 +130,7 @@
     
     #alias {check_and_start_dz} {
         stop_dz;
-        chifan;
-        #action {CHIFAN_DONE} {
+        chifan {
             start_dz;
         };
     };
@@ -208,8 +207,7 @@
 
     #alias {check_and_start_ms} {
         stop_ms;
-        chifan;
-        #action {CHIFAN_DONE} {
+        chifan {
             start_ms;
         };
     };

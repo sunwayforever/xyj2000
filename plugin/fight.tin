@@ -199,8 +199,6 @@
     #alias equip_action #cr;
     #alias equip_action %1;
     #alias {equip_all}  {
-        remove all;
-        unwield all;
         wear all;
         wield all;
     };
@@ -237,8 +235,10 @@
     #action {ITEM_FOUND} {
         equip_all;
         #class equip kill;
-        #showme EQUIP_DONE;
-        equip_action;
+        #delay {2} {
+            #showme EQUIP_DONE;
+            equip_action;            
+        };
     };
     #action {ITEM_NOT_FOUND} {
         do_equip;

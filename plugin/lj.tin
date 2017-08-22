@@ -17,7 +17,7 @@
 
 #alias {lj.prepare} {
     wd.kick;
-    health {
+    quest.prepare {
         lj.q;
     };
 };

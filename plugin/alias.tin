@@ -437,25 +437,26 @@ walk_to east;
     #alias chifan_action #cr;
     #alias chifan_action %1;
     #class chifan open;
-    #action {你身上没有这样东西。} {
-        get_wan;
-    };
-    #action {GOT_WAN} {
-        eat wan;
-    };
-    #action {你捏起一颗小小的辟谷丸往舌下一放。} {
+    #alias {chifan_done} {
         #class chifan kill;
         #showme CHIFAN_DONE;
         chifan_action;
     };
+    #action {你身上没有这样东西。} {
+        get_wan {
+            eat wan;
+        };
+    };
+    #action {你捏起一颗小小的辟谷丸往舌下一放。} {
+        chifan_done;
+    };
     #class chifan close;
+    
     #if {${food_percent} < 20 || ${water_percent} < 20} {
         eat wan;
     };
     #else {
-        #class chifan kill;
-        #showme CHIFAN_DONE;
-        chifan_action;
+        chifan_done;
     };
 };
 
@@ -522,4 +523,10 @@ walk_to east;
     #delay {set_env_delay} {
         #class env write char/${char}_env${dot}tin;
     }{3};
+};
+
+#alias {quest.prepare} {
+    #alias quest_prepare_action #cr;
+    #alias quest_prepare_action %1;
+    chain equip get_qian get_yao get_dan get_wan health get_bishuizhou get_shutie get_penglai quest_prepare_action;
 };
