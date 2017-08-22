@@ -199,4 +199,23 @@
     #class cross_river close;
     cross river;
 };
+
+#alias {gps.wudidong} {
+    #class gps_wudidong open;
+    #ticker {push_statue} {
+        jiali max; push statue;
+    } {6};
+
+    #ticker {heal} {
+        yun heal;
+    } {2};
+    #action {你纵身一跃，跳了进去，大洞随即又合上了。} {
+        #class gps_wudidong kill;
+        #unticker {push_statue};
+        #unticker {heal};
+        gps.run;
+    };
+    #class gps_wudidong close;
+    jiali max; push statue;
+};
 #class gps_actions close;

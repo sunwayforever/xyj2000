@@ -10,10 +10,10 @@ from ..common import logger
 
 def check_room(conn, zone, room, desc, exits):
     room = fixup_room(room)
-    sql = "select roomno,abbr from mud_room where roomname = '%s'" % (room)
-    rows = conn.execute(sql).fetchall()
-    if len(rows) == 1:
-        return rows[0][0], rows[0][1]
+    # sql = "select roomno,abbr from mud_room where roomname = '%s'" % (room)
+    # rows = conn.execute(sql).fetchall()
+    # if len(rows) == 1:
+    #     return rows[0][0], rows[0][1]
 
     sql = "select roomno,abbr from mud_room where roomname = '%s' and zone = '%s'" % (
         room, zone)

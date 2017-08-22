@@ -592,7 +592,7 @@ load gps_actions;
     };
 
     #action {^[输入时暂存讯息]} {
-        #cr;
+        #cr
     } {4};
     
     #action {^[%*]} {
@@ -611,7 +611,7 @@ load gps_actions;
         tmp_get_area;
     } {1.5};
     #class record.inner close;
-    map;
+    map;#send {q};
 };
 
 #alias {get_pos} {
