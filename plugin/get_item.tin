@@ -24,6 +24,31 @@
     checkitem {〖东海仙山图〗};
 };
 
+#alias {get_xueshan} {
+    #alias xueshan_action #cr;
+    #alias xueshan_action %0;
+    #class get_xueshan.inner open;
+    #action {ITEM_FOUND} {
+        #class get_xueshan.inner kill;
+        #delay {2} {
+            xueshan_action;    
+        };
+    };
+    #action {ITEM_NOT_FOUND} {
+        gt 礼品店;
+        on_there {
+            yao map;
+        };
+    };
+    #action {【大雪山地图】交给你,并告诉你:带好，别乱丢哦！} {
+        #class get_xueshan.inner kill;
+        xueshan_action;
+    };
+    #class get_xueshan.inner close;
+
+    checkitem {【大雪山地图】};
+};;
+
 #alias {get_bishuizhou} {
     #alias bishuizhou_action #cr;
     #alias bishuizhou_action %0;

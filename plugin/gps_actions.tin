@@ -190,6 +190,13 @@
     };
 };
 
+#alias {gps.xueshan} {
+    get_xueshan {
+        fly xueshan;
+        gps.run;
+    };
+};
+
 #alias {gps.cross_river} {
     #class cross_river open;
     #action {ƒ„¡‹¿Ï¿Ïµÿ≈¿…œ¡À∞∂°£} {
