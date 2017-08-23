@@ -313,13 +313,11 @@ walk_to east;
 
 #alias {set_last_quest} {
     #var last_quest %1;
-    xmpp.status ${last_quest};
     @setenv{last_quest;${last_quest}};
 };
 
 #alias {unset_last_quest} {
     #var last_quest nil;
-    xmpp.status ${last_quest};
     @setenv{last_quest;nil};
 };
 
@@ -334,7 +332,7 @@ walk_to east;
     play alert.wav;
     show_to_info %0;
     #nop desktop.notify %0;
-    xmpp.notify %0;
+    irc.notify %0;
 };
 
 #alias {corpse} {

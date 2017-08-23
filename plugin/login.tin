@@ -1,7 +1,7 @@
 #class login open;
 #action {ÇëÊäÈëÏàÓ¦ÃÜÂë} {
     #delay {2} {
-        xmpp.start;
+        irc.start;
         init_set;
         #send {score};
         check_gongfu;

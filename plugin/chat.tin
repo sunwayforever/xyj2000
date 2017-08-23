@@ -23,11 +23,11 @@
 
 #alias {do_chat} {
     show_to_chat %0;
+    #if {${irc_chat} == 1} {
+        #irc %0;
+    };
     #return
     chat.record %0;
-    #if {${xmpp_chat} == 1} {
-        #xmpp %0;
-    };
 };
 
 #gag {║╬опад║©%*};
