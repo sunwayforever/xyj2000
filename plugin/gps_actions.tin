@@ -160,7 +160,7 @@
     };
 };
 
-#alias {gps.baidujing} {
+#alias {gps.baigujing} {
     #class gps_baigujing open;
     #alais {baigujing_clear_next} {
         #list baigujing_targets get ${baigujing_index} baigujing_target;
