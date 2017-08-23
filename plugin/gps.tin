@@ -7,6 +7,9 @@ load gps_actions;
 #var gps_path_index 0;
 #var gps_path_size 0;
 
+#var GPS_TRAVERSE_DELAY 0.5;
+#var GPS_GT_DELAY 0.5;
+
 #alias {on_there} {
     #alias on_there_${dst_roomno} %0;
 };
@@ -191,6 +194,33 @@ load gps_actions;
     };
 };
 
+#alias {gps.run_maze} {
+    #var gps_maze %0;
+    #list gps_maze_list create ${gps_maze};
+    #list gps_maze_list size gps_maze_size;
+    #var gps_maze_index 1;
+    gps.maze.run;
+};
+
+#alias {gps.maze.run} {
+    #if {"${gps.run.mode}" == "NORMAL"} {
+        #send {${gps_maze}};
+        gps.run;
+    };
+    #else {
+        #if {${gps_maze_index} > ${gps_maze_size}} {
+            gps.run;
+            #return;
+        };
+        #list gps_maze_list get ${gps_maze_index} gps_maze_next_step;
+        #math gps_maze_index ${gps_maze_index}+1;
+        ${gps_next_step};
+        #delay {${GPS_TRAVERSE_DELAY}} {
+            gps.maze.run;
+        };
+    };
+};
+
 #alias {gps.run} {
     #var is_break 0;
     #var accu 0;
@@ -210,12 +240,12 @@ load gps_actions;
             #break;
         };
         #elseif {"${gps.run.mode}" == "TRAVERSE"} {
-            gps.delay 0.5;
+            gps.delay ${GPS_TRAVERSE_DELAY};
             #var is_break 1;
             #break;
         };
         #elseif {"${gps.run.mode}" == "NORMAL" && ${accu} > 5} {
-            gps.delay 0.5;
+            gps.delay ${GPS_GT_DELAY};
             #var is_break 1;
             #break;
         };

@@ -220,8 +220,7 @@
 };
 
 #alias {gps.baiyundong} {
-    #3 n; ne;ne;nw;n;n;
-    gps.run;
+    gps.run_maze {n;n;n;ne;ne;nw;n;n};
 };
 
 #alias {gps.cliff} {
