@@ -84,8 +84,6 @@
     #action {落荒而逃了。} {
         follow @lower{${lj_target}};
     };
-    #action {你灭妖有功} {
-    };
 
     #action {GPS: 遍历完成} {
         wd.kick;

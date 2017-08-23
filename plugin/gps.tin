@@ -7,7 +7,7 @@ load gps_actions;
 #var gps_path_index 0;
 #var gps_path_size 0;
 
-#var GPS_TRAVERSE_DELAY 0.5;
+#var GPS_TRAVERSE_DELAY 0.8;
 #var GPS_GT_DELAY 0.5;
 
 #alias {on_there} {
@@ -203,6 +203,9 @@ load gps_actions;
 };
 
 #alias {gps.maze.run} {
+    #if {${gps_stop} == 1} {
+        #return;
+    };
     #if {${gps_maze_index} > ${gps_maze_size}} {
         gps.run;
         #return;
