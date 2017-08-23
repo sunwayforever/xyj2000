@@ -25,26 +25,26 @@
     #alias {start_du_ticker} {
         #ticker {du} {
             du ${du_book};
-        } {1};
+        } {0.6};
+        #ticker {check_js} {
+            #if {${js_percent} < 5} {
+                yun refresh;
+            };
+            #if {${nl_percent} < 10} {
+                stop_du_ticker;
+                chain on_sleep chifan start_du;
+            };
+        } {5};
     };
     
     #alias {stop_du_ticker} {
         #unticker {du};
+        #unticker {check_js};
     };
 
     #action {没有学到任何东西} {
         du.stop;
     };
-    #action {你现在过于疲倦，无法专心下来研读新知。} {
-        #if {${nl_percent} > 30} {
-            yun refresh;
-        };
-        #else {
-            stop_du_ticker;
-            chain on_sleep chifan start_du;
-        };
-    };
-
     #class du.inner close;
 };
 

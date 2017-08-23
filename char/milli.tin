@@ -4,4 +4,51 @@
 #var shifu ao;
 #var shortcut nil;
 #var weapon_to_wield fork;
+
+#var shortcut F1: fengbo F2: hufa F3: sheshen F4: water;
+
+#alias {fengbo} {
+    perform fengboshiercha;
+};
+
+#alias {hufa} {
+    cast hufa;
+};
+
+#alias {sheshen} {
+    perform sheshen;
+};
+
+#alias {water} {
+    cast water;
+};
+
+#macro {\eOP} {
+    fengbo;
+};
+
+#macro {\eOQ} {
+    hufa;
+};
+
+#macro {\eOR} {
+    sheshen;
+};
+
+#macro {\eOS} {
+    water;
+};
+
+#alias {attack.prepare} {
+    yun shield;
+};
+#alias {attack} {
+    #class attack.inner open;
+    #ticker {fengbo} {
+        fengbo
+    } {8};
+    #class attack.inner close;
+    cst hufa;
+    fengbo;
+};
 #class milli close;

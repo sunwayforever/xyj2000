@@ -3,7 +3,7 @@
 #var saved_qn @getenv{qn};
 #var money @getenv{money};
 #alias {update_status} {
-    #var status_content ${char_name}: 道行: ${dh}年 潜能: ${qn}/${saved_qn} 黄金: ${money} 武学: ${wx} 杀气: ${sq} 冥思: @eval{(${max_fl}*100+100)/(${limit_fl}+1)}${percent} 打坐: @eval{(${max_nl}*100+100)/(${limit_nl}+1)}${percent};
+    #var status_content ${char.name}: 道行: ${dh}年 潜能: ${qn}/${saved_qn} 黄金: ${money} 武学: ${wx} 杀气: ${sq} 冥思: @eval{(${max_fl}*100+100)/(${limit_fl}+1)}${percent} 打坐: @eval{(${max_nl}*100+100)/(${limit_nl}+1)}${percent};
     show_to_status ${status_content};
     drawhp;
 };

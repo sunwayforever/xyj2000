@@ -1,7 +1,22 @@
 #class gps_actions open;
 
 #alias {gps.clear} {
-    clear %0;
+    #var clear_target %0;
+    #var clear_menpai "";
+    #replace clear_target {@} {;};
+    #list clear_target_list create ${clear_target};
+    #list clear_target_list size clear_target_size;
+    #var clear_target $clear_target_list[1];
+    #if {${clear_target_size} == 2} {
+        #var clear_menpai $clear_target_list[2];
+    };
+
+    #if {"${char.menpai}" == "${clear_menpai}"} {
+        gps.run;
+        #return;
+    };
+    
+    clear clear_target;
     on_cleared {
         gps.run;
     };

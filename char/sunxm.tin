@@ -42,7 +42,6 @@
 };
 
 #alias {attack.prepare} {
-    jiali 10;
     cst wuxue;
 };
 
