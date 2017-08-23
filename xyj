@@ -18,7 +18,7 @@ remove_tmp() {
     sleep 5;
     rm /tmp/xyj_${char}.tin
 }
-# erq, sunxm, milli, salonbus
+# erq, sunxm, milli, salonbus, beige
 login() {
     echo "#var pid $$;" > /tmp/xyj_${char}.tin
     echo "#var char $char;" >> /tmp/xyj_${char}.tin
