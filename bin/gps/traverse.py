@@ -81,7 +81,7 @@ def traverse_dfs(mud, roomno, location, candidate=None):
 
         visited.add(dst_room_no)
         if dst_room_no not in mud.neighbours:
-            continue;
+            continue
         for link in mud.neighbours[dst_room_no]:
             if link.is_boundary == 1 or link.linkroomno in visited:
                 continue
@@ -90,7 +90,7 @@ def traverse_dfs(mud, roomno, location, candidate=None):
                 if link.linkroomno in candidate:
                     stack.append((link.linkroomno, link.linkroomname))
             else:
-                if link.src_room_zone2 == link.dst_room_zone2 or link.src_room_zone2 is None or link.dst_room_zone2 is None:
+                if link.src_room_zone2 == link.dst_room_zone2 or link.src_room_zone2 == "" or link.dst_room_zone2 == "":
                     stack.append((link.linkroomno, link.linkroomname))
 
     traverse_path.extend(mud.get_path(last_room_no, roomno))

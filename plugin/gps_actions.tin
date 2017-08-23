@@ -220,7 +220,7 @@
 };
 
 #alias {gps.baiyundong} {
-    gps.run_maze {n;n;n;ne;ne;nw;n;n};
+    gps.run_maze {north;north;north;northeast;northeast;northwest;north;north};
 };
 
 #alias {gps.cliff} {

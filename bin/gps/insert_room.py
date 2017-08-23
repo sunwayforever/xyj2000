@@ -19,10 +19,11 @@ def insert_room(conn, room, desc, exits, zone):
         return row[0]
     return -1
 
+
 if __name__ == "__main__":
     conn = open_database()
-    roomno = insert_room(conn, sys.argv[1], sys.argv[2], normalize_exits(sys.argv[3]),
-                         sys.argv[4])
+    roomno = insert_room(conn, sys.argv[1], sys.argv[2],
+                         normalize_exits(sys.argv[3]), sys.argv[4])
     conn.close()
     tt = Tintin()
     tt.write("#var gps.roomno %d;" % (roomno))
