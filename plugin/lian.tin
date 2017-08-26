@@ -60,12 +60,32 @@
         #ticker {lian} {
             lian ${skill_to_lian} ${lian_count};
         } {1};
+        #ticker {lian_check_status} {
+            lian_check_status;
+        } {5};
     };
     
     #alias {stop_lian_ticker} {
         #unticker {lian};
+        #unticker {lian_check_status};
     };
 
+    #alias {lian_check_status} {
+        #if {${nl_percent} < 10} {
+            #if {${js_percent} < 30} {
+                chain on_sleep chifan start_lian;
+                #return;
+            };
+            #if {${qx_percent} < 30} {
+                stop_lian_ticker;
+                chain chifan dz.full start_lian;
+            };
+        };
+        #else {
+            re;
+        };
+    };
+    
     #ticker {check_level} {
         #if {@get_level_a{${skill_to_lian}} <= @get_level_b{${skill_to_lian}}} {
             stop_lian_ticker;
@@ -81,52 +101,6 @@
     
     #action {必须空手} {
         unwield all;
-    };
-
-    #alias {on_low_qx} {
-        #if {${nl_percent} > 30} {
-            yun recover;
-        };
-        #else {
-            stop_lian_ticker;
-            #delay {lian_delay} {
-                chain on_sleep chifan start_lian;                
-            } {30};
-        };  
-    };
-
-    #alias {on_low_js} {
-        #if {${nl_percent} > 30} {
-            yun refresh;
-        };
-        #else {
-            stop_lian_ticker;
-            chain on_sleep chifan start_lian;
-        };  
-    };
-
-    #action {你的内力或气不够} {
-        on_low_qx;
-    };
-
-    #action {你的体力太弱} {
-        on_low_qx;
-    };
-
-    #action {你的气或内力不够} {
-        on_low_qx;
-    };
-
-    #action {你的内力不够了} {
-        dazuo ${dazuo_count};
-    };
-    
-    #action {你的精神太差了，不能练} {
-        on_low_js;
-    };
-
-    #action {你的精神无法集中} {
-        on_low_js;
     };
 
     #class lian.inner close;
