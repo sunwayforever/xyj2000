@@ -40,7 +40,7 @@ def traverse_bfs(mud, roomno, location):
     visited = set()
     last_room_no = roomno
     if location == "nil":
-        bfs_max_count = 10
+        bfs_max_count = 20
     else:
         bfs_max_count = 50
 

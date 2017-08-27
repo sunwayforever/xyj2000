@@ -4,7 +4,7 @@
     #alias wd_action %0;
     #delay {wd_delay} {
         wd_action;
-    } {300};
+    } {360};
 };
 
 #alias {wd.stop} {

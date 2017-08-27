@@ -16,7 +16,7 @@
         #return;
     };
     
-    clear clear_target;
+    clear ${clear_target};
     on_cleared {
         gps.run;
     };

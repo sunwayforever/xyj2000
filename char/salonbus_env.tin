@@ -1,4 +1,6 @@
-#class env open;
-#VARIABLE         {map_env_keys}  {}
-#VARIABLE         {map_env_values}  {}
-#class env close;
+#CLASS {env} OPEN
+
+#VARIABLE         {map_env_keys}  {{1}{qn}}
+#VARIABLE         {map_env_values}  {{1}{2039}}
+
+#CLASS {env} CLOSE

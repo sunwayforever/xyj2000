@@ -69,7 +69,9 @@
         #unaction {^这里没有这个人};
         #class clear.inner kill;
         raw;
-        #showme CLEAR_DONE;
+        health {
+            #showme CLEAR_DONE;
+        };
     } {1};
     #ticker {kill} {
         kill %0;
@@ -296,6 +298,12 @@
         };
     };
     check_js;
+};
+
+#alias {health} {
+    #alias tmp_health #cr;
+    #alias tmp_health %0;
+    chain qx.full js.full chifan dz.full ms.full re tmp_health;
 };
 
 #class war close;

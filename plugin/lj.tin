@@ -53,9 +53,18 @@
     };
     
     #action {看来该找机会逃跑了．．．} {
-        lj.prepare;
+        health {
+            lj.bl.bfs;
+        };
     };
 
+    #action {这里没有 ${lj_target}。} {
+        wd.kick;
+        health {
+            lj.bl.bfs;
+        };
+    };
+    
     #action {李靖对手中照妖镜一看，说：%*妖魔已除尽,不妨先去歇息。} {
         lj.wait;
     };
@@ -74,15 +83,15 @@
 
     #action {找到目标} {
         wd.kick;
-        follow @lower{${lj_target}};
+        follow ${lj_target};
     };
 
     #action {你决定开始跟随%*一起行动。} {
-        kill @lower{${lj_target}};        
+        kill ${lj_target};
     };
 
     #action {落荒而逃了。} {
-        follow @lower{${lj_target}};
+        follow ${lj_target};
     };
 
     #action {GPS: 遍历完成} {
@@ -93,13 +102,19 @@
     
     #alias {lj.bl} {
         wd.kick;
-        bl.start {${lj_target}};
+        bl.start {${lj_real_target}};
+    };
+
+    #alias {lj.bl.bfs} {
+        wd.kick;
+        bl.start {${lj_real_target}} bfs;
     };
 
     #action {李靖对你说道：近有%*(%*)在%*为非作歹，请速去降服！}{
         wd.kick;
         show_to_quest 灭妖: %%1 @ %%3;
-        #var lj_target %%2;
+        #var lj_real_target %%2;
+        #var lj_target @lower{${lj_real_target}};
         #var lj_area %%3;
         gt %%3;
         on_there {

@@ -17,6 +17,7 @@
     };
     #action {〖东海仙山图〗交给你,并告诉你:带好，别乱丢哦！} {
         #class get_penglai.inner kill;
+        southwest;
         penglai_action;
     };
     #class get_penglai.inner close;
@@ -42,6 +43,7 @@
     };
     #action {【大雪山地图】交给你,并告诉你:带好，别乱丢哦！} {
         #class get_xueshan.inner kill;
+        southwest;
         xueshan_action;
     };
     #class get_xueshan.inner close;

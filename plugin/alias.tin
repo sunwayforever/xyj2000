@@ -433,9 +433,11 @@ walk_to east;
 };
 
 #alias {gift.start} {
+    #var gift_ticker 2;
+    #var gift_ticker %1;
     #ticker {gift} {
         play; place; play; yun refresh; yun recover;
-    } {2};
+    } {${gift_ticker}};
 };
 
 #alias {gift.stop} {

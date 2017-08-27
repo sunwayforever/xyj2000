@@ -17,12 +17,6 @@
     chain equip get_qian get_yao get_dan buji_action;
 };
 
-#alias {health} {
-    #alias tmp_health #cr;
-    #alias tmp_health %0;
-    chain qx.full js.full chifan dz.full ms.full re tmp_health;
-};
-
 #alias {daoju} {
     #alias daoju_action #cr;
     #alias daoju_action %0;

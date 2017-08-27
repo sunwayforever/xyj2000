@@ -27,10 +27,10 @@
             du ${du_book};
         } {0.6};
         #ticker {check_js} {
-            #if {${js_percent} < 5} {
+            #if {${js_percent} < 20} {
                 yun refresh;
             };
-            #if {${nl_percent} < 10} {
+            #if {${nl_percent} < 20} {
                 stop_du_ticker;
                 chain on_sleep chifan start_du;
             };

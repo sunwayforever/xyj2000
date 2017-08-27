@@ -17,11 +17,10 @@
     set active_message_others 2;
 };
 
-#action {¡¾%*¡¿%*µÚ%* %*(%*)} {
-    #unaction {¡¾%*¡¿%*µÚ%* %*(%*)};
-    #var char.name %4;
-    #var char.id @lower{%5};
-    #var char.menpai %2;
+#action {¡¾%*¡¿%* %*(%*)} {
+    #unaction {¡¾%*¡¿%* %*(%*)};
+    #var char.name %3;
+    #var char.id @lower{%4};
     #send {hp};
     #delay {2} {
         show.init;        
