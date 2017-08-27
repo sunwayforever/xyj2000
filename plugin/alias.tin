@@ -400,8 +400,11 @@ walk_to east;
     #class cun_qn.inner open;
     #action {你歪头想了会，说道：好吧！} {
         #class cun_qn.inner kill;
-        #showme CUN_QN_DONE;
-        cun_qn_action;
+        #send {out;southwest};
+        #delay {1} {
+            #showme CUN_QN_DONE;
+            cun_qn_action;            
+        };
     };
     #class cun_qn.inner close;
 
@@ -420,8 +423,11 @@ walk_to east;
     #class qu_qn.inner open;
     #action {你歪头想了会，说道：好吧！} {
         #class qu_qn.inner kill;
-        #showme QU_QN_DONE;
-        qu_qn_action;
+        #send {out;southwest};
+        #delay {1} {
+            #showme QU_QN_DONE;
+            qu_qn_action;            
+        };
     };
     #class qu_qn.inner close;
     gt 潜能银行;

@@ -8,7 +8,7 @@
 #alias {quest.prepare} {
     #alias quest_after_action #cr;
     #alias quest_after_action %0;
-    chain health buji quest_after_action;
+    chain health buji cun_qn quest_after_action;
 };
 
 #alias {buji} {
