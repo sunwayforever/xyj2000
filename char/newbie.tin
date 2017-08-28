@@ -1,0 +1,5 @@
+#class newbie open;
+#alias {gps.madao} {
+    give dao 1 silver;
+};
+#class newbie close;

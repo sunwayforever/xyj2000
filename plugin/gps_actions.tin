@@ -271,4 +271,7 @@
     gps.run_maze {northwest;northeast;southwest;northwest;southeast};
 };
 
+#alias {gps.madao} {
+    gps.clear dao;
+};
 #class gps_actions close;
