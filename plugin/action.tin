@@ -1,5 +1,5 @@
 #class action open;
-#nop #ticker {auto_save} {save} {610}
+#nop #ti {auto_save} {save} {610}
 
 #macro {\en} {#buffer down};
 #macro {\ep} {#buffer up};
@@ -15,11 +15,11 @@
     };
 };
 
-#action {你告诉%*：notify %*} {
+#ac {你告诉%*：notify %*} {
     #cr;
 } {1};
 
-#alias {we} {
+#al {we} {
     remove all;
     wear my boots;
     wear my cloth;
@@ -36,7 +36,7 @@
     wear all;
 };
 
-#action {你现在正忙着哩} {
+#ac {你现在正忙着哩} {
     #showme busy_for_move;
     #showme busy_for_action;
 };
@@ -53,18 +53,18 @@
 };
 
 #foreach {${busy_for_move}[%*]} {name} {
-    #action {${name}} {
+    #ac {${name}} {
         #showme busy_for_move;
     };
 };
 
-#action {马盗冲过来，对你大喝一声：要钱还是要命？} {
+#ac {马盗冲过来，对你大喝一声：要钱还是要命？} {
     #delay {1} {
         give ma 20 coin;        
     };
 };
 
-#action {秦安喝道：将军府岂是你乱闯之地！有何贵干(answer)？} {
+#ac {秦安喝道：将军府岂是你乱闯之地！有何贵干(answer)？} {
     answer 拜师;
 };
 #class action close;

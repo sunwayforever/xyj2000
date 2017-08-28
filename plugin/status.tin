@@ -2,7 +2,7 @@
 
 #var saved_qn @getenv{qn};
 #var money @getenv{money};
-#alias {update_status} {
+#al {update_status} {
     #var status_content ${char.name}: 道行: ${dh}年 潜能: ${qn}/${saved_qn} 黄金: ${money} 武学: ${wx} 杀气: ${sq} 冥思: @eval{(${max_fl}*100+100)/(${limit_fl}+1)}${percent} 打坐: @eval{(${max_nl}*100+100)/(${limit_nl}+1)}${percent};
     show_to_status ${status_content};
     drawhp;
@@ -13,16 +13,16 @@
 #var nl_percent 0;
 #var fl_percent 0;
 
-#alias {hp} {
+#al {hp} {
     #showme 气血:${curr_qx}/${max_qx} 精神:${curr_js}/${max_js};
     #showme 法力:${curr_fl}/${max_fl} 内力:${curr_nl}/${max_nl};
 };
 
-#ticker hp {
+#ti hp {
     #send {hp};
 } {2};
 
-#action { 气血：%s%d/%s%d (%s%*%%)%s内力：%s%d /%s%d (%*) (%*)} {
+#ac { 气血：%s%d/%s%d (%s%*%%)%s内力：%s%d /%s%d (%*) (%*)} {
     #var curr_qx %2;
     #var max_qx %4;
     #math qx_percent ${curr_qx}*100/${max_qx};
@@ -32,7 +32,7 @@
     #var eff_qx_percent %6;
 };
 
-#action { 精神：%s%d/%s%d (%s%*%%)%s法力：%s%d /%s%d (%*) (%*)} {
+#ac { 精神：%s%d/%s%d (%s%*%%)%s法力：%s%d /%s%d (%*) (%*)} {
     #var curr_js %2;
     #var max_js %4;
     #math js_percent ${curr_js}*100/${max_js};
@@ -47,19 +47,19 @@
 #var water 0;
 #var maxwater 100;
 
-#action {食物：%s%d/%s%d%s武学：%s%*} {
+#ac {食物：%s%d/%s%d%s武学：%s%*} {
     #var food %2;
     #var maxfood %4;
     #math food_percent ${food}*100/${maxfood};
     #var wx %7;
 };
 
-#action {潜能：%s%d%s杀气：%s%*} {
+#ac {潜能：%s%d%s杀气：%s%*} {
     #var qn %2;
     #var sq %5;
 };
 
-#action {饮水：%s%d/%s%d%s道行：%s%*} {
+#ac {饮水：%s%d/%s%d%s道行：%s%*} {
     #var water %2;
     #var maxwater %4;
     #math water_percent ${water}*100/${maxwater};
@@ -68,7 +68,7 @@
     update_status;
 };
 
-#alias {drawhp} {
+#al {drawhp} {
     #echo {{<099>@hpcolor{气血[;$curr_qx}@hpdraw{$curr_qx;$max_qx}@hpcolor{];$curr_qx}@hpcolor{[;$eff_qx_percent}@hpdraw{$eff_qx_percent;100}@hpcolor{];$eff_qx_percent} @hpcolor{精神[;$curr_js}@hpdraw{$curr_js;$max_js}@hpcolor{];$curr_js}@hpcolor{[;$eff_js_percent}@hpdraw{$eff_js_percent;100}@hpcolor{];$eff_js_percent} @hpcolor{法力[;$curr_fl}@hpdraw{$curr_fl;$max_fl}@hpcolor{];$curr_fl} @hpcolor{内力[;$curr_nl}@hpdraw{$curr_nl;$max_nl}@hpcolor{];$curr_nl} @hpcolor{食物[;$food}@hpdraw{$food;$maxfood}@hpcolor{];$food} @hpcolor{饮水[;$water}@hpdraw{$water;$maxwater}@hpcolor{];$water}<099>} {${show_status_pos}}};
 };
 
@@ -127,12 +127,12 @@
     #var result <099>%1;
 };
 
-#action {你储存了%*点潜能！} {
+#ac {你储存了%*点潜能！} {
     #math saved_qn %1;
     @setenv{qn;${saved_qn}};
 };
 
-#action {您在敝银庄共存有%*两黄金} {
+#ac {您在敝银庄共存有%*两黄金} {
     #var money @ctd{%1};
     @setenv{money;${money}};
 };

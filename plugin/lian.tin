@@ -1,6 +1,6 @@
 #class lian open;
 #var lian_count 10;
-#alias {lian.start} {
+#al {lian.start} {
     show_to_quest 练习;
     lian.setup;
     get_next_to_lian;
@@ -13,17 +13,17 @@
     };
 };
 
-#alias {lian.stop} {
+#al {lian.stop} {
     stop_lian_ticker;
     #class lian.inner kill;
     show_to_quest 练习结束;
     wd.stop;
 };
 
-#alias {lian.setup} {
+#al {lian.setup} {
     #class lian.inner open;
     #var lian_index 2;
-    #alias {get_next_to_lian} {
+    #al {get_next_to_lian} {
         #math lian_index ${lian_index}+1;
         #if {${lian_index} > ${skills_size}} {
             #var skill_to_lian nil;
@@ -40,37 +40,37 @@
     };
 
     #var lian_level_up 0;
-    #action {你的「%*」进步了！} {
+    #ac {你的「%*」进步了！} {
         #math lian_level_up ${lian_level_up}+1;
         show_to_info %%1 +${lian_level_up};
     } {1};
 
-    #action {你的%*进步了} {
+    #ac {你的%*进步了} {
         wd.kick;
     } {2};
     
-    #alias {start_lian} {
+    #al {start_lian} {
         gt ${shifu_pos};
         on_there {
             start_lian_ticker;
         };
     };
 
-    #alias {start_lian_ticker} {
-        #ticker {lian} {
+    #al {start_lian_ticker} {
+        #ti {lian} {
             lian ${skill_to_lian} ${lian_count};
         } {1};
-        #ticker {lian_check_status} {
+        #ti {lian_check_status} {
             lian_check_status;
         } {5};
     };
     
-    #alias {stop_lian_ticker} {
+    #al {stop_lian_ticker} {
         #unticker {lian};
         #unticker {lian_check_status};
     };
 
-    #alias {lian_check_status} {
+    #al {lian_check_status} {
         #if {${nl_percent} < 10} {
             #if {${js_percent} < 30} {
                 chain on_sleep chifan start_lian;
@@ -86,7 +86,7 @@
         };
     };
     
-    #ticker {check_level} {
+    #ti {check_level} {
         #if {@get_level_a{${skill_to_lian}} <= @get_level_b{${skill_to_lian}}} {
             stop_lian_ticker;
             get_next_to_lian;
@@ -99,7 +99,7 @@
         };        
     } {60};
     
-    #action {必须空手} {
+    #ac {必须空手} {
         unwield all;
     };
 

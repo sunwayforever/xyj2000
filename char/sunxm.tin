@@ -5,23 +5,23 @@
 #var shortcut F1: arrow F2: mihun F3: wuxue F4: fenghui;
 #var weapon_to_wield sword;
 
-#alias {arrow} {
+#al {arrow} {
     enchant 10;cast arrow;
 };
 
-#alias {shiyue} {
+#al {shiyue} {
     enchant 10;cast shiyue;
 };
 
-#alias {fenghui} {
+#al {fenghui} {
     perform fenghuixuewu;
 };
 
-#alias {mihun} {
+#al {mihun} {
     cast mihun;
 };
 
-#alias {wuxue} {
+#al {wuxue} {
     perform wuxue;
 };
 
@@ -41,23 +41,32 @@
     fenghui;
 };
 
-#alias {attack.prepare} {
+#al {attack.prepare} {
     cst wuxue;
 };
 
-#alias {attack} {
+#al {attack} {
     #class attack.inner open;
-    #ticker {mihun} {
+    #ti {mihun} {
         cst mihun;
     } {3};
-    #ticker {arrow} {
+    #ti {arrow} {
         cst arrow;
     } {5};
-    #ticker {fenghui} {
+    #ti {fenghui} {
         fenghui;
     } {8};
     #class attack.inner close;
     cst mihun;
     fenghui;
+};
+
+#al {reborn} {
+    jifa force moonforce;
+    jifa spells moonshentong;
+    jifa dodge moondance;
+    jifa parry snowsword;
+    jifa sword snowsword;
+    jifa unarmed baihua-zhang;
 };
 #class sunxm close;

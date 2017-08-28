@@ -8,14 +8,14 @@
 #list level_b create {};
 #loop 1 $skills_size tmp {#list level_b add 0;#list level_a add 0};
 
-#alias {check_gongfu} {
+#al {check_gongfu} {
     #list special_skills create {};
     #list special_skills_level create {};
     #class check_gongfu open;
     #var skill_index 1;
     #list skills get $skill_index skill;
 
-    #action {  %S (%*)%s： %S%s有效等级：} {
+    #ac {  %S (%*)%s： %S%s有效等级：} {
         #var basic_skill_en %%2;
         #var special_skill_zh %%4;
         #tab ${basic_skill_en};
@@ -34,7 +34,7 @@
         };
     } {2};
 
-    #action {┃  %S (%S)%s- %S%s%d/} {
+    #ac {┃  %S (%S)%s- %S%s%d/} {
         #var basic_skill_zh %%1;
         #var basic_skill_en %%2;
         #var basic_skill_level %%6;
@@ -47,7 +47,7 @@
         };
     } {3};
 
-    #action {┃□%S (%S)%s - %S%s%d/} {
+    #ac {┃□%S (%S)%s - %S%s%d/} {
         #var special_skill_zh %%1;
         #var special_skill_en %%2;
         #tab ${special_skill_en};
@@ -56,21 +56,21 @@
         #list special_skills_level add ${special_skill_level};
     } {2};
     
-    #alias {record_level_a} {
+    #al {record_level_a} {
         #list skills find %%1 record_a_tmp_index;
         #if {$record_a_tmp_index != 0} {
             #list level_a set $record_a_tmp_index %%2;
         };
     };
 
-    #alias {record_level_b} {
+    #al {record_level_b} {
         #list skills find %%1 record_b_tmp_index;
         #if {$record_b_tmp_index != 0} {
             #list level_b set $record_b_tmp_index %%2;
         };
     };
 
-    #action {你歪头想了会，说道：好吧！} {
+    #ac {你歪头想了会，说道：好吧！} {
         #math limit_nl ${limit_nl_a}+${limit_nl_b};
         #math limit_fl ${limit_fl_a}+${limit_fl_b};
         #var skills_level_a ${level_a};
@@ -105,16 +105,16 @@
     #return ${level_b_result};
 };
 
-#alias {sk} {
+#al {sk} {
     #send {skills %0};
     lock 你目前所掌握的技能;
 };
 
-#ticker {gongfu} {
+#ti {gongfu} {
     check_gongfu;
 } {180};
 
-#action {你的「%*」进步了！} {
+#ac {你的「%*」进步了！} {
     check_gongfu;
 };
 #class skill close;

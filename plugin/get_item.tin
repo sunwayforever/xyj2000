@@ -1,21 +1,21 @@
 #class get_item open;
-#alias {get_penglai} {
-    #alias penglai_action #cr;
-    #alias penglai_action %0;
+#al {get_penglai} {
+    #al penglai_action #cr;
+    #al penglai_action %0;
     #class get_penglai.inner open;
-    #action {ITEM_FOUND} {
+    #ac {ITEM_FOUND} {
         #class get_penglai.inner kill;
         #delay {2} {
             penglai_action;    
         };
     };
-    #action {ITEM_NOT_FOUND} {
+    #ac {ITEM_NOT_FOUND} {
         gt 礼品店;
         on_there {
             yao tu;
         };
     };
-    #action {〖东海仙山图〗交给你,并告诉你:带好，别乱丢哦！} {
+    #ac {〖东海仙山图〗交给你,并告诉你:带好，别乱丢哦！} {
         #class get_penglai.inner kill;
         southwest;
         penglai_action;
@@ -25,23 +25,23 @@
     checkitem {〖东海仙山图〗};
 };
 
-#alias {get_xueshan} {
-    #alias xueshan_action #cr;
-    #alias xueshan_action %0;
+#al {get_xueshan} {
+    #al xueshan_action #cr;
+    #al xueshan_action %0;
     #class get_xueshan.inner open;
-    #action {ITEM_FOUND} {
+    #ac {ITEM_FOUND} {
         #class get_xueshan.inner kill;
         #delay {2} {
             xueshan_action;    
         };
     };
-    #action {ITEM_NOT_FOUND} {
+    #ac {ITEM_NOT_FOUND} {
         gt 礼品店;
         on_there {
             yao map;
         };
     };
-    #action {【大雪山地图】交给你,并告诉你:带好，别乱丢哦！} {
+    #ac {【大雪山地图】交给你,并告诉你:带好，别乱丢哦！} {
         #class get_xueshan.inner kill;
         southwest;
         xueshan_action;
@@ -51,19 +51,19 @@
     checkitem {【大雪山地图】};
 };;
 
-#alias {get_bishuizhou} {
-    #alias bishuizhou_action #cr;
-    #alias bishuizhou_action %0;
+#al {get_bishuizhou} {
+    #al bishuizhou_action #cr;
+    #al bishuizhou_action %0;
     
     #class bishuizhou open;
-    #action {ITEM_NOT_FOUND} {
+    #ac {ITEM_NOT_FOUND} {
         gt 南城客栈;
         on_there {
             buy jiudai from er;
         };
     };
 
-    #action {ITEM_FOUND} {
+    #ac {ITEM_FOUND} {
         #class bishuizhou kill;
         #delay {2} {
             #showme GOT_BISHUIZHOU;
@@ -71,14 +71,14 @@
         };
     };
 
-    #action {你撕开无字天书的背页，从里面小心翼翼地取出一张小纸片。} {
+    #ac {你撕开无字天书的背页，从里面小心翼翼地取出一张小纸片。} {
         #class bishuizhou kill;
         #delay {2} {
             #showme GOT_BISHUIZHOU;
             bishuizhou_action;            
         };
     };
-    #action {你向店小二买下一个桂花酒袋} {
+    #ac {你向店小二买下一个桂花酒袋} {
         gt 袁氏草堂;
         on_there {
             give jiudai to yuan;
@@ -91,19 +91,19 @@
     checkitem {避水咒};
 };
 
-#alias {get_book} {
-    #alias book_action #cr;
-    #alias book_action %0;
+#al {get_book} {
+    #al book_action #cr;
+    #al book_action %0;
     
     #class bishuizhou open;
-    #action {ITEM_NOT_FOUND} {
+    #ac {ITEM_NOT_FOUND} {
         gt 南城客栈;
         on_there {
             buy jiudai from er;
         };
     };
 
-    #action {ITEM_FOUND} {
+    #ac {ITEM_FOUND} {
         #class bishuizhou kill;
         #delay {2} {
             #showme GOT_BOOK;
@@ -111,7 +111,7 @@
         };
     };
 
-    #action {你向店小二买下一个桂花酒袋} {
+    #ac {你向店小二买下一个桂花酒袋} {
         gt 袁氏草堂;
         on_there {
             give jiudai to yuan;
@@ -123,28 +123,28 @@
     checkitem {无字天书};    
 };
 
-#alias get_pillow {
-    #alias pillow_action #cr;
-    #alias pillow_action %0;
+#al get_pillow {
+    #al pillow_action #cr;
+    #al pillow_action %0;
     
     #class get_pillow open;
-    #alias {got_pillow} {
+    #al {got_pillow} {
         #class get_pillow kill;
         #showme GOT_PILLOW;
         pillow_action;
     };
-    #action {ITEM_NOT_FOUND} {
+    #ac {ITEM_NOT_FOUND} {
         gt 南城客栈;
         on_there {
             buy pillow from er;
         };
     };
-    #action {ITEM_FOUND} {
+    #ac {ITEM_FOUND} {
         #delay {2} {
             got_pillow;    
         };
     };
-    #action {你向店小二买下一只黄粱枕。} {
+    #ac {你向店小二买下一只黄粱枕。} {
         got_pillow;
     };
     #class get_pillow close;
@@ -152,24 +152,22 @@
     checkitem 黄粱枕;
 };
 
-#alias {get_gift} {
-    #alias gift_action #cr;
-    #alias gift_action %0;
+#al {get_gift} {
+    #al gift_action #cr;
+    #al gift_action %0;
     #class gift.inner open;
-    #action {ITEM_FOUND} {
+    #ac {ITEM_FOUND} {
         #class gift.inner kill;
-        #showme GOT_GIFT;
         gift_action;
     };
-    #action {ITEM_NOT_FOUND} {
+    #ac {ITEM_NOT_FOUND} {
         gt 礼品店;
         on_there {
             buy newbie gift from boss;
         }
     };
-    #action {你向二手货商买下一个新手宝贝。} {
+    #ac {你向二手货商买下一个新手宝贝。} {
         #class gift.inner kill;
-        #showme GOT_GIFT;
         gift_action;
     };
     #class gift.inner close;
@@ -177,25 +175,25 @@
     checkitem {新手宝贝};
 };
 
-#alias {get_qian} {
-    #alias qian_action #cr;
-    #alias qian_action %0;
+#al {get_qian} {
+    #al qian_action #cr;
+    #al qian_action %0;
     #class get_qian.inner open;
-    #alias {got_qian} {
+    #al {got_qian} {
         #class get_qian.inner kill;
         #delay {2} {
             #showme GOT_QIAN;
             qian_action;
         };    
     };
-    #alias {qu_qian} {
+    #al {qu_qian} {
         gt 相记钱庄;
         on_there {
             qu 5 gold;
             account;
         };
     };
-    #action {%*_ITEM_FOUND} {
+    #ac {%*_ITEM_FOUND} {
         #if {%%1 > 5} {
             got_qian;
         };
@@ -203,10 +201,10 @@
             qu_qian;
         };
     };
-    #action {ITEM_NOT_FOUND} {
+    #ac {ITEM_NOT_FOUND} {
         qu_qian;
     };
-    #action {你从银号里取出} {
+    #ac {你从银号里取出} {
         got_qian;
     };
     #class get_qian.inner close;
@@ -216,24 +214,24 @@
 
 #var get_yao_count 50;
 
-#alias {get_yao} {
-    #alias yao_action #cr;
-    #alias yao_action %0;
+#al {get_yao} {
+    #al yao_action #cr;
+    #al yao_action %0;
     #class get_yao.inner open;
-    #alias {got_yao} {
+    #al {got_yao} {
         #class get_yao.inner kill;
         #delay {2} {
             #showme GOT_YAO;
             yao_action;
         };    
     };
-    #alias {qu_yao} {
+    #al {qu_yao} {
         gt 回春药铺;
         on_there {
             buy ${get_yao_count} yao from boss;
         };
     };
-    #action {%*_ITEM_FOUND} {
+    #ac {%*_ITEM_FOUND} {
         #if {%%1 >= ${get_yao_count}} {
             got_yao;
         };
@@ -241,10 +239,10 @@
             qu_yao;
         };
     };
-    #action {ITEM_NOT_FOUND} {
+    #ac {ITEM_NOT_FOUND} {
         qu_yao;
     };
-    #action {你向杨中顺买下一些金创药。} {
+    #ac {你向杨中顺买下一些金创药。} {
         #send {west};
         got_yao;
     };
@@ -253,24 +251,23 @@
     checkitem 金创药;
 };
 
-#alias {get_dan} {
-    #alias dan_action #cr;
-    #alias dan_action %0;
+#al {get_dan} {
+    #al dan_action #cr;
+    #al dan_action %0;
     #class get_dan.inner open;
-    #alias {got_dan} {
+    #al {got_dan} {
         #class get_dan.inner kill;
         #delay {2} {
-            #showme GOT_DAN;
             dan_action;
         };    
     };
-    #alias {qu_dan} {
+    #al {qu_dan} {
         gt 回春药铺;
         on_there {
             buy ${get_yao_count} dan from boss;
         };
     };
-    #action {%*_ITEM_FOUND} {
+    #ac {%*_ITEM_FOUND} {
         #if {%%1 >= ${get_yao_count}} {
             got_dan;
         };
@@ -278,10 +275,10 @@
             qu_dan;
         };
     };
-    #action {ITEM_NOT_FOUND} {
+    #ac {ITEM_NOT_FOUND} {
         qu_dan;
     };
-    #action {你向杨中顺买下一些混元丹。} {
+    #ac {你向杨中顺买下一些混元丹。} {
         #send {west};
         got_dan;
     };
@@ -290,30 +287,30 @@
     checkitem 混元丹;
 };
 
-#alias {get_wan} {
-    #alias wan_action #cr;
-    #alias wan_action %0;
+#al {get_wan} {
+    #al wan_action #cr;
+    #al wan_action %0;
     #class get_wan.inner open;
-    #alias {got_wan} {
+    #al {got_wan} {
         #class get_wan.inner kill;
         #delay {2} {
             #showme GOT_WAN;
             wan_action;
         };    
     };
-    #alias {qu_wan} {
+    #al {qu_wan} {
         gt 回春药铺;
         on_there {
             buy wan from boss;
         };
     };
-    #action {ITEM_FOUND} {
+    #ac {ITEM_FOUND} {
         got_wan;
     };
-    #action {ITEM_NOT_FOUND} {
+    #ac {ITEM_NOT_FOUND} {
         qu_wan;
     };
-    #action {你向杨中顺买下一颗辟谷丸。} {
+    #ac {你向杨中顺买下一颗辟谷丸。} {
         #send {west};
         got_wan;
     };
@@ -322,20 +319,20 @@
     checkitem 辟谷丸;
 };
 
-#alias {get_shutie} {
-    #alias shutie_action #cr;
-    #alias shutie_action %0;
+#al {get_shutie} {
+    #al shutie_action #cr;
+    #al shutie_action %0;
     #class get_shutie.inner open;
-    #action {ITEM_FOUND} {
+    #ac {ITEM_FOUND} {
         #class get_shutie.inner kill;
         #delay {2} {
             shutie_action;    
         };
     };
-    #action {ITEM_NOT_FOUND} {
+    #ac {ITEM_NOT_FOUND} {
         gt 琉璃塔十三层;
     };
-    #action {奔波儿灞交给你一封帖。} {
+    #ac {奔波儿灞交给你一封帖。} {
         #class get_shutie.inner kill;
         shutie_action;
     };
@@ -344,23 +341,23 @@
     checkitem {书帖};    
 };
 
-#alias {get_huangqian} {
-    #alias huangqian_action #cr;
-    #alias huangqian_action %0;
+#al {get_huangqian} {
+    #al huangqian_action #cr;
+    #al huangqian_action %0;
     #class get_huangqian.inner open;
-    #action {ITEM_FOUND} {
+    #ac {ITEM_FOUND} {
         #class get_huangqian.inner kill;
         #delay {2} {
             huangqian_action;    
         };
     };
-    #action {ITEM_NOT_FOUND} {
+    #ac {ITEM_NOT_FOUND} {
         gt 南坡;
         on_there {
             ask furen about 黄钱;
         }
     };
-    #action {断肠妇人给你一张黄钱。} {
+    #ac {断肠妇人给你一张黄钱。} {
         #class get_huangqian.inner kill;
         huangqian_action;
     };

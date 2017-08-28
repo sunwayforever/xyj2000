@@ -6,16 +6,16 @@
 #var dz_total_count 0;
 #var ms_total_count 0;
 
-#alias {ms.full.cancel} {
+#al {ms.full.cancel} {
     #class ms.full.inner kill;
     #unticker {ms};
 };
 
-#alias {ms.full} {
-    #alias tmp_ms #cr;
-    #alias tmp_ms %0;
+#al {ms.full} {
+    #al tmp_ms #cr;
+    #al tmp_ms %0;
     #class ms.full.inner open;
-    #action {你现在神智不清,不能再想入非非了。} {
+    #ac {你现在神智不清,不能再想入非非了。} {
         yun refresh;
     };
     #class ms.full.inner close;
@@ -25,7 +25,7 @@
     };
     #else {
         #delay {ms_delay} {
-            #ticker {ms} {
+            #ti {ms} {
                 #if {${fl_percent} < 190} {
                     mingsi ${dazuo_count};
                 };
@@ -42,16 +42,16 @@
     };
 };
 
-#alias {dz.full.cancel} {
+#al {dz.full.cancel} {
     #class dz.full.inner kill;
     #unticker {dz};
 };
 
-#alias {dz.full} {
-    #alias tmp_dz #cr;
-    #alias tmp_dz %0;
+#al {dz.full} {
+    #al tmp_dz #cr;
+    #al tmp_dz %0;
     #class dz.full.inner open;
-    #action {你现在精不够} {
+    #ac {你现在精不够} {
         heal 1;
     };
     #class dz.full.inner close;
@@ -61,7 +61,7 @@
     };
     #else {
         #delay {dz_delay} {
-            #ticker {dz} {
+            #ti {dz} {
                 #if {${nl_percent} < 190} {
                     yun recover; dazuo ${dazuo_count};
                 };
@@ -77,14 +77,14 @@
     };
 };
 
-#alias {cancel_dazuo} {
+#al {cancel_dazuo} {
     stop_dz;
     #class dazuo kill;
 };
 
-#alias {do_dazuo} {
-    #alias dazuo_action #cr;
-    #alias dazuo_action %0;
+#al {do_dazuo} {
+    #al dazuo_action #cr;
+    #al dazuo_action %0;
     #if {${limit_nl} < ${max_nl} + 1} {
         #delay {1} {
             #showme DAZUO_DONE;            
@@ -95,40 +95,40 @@
     };
 
     #class dazuo open;
-    #alias {start_dazuo} {
-        #ticker {dz} {
+    #al {start_dazuo} {
+        #ti {dz} {
             dazuo ${dazuo_count};
         } {3};
     };
 
-    #alias {stop_dazuo} {
+    #al {stop_dazuo} {
         #unticker {dz};
     };
 
-    #action {你现在的气太少了} {
+    #ac {你现在的气太少了} {
         stop_dz;
         #class dazuo kill;
         #showme DAZUO_DONE;
         dazuo_action;
     };
 
-    #alias {stop_dz} {
+    #al {stop_dz} {
         stop_dazuo;
     };
     
-    #alias {start_dz} {
+    #al {start_dz} {
         gt ${shifu_pos};
         on_there {
             start_dazuo;
         };
     };
     
-    #action {你的内力增强} {
+    #ac {你的内力增强} {
         #math dz_total_count ${dz_total_count}+1;
         show_to_info force +${dz_total_count};
     };
     
-    #alias {check_and_start_dz} {
+    #al {check_and_start_dz} {
         stop_dz;
         chifan {
             start_dz;
@@ -139,9 +139,9 @@
     check_and_start_dz;
 };
 
-#alias {dz.start} {
+#al {dz.start} {
     #class dz.inner open;
-    #action {DAZUO_DONE} {
+    #ac {DAZUO_DONE} {
         wd.kick;
         #if {${limit_nl} < ${max_nl} + 1} {
             dz.stop;
@@ -160,19 +160,19 @@
     };
 };
 
-#alias {dz.stop} {
+#al {dz.stop} {
     cancel_dazuo;
     #class dz.inner kill;
     show_to_quest 打坐完毕;
     wd.stop;
 };
 
-#alias {cancel_mingsi} {
+#al {cancel_mingsi} {
     stop_ms;
     #class mingsi kill;
 };
 
-#alias {do_mingsi} {
+#al {do_mingsi} {
     #if {${limit_fl} < ${max_fl} + 1} {
         #delay {1} {
             #showme MINGSI_DONE;            
@@ -180,32 +180,32 @@
         #return;
     };
     #class mingsi open;
-    #alias {start_ms} {
+    #al {start_ms} {
         gt ${shifu_pos};
         on_there {
             start_mingsi;
         };
     };
-    #alias {start_mingsi} {
-        #ticker {mingsi}{
+    #al {start_mingsi} {
+        #ti {mingsi}{
             mingsi 20
         } {3};
     };
-    #action {你的法力增强} {
+    #ac {你的法力增强} {
         #math ms_total_count ${ms_total_count}+1;
         show_to_info spells +${ms_total_count};
     };
 
-    #action {你现在神智不清,不能再想入非非了。} {
+    #ac {你现在神智不清,不能再想入非非了。} {
         stop_ms;
         #class mingsi kill;
         #showme MINGSI_DONE;
     };
-    #alias {stop_ms} {
+    #al {stop_ms} {
         #unticker {mingsi};
     };
 
-    #alias {check_and_start_ms} {
+    #al {check_and_start_ms} {
         stop_ms;
         chifan {
             start_ms;
@@ -216,9 +216,9 @@
     check_and_start_ms;
 };
 
-#alias {ms.start} {
+#al {ms.start} {
     #class ms.inner open;
-    #action {MINGSI_DONE} {
+    #ac {MINGSI_DONE} {
         wd.kick;
         #if {${limit_fl} < ${max_fl} + 1} {
             ms.stop;
@@ -236,21 +236,21 @@
     };
 };
 
-#alias {ms.stop} {
+#al {ms.stop} {
     wd.stop;
     cancel_mingsi;
     #class ms.inner kill;
     show_to_quest 冥思完毕;
 };
 
-#alias {xl.start} {
+#al {xl.start} {
     #class xiulian.inner open;
-    #action {DAZUO_DONE} {
+    #ac {DAZUO_DONE} {
         wd.kick;
         do_mingsi;
     };
 
-    #action {MINGSI_DONE} {
+    #ac {MINGSI_DONE} {
         wd.kick;
         #if {${max_nl} + 1 < ${limit_nl}} {
             on_sleep {
@@ -274,7 +274,7 @@
     show_to_quest 修炼;
 };
 
-#alias {xl.stop} {
+#al {xl.stop} {
     #class xiulian.inner kill;
     wd.stop;
     cancel_mingsi;

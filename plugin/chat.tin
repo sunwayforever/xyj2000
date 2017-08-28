@@ -1,11 +1,11 @@
 #class chat open;
 #var chat_on 0;
-#alias {chat.on} {
+#al {chat.on} {
     #var chat_on 1;
     show.init;
 };
 
-#alias {chat.off} {
+#al {chat.off} {
     #var chat_on 0;
     show.init;
     #send {l};
@@ -16,37 +16,37 @@
 };
 
 #foreach {${chat_ignore_list}[%*]} {chat_ignore} {
-    #action {${chat_ignore}} {
+    #ac {${chat_ignore}} {
         #cr;
     } {2};
 };
 
-#alias {do_chat} {
+#al {do_chat} {
     show_to_chat %0;
     #return
     chat.record %0;
 };
 
 #gag {¡¾ÏÐÁÄ¡¿%*};
-#action {¡¾ÏÐÁÄ¡¿%*} {
+#ac {¡¾ÏÐÁÄ¡¿%*} {
     do_chat %0;
 } {4};
 
-#action {^¡¾ÏÐÁÄ¡¿%*(%*): %*} {
+#ac {^¡¾ÏÐÁÄ¡¿%*(%*): %*} {
     remember @lower{%2};
     do_chat %0
 } {3};
 
-#action {^%w(%w){»Ø´ð|¸æËß}Äã£º%*} {
+#ac {^%w(%w){»Ø´ð|¸æËß}Äã£º%*} {
     remember @lower{%2};
     do_chat %0;
 } {4};
 
-#action {^Äã{»Ø´ð|¸æËß}%1£º%2} {
+#ac {^Äã{»Ø´ð|¸æËß}%1£º%2} {
     do_chat %0;
 } {4};
 
-#alias {chat.record} {
+#al {chat.record} {
     #return
     #var chat_content %0;
     #format {current_epoch} {%T};
@@ -54,13 +54,13 @@
     #system {sqlite3 db/chat.db 'insert or ignore into chat values (${current_epoch}, "${current_time}", "${chat_content}")'};
 };
 
-#alias {chat.query} {
+#al {chat.query} {
     #format {current_epoch} {%T};
     #math last_epoch ${current_epoch} - 2*60*60;
     #system {sqlite3 db/chat.db 'select date, content from chat where epoch > ${last_epoch} order by epoch'};
 };
 
-#alias {remember} {
+#al {remember} {
     #return
     #if {@ismember{%1;contacts} != 0} {
         #return;

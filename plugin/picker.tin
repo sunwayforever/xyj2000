@@ -1,7 +1,7 @@
 #class picker open;
 #list picker_items create {Silver armor;Iron armor;Pink skirt;Hammer;Gang cha;Teng jia};
 
-#alias {picker.start} {
+#al {picker.start} {
     picker.setup;
     #var picker_item_index 1;
     #list picker_items size picker_item_size;
@@ -9,21 +9,21 @@
     picker.bl;
 };
 
-#alias {picker.bl} {
+#al {picker.bl} {
     gt 龙宫;
     on_there {
         bl.start {${picker_item}};
     };
 };
 
-#alias {picker.stop} {
+#al {picker.stop} {
     #class picker kill;
     #undelay {picker_delay};
 };
 
-#alias {picker.setup} {
+#al {picker.setup} {
     #class picker open;
-    #action {GPS: 遍历完成} {
+    #ac {GPS: 遍历完成} {
         #math picker_item_index ${picker_item_index}+1;
         #if {${picker_item_index} > ${picker_item_size}} {
             #var picker_item_index 1;
@@ -34,56 +34,56 @@
         };
         
     };
-    #action {找到目标} {
+    #ac {找到目标} {
         picker.get_all @lower{${picker_item}};
     };
 
-    #action {GET_ALL_DONE} {
+    #ac {GET_ALL_DONE} {
         bl.continue;
     };
 
-    #action {GET_ALL_FULL} {
+    #ac {GET_ALL_FULL} {
         gt 董记当铺;
         on_there {
             picker.sell_all @lower{${picker_item}};
         };
     };
 
-    #action {SELL_ALL_DONE} {
+    #ac {SELL_ALL_DONE} {
         #list picker_items get ${picker_item_index} picker_item;
         picker.bl;
     };
     #class picker close;
 };
 
-#alias {picker.get_all} {
+#al {picker.get_all} {
     #var get_all_item %0;
     #class get_all open;
-    #ticker {get_all} {
+    #ti {get_all} {
         get ${get_all_item};
     } {2};
-    #action {对你而言太重了。} {
+    #ac {对你而言太重了。} {
         #class get_all kill;
         #showme GET_ALL_FULL;
     };
-    #action {你附近没有这样东西。} {
+    #ac {你附近没有这样东西。} {
         #class get_all kill;
         #showme GET_ALL_DONE;
     };
     #class get_all close;
 };
 
-#alias {picker.sell_all} {
+#al {picker.sell_all} {
     #var sell_all_item %0;
     #class sell_all open;
-    #ticker {sell_all} {
+    #ti {sell_all} {
         sell ${sell_all_item};
     } {3};
-    #action {这样东西不值钱。} {
+    #ac {这样东西不值钱。} {
         #class sell_all kill;
         #showme SELL_ALL_DONE;
     };
-    #action {你要卖断什么物品？} {
+    #ac {你要卖断什么物品？} {
         #class sell_all kill;
         #showme SELL_ALL_DONE;
     };

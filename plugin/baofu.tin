@@ -1,29 +1,29 @@
 #class baofu open;
 
-#alias {checkitem} {
+#al {checkitem} {
     #var check_item @lower{%0};
     
     @mapcreate{burden};
     #unvar burden_all;
     #class burden.check.inner open;
     #var burden_start_cap 0;
-    #action {□%S(%*)} {
+    #ac {□%S(%*)} {
         #if {${burden_start_cap} == 1} {
             #var burden_all ${burden_all} %%1;
         }
     };
 
-    #action {  %S(%*)} {
+    #ac {  %S(%*)} {
         #if {${burden_start_cap} == 1} {
             #var burden_all ${burden_all} %%1;
         }
     };
 
-    #action {你身上带着下列这些东西} {
+    #ac {你身上带着下列这些东西} {
         #var burden_start_cap 1;
     } {1};
     
-    #action {总计%*种。} {
+    #ac {总计%*种。} {
         #class burden.check.inner kill;
         INVOKE burden "${burden_all}";
         #var count @mapget{burden;%1};

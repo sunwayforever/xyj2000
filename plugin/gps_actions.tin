@@ -1,6 +1,6 @@
 #class gps_actions open;
 
-#alias {gps.clear} {
+#al {gps.clear} {
     #var clear_target %0;
     #var clear_menpai "";
     #replace clear_target {@} {;};
@@ -22,7 +22,7 @@
     };
 };
 
-#alias {gps.delay} {
+#al {gps.delay} {
     #var gps_delay 1.5;
     #var gps_delay %1;
     #delay {gps_delay} {
@@ -30,16 +30,16 @@
     } {${gps_delay}};
 };
 
-#alias {gps.zuo_mufa} {
+#al {gps.zuo_mufa} {
     #class zuo_mufa open;
-    #ticker {mufa} {
+    #ti {mufa} {
         zuo mufa;
     } {3};
-    #action {一只木筏从海上漂了过来。} {
+    #ac {一只木筏从海上漂了过来。} {
         enter;
         #unticker {mufa};
     };
-    #action {木筏一震，搁浅了。显然是到陆地了，赶紧上去吧。} {
+    #ac {木筏一震，搁浅了。显然是到陆地了，赶紧上去吧。} {
         #class zuo_mufa kill;
         out;
         #delay {gps_delay} {
@@ -49,9 +49,9 @@
     #class zuo_mufa close;
 };
 
-#alias {gps.longgong} {
+#al {gps.longgong} {
     #class longgong open;
-    #action {GOT_BISHUIZHOU} {
+    #ac {GOT_BISHUIZHOU} {
         #delay {gps_longgong_delay} {
             #class longgong kill;
             #delay {1} {
@@ -63,7 +63,7 @@
             dive;
         };
     };
-    #action {海底 -} {
+    #ac {海底 -} {
         #undelay {gps_longgong_delay};
         #class longgong kill;
         #delay {1} {
@@ -75,21 +75,21 @@
     get_bishuizhou;
 };
 
-#alias {gps.honglou} {
+#al {gps.honglou} {
     #class honglou open;
-    #action {不一会儿，你就进入了梦乡。} {
+    #ac {不一会儿，你就进入了梦乡。} {
         #delay {gps_honglou_delay} {
             #class honglou kill;
             gps.retry;
         } {20};
     };
-    #action {GOT_PILLOW} {
+    #ac {GOT_PILLOW} {
         gt ${sleep_pos};
         on_there {
             sleep;
         };
     };
-    #action {荡悠悠三更梦 -} {
+    #ac {荡悠悠三更梦 -} {
         #undelay {gps_honglou_delay};
         #class honglou kill;
         gps.retry;
@@ -98,9 +98,9 @@
     get_pillow;
 };
 
-#alias {gps.hongloub} {
+#al {gps.hongloub} {
     #class hongloub open;
-    #action {你揉揉眼睛，醒了过来。} {
+    #ac {你揉揉眼睛，醒了过来。} {
         #class hongloub kill;
         gps.retry;
     };
@@ -108,16 +108,16 @@
     ask girl about back;
 };
 
-#alias {gps.fly} {
+#al {gps.fly} {
     #class gps_fly open;
-    #action {到了！你按下云头跳了下来。} {
+    #ac {到了！你按下云头跳了下来。} {
         #class gps_fly kill;
         gps.retry;
     };
     #class gps_fly close;
     fly %1;
 };
-#alias {gps.bgz} {
+#al {gps.bgz} {
     #2 ne;
     #2 nw;
     #2 sw;
@@ -125,8 +125,8 @@
     gps.run;
 };
 
-#alias {gps.yuntouqiao_n} {
-    #alias {yuntouqiao_check_exits} {
+#al {gps.yuntouqiao_n} {
+    #al {yuntouqiao_check_exits} {
         #list yuntouqiao_exits create ${pos.exits};
         #if {@ismember{north;yuntouqiao_exits} != 0} {
             #send {north};
@@ -134,8 +134,8 @@
         };
         #else {
             #echo 过不去...等桥降下来;
-            #action {慢慢聚在一起} {
-                #unaction {慢慢聚在一起};
+            #ac {慢慢聚在一起} {
+                #unac {慢慢聚在一起};
                 #send {north};
                 gps.run;
             };
@@ -146,8 +146,8 @@
     };
 };
 
-#alias {gps.yuntouqiao_s} {
-    #alias {yuntouqiao_check_exits} {
+#al {gps.yuntouqiao_s} {
+    #al {yuntouqiao_check_exits} {
         #list yuntouqiao_exits create ${pos.exits};
         #if {@ismember{south;yuntouqiao_exits} != 0} {
             #send {south};
@@ -155,8 +155,8 @@
         };
         #else {
             #echo 过不去...等桥降下来;
-            #action {慢慢聚在一起} {
-                #unaction {慢慢聚在一起};
+            #ac {慢慢聚在一起} {
+                #unac {慢慢聚在一起};
                 #send {south};
                 gps.run;
             };
@@ -167,22 +167,22 @@
     };
 };
 
-#alias {gps.xiezhidong} {
+#al {gps.xiezhidong} {
     #send {northeast};
-    #action {慢慢地你终于又有了知觉．．．} {
-        #unaction {慢慢地你终于又有了知觉．．．};
+    #ac {慢慢地你终于又有了知觉．．．} {
+        #unac {慢慢地你终于又有了知觉．．．};
         gps.run;
     };
 };
 
-#alias {gps.baigujing} {
+#al {gps.baigujing} {
     #class gps_baigujing open;
-    #alais {baigujing_clear_next} {
+    #al {baigujing_clear_next} {
         #list baigujing_targets get ${baigujing_index} baigujing_target;
         clear ${baigujing_target};
     };
     
-    #action {CLEAR_DONE} {
+    #ac {CLEAR_DONE} {
         #math baigujing_index ${baigujing_index}+1;
         #if {${baigujing_index} >= 4} {
             #class gps_baigujing kill;
@@ -198,23 +198,23 @@
     baigujing_clear_next;
 };
 
-#alias {gps.penglai} {
+#al {gps.penglai} {
     get_penglai {
         fly penglai;
         gps.run;
     };
 };
 
-#alias {gps.xueshan} {
+#al {gps.xueshan} {
     get_xueshan {
         fly xueshan;
         gps.run;
     };
 };
 
-#alias {gps.cross_river} {
+#al {gps.cross_river} {
     #class cross_river open;
-    #action {你淋漓漓地爬上了岸。} {
+    #ac {你淋漓漓地爬上了岸。} {
         #class cross_river kill;
         gps.run;
     };
@@ -222,16 +222,16 @@
     cross river;
 };
 
-#alias {gps.wudidong} {
+#al {gps.wudidong} {
     #class gps_wudidong open;
-    #ticker {push_statue} {
+    #ti {push_statue} {
         jiali max; push statue;
     } {6};
 
-    #ticker {heal} {
+    #ti {heal} {
         yun heal;
     } {2};
-    #action {你纵身一跃，跳了进去，大洞随即又合上了。} {
+    #ac {你纵身一跃，跳了进去，大洞随即又合上了。} {
         #class gps_wudidong kill;
         #unticker {push_statue};
         #unticker {heal};
@@ -241,11 +241,11 @@
     jiali max; push statue;
 };
 
-#alias {gps.baiyundong} {
+#al {gps.baiyundong} {
     gps.run_maze {north;north;north;northeast;northeast;northwest;north;north};
 };
 
-#alias {gps.baihuagu} {
+#al {gps.baihuagu} {
     gps.run_maze {
         north;west;south;south;east;east;north;north;north;west;
         west;west;south;south;south;south;east;east;east;east;north;north;north;north;
@@ -253,12 +253,12 @@
     };
 };
 
-#alias {gps.cliff} {
+#al {gps.cliff} {
     #class gps_cliff open;
-    #ticker {climb} {
+    #ti {climb} {
         climb cliff;
     } {10};
-    #action {你慢慢的爬了上来。} {
+    #ac {你慢慢的爬了上来。} {
         #unticker {climb};
         #class gps_cliff kill;
         gps.run;
@@ -267,11 +267,11 @@
     climb cliff;
 };
 
-#alias {gps.zizhulin} {
+#al {gps.zizhulin} {
     gps.run_maze {northwest;northeast;southwest;northwest;southeast};
 };
 
-#alias {gps.madao} {
+#al {gps.madao} {
     gps.clear dao;
 };
 #class gps_actions close;

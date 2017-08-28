@@ -1,19 +1,19 @@
 #class irc open;
-#alias {irc.start} {
+#al {irc.start} {
     #run {irc} {./bin/irc_bot.py ${char}};
     #unticker {%*};
-    #unaction {%*};
-    #action {${char}: %*} {
+    #unac {%*};
+    #ac {${char}: %*} {
         #mud %%1;
     };
     #mud;
 };
 
-#alias {irc.notify} {
+#al {irc.notify} {
     #irc %0;
 };
 
-#alias {status} {
+#al {status} {
     #cr;
 };
 

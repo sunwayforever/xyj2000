@@ -1,7 +1,7 @@
 #class busy open;
 #var busying 0;
 #list unbusy_list create {};
-#alias {do_unbusy} {
+#al {do_unbusy} {
     #list unbusy_list size busy_list_size;
     #if {${busy_list_size} == 0} {
         #var busy_action nil;
@@ -22,7 +22,7 @@
     };
 };
 
-#alias {on_unbusy} {
+#al {on_unbusy} {
     #list unbusy_list add {%0};
     #if {${busying} == 0} {
         do_unbusy;
@@ -31,9 +31,9 @@
 
 #gag {禁止练功};
 #gag {你最少要花 20 点「气」才能练功。};
-#alias {on_unbusy_inner} {
-    #alias tmp_unbusy #cr;
-    #alias tmp_unbusy %0;
+#al {on_unbusy_inner} {
+    #al tmp_unbusy #cr;
+    #al tmp_unbusy %0;
     #class unbusy.inner open;
     #class unbusy.inner close;
     tmp_unbusy;

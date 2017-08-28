@@ -1,25 +1,25 @@
 #class ytg open;
 #var ytg_stopped 1;
-#alias {ytg.start} {
+#al {ytg.start} {
     #var ytg_stopped 0;
     wd.start {ytg.start};
     ytg.setup;
     ytg.prepare;
 };
 
-#alias {ytg.stop} {
+#al {ytg.stop} {
     wd.stop;
     #var ytg_stopped 1;
     #undelay {ytg.delay};
     ytg.teardown;
 };
 
-#alias {ytg.prepare} {
+#al {ytg.prepare} {
     wd.kick;
     prepare;
 };
 
-#alias {ytg.q} {
+#al {ytg.q} {
     wd.kick;
     gt ytg;
     on_there {
@@ -27,35 +27,35 @@
     };
 };
 
-#alias {ytg.teardown} {
+#al {ytg.teardown} {
     #class ytg.inner kill;
     cancel_prepare;
 };
 
-#alias {ytg.setup} {
+#al {ytg.setup} {
     #class ytg.inner open;
     #var ytg_got_task 0;
-    #action {PREPARE_DONE} {
+    #ac {PREPARE_DONE} {
         ytg.q;
     };
-    #action {慢慢地你终于又有了知觉．．．} {
+    #ac {慢慢地你终于又有了知觉．．．} {
         ytg.prepare;
     };
-    #action {看来该找机会逃跑了．．．} {
+    #ac {看来该找机会逃跑了．．．} {
         ytg.prepare;
     };
-    #action {袁天罡将手中桃木剑向四方一划，对你说道：} {
+    #ac {袁天罡将手中桃木剑向四方一划，对你说道：} {
         #var ytg_got_task 1;
     };
 
-    #action {你向袁天罡打听有关『kill』的消息。} {
+    #ac {你向袁天罡打听有关『kill』的消息。} {
         #var ytg_got_task 0;
     };
-    #action {袁天罡说道：在下不是请您去收服} {
+    #ac {袁天罡说道：在下不是请您去收服} {
         ytg.wait;
     };
 
-    #alias {ytg.wait} {
+    #al {ytg.wait} {
         wd.kick;
         #delay {ytg.delay} {
             ask yuan about kill;   
@@ -63,16 +63,16 @@
         show_to_quest 灭妖: 等待;
     };
     
-    #action {袁天罡将手中桃木剑缓缓放下} {
+    #ac {袁天罡将手中桃木剑缓缓放下} {
         ytg.wait;
     };
 
-    #action {找到目标} {
+    #ac {找到目标} {
         wd.kick;
         kill @lower{${ytg_target}};
     };
 
-    #action {你灭妖有功} {
+    #ac {你灭妖有功} {
         wd.kick;
         show_to_quest 灭妖: 完成;
         show_to_info 完成: ${ytg_area};
@@ -82,18 +82,18 @@
         };
     };
 
-    #action {GPS: 遍历完成} {
+    #ac {GPS: 遍历完成} {
         wd.kick;
         show_to_info 没有找到怪: ${ytg_area};
         ytg.prepare;
     };
     
-    #alias {ytg.bl} {
+    #al {ytg.bl} {
         wd.kick;
         bl.start {${ytg_target}};
     };
 
-    #action {　　近有%*(%*)在%*出没，为害不小，请速去收服！} {
+    #ac {　　近有%*(%*)在%*出没，为害不小，请速去收服！} {
         #if {${ytg_got_task} == 1} {
             wd.kick;
             show_to_quest 灭妖: %%1 @ %%3;

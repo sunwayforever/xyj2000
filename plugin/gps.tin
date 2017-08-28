@@ -2,7 +2,7 @@
 load gps_actions;
 
 @stackcreate{gt};
-#alias gt gps.gt;
+#al gt gps.gt;
 
 #var gps_path_index 0;
 #var gps_path_size 0;
@@ -10,15 +10,15 @@ load gps_actions;
 #var GPS_TRAVERSE_DELAY 0.8;
 #var GPS_GT_DELAY 0.5;
 
-#alias {on_there} {
-    #alias on_there_${dst_roomno} %0;
+#al {on_there} {
+    #al on_there_${dst_roomno} %0;
 };
 
-#alias {gps.gt.check} {
+#al {gps.gt.check} {
     gt.stop;
     #var gps_stop 0;
     #var dst_roomno @stacktop{gt};
-    #alias {gps_check_room_done} {
+    #al {gps_check_room_done} {
         #var src_roomno ${gps.roomno};
         #if {${src_roomno} == ${dst_roomno}} {
             gt.stop;
@@ -43,22 +43,22 @@ load gps_actions;
     };
 };
 
-#alias gt.stop gps.gt.stop;
-#alias {gps.gt.stop} {
+#al gt.stop gps.gt.stop;
+#al {gps.gt.stop} {
     #var gps.run.mode nil;
     gps.stop;
 };
-#alias {gps.stop} {
+#al {gps.stop} {
     #var gps_stop 1;
     #class gps.action.inner kill;
     #undelay {there_delay};
     #undelay {gps_delay};
     #unticker {gps_ticker};
-    #alias tmp_get_pos #cr;
+    #al tmp_get_pos #cr;
     set brief 2;
 };
 
-#alias {gps.retry} {
+#al {gps.retry} {
     #var tmp @stackpop{gt};
     #if {"${tmp}" == "nil"} {
         gps.run;
@@ -68,7 +68,7 @@ load gps_actions;
     };
 };
 
-#alias {gps.gt} {
+#al {gps.gt} {
     #var gps_stop 0;
     #var gps_gt_dest %1;
     #replace gps_gt_dest ( \(;
@@ -83,7 +83,7 @@ load gps_actions;
     };
 
     @stackpush{gt;${dst_roomno}};
-    #alias {gps_check_room_done} {
+    #al {gps_check_room_done} {
         #var src_roomno ${gps.roomno};
         #var dst_roomno @stacktop{gt};
         
@@ -131,35 +131,35 @@ load gps_actions;
     };
 };
 
-#alias {on_reachable} {
-    #alias tmp_there #cr;
-    #alias tmp_there %0;
-    #action {GPS: 目标房间可达} {
-        #unaction {GPS: 目标房间可达};
+#al {on_reachable} {
+    #al tmp_there #cr;
+    #al tmp_there %0;
+    #ac {GPS: 目标房间可达} {
+        #unac {GPS: 目标房间可达};
         on_unbusy {
             tmp_there;
         };
     };
 };
 
-#alias {on_unreachable} {
-    #alias tmp_not_there #cr;
-    #alias tmp_not_there %0;
-    #action {GPS: 目标房间不可达} {
-        #unaction {GPS: 目标房间不可达};
+#al {on_unreachable} {
+    #al tmp_not_there #cr;
+    #al tmp_not_there %0;
+    #ac {GPS: 目标房间不可达} {
+        #unac {GPS: 目标房间不可达};
         on_unbusy {
             tmp_not_there;
         };
     };
 };
 
-#alias {gps.check} {
+#al {gps.check} {
     #var gps_stop 0;
     #var gps_gt_dest %1;
     #replace gps_gt_dest ( \(;
     #replace gps_gt_dest ) \);
 
-    #alias {gps_check_room_done} {
+    #al {gps_check_room_done} {
         #var src_roomno ${gps.roomno};
         #if {${gps.roomno} == -1} {
             #showme GPS: 目标房间可达;
@@ -193,7 +193,7 @@ load gps_actions;
     };
 };
 
-#alias {gps.run_maze} {
+#al {gps.run_maze} {
     #var gps_maze %0;
     #list gps_maze_list create ${gps_maze};
     #list gps_maze_list size gps_maze_size;
@@ -201,7 +201,7 @@ load gps_actions;
     gps.maze.run;
 };
 
-#alias {gps.maze.run} {
+#al {gps.maze.run} {
     #if {${gps_stop} == 1} {
         #return;
     };
@@ -217,7 +217,7 @@ load gps_actions;
     };
 };
 
-#alias {gps.run} {
+#al {gps.run} {
     #var is_break 0;
     #var accu 0;
     #while {${gps_path_index} <= ${gps_path_size}} {
@@ -255,20 +255,20 @@ load gps_actions;
             #elseif {"${gps.run.mode}" == "TRAVERSE"} {
                 bl.stop;
                 #showme {GPS: 遍历完成};
-                #unaction {${gps_traverse_target}};
+                #unac {${gps_traverse_target}};
             };
         } {1};
     };
 };
 
-#alias bl.continue gps.traverse.continue;
-#alias bl.start gps.traverse;
-#alias bl.stop gps.traverse.stop;
+#al bl.continue gps.traverse.continue;
+#al bl.start gps.traverse;
+#al bl.stop gps.traverse.stop;
 
 #var gps_stop 0;
-#alias {gps.traverse.continue} {
-    #action {${gps_traverse_target}} {
-        #unaction {${gps_traverse_target}};
+#al {gps.traverse.continue} {
+    #ac {${gps_traverse_target}} {
+        #unac {${gps_traverse_target}};
         #showme 找到目标: ${gps_traverse_target};
         bl.stop;
     } {1};
@@ -279,14 +279,14 @@ load gps_actions;
     gps.run;
 };
 
-#alias {gps.traverse.stop} {
-    #unaction {${gps_traverse_target}};
+#al {gps.traverse.stop} {
+    #unac {${gps_traverse_target}};
     #var gps.run.mode nil;
     gps.stop;
 };
 
-#alias {gps.traverse} {
-    #unaction {${gps_traverse_target}};
+#al {gps.traverse} {
+    #unac {${gps_traverse_target}};
     gps.setup;
     #var gps_stop 0;
     #var mode nil;
@@ -294,9 +294,9 @@ load gps_actions;
     #var mode %2;
     #var gps_traverse_location nil;
 
-    #alias {gps_check_room_done} {
-        #action {${gps_traverse_target}} {
-            #unaction {${gps_traverse_target}};
+    #al {gps_check_room_done} {
+        #ac {${gps_traverse_target}} {
+            #unac {${gps_traverse_target}};
             #showme 找到目标: ${gps_traverse_target};
             bl.stop;
         } {1};
@@ -329,15 +329,15 @@ load gps_actions;
 };
 
 #var DEFAULT_GPS_WEIGHT "50,100,1";
-#alias {gps.fly.on} {
+#al {gps.fly.on} {
     #var DEFAULT_GPS_WEIGHT "50,10,1";
 };
 
-#alias {gps.fly.off} {
+#al {gps.fly.off} {
     #var DEFAULT_GPS_WEIGHT "50,10,-1";
 };
 
-#alias {gps.get_path} {
+#al {gps.get_path} {
     #nop about type: 1. gps.clear 2. gps.delay 3. gps.fly
     #nop weight > 0: there is a weight;
     #nop weight = 0: there is no weight;
@@ -354,10 +354,10 @@ load gps_actions;
     gps.record;
 };
 
-#alias {gps.check_room} {
-    #alias tmp_check_room #cr;
-    #alias tmp_check_room %0;
-    #alias {get_pos_done} {
+#al {gps.check_room} {
+    #al tmp_check_room #cr;
+    #al tmp_check_room %0;
+    #al {get_pos_done} {
         INVOKE gps.check_room "${pos.area}" "${pos.room}" "${pos.desc}" "${pos.exits}";
         tmp_check_room;
     };
@@ -368,8 +368,8 @@ load gps_actions;
     };
 };
 
-#alias {gps.check_or_insert_room} {
-    #alias {gps_check_room_done} {
+#al {gps.check_or_insert_room} {
+    #al {gps_check_room_done} {
         #if {${gps.roomno} == -1} {
             #show {GPS: 房间未记录};
             INVOKE gps.insert_room "${pos.room}" "${pos.desc}" "${pos.exits}" "${pos.area}";
@@ -386,10 +386,10 @@ load gps_actions;
     };
 }
 
-#alias {gps.set_roomno} {
+#al {gps.set_roomno} {
     #var roomno 0;
     #var roomno %1;
-    #alias {gps_check_room_done} {
+    #al {gps_check_room_done} {
         INVOKE gps.update_room ${roomno} "${pos.area}" "${pos.room}" "${pos.desc}" "${pos.exits}";
         gps.check_link;
     };
@@ -398,9 +398,9 @@ load gps_actions;
     };
 };
 
-#alias {gps.set_abbrev} {
+#al {gps.set_abbrev} {
     #var abbrev %1;
-    #alias {gps_check_room_done} {
+    #al {gps_check_room_done} {
         INVOKE gps.set_abbrev ${gps.roomno} "$abbrev";
         gps.check_link;
     };
@@ -409,9 +409,9 @@ load gps_actions;
     };
 };
 
-#alias {gps.set_zone} {
+#al {gps.set_zone} {
     #var zone %1;
-    #alias {gps_check_room_done} {
+    #al {gps_check_room_done} {
         INVOKE gps.set_zone ${gps.roomno} "$zone";
         gps.check_link;
     };
@@ -420,8 +420,8 @@ load gps_actions;
     };
 };
 
-#alias {gps.check_link} {
-    #alias {gps_check_room_done} {
+#al {gps.check_link} {
+    #al {gps_check_room_done} {
         #delay {1} {
             #show {GPS: ${pos.room}: ${gps.roomno} ${gps.abbr}};
         };
@@ -439,7 +439,7 @@ load gps_actions;
     };
 };
 
-#alias {gps.insert_link} {
+#al {gps.insert_link} {
     #var room_no %1;
     #var target_room_no %2;
     #var direction %3;
@@ -448,10 +448,10 @@ load gps_actions;
     INVOKE gps.insert_link ${room_no} ${target_room_no} "${direction}" "${reverse_direction}"
 };
 
-#alias {gps.record} {
+#al {gps.record} {
     #var lookaround_type 0;
     #class gps.record open;
-    #action {ROOM_INSERTED} {
+    #ac {ROOM_INSERTED} {
         #if {${lookaround_type} == 0} {
             do_lookaround;
         };
@@ -462,7 +462,7 @@ load gps_actions;
         };
     };
 
-    #action {ROOM_CHANGED} {
+    #ac {ROOM_CHANGED} {
         #if {${lookaround_type} == 0} {
             look_next;
         };
@@ -471,7 +471,7 @@ load gps_actions;
         };
     };
 
-    #action {ROOM_NOT_CHANGED} {
+    #ac {ROOM_NOT_CHANGED} {
         #if {${lookaround_type} == 1} {
             look_next;
         };
@@ -481,11 +481,11 @@ load gps_actions;
     };
     
     #class gps.record close;
-    #alias {finish_record} {
+    #al {finish_record} {
         #class gps.record kill;
         gps.check_link;
     };
-    #alias {look_next} {
+    #al {look_next} {
         #math lookaround_exit_index ${lookaround_exit_index}+1;
         #if {${lookaround_exit_index} > ${lookaround_exit_size}} {
             finish_record;
@@ -498,7 +498,7 @@ load gps_actions;
         };
     };
 
-    #alias {do_lookaround} {
+    #al {do_lookaround} {
         #list lookaround_exits create ${pos.exits};
         #var lookaround_room_no ${gps.roomno};
 
@@ -511,11 +511,11 @@ load gps_actions;
     gps.check_or_insert_room;
 };
 
-#alias {gps.record_zone} {
+#al {gps.record_zone} {
     #var zone %1;
     #var lookaround_type 0;
     #class gps.record open;
-    #action {ROOM_INSERTED} {
+    #ac {ROOM_INSERTED} {
         INVOKE gps.set_zone ${gps.roomno} ${zone};
         #if {${lookaround_type} == 0} {
             do_lookaround;
@@ -526,7 +526,7 @@ load gps_actions;
         };
     };
 
-    #action {ROOM_CHANGED} {
+    #ac {ROOM_CHANGED} {
         #if {${lookaround_type} == 0} {
             look_next;
         };
@@ -535,7 +535,7 @@ load gps_actions;
         };
     };
 
-    #action {ROOM_NOT_CHANGED} {
+    #ac {ROOM_NOT_CHANGED} {
         #if {${lookaround_type} == 1} {
             look_next;
         };
@@ -545,11 +545,11 @@ load gps_actions;
     };
     
     #class gps.record close;
-    #alias {finish_record} {
+    #al {finish_record} {
         #class gps.record kill;
         gps.check_link;
     };
-    #alias {look_next} {
+    #al {look_next} {
         #math lookaround_exit_index ${lookaround_exit_index}+1;
         #if {${lookaround_exit_index} > ${lookaround_exit_size}} {
             finish_record;
@@ -562,7 +562,7 @@ load gps_actions;
         };
     };
 
-    #alias {do_lookaround} {
+    #al {do_lookaround} {
         #list lookaround_exits create ${pos.exits};
 
         #var lookaround_exit_index 0;
@@ -574,60 +574,60 @@ load gps_actions;
     gps.check_or_insert_room;
 };
 
-#alias {get_area} {
-    #alias tmp_get_area #cr;
-    #alias tmp_get_area %0;
+#al {get_area} {
+    #al tmp_get_area #cr;
+    #al tmp_get_area %0;
     #var pos.area {};
     #class record.inner open;
     
-    #action {【西游记】－－%S} {
+    #ac {【西游记】－－%S} {
         #class record.inner kill;
         #undelay get_area_delay;        
         #var pos.area %%1;
         tmp_get_area;
     };
-    #action {【西游记】──%S} {
+    #ac {【西游记】──%S} {
         #class record.inner kill;
         #undelay get_area_delay;        
         #var pos.area %%1;
         tmp_get_area;
     };
-    #action {找不到当前地区的地图！} {
+    #ac {找不到当前地区的地图！} {
         #class record.inner kill;
         #undelay get_area_delay;
         #var pos.area {};
         tmp_get_area;
     };
-    #action {这里暂时没有地图。} {
+    #ac {这里暂时没有地图。} {
         #class record.inner kill;
         #undelay get_area_delay;
         #var pos.area {};
         tmp_get_area;
     };
-    #action {^〖%*〗} {
+    #ac {^〖%*〗} {
         #class record.inner kill;
         #undelay get_area_delay;        
         #var pos.area %%1;
         tmp_get_area;
     };
-    #action {^［%*］} {
+    #ac {^［%*］} {
         #class record.inner kill;
         #undelay get_area_delay;
         #var pos.area %%1;
         tmp_get_area;
     };
 
-    #action {^[输入时暂存讯息]} {
+    #ac {^[输入时暂存讯息]} {
         #cr
     } {4};
     
-    #action {^[%*]} {
+    #ac {^[%*]} {
         #class record.inner kill;
         #undelay get_area_delay;
         #var pos.area %%1;
         tmp_get_area;
     };
-    #action {q 离开} {
+    #ac {q 离开} {
         #send {q};
     };
 
@@ -640,15 +640,15 @@ load gps_actions;
     map;#send {q};
 };
 
-#alias {get_pos} {
-    #alias tmp_get_pos #cr;
-    #alias tmp_get_pos %0;
+#al {get_pos} {
+    #al tmp_get_pos #cr;
+    #al tmp_get_pos %0;
     #var record_state 0;
     #var current_room {};
     #var description {};
     #var exits_list  {};
     #class record.inner open;
-    #action {^%* - $} {
+    #ac {^%* - $} {
         #var record_state 1;
         #var current_room %%1;
         #if {"${current_room}" == "囚洞"} {
@@ -656,64 +656,64 @@ load gps_actions;
         };
     } {1};
     
-    #action {    「%*」: %*} {
+    #ac {    「%*」: %*} {
         #delay {look_delay} {
             get_exits_done;
         } {1};
     } {6};
 
-    #action {这里没有任何明显的出路。} {
+    #ac {这里没有任何明显的出路。} {
         #var exits_list  {};
         get_exits_done;
     } {7};
 
-    #action {这里唯一的出口是 %w。} {
+    #ac {这里唯一的出口是 %w。} {
         #var exits_list  {%%1;};
         get_exits_done;
     } {7};
 
-    #action {这里明显的出口是 %w 和 %w。} {
+    #ac {这里明显的出口是 %w 和 %w。} {
         #var exits_list {%%1;%%2;};
         get_exits_done;
     } {7};
 
-    #action {这里明显的出口是 %w、%w 和 %w。} {
+    #ac {这里明显的出口是 %w、%w 和 %w。} {
         #var exits_list {%%1;%%2;%%3;};
         get_exits_done;
     } {7};
 
-    #action {这里明显的出口是 %w、%w、%w 和 %w。} {
+    #ac {这里明显的出口是 %w、%w、%w 和 %w。} {
         #var exits_list {%%1;%%2;%%3;%%4;};
         get_exits_done;
     } {7};
 
-    #action {这里明显的出口是 %w、%w、%w、%w 和 %w。} {
+    #ac {这里明显的出口是 %w、%w、%w、%w 和 %w。} {
         #var exits_list {%%1;%%2;%%3;%%4;%%5;};
         get_exits_done;
     } {7};
 
-    #action {这里明显的出口是 %w、%w、%w、%w、%w 和 %w。} {
+    #ac {这里明显的出口是 %w、%w、%w、%w、%w 和 %w。} {
         #var exits_list {%%1;%%2;%%3;%%4;%%5;%%6;};
         get_exits_done;
     } {7};
 
-    #action {这里明显的出口是 %w、%w、%w、%w、%w、%w 和 %w。} {
+    #ac {这里明显的出口是 %w、%w、%w、%w、%w、%w 和 %w。} {
         #var exits_list {%%1;%%2;%%3;%%4;%%5;%%6;%%7;};
         get_exits_done;
     } {7};
 
 
-    #action {这里明显的出口是 %w、%w、%w、%w、%w、%w、%w 和 %w。} {
+    #ac {这里明显的出口是 %w、%w、%w、%w、%w、%w、%w 和 %w。} {
         #var exits_list {%%1;%%2;%%3;%%4;%%5;%%6;%%7;%%8};
         get_exits_done;
     } {7};
 
-    #action {这里明显的出口是 %w、%w、%w、%w、%w、%w、%w、%w 和 %w。} {
+    #ac {这里明显的出口是 %w、%w、%w、%w、%w、%w、%w、%w 和 %w。} {
         #var exits_list {%%1;%%2;%%3;%%4;%%5;%%6;%%7;%%8;%%9};
         get_exits_done;
     } {7};
 
-    #alias {get_exits_done} {
+    #al {get_exits_done} {
         #var pos.room ${current_room};
         #replace {description} { } {};
         #replace {description} {	} {};
@@ -724,17 +724,17 @@ load gps_actions;
         tmp_get_pos;
     };
 
-    #action {^    %S。} {
+    #ac {^    %S。} {
         #cr
     } {8};
     
-    #action {^%S%*} {
+    #ac {^%S%*} {
         #if {$record_state == 1} {
             #var description ${description}%%1%%2;
         };
     } {9};
 
-    #ticker {ticker_get_position_look} {
+    #ti {ticker_get_position_look} {
         #send {l};
         #send {ok};
     } {5};
@@ -742,8 +742,8 @@ load gps_actions;
     #send {l};
 };
 
-#alias {do_random_walk} {
-    #alias {get_pos_done} {
+#al {do_random_walk} {
+    #al {get_pos_done} {
         #list exits_list create ${pos.exits};
         #list exits_list size tmp_exit_list_size;
         #if {${tmp_exit_list_size} == 0} {
@@ -760,31 +760,31 @@ load gps_actions;
     };    
 };
 
-#alias {random_walk.stop} {
+#al {random_walk.stop} {
     #class random_walk kill;  
 };
 
-#alias {random_walk.start} {
+#al {random_walk.start} {
     #class random_walk open;
-    #action {ROOM_CHANGED} {
+    #ac {ROOM_CHANGED} {
         do_random_walk;
     };
-    #action {ROOM_NOT_CHANGED} {
+    #ac {ROOM_NOT_CHANGED} {
         do_random_walk;
     };
     #class random_walk close;
     do_random_walk;
 };
 
-#alias {random_walk} {
-    #alias tmp_random_walk #cr;
-    #alias tmp_random_walk %0;
+#al {random_walk} {
+    #al tmp_random_walk #cr;
+    #al tmp_random_walk %0;
     
     #class random_walk open;
-    #action {ROOM_CHANGED} {
+    #ac {ROOM_CHANGED} {
         tmp_random_walk;
     };
-    #action {ROOM_NOT_CHANGED} {
+    #ac {ROOM_NOT_CHANGED} {
         tmp_random_walk;
     };
     #class random_walk close;
@@ -792,8 +792,8 @@ load gps_actions;
     do_random_walk;
 };
 
-#alias {gps.insert_room} {
-    #alias {get_pos_done} {
+#al {gps.insert_room} {
+    #al {get_pos_done} {
         INVOKE gps.insert_room "${pos.room}" "${pos.desc}" "${pos.exits}" "${pos.area}";
         #delay {1} {
             #echo {GPS: ${pos.room}: ${gps.roomno}};            

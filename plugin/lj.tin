@@ -1,6 +1,6 @@
 #class lj open;
 #var lj_stopped 1;
-#alias {lj.start} {
+#al {lj.start} {
     #var lj_stopped 0;
     wd.start {lj.start};
     lj.setup;
@@ -9,7 +9,7 @@
     };
 };
 
-#alias {lj.stop} {
+#al {lj.stop} {
     wd.stop;
     #var lj_stopped 1;
     #undelay {lj.delay};
@@ -17,14 +17,14 @@
     lj.teardown;
 };
 
-#alias {lj.prepare} {
+#al {lj.prepare} {
     wd.kick;
     quest.prepare {
         lj.q;
     };
 };
 
-#alias {lj.q} {
+#al {lj.q} {
     wd.kick;
     gt lj;
     on_there {
@@ -32,18 +32,18 @@
     };
 };
 
-#alias {lj.teardown} {
+#al {lj.teardown} {
     #class lj.inner kill;
     cancel_prepare;
 };
 
-#alias {lj.setup} {
+#al {lj.setup} {
     #class lj.inner open;
-    #action {慢慢地你终于又有了知觉．．．} {
+    #ac {慢慢地你终于又有了知觉．．．} {
         lj.prepare;
     };
 
-    #action {你得到了%*和%*点潜能！} {
+    #ac {你得到了%*和%*点潜能！} {
         wd.kick;
         show_to_quest 灭妖: 完成;
         show_to_info 完成: ${lj_area}, 获得 @ctd{%%2} 点潜能;
@@ -52,13 +52,13 @@
         };
     };
     
-    #action {看来该找机会逃跑了．．．} {
+    #ac {看来该找机会逃跑了．．．} {
         health {
             lj.bl.bfs;
         };
     };
 
-    #action {这里没有 %*。} {
+    #ac {这里没有 %*。} {
         #if {"${lj_target}" == "%%1"} {
             wd.kick;
             health {
@@ -67,15 +67,15 @@
         };
     };
     
-    #action {李靖对手中照妖镜一看，说：%*妖魔已除尽,不妨先去歇息。} {
+    #ac {李靖对手中照妖镜一看，说：%*妖魔已除尽,不妨先去歇息。} {
         lj.wait;
     };
     
-    #action {李靖说道：老夫不是派你去} {
+    #ac {李靖说道：老夫不是派你去} {
         lj.wait;
     };
 
-    #alias {lj.wait} {
+    #al {lj.wait} {
         wd.kick;
         #delay {lj.delay} {
             ask li about kill;   
@@ -83,32 +83,32 @@
         show_to_quest 灭妖: 等待;
     };
 
-    #action {找到目标} {
+    #ac {找到目标} {
         wd.kick;
         follow ${lj_target};
     };
 
-    #action {你决定开始跟随%*一起行动。} {
+    #ac {你决定开始跟随%*一起行动。} {
         kill ${lj_target};
     };
     
-    #action {GPS: 遍历完成} {
+    #ac {GPS: 遍历完成} {
         wd.kick;
         show_to_info 没有找到怪: ${lj_area};
         #nop lj.prepare;
     };
     
-    #alias {lj.bl} {
+    #al {lj.bl} {
         wd.kick;
         bl.start {${lj_real_target}};
     };
 
-    #alias {lj.bl.bfs} {
+    #al {lj.bl.bfs} {
         wd.kick;
         bl.start {${lj_real_target}} bfs;
     };
 
-    #action {李靖对你说道：近有%*(%*)在%*为非作歹，请速去降服！}{
+    #ac {李靖对你说道：近有%*(%*)在%*为非作歹，请速去降服！}{
         wd.kick;
         show_to_quest 灭妖: %%1 @ %%3;
         #var lj_real_target %%2;

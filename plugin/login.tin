@@ -1,5 +1,5 @@
 #class login open;
-#action {请输入相应密码} {
+#ac {请输入相应密码} {
     #delay {2} {
         irc.start;
         init_set;
@@ -8,7 +8,7 @@
     };
 };
 
-#alias {init_set} {
+#al {init_set} {
     set wimpy 20;
     set openmap 1;
     set combat_message_others 2;
@@ -17,8 +17,8 @@
     set active_message_others 2;
 };
 
-#action {【%*】%* %*(%*)} {
-    #unaction {【%*】%* %*(%*)};
+#ac {【%*】%* %*(%*)} {
+    #unac {【%*】%* %*(%*)};
     #var char.name %3;
     #var char.id @lower{%4};
     #send {hp};
@@ -27,7 +27,7 @@
     };
 };
 
-#alias {login} {
+#al {login} {
     chain equip qu_qn get_qian chifan;
 };
 #class login close;

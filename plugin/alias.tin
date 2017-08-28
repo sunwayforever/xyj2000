@@ -1,48 +1,48 @@
-#alias c chat;
-#alias * chat*;
-#alias r reply;
+#al c chat;
+#al * chat*;
+#al r reply;
 
-#alias {lm} {
+#al {lm} {
     map;
 };
 
-#alias {grep} {
+#al {grep} {
     #grep %1;
 };
 
-#alias {le} {l east};
-#alias {lw} {l west};
-#alias {ls} {l south};
-#alias {ln} {l north};
+#al {le} {l east};
+#al {lw} {l west};
+#al {ls} {l south};
+#al {ln} {l north};
 
-#alias {i} {
+#al {i} {
     #send {i %0};
     lock 总计;
 };
 
-#alias {sc} {
+#al {sc} {
     #send {score %0};
     lock 内力修为;
 };
 
-#alias {jifa} {
+#al {jifa} {
     #send {jifa %0};
     lock 以下是你目前使用中的特殊技能;
 };
 
-#alias {lock} {
+#al {lock} {
     #if {"%0" != ""} {
-        #action {%0} {
-            #action {^>} {
+        #ac {%0} {
+            #ac {^>} {
                 #buffer lock;
-                #unaction {^>}
+                #unac {^>}
             };
-            #unaction {%0};
+            #unac {%0};
         };
     };
 };
 
-#alias {iall} {
+#al {iall} {
     #echo {≡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━≡};
     #send {i ring};
     #send {i necklace};
@@ -60,7 +60,7 @@
     #send {i boots};
     #send {i wrists};
     #send {i surcoat};
-    #action {你身上id为surcoat的东西有下面这些} {
+    #ac {你身上id为surcoat的东西有下面这些} {
         #delay {0.5} {
             #echo {≡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━≡};
             #buffer lock;
@@ -68,12 +68,12 @@
     };
 };
 
-#alias {heal.stop} {
+#al {heal.stop} {
     #unticker {heal};
 };
 
-#alias {heal.start} {
-    #ticker {heal} {
+#al {heal.start} {
+    #ti {heal} {
         yun lifeheal %1;
         #edelay {2} {
             dazuo 100;
@@ -81,11 +81,11 @@
     } {5};
 };
 
-#alias {on_hit} {
-    #alias tmp_hit #cr;
-    #alias tmp_hit %0;
-    #action {你战胜了} {
-        #unaction {你战胜了};
+#al {on_hit} {
+    #al tmp_hit #cr;
+    #al tmp_hit %0;
+    #ac {你战胜了} {
+        #unac {你战胜了};
         #delay {2} {
             halt;
             tmp_hit;
@@ -93,11 +93,11 @@
     };
 };
 
-#alias {on_dead} {
-    #alias tmp_dead #cr;
-    #alias tmp_dead %0;
-    #action {死了} {
-        #unaction {死了};
+#al {on_dead} {
+    #al tmp_dead #cr;
+    #al tmp_dead %0;
+    #ac {死了} {
+        #unac {死了};
         #delay {2} {
             halt;
             tmp_dead;
@@ -105,27 +105,27 @@
     } {1};
 };
 
-#alias {on_sleep} {
-    #alias sleep_action #cr;
-    #alias sleep_action %0;
+#al {on_sleep} {
+    #al sleep_action #cr;
+    #al sleep_action %0;
     #class on_wakeup.inner open;
-    #action {翻来覆去无法入眠!} {
+    #ac {翻来覆去无法入眠!} {
         #delay {sleep} {
             sleep;
         } {10};
     };
-    #action {睡过一觉} {
+    #ac {睡过一觉} {
         #delay {sleep} {
             sleep;
         } {10};
     };
-    #action {你一觉醒来} {
+    #ac {你一觉醒来} {
         #class on_wakeup.inner kill;
         #delay {wakeup} {
             sleep_action;
         } {3};
     };
-    #action {荡悠悠三更梦 -} {
+    #ac {荡悠悠三更梦 -} {
         #class on_wakeup.inner kill;
         #delay {wakeup} {
             sleep_action;
@@ -138,26 +138,26 @@
     };
 };
 
-#alias {log.save} {
+#al {log.save} {
     #system {cp debug${dot}${char}${dot}log ${char}${dot}log};
 };
 
-#alias {log.start} {
+#al {log.start} {
     #log overwrite debug${dot}${char}${dot}log;
     #debug all log;
     #var debug_info on;
     update_status;
 };
 
-#alias {log.stop} {
+#al {log.stop} {
     #log off;
     #debug all off;
 };
 
-#alias {walk_to} {
+#al {walk_to} {
     #var  direction %1;
     #var  action #cr;
-    #alias {get_pos_done} {
+    #al {get_pos_done} {
         #list exits_list create ${exits_list};
         #if {@ismember{${direction};exits_list}} {
             @abbrev{${direction}};
@@ -187,7 +187,7 @@ walk_to west;
 walk_to east;
 };
 
-#alias {chain} {
+#al {chain} {
     on_unbusy {%1 {on_unbusy {%2 {on_unbusy {%3 {on_unbusy {%4 {on_unbusy {%5 {on_unbusy {%6 {on_unbusy {%7 {on_unbusy {%8 {on_unbusy {%9 {on_unbusy {%10 {on_unbusy {%11 {on_unbusy {%12;};};};};};};};};};};};};};};};};};};};};};};};
 };
 
@@ -195,28 +195,28 @@ walk_to east;
     INVOKE pinyin %0;
 };
 
-#alias {n} {north;look};
-#alias {s} {south;look};
-#alias {e} {east;look};
-#alias {w} {west;look};
-#alias {u} {up;look};
-#alias {d} {down;look};
-#alias {ne} {northeast;look};
-#alias {sw} {southwest;look};
-#alias {nw} {northwest;look};
-#alias {se} {southeast;look};
-#alias {nd} {northdown;look};
-#alias {su} {southup;look};
-#alias {nu} {northup;look};
-#alias {sd} {southdown;look};
-#alias {eu} {eastup;look};
-#alias {wd} {westdown;look};
-#alias {ed} {eastdown;look};
-#alias {wu} {westup;look};
+#al {n} {north;look};
+#al {s} {south;look};
+#al {e} {east;look};
+#al {w} {west;look};
+#al {u} {up;look};
+#al {d} {down;look};
+#al {ne} {northeast;look};
+#al {sw} {southwest;look};
+#al {nw} {northwest;look};
+#al {se} {southeast;look};
+#al {nd} {northdown;look};
+#al {su} {southup;look};
+#al {nu} {northup;look};
+#al {sd} {southdown;look};
+#al {eu} {eastup;look};
+#al {wd} {westdown;look};
+#al {ed} {eastdown;look};
+#al {wu} {westup;look};
 
 #list kaimen_actions create {open;push;pull;break};
 #list kaimen_names create {door;gate;men;stone};
-#alias {kaimen} {
+#al {kaimen} {
     #gag 什么？;
     #foreach {${kaimen_actions}[%*]} {kaimen_action} {
         #foreach {${kaimen_names}[%*]} {kaimen_name} {
@@ -229,23 +229,23 @@ walk_to east;
     };
 };
 
-#alias {on_echo} {
-    #alias tmp_echo #cr;
-    #alias tmp_echo %0;
-    #action {^>} {
-        #unaction {^>};
+#al {on_echo} {
+    #al tmp_echo #cr;
+    #al tmp_echo %0;
+    #ac {^>} {
+        #unac {^>};
         tmp_echo;
     };
 };
 
-#alias {l} {
+#al {l} {
     #ungag {^$};
     #send {l %0};
     #delay {gag_delay} {
         #gag {^$};
     } {1.5};
-    #action {^>} {
-        #unaction {^>};
+    #ac {^>} {
+        #unac {^>};
         #gag {^$};
     }
 };
@@ -254,7 +254,7 @@ walk_to east;
     show.reset;
 };
 
-#alias {INVOKE} {
+#al {INVOKE} {
     #script {file_name} {python3 -m bin.%0 ${char}};
     #var file_name ${file_name}[1];
     #if {"${file_name}" != ""} {
@@ -264,7 +264,7 @@ walk_to east;
 };
 
 #var pid 0;
-#alias {check_heart_beat} {
+#al {check_heart_beat} {
     #delay {check_heart_beat_delay} {
         #if {${pid} != 0} {
             #system {kill -30 ${pid}};
@@ -282,74 +282,74 @@ walk_to east;
     };
 };
 
-#alias {end_and_restart} {
+#al {end_and_restart} {
     #end;
 };
 
-#alias {end} {
+#al {end} {
     #unevent {SESSION DEACTIVATED};
     unset_last_quest;
     #end;
 };
 
-#alias {quit_and_restart} {
+#al {quit_and_restart} {
     #class quit.inner.open;
-    #action {你丢下} {
+    #ac {你丢下} {
         #class quit.inner kill;
         #end;
     };
-    #ticker {quit} {
+    #ti {quit} {
         #send {quit};
     } {3};
     #class quit.inner.close;
     #send {quit};
 };
 
-#alias {quit} {
+#al {quit} {
     #unevent {SESSION DEACTIVATED};
     unset_last_quest;
     quit_and_restart;
 };
 
-#alias {set_last_quest} {
+#al {set_last_quest} {
     #var last_quest %1;
     @setenv{last_quest;${last_quest}};
 };
 
-#alias {unset_last_quest} {
+#al {unset_last_quest} {
     #var last_quest nil;
     @setenv{last_quest;nil};
 };
 
-#alias {restart_last_quest} {
+#al {restart_last_quest} {
     #var last_quest @getenv{last_quest};
     #if {"${last_quest}" != "nil"} {
         ${last_quest}${dot}start;
     };
 };
 
-#alias {notify} {
+#al {notify} {
     irc.notify %0;
 };
 
-#alias {corpse} {
+#al {corpse} {
     get all from corpse;
 };
 
-#alias {on_server_reboot} {
+#al {on_server_reboot} {
     #showme INFO: 服务器重启!;
 };
 
-#alias {shifu} {
+#al {shifu} {
     gt $shifu_pos;
 };
 
-#alias walk {
-    #alias tmp_walk_to #cr;
-    #alias tmp_walk_to %0;
+#al walk {
+    #al tmp_walk_to #cr;
+    #al tmp_walk_to %0;
 
     #class on_walk open;
-    #action {^%S - } {
+    #ac {^%S - } {
         #class on_walk kill;
         #undelay walk_delay;
         #showme {ROOM_CHANGED};
@@ -363,21 +363,20 @@ walk_to east;
     tmp_walk_to;
 };
 
-#alias {chifan} {
-    #alias chifan_action #cr;
-    #alias chifan_action %0;
+#al {chifan} {
+    #al chifan_action #cr;
+    #al chifan_action %0;
     #class chifan open;
-    #alias {chifan_done} {
+    #al {chifan_done} {
         #class chifan kill;
-        #showme CHIFAN_DONE;
         chifan_action;
     };
-    #action {你身上没有这样东西。} {
+    #ac {你身上没有这样东西。} {
         get_wan {
             eat wan;
         };
     };
-    #action {你捏起一颗小小的辟谷丸往舌下一放。} {
+    #ac {你捏起一颗小小的辟谷丸往舌下一放。} {
         chifan_done;
     };
     #class chifan close;
@@ -390,12 +389,12 @@ walk_to east;
     };
 };
 
-#alias {cun_qn} {
-    #alias cun_qn_action #cr;
-    #alias cun_qn_action %0;
+#al {cun_qn} {
+    #al cun_qn_action #cr;
+    #al cun_qn_action %0;
 
     #class cun_qn.inner open;
-    #action {你歪头想了会，说道：好吧！} {
+    #ac {你歪头想了会，说道：好吧！} {
         #class cun_qn.inner kill;
         #send {out};
         #send {southwest};
@@ -418,12 +417,12 @@ walk_to east;
     };
 };
 
-#alias {qu_qn} {
-    #alias qu_qn_action #cr;
-    #alias qu_qn_action %0;
+#al {qu_qn} {
+    #al qu_qn_action #cr;
+    #al qu_qn_action %0;
 
     #class qu_qn.inner open;
-    #action {你歪头想了会，说道：好吧！} {
+    #ac {你歪头想了会，说道：好吧！} {
         #class qu_qn.inner kill;
         #send {out};
         #send {southwest};
@@ -441,21 +440,21 @@ walk_to east;
     };
 };
 
-#alias {gift.start} {
+#al {gift.start} {
     #var gift_ticker 2;
     #var gift_ticker %1;
-    #ticker {gift} {
+    #ti {gift} {
         play; place; play; yun refresh; yun recover;
     } {${gift_ticker}};
 };
 
-#alias {gift.stop} {
+#al {gift.stop} {
     #unticker {gift};
 };
 
-#alias {yun} {exert};
-#alias {cun} {deposit};
-#alias {qu} {withdraw};
+#al {yun} {exert};
+#al {cun} {deposit};
+#al {qu} {withdraw};
 
 #function {getenv} {
     #var result @mapget{env;%1};

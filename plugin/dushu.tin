@@ -1,32 +1,32 @@
 #class dushu open;
 #var du_book book;
-#alias {du.start} {
+#al {du.start} {
     #var du_book %1;
     du.setup;
     chain chifan start_du;
     show_to_quest 读书;
 };
 
-#alias {du.stop} {
+#al {du.stop} {
     stop_du_ticker;
     #class du.inner kill;
     show_to_quest 读书结束;
 };
 
-#alias {du.setup} {
+#al {du.setup} {
     #class du.inner open;
-    #alias {start_du} {
+    #al {start_du} {
         gt ${shifu_pos};
         on_there {
             start_du_ticker;
         };
     };
 
-    #alias {start_du_ticker} {
-        #ticker {du} {
+    #al {start_du_ticker} {
+        #ti {du} {
             du ${du_book};
         } {0.6};
-        #ticker {check_js} {
+        #ti {check_js} {
             #if {${js_percent} < 20} {
                 yun refresh;
             };
@@ -37,12 +37,12 @@
         } {5};
     };
     
-    #alias {stop_du_ticker} {
+    #al {stop_du_ticker} {
         #unticker {du};
         #unticker {check_js};
     };
 
-    #action {没有学到任何东西} {
+    #ac {没有学到任何东西} {
         du.stop;
     };
     #class du.inner close;

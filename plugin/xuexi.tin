@@ -1,6 +1,6 @@
 #class xuexi open;
 #var xue_count 5;
-#alias {xue.start} {
+#al {xue.start} {
     #var xue_jineng %1;
     show_to_quest 学习: ${xue_jineng};
     xue.setup;
@@ -10,7 +10,7 @@
     };
 };
 
-#alias {xue.stop} {
+#al {xue.stop} {
     show_to_quest 学习完成;
     #unticker {xue};
     cancel_dazuo;
@@ -18,39 +18,39 @@
     wd.stop;
 };
 
-#alias {xue.setup} {
+#al {xue.setup} {
     #class xue.inner open;
-    #alias {do_xue} {
+    #al {do_xue} {
         xue ${xue_jineng} from ${shifu} for ${xue_count};
     };
-    #action {和你切磋了一会儿} {
+    #ac {和你切磋了一会儿} {
         xue.stop;
     };
-    #action {你的潜能不足！} {
+    #ac {你的潜能不足！} {
         show_to_quest 潜能不足;
         xue.stop;
     };
-    #action {似乎有些心得。} {
+    #ac {似乎有些心得。} {
         wd.kick;
     };
-    #action {你的法术修为还不够高深，无法学习} {
+    #ac {你的法术修为还不够高深，无法学习} {
         show_to_quest spells 等级不够;
         xue.stop;
     };
-    #alias {start_xue} {
-        #ticker {xue} {
+    #al {start_xue} {
+        #ti {xue} {
             do_xue;  
         } {1};
     };
 
-    #alias {restart_xue} {
+    #al {restart_xue} {
         gt ${shifu_pos};
         on_there {
             start_xue;
         };  
     };
     
-    #action {你今天太累了，结果什么也没有学到。} {
+    #ac {你今天太累了，结果什么也没有学到。} {
         wd.kick;
         #unticker {xue};
         #delay {3} {

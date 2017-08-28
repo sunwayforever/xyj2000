@@ -213,7 +213,7 @@
     #math result 1d${max_random};
 };
 
-#alias {load} {
+#al {load} {
     #var v %1;
     #if {"${v}" == "char"} {
         #read char/${char}${dot}tin;
@@ -224,7 +224,7 @@
     };
 };
 
-#alias {unload} {
+#al {unload} {
     #class %1 kill;
 };
 

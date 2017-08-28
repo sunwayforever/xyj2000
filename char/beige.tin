@@ -5,23 +5,23 @@
 #var weapon_to_wield staff;
 #var shortcut F1: hammer F2: jingang F3: lianhua;
 
-#alias {hammer} {
+#al {hammer} {
     enchant 10;cast bighammer;
 };
 
-#alias {diyu} {
+#al {diyu} {
     perform diyu;
 };
 
-#alias {lianhua} {
+#al {lianhua} {
     cast lianhua;
 };
 
-#alias {jinguzhou} {
+#al {jinguzhou} {
     cast jinguzhou;
 };
 
-#alias {jingang} {
+#al {jingang} {
     cast jingang;
 };
 
@@ -37,16 +37,16 @@
     buff;
 };
 
-#alias {attack.prepare} {
+#al {attack.prepare} {
     cst lianhua;
 };
 
-#alias {attack} {
+#al {attack} {
     #class attack.inner open;
-    #ticker {hammer} {
+    #ti {hammer} {
         cst hammer;
     } {3};
-    #ticker {jinguzhou} {
+    #ti {jinguzhou} {
         cst jinguzhou;
     } {5};
     #class attack.inner close;

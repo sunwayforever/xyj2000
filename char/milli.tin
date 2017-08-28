@@ -8,19 +8,19 @@
 
 #var shortcut F1: fengbo F2: hufa F3: sheshen F4: water;
 
-#alias {fengbo} {
+#al {fengbo} {
     perform fengboshiercha;
 };
 
-#alias {hufa} {
+#al {hufa} {
     cast hufa;
 };
 
-#alias {sheshen} {
+#al {sheshen} {
     perform sheshen;
 };
 
-#alias {water} {
+#al {water} {
     cast water;
 };
 
@@ -40,12 +40,12 @@
     water;
 };
 
-#alias {attack.prepare} {
+#al {attack.prepare} {
     yun shield;
 };
-#alias {attack} {
+#al {attack} {
     #class attack.inner open;
-    #ticker {fengbo} {
+    #ti {fengbo} {
         fengbo
     } {8};
     #class attack.inner close;

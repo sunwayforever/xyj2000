@@ -2,20 +2,19 @@
 #var shifu_pos 2048;
 #var sleep_pos 2064;
 #var shifu {kongque};
-#var shortcut nil;
 #var weapon_to_wield sword;
 
 #var shortcut F1: juanbi F2: chaofeng F3 tuntian;
 
-#alias {juanbi} {
+#al {juanbi} {
     enchant 10;cast juanbi;
 };
 
-#alias {chaofeng} {
+#al {chaofeng} {
     perform chaofeng;
 };
 
-#alias {tuntian} {
+#al {tuntian} {
     cast tuntian;
 };
 
@@ -35,16 +34,16 @@
     #cr
 };
 
-#alias {attack.prepare} {
+#al {attack.prepare} {
     #cr;
 };
 
-#alias {attack} {
+#al {attack} {
     #class attack.inner open;
-    #ticker {chaofeng} {
+    #ti {chaofeng} {
         chaofeng;
     } {5};
-    #ticker {juanbi} {
+    #ti {juanbi} {
         cast juanbi;
     } {2};
     #class attack.inner close;

@@ -6,23 +6,23 @@
 #var weapon_to_wield stick;
 #var shortcut F1: pili F2: light F3: fenshen;
 
-#alias {pili} {
+#al {pili} {
     perform pili;
 };
 
-#alias {qiankun} {
+#al {qiankun} {
     perform qiankun;
 };
 
-#alias {fenshen} {
+#al {fenshen} {
     cast fenshen;
 };
 
-#alias {light} {
+#al {light} {
     cast light;
 };
 
-#alias {thunder} {
+#al {thunder} {
     cast thunder;
 };
 
@@ -38,12 +38,12 @@
     fenshen;
 };
 
-#alias {attack} {
+#al {attack} {
     #class attack.inner open;
-    #ticker {pili} {
+    #ti {pili} {
         pili;
     } {6};
-    #ticker {thunder} {
+    #ti {thunder} {
         cst thunder;
     } {3};
     #class attack.inner close;
