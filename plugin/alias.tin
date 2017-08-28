@@ -329,9 +329,6 @@ walk_to east;
 };
 
 #alias {notify} {
-    play alert.wav;
-    show_to_info %0;
-    #nop desktop.notify %0;
     irc.notify %0;
 };
 
@@ -400,14 +397,19 @@ walk_to east;
     #class cun_qn.inner open;
     #action {你歪头想了会，说道：好吧！} {
         #class cun_qn.inner kill;
-        #send {out;southwest};
+        #send {out};
+        #send {southwest};
         #delay {1} {
             #showme CUN_QN_DONE;
             cun_qn_action;            
         };
     };
     #class cun_qn.inner close;
-
+    #if {${qn} <= 1000} {
+        #showme CUN_QN_DONE;
+        cun_qn_action;            
+        #return;
+    };
     gt 潜能银行;
     on_there {
         deposit ${qn};
@@ -423,7 +425,8 @@ walk_to east;
     #class qu_qn.inner open;
     #action {你歪头想了会，说道：好吧！} {
         #class qu_qn.inner kill;
-        #send {out;southwest};
+        #send {out};
+        #send {southwest};
         #delay {1} {
             #showme QU_QN_DONE;
             qu_qn_action;            

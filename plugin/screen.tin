@@ -72,6 +72,7 @@
 };
 
 #alias {show_to_info} {
+    notify %0;
     #format {tmp_time} {%t} {%T};
     #var screen_width @screenw{};
     #math header_width @len{tmp_time}+2;
@@ -150,6 +151,7 @@
 };
 
 #alias {show_to_quest} {
+    notify %0;
     #var show_quest %0;
     #if {${show_inited} == 0} {
         #return;

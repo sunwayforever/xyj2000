@@ -115,8 +115,7 @@ load gps_actions;
                 #if {${gps_path_size} == 0} {
                     #var tmp @stackpop{gt};
                     #delay {1} {
-                        #showme GPS: 目标房间不可达, 无法行走;
-                        notify GPS: 目标房间不可达, 无法行走: ${gps_gt_dest};
+                        show_to_info GPS: 目标房间不可达, 无法行走: ${gps_gt_dest};
                     };
                 };
                 #else {

@@ -13,20 +13,8 @@
     #irc %0;
 };
 
-#alias {irc.chat.on} {
-    #var irc_chat 1;
-};
-
-#alias {irc.chat.off} {
-    #var irc_chat 0;
-};
-
 #alias {status} {
-    #alias {report_status} {
-        irc.notify Œª÷√: ${pos.room} @ ${pos.area};
-    };
-    chain get_area get_pos report_status;
+    #cr;
 };
 
-irc.chat.off;
 #class irc close;
