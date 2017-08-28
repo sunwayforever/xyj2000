@@ -79,7 +79,7 @@
         wd.kick;
         #delay {lj.delay} {
             ask li about kill;   
-        } {20};
+        } {30};
         show_to_quest 灭妖: 等待;
     };
 
@@ -91,11 +91,7 @@
     #action {你决定开始跟随%*一起行动。} {
         kill ${lj_target};
     };
-
-    #action {落荒而逃了。} {
-        follow ${lj_target};
-    };
-
+    
     #action {GPS: 遍历完成} {
         wd.kick;
         show_to_info 没有找到怪: ${lj_area};

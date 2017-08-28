@@ -266,4 +266,9 @@
     #class gps_cliff close;
     climb cliff;
 };
+
+#alias {gps.zizhulin} {
+    gps.run_maze {northwest;northeast;southwest;northwest;southeast};
+};
+
 #class gps_actions close;
