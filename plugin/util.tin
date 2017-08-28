@@ -220,6 +220,7 @@
     };
     #else {
         #read plugin/%1.tin;
+        #read char/${char}${dot}tin;
     };
 };
 

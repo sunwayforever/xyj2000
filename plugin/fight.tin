@@ -1,4 +1,4 @@
-#class war open;
+#class fight open;
 
 #alias {re} {
     #alias re_action #cr;
@@ -16,6 +16,9 @@
 #action {你似乎十分疲惫，看来需要好好休息了} {re} {1};
 #action {你气喘嘘嘘，看起来状况并不太好} {re} {1};
 #action {你看起来已经力不从心了} {re} {1};
+#action {你受了相当重的伤，只怕会有生命危险。} {re} {1};
+#action {你气息粗重，动作开始散乱，看来所受的伤着实不轻。} {re} {1};
+#action {你伤重之下已经难以支撑，眼看就要倒在地上。} {re} {1};
 
 #alias {raw} {
     #var pfming 0;
@@ -306,4 +309,4 @@
     chain qx.full js.full chifan dz.full ms.full re tmp_health;
 };
 
-#class war close;
+#class fight close;
