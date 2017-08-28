@@ -4,4 +4,51 @@
 #var shifu {kongque};
 #var shortcut nil;
 #var weapon_to_wield sword;
+
+#var shortcut F1: juanbi F2: chaofeng F3 tuntian;
+
+#alias {juanbi} {
+    enchant 10;cast juanbi;
+};
+
+#alias {chaofeng} {
+    perform chaofeng;
+};
+
+#alias {tuntian} {
+    cast tuntian;
+};
+
+#macro {\eOP} {
+    juanbi;
+};
+
+#macro {\eOQ} {
+    chaofeng;
+};
+
+#macro {\eOR} {
+    tuntian;
+};
+
+#macro {\eOS} {
+    #cr
+};
+
+#alias {attack.prepare} {
+    #cr;
+};
+
+#alias {attack} {
+    #class attack.inner open;
+    #ticker {chaofeng} {
+        chaofeng;
+    } {5};
+    #ticker {juanbi} {
+        cast juanbi;
+    } {2};
+    #class attack.inner close;
+    chaofeng;
+    cst juanbi;
+};
 #class salonbus close;
