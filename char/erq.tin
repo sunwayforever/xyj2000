@@ -4,7 +4,7 @@
 #var shifu master;
 #var shortcut nil;
 #var weapon_to_wield stick;
-#var shortcut F1: pili F2: light F3: fenshen;
+#var shortcut F1: pili F2: light F3: qiankun;
 
 #al {pili} {
     perform pili;
@@ -35,19 +35,19 @@
 };
 
 #macro {\eOR} {
-    fenshen;
+    qiankun;
 };
 
 #al {attack} {
     #class attack.inner open;
     #ti {pili} {
         pili;
-    } {6};
-    #ti {thunder} {
-        cst thunder;
     } {3};
+    #ti {light} {
+        cst light;
+    } {4};
     #class attack.inner close;
-    cst fenshen;
     pili;
+    cst light;
 };
 #class erq close;

@@ -43,11 +43,7 @@
     #ti {chaofeng} {
         chaofeng;
     } {5};
-    #ti {juanbi} {
-        cast juanbi;
-    } {2};
     #class attack.inner close;
     chaofeng;
-    cst juanbi;
 };
 #class salonbus close;

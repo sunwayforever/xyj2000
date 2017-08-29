@@ -329,11 +329,21 @@
             shutie_action;    
         };
     };
+    #al {shutie_updown} {
+        #ti {shutie_updown} {
+            down;up;    
+        } {30};
+    };
+    
     #ac {ITEM_NOT_FOUND} {
         gt 琉璃塔十三层;
+        on_there {
+            shutie_updown;
+        };
     };
-    #ac {奔波儿灞交给你一封帖。} {
+    #ac {交给你一封帖。} {
         #class get_shutie.inner kill;
+        #unti {shutie_updown};
         shutie_action;
     };
     #class get_shutie.inner close;

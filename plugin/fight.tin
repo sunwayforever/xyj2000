@@ -23,6 +23,7 @@
 #alias {raw} {
     #var pfming 0;
     #unticker {fighting};
+    #unticker {re};
     @stackcreate{pfm};
     #class war.monior kill;
     #class attack.inner kill;
@@ -49,6 +50,11 @@
 
 #alias {war} {
     war.monitor;
+    #class attach.inner open;
+    #ti {re} {
+        re;
+    } {3};
+    #class attach.inner close;
     attack;
 };
 
@@ -72,9 +78,7 @@
         #unaction {^这里没有这个人};
         #class clear.inner kill;
         raw;
-        health {
-            #showme CLEAR_DONE;
-        };
+        #showme CLEAR_DONE;
     } {1};
     #ticker {kill} {
         kill %0;

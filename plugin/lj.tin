@@ -66,6 +66,14 @@
             };
         };
     };
+
+    #ac {%*往%*落荒而逃了。} {
+        #if {"%%1" == "${lj_target_zh}"} {
+            #delay {1} {
+                follow ${lj_target};
+            };
+        };
+    };
     
     #ac {李靖对手中照妖镜一看，说：%*妖魔已除尽,不妨先去歇息。} {
         lj.wait;
@@ -111,6 +119,7 @@
     #ac {李靖对你说道：近有%*(%*)在%*为非作歹，请速去降服！}{
         wd.kick;
         show_to_quest 灭妖: %%1 @ %%3;
+        #var lj_target_zh %%1;
         #var lj_real_target %%2;
         #var lj_target @lower{${lj_real_target}};
         #var lj_area %%3;

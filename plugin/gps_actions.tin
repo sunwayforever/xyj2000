@@ -17,9 +17,7 @@
     };
     
     clear ${clear_target};
-    on_cleared {
-        gps.run;
-    };
+    chain on_cleared health gps.run;
 };
 
 #al {gps.delay} {
