@@ -184,10 +184,15 @@
         #math baigujing_index ${baigujing_index}+1;
         #if {${baigujing_index} >= 4} {
             #class gps_baigujing kill;
-            gps.run;
+            southwest;
+            health {
+                gps.run;    
+            };
         };
         #else {
-            baigujing_clear_next;
+            #delay {3} {
+                baigujing_clear_next;    
+            };
         };
     };
     #class gps_baigujing close;
