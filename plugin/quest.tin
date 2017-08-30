@@ -20,6 +20,6 @@
 #al {daoju} {
     #al daoju_action #cr;
     #al daoju_action %0;
-    chain get_bishuizhou get_shutie get_penglai get_xueshan get_huangqian daoju_action;
+    chain get_bishuizhou get_penglai get_xueshan get_huangqian daoju_action;
 };
 #class quest close;

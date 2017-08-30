@@ -61,9 +61,7 @@
     #ac {这里没有 %*。} {
         #if {"${lj_target}" == "%%1"} {
             wd.kick;
-            health {
-                lj.bl.bfs;
-            };
+            lj.bl.bfs;
         };
     };
 

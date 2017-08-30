@@ -233,7 +233,7 @@
             yao yupei;
             yao ring;
             yao fist;
-            yao ${weapon_to_wield};
+            #5 yao ${weapon_to_wield};
             equip_all;
             #class equip kill;
             #showme EQUIP_DONE;
@@ -313,4 +313,7 @@
     chain qx.full js.full chifan dz.full ms.full re tmp_health;
 };
 
+#ac {你所使用的外功中没有这种功能。} {
+    wield ${weapon_to_wield};
+};
 #class fight close;

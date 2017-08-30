@@ -73,6 +73,7 @@
     #al {lian_check_status} {
         #if {${nl_percent} < 10} {
             #if {${js_percent} < 30} {
+                stop_lian_ticker;
                 chain on_sleep chifan start_lian;
                 #return;
             };
@@ -98,6 +99,10 @@
             };
         };        
     } {60};
+
+    #ac {你必须先找一把剑才能练剑法。} {
+        wield sword;
+    };
     
     #ac {必须空手} {
         unwield all;
