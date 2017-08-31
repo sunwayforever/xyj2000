@@ -6,7 +6,7 @@
 #var shortcut F1: hammer F2: jingang F3: lianhua;
 
 #al {hammer} {
-    enchant 50;cast bighammer;
+    cast bighammer;
 };
 
 #al {diyu} {

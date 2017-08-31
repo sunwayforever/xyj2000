@@ -658,6 +658,9 @@ load gps_actions;
         #if {"${current_room}" == "«Ù∂¥"} {
             get_exits_done;
         };
+        #if {"${current_room}" == "ªÏ„Á÷Æ≥ı"} {
+            get_exits_done;
+        };
     } {1};
     
     #ac {    °∏%*°π: %*} {

@@ -1,4 +1,43 @@
 #class get_item open;
+
+#var get_chuansuoqi_count 5;
+#al {get_chuansuoqi} {
+    #al chuansuoqi_action #cr;
+    #al chuansuoqi_action %0;
+    #class get_chuansuoqi.inner open;
+    #al {got_chuansuoqi} {
+        #class get_chuansuoqi.inner kill;
+        #delay {2} {
+            #showme GOT_CHUANSUOQI;
+            chuansuoqi_action;
+        };    
+    };
+    #al {qu_chuansuoqi} {
+        gt 礼品店;
+        on_there {
+            buy ${get_chuansuoqi_count} chuansuo qi from boss;
+        };
+    };
+    #ac {%*_ITEM_FOUND} {
+        #if {%%1 >= ${get_chuansuoqi_count}} {
+            got_chuansuoqi;
+        };
+        #else {
+            qu_chuansuoqi;
+        };
+    };
+    #ac {ITEM_NOT_FOUND} {
+        qu_chuansuoqi;
+    };
+    #ac {你向二手货商买下一些时空穿梭器} {
+        #send {southwest};
+        got_chuansuoqi;
+    };
+    #class get_chuansuoqi.inner close;
+
+    checkitem 时空穿梭器;    
+};
+
 #al {get_penglai} {
     #al penglai_action #cr;
     #al penglai_action %0;

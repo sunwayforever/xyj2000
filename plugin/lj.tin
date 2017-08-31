@@ -2,10 +2,16 @@
 #var lj_stopped 1;
 #al {lj.start} {
     #var lj_stopped 0;
-    wd.start {lj.start};
+    wd.start {lj.restart};
     lj.setup;
     quest.start {
         lj.q;
+    };
+};
+
+#al {lj.restart} {
+    after_launch {
+        lj.start;
     };
 };
 
@@ -43,10 +49,10 @@
         lj.prepare;
     };
 
-    #ac {你得到了%*和%*点潜能！} {
+    #ac {你得到了%*点武学经验、%*天道行和%*点潜能！} {
         wd.kick;
         show_to_quest 灭妖: 完成;
-        show_to_info 完成: ${lj_area}, 获得 @ctd{%%2} 点潜能;
+        show_to_info 完成: ${lj_area}, 获得 @ctd{%%2} 点潜能, @ctd{%%1} 点武学;
         #if {${lj_stopped} == 0} {
             lj.prepare;
         };
@@ -101,7 +107,7 @@
     #ac {GPS: 遍历完成} {
         wd.kick;
         show_to_info 没有找到怪: ${lj_area};
-        #nop lj.prepare;
+        lj.prepare;
     };
     
     #al {lj.bl} {

@@ -14,7 +14,7 @@
 #al {buji} {
     #al buji_action #cr;
     #al buji_action %0;
-    chain equip get_qian get_yao get_dan buji_action;
+    chain equip get_qian get_yao get_dan get_chuansuoqi buji_action;
 };
 
 #al {daoju} {
@@ -22,4 +22,20 @@
     #al daoju_action %0;
     chain get_bishuizhou get_penglai get_xueshan get_huangqian daoju_action;
 };
+
+#al {after_launch} {
+    #al launch_action #cr;
+    #al launch_action %0;
+    #class launch open;
+    #ac {一阵时空弯曲之后你来到一个陌生的地方，时空穿梭器随之坠毁了！} {
+        #class launch kill;
+        #delay {1} {
+            divedown;
+            launch_action;
+        };
+    };
+    #class launch close;
+    launch;
+};
+
 #class quest close;
