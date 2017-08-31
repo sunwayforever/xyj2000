@@ -61,7 +61,7 @@
     fenghui;
 };
 
-#al {reborn} {
+#al {do_reborn} {
     jifa force moonforce;
     jifa spells moonshentong;
     jifa dodge moondance;

@@ -54,4 +54,13 @@
     cst tuntian;
     feijian;
 };
+
+#al {do_reborn} {
+    jifa force ningxie-force;
+    jifa spells dengxian-dafa;
+    jifa dodge xiaoyaoyou;
+    jifa parry bainiao-jian;
+    jifa sword bainiao-jian;
+    jifa unarmed cuixin-zhang;
+};
 #class salonbus close;

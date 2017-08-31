@@ -2,7 +2,7 @@
 #al {quest.start} {
     #al quest_before_action #cr;
     #al quest_before_action %0;
-    chain buji health daoju quest_before_action;
+    chain reborn buji health daoju quest_before_action;
 };
 
 #al {quest.prepare} {

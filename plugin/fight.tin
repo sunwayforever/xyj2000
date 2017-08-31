@@ -59,9 +59,6 @@
     attack;
 };
 
-#al {attack} {#cr};
-#al {attack.prepare} {#cr};
-
 #var enemy nil;
 #al {perform} {
     #if {"${enemy}" == "nil"} {
@@ -325,4 +322,27 @@
 #ac {你所使用的外功中没有这种功能。} {
     wield ${weapon_to_wield};
 };
+
+#al {attack} {#cr};
+#al {attack.prepare} {#cr};
+#al {do_reborn} {#cr};
+
+#al {reborn} {
+    #al reborn_action #cr;
+    #al reborn_action %0;
+    
+    #al {do_reborn_if_needed} {
+        #if {@get_level_b{force} == 0} {
+            do_reborn;
+            reborn_action;
+        };
+        #else {
+            reborn_action;
+        };
+    };
+    check_gongfu {
+        do_reborn_if_needed;
+    };
+};
+
 #class fight close;

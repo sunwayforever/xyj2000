@@ -9,6 +9,9 @@
 #loop 1 $skills_size tmp {#list level_b add 0;#list level_a add 0};
 
 #al {check_gongfu} {
+    #al check_gongfu_action #cr;
+    #al check_gongfu_action %0;
+    
     #list special_skills create {};
     #list special_skills_level create {};
     #class check_gongfu open;
@@ -76,6 +79,7 @@
         #var skills_level_a ${level_a};
         #var skills_level_b ${level_b};
         #class check_gongfu kill;
+        check_gongfu_action;
     };
     #class check_gongfu close;
     #send {skills};

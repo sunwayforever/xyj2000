@@ -394,14 +394,14 @@ walk_to east;
     #al cun_qn_action %0;
 
     #class cun_qn.inner open;
-    #ac {你歪头想了会，说道：好吧！} {
+    #ac {你储存了%*点潜能！} {
         #class cun_qn.inner kill;
         #send {out};
         #send {southwest};
         #delay {1} {
             #showme CUN_QN_DONE;
             cun_qn_action;            
-        };
+        };        
     };
     #class cun_qn.inner close;
     #if {${qn} <= 1000} {
@@ -413,7 +413,6 @@ walk_to east;
     on_there {
         deposit ${qn};
         account;
-        #send {ok};
     };
 };
 

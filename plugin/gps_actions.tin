@@ -275,4 +275,23 @@
 #al {gps.madao} {
     gps.clear dao;
 };
+
+#al {gps.cailian} {
+    #class cailian open;
+    #ac {你见那莲蓬诱人，便伸手去摘} {
+        #unac {你见那莲蓬诱人，便伸手去摘};
+        #ti {cailian} {
+            cai lian;
+        } {1};
+    };
+
+    #ac {你脚下一滑，扑通一声掉进了莲花池．} {
+        #class cailian kill;
+        #unti {cailian};
+        gps.run;
+    };
+    #class cailian close;
+    
+    cai lian;
+};
 #class gps_actions close;

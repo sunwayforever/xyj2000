@@ -50,4 +50,13 @@
     cst jingang;
     cst hammer;
 };
+
+#al {do_reborn} {
+    jifa force lotusforce;
+    jifa spells buddhism;
+    jifa dodge lotusmove;
+    jifa parry lunhui-zhang;
+    jifa staff lunhui-zhang ;
+    jifa unarmed jienan-zhi;
+};
 #class beige close;
