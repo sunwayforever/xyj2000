@@ -1,26 +1,26 @@
 #class fight open;
 
-#alias {re} {
-    #alias re_action #cr;
-    #alias re_action %0;
+#al {re} {
+    #al re_action #cr;
+    #al re_action %0;
     yun recover;
     yun refresh;
     re_action;
 };
 
-#action {看起来%1想杀死你} {
+#ac {看起来%1想杀死你} {
     attack.prepare;
     war;
 };
 
-#action {你似乎十分疲惫，看来需要好好休息了} {re} {1};
-#action {你气喘嘘嘘，看起来状况并不太好} {re} {1};
-#action {你看起来已经力不从心了} {re} {1};
-#action {你受了相当重的伤，只怕会有生命危险。} {re} {1};
-#action {你气息粗重，动作开始散乱，看来所受的伤着实不轻。} {re} {1};
-#action {你伤重之下已经难以支撑，眼看就要倒在地上。} {re} {1};
+#ac {你似乎十分疲惫，看来需要好好休息了} {re} {1};
+#ac {你气喘嘘嘘，看起来状况并不太好} {re} {1};
+#ac {你看起来已经力不从心了} {re} {1};
+#ac {你受了相当重的伤，只怕会有生命危险。} {re} {1};
+#ac {你气息粗重，动作开始散乱，看来所受的伤着实不轻。} {re} {1};
+#ac {你伤重之下已经难以支撑，眼看就要倒在地上。} {re} {1};
 
-#alias {raw} {
+#al {raw} {
     #var pfming 0;
     #unticker {fighting};
     #unticker {re};
@@ -31,15 +31,15 @@
     #var enemy_menpai nil;
 };
 
-#alias {war.monitor} {
+#al {war.monitor} {
     #class war.monitor open;
-    #action {你气血圆满，不需要疗伤。} {
+    #ac {你气血圆满，不需要疗伤。} {
         raw;
     };
-    #action {你全身放松} {
+    #ac {你全身放松} {
         raw;
     };
-    #action {你已经受伤过重，只怕一运真气便有生命危险！} {
+    #ac {你已经受伤过重，只怕一运真气便有生命危险！} {
         raw;
     };
     #ticker {fighting} {
@@ -48,7 +48,8 @@
     #class war.monitor close;
 };
 
-#alias {war} {
+#al {war} {
+    health.cancel;
     war.monitor;
     #class attach.inner open;
     #ti {re} {
@@ -58,11 +59,11 @@
     attack;
 };
 
-#alias {attack} {#cr};
-#alias {attack.prepare} {#cr};
+#al {attack} {#cr};
+#al {attack.prepare} {#cr};
 
 #var enemy nil;
-#alias {perform} {
+#al {perform} {
     #if {"${enemy}" == "nil"} {
         #send {perform %0};
     };
@@ -71,10 +72,10 @@
     };
 };
 
-#alias {clear} {
+#al {clear} {
     kill %0;
     #class clear.inner open;
-    #action {^这里没有这个人} {
+    #ac {^这里没有这个人} {
         #unaction {^这里没有这个人};
         #class clear.inner kill;
         raw;
@@ -86,9 +87,9 @@
     #class clear.inner close;
 };
 
-#alias {on_cleared} {
-    #alias tmp_on_cleared %0;
-    #action {CLEAR_DONE} {
+#al {on_cleared} {
+    #al tmp_on_cleared %0;
+    #ac {CLEAR_DONE} {
         #unaction {CLEAR_DONE};
         #delay {3} {
             tmp_on_cleared;
@@ -96,25 +97,25 @@
     };
 };
 
-#alias {kill} {
+#al {kill} {
     attack.prepare;
     #send kill %0;
     war;
 };
 
-#alias {killall} {
+#al {killall} {
     attack.prepare;
     #send killall %0;
     war;
 };
 
-#alias {hit} {
+#al {hit} {
     attack.prepare;
     #send hit %0;
     war;
 };
 
-#alias {fight} {
+#al {fight} {
     attack.prepare;
     #send fight %0;
     war;
@@ -126,9 +127,9 @@
 #gag 你现在不能用魔法;
 
 #var casting 0;
-#alias {do_cast} {
+#al {do_cast} {
     #class do_cast open;
-    #alias {retry_cast} {
+    #al {retry_cast} {
         #delay {do_cast_delay} {
             ${cast_action};
         } {0.5};
@@ -137,17 +138,17 @@
             cast.next;
         } {1};  
     };
-    #action {( 你上一个动作还没有完成，不能念咒文。)} {
+    #ac {( 你上一个动作还没有完成，不能念咒文。)} {
         retry_cast;
     };
-    #action {你现在不能用魔法！} {
+    #ac {你现在不能用魔法！} {
         retry_cast;
     };
     #class do_cast close;
     retry_cast;
 };
 
-#alias {cast.next} {
+#al {cast.next} {
     #var cast_action @stackpoll{cast};
 
     #if {"${cast_action}" != "nil"} {
@@ -160,7 +161,7 @@
 };
 
 @stackcreate{cast};
-#alias {cst} {
+#al {cst} {
     #if {@stackismember{cast;%1} == 0} {
         @stackpush{cast;%1};
         #if {${casting} == 0} {
@@ -169,23 +170,23 @@
     };
 };
 
-#alias {cancel_prepare} {
+#al {cancel_prepare} {
     #class prepare kill;
     #undelay {recover_delay};
 };
 
-#alias {prepare} {
+#al {prepare} {
     #class prepare open;
-    #action {EQUIP_DONE} {
+    #ac {EQUIP_DONE} {
         cun_qn;
     };
-    #action {CUN_QN_DONE} {
+    #ac {CUN_QN_DONE} {
         chifan;
     };
-    #action {CHIFAN_DONE} {
+    #ac {CHIFAN_DONE} {
         recover;
     };
-    #action {RECOVER_DONE} {
+    #ac {RECOVER_DONE} {
         #class prepare kill;
         #showme PREPARE_DONE;
     };
@@ -193,7 +194,7 @@
     equip;
 };
 
-#alias {recover} {
+#al {recover} {
     #if {${qx_percent} > 90} {
         #showme RECOVER_DONE;
     };
@@ -204,14 +205,16 @@
     };
 };
 
-#alias {equip} {
-    #alias equip_action #cr;
-    #alias equip_action %0;
-    #alias {equip_all}  {
+#al {equip} {
+    #al equip_action #cr;
+    #al equip_action %0;
+    #al {equip_all}  {
+        remove linen;
         wear all;
         wield all;
     };
-    #alias {do_equip} {
+
+    #al {do_equip} {
         gt 281;
         on_there {
             drop shield;
@@ -235,48 +238,54 @@
             yao fist;
             #5 yao ${weapon_to_wield};
             equip_all;
-            #class equip kill;
-            #showme EQUIP_DONE;
-            equip_action;
+            equip_done;
         };        
     };
-    #class equip open;
-    #action {ITEM_FOUND} {
-        equip_all;
+
+    #al {equip_done} {
         #class equip kill;
-        #delay {2} {
+        #delay {1} {
+            #send {southwest};
             #showme EQUIP_DONE;
-            equip_action;            
+            equip_action;
         };
     };
-    #action {ITEM_NOT_FOUND} {
-        do_equip;
+    
+    #class equip open;
+    #ac { 兵器伤害力：[%*]%s盔甲保护力：[%*]} {
+        #if {%%1 <= 100 || %%3 <= 100} {
+            do_equip;
+        };
+        #else {
+            equip_done;
+        };
     };
     #class equip close;
-    checkitem {拳套};
+    equip_all;
+    #send {score};
 };
 
-#alias {health.cancel} {
+#al {health.cancel} {
     #class health.inner kill;
-    #alias tmp_health #cr;
+    #al tmp_health #cr;
     dz.full.cancel;
     ms.full.cancel;
     qx.full.cancel;
     js.full.cancel;
 };
 
-#alias {qx.full.cancel} {
-    #alias {check_qx} {#cr};
+#al {qx.full.cancel} {
+    #al {check_qx} {#cr};
 };
 
-#alias {js.full.cancel} {
-    #alias {check_js} {#cr};
+#al {js.full.cancel} {
+    #al {check_js} {#cr};
 };
 
-#alias {qx.full} {
-    #alias qx_full_action #cr;
-    #alias qx_full_action %0;
-    #alias {check_qx} {
+#al {qx.full} {
+    #al qx_full_action #cr;
+    #al qx_full_action %0;
+    #al {check_qx} {
         #if {${eff_qx_percent} < 70} {
             eat 5 yao;
             #delay {2} {
@@ -290,10 +299,10 @@
     check_qx;
 };
 
-#alias {js.full} {
-    #alias js_full_action #cr;
-    #alias js_full_action %0;
-    #alias {check_js} {
+#al {js.full} {
+    #al js_full_action #cr;
+    #al js_full_action %0;
+    #al {check_js} {
         #if {${eff_js_percent} < 70} {
             eat 5 dan;
             #delay {2} {
@@ -307,9 +316,9 @@
     check_js;
 };
 
-#alias {health} {
-    #alias tmp_health #cr;
-    #alias tmp_health %0;
+#al {health} {
+    #al tmp_health #cr;
+    #al tmp_health %0;
     chain qx.full js.full chifan dz.full ms.full re tmp_health;
 };
 

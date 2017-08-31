@@ -14,6 +14,10 @@
     perform chaofeng;
 };
 
+#al {feijian} {
+    perform feijian;
+};
+
 #al {tuntian} {
     cast tuntian;
 };
@@ -40,10 +44,14 @@
 
 #al {attack} {
     #class attack.inner open;
-    #ti {chaofeng} {
-        chaofeng;
-    } {5};
+    #ti {tuntian} {
+        cast tuntian;
+    } {3};
+    #ti {feijian} {
+        feijian;
+    } {2};
     #class attack.inner close;
-    chaofeng;
+    cst tuntian;
+    feijian;
 };
 #class salonbus close;

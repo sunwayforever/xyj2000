@@ -6,6 +6,8 @@
 #var dz_total_count 0;
 #var ms_total_count 0;
 
+#var health_percent 190;
+
 #al {ms.full.cancel} {
     #class ms.full.inner kill;
     #unticker {ms};
@@ -19,14 +21,14 @@
         yun refresh;
     };
     #class ms.full.inner close;
-    #if {${fl_percent} >= 190} {
+    #if {${fl_percent} >= ${health_percent}} {
         #class ms.full.inner kill;
         tmp_ms;
     };
     #else {
         #delay {ms_delay} {
             #ti {ms} {
-                #if {${fl_percent} < 190} {
+                #if {${fl_percent} < ${health_percent}} {
                     mingsi ${dazuo_count};
                 };
                 #else {
@@ -55,14 +57,14 @@
         heal 1;
     };
     #class dz.full.inner close;
-    #if {${nl_percent} >= 190} {
+    #if {${nl_percent} >= ${health_percent}} {
         #class dz.full.inner kill;
         tmp_dz;
     };
     #else {
         #delay {dz_delay} {
             #ti {dz} {
-                #if {${nl_percent} < 190} {
+                #if {${nl_percent} < ${health_percent}} {
                     yun recover; dazuo ${dazuo_count};
                 };
                 #else {

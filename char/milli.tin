@@ -9,7 +9,7 @@
 #var shortcut F1: fengbo F2: hufa F3: sheshen F4: water;
 
 #al {fengbo} {
-    perform fengboshiercha;
+    perform fengbo;
 };
 
 #al {hufa} {
@@ -17,7 +17,13 @@
 };
 
 #al {sheshen} {
+    unwield fork;
     perform sheshen;
+    wield fork;
+};
+
+#al {freeze} {
+    cast freez;
 };
 
 #al {water} {
@@ -46,10 +52,14 @@
 #al {attack} {
     #class attack.inner open;
     #ti {fengbo} {
-        fengbo
-    } {8};
+        fengbo;
+    } {5};
+    #ti {freeze} {
+        cst freeze;
+    } {7};
     #class attack.inner close;
     cst hufa;
+    cst freeze;
     fengbo;
 };
 #class milli close;

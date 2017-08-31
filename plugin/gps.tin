@@ -294,6 +294,10 @@ load gps_actions;
     #var mode %2;
     #var gps_traverse_location nil;
 
+    #al {gps_traverse_retry} {
+        gps.traverse {${gps_traverse_target}} ${mode};
+    };
+    
     #al {gps_check_room_done} {
         #ac {${gps_traverse_target}} {
             #unac {${gps_traverse_target}};
@@ -305,7 +309,7 @@ load gps_actions;
             #delay {gps_check_delay} {
                 #showme {GPS: 当前房间未记录, 无法遍历};
                 random_walk {
-                    gps.traverse ${traverse_tmp} ${mode};
+                    gps_traverse_retry;
                 };
             } {1};
         };

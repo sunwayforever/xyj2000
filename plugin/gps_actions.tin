@@ -182,12 +182,10 @@
     
     #ac {CLEAR_DONE} {
         #math baigujing_index ${baigujing_index}+1;
-        #if {${baigujing_index} >= 4} {
+        #if {${baigujing_index} >= 10} {
             #class gps_baigujing kill;
             southwest;
-            health {
-                gps.run;    
-            };
+            gps.run;
         };
         #else {
             #delay {3} {
@@ -196,7 +194,7 @@
         };
     };
     #class gps_baigujing close;
-    #list baigujing_targets create {nu;fu;gong};
+    #list baigujing_targets create {nu;fu;gong;nu;fu;gong;nu;fu;gong};
     #var baigujing_index 1;
     baigujing_clear_next;
 };
