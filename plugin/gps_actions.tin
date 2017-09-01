@@ -294,4 +294,8 @@
     
     cai lian;
 };
+
+#al {gps.luhuadang} {
+    gps.run_maze {e;e;e;n;e;e;e;n;e;e;e;n;w};
+};
 #class gps_actions close;
