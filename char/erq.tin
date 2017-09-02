@@ -50,4 +50,13 @@
     pili;
     cst light;
 };
+
+#al {do_reborn} {
+    jifa force wuxiangforce;
+    jifa spells dao;
+    jifa dodge jindouyun;
+    jifa stick qianjun-bang;
+    jifa parry qianjun-bang;
+    jifa unarmed puti-zhi;
+};
 #class erq close;

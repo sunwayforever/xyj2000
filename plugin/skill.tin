@@ -35,7 +35,14 @@
                 #math limit_fl_b ${tmp_level}*10;
             };
         };
+        #else {
+            record_level_b ${basic_skill_en} 0;
+        };
     } {2};
+
+    #ac {你现在没有使用任何特殊技能。} {
+        #list level_b creat {};
+    };
 
     #ac {┃  %S (%S)%s- %S%s%d/} {
         #var basic_skill_zh %%1;
