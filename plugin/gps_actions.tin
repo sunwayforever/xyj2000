@@ -17,7 +17,12 @@
     };
     
     clear ${clear_target};
-    chain on_cleared health gps.run;
+    if {"${gps.run.mode}" == "TRAVERSE"} {
+        chain on_cleared health gps.run;    
+    };
+    #else {
+        chain on_cleared gps.run;
+    };
 };
 
 #al {gps.delay} {
@@ -116,11 +121,7 @@
     fly %1;
 };
 #al {gps.bgz} {
-    #2 ne;
-    #2 nw;
-    #2 sw;
-    se;n;
-    gps.run;
+    gps.run_maze {northeast;northeast;northwest;northwest;southwest;southwest;southeast;north};
 };
 
 #al {gps.yuntouqiao_n} {
@@ -296,6 +297,6 @@
 };
 
 #al {gps.luhuadang} {
-    gps.run_maze {e;e;e;n;e;e;e;n;e;e;e;n;w};
+    gps.run_maze {east;east;east;north;east;east;east;north;east;east;east;north;west};
 };
 #class gps_actions close;

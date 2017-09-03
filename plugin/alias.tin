@@ -466,3 +466,41 @@ walk_to east;
         #class env write char/${char}_env${dot}tin;
     }{3};
 };
+
+#list garbage_list create {lian zi};
+#list garbage_list size garbage_size;
+
+#al {drop_garbage} {
+    #al drop_garbage_action #cr;
+    #al drop_garbage_action %0;
+
+    #class drop_garbage open;
+    #al {drop_next_garbge} {
+        #math garbage_index ${garbage_index}+1;
+        #if {${garbage_index} > ${garbage_size}} {
+            #class drop_garbage kill;
+            #delay {2} {
+                #send {up};
+                drop_garbage_action;                
+            };
+            #return;
+        };
+        #list garbage_list get ${garbage_index} current_garbage;
+        #ti {drop_garbage} {
+            drop ${current_garbage};
+        } {1};
+    };
+    #ac {你身上没有这样东西。} {
+        #unti {drop_garbage};
+        #delay {1} {
+            drop_next_garbge;    
+        };
+    };
+    #class drop_garbage close;
+    
+    #var garbage_index 0;
+    gt 瓦砾场;
+    on_there {
+        drop_next_garbge;        
+    };
+};

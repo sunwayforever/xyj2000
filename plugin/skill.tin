@@ -42,6 +42,7 @@
 
     #ac {你现在没有使用任何特殊技能。} {
         #list level_b creat {};
+        #loop 1 $skills_size tmp {#list level_b add 0};
     };
 
     #ac {┃  %S (%S)%s- %S%s%d/} {
