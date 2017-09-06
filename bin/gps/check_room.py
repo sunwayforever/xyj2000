@@ -9,7 +9,7 @@ from ..common import logger
 
 
 def check_room(conn, zone, room, desc, exits):
-    zone, room, desc, exits = fixup_room(zone, room, desc, exits)
+    room = fixup_room(room)
     if room in room_alias:
         return room_alias[room], None
 
@@ -38,7 +38,7 @@ def check_room(conn, zone, room, desc, exits):
 
     sql = "select max(roomno),abbr from mud_room where zone = '%s' and roomname = '%s' and description = '%s' and exits = '%s'" % (
         zone, room, desc, exits)
-    
+
     row = conn.execute(sql).fetchone()
     if row and row[0]:
         return row[0], row[1]

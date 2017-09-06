@@ -19,6 +19,7 @@ room_alias = {
     "小木屋": 2048,
 }
 
+
 def fixup_area(desc):
     for [k, v] in area_alias:
         if re.match("^%s" % (k), desc):
@@ -28,9 +29,8 @@ def fixup_area(desc):
     return desc
 
 
-def fixup_room(zone, room, desc, exits):
-    return zone, room, desc, exits
-
+def fixup_room(room):
+    return room
 
 def get_zone(conn, room):
     sql = "select zone from mud_room where roomno = %d" % (room)
