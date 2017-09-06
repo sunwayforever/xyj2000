@@ -127,11 +127,6 @@
     #var result <099>%1;
 };
 
-#ac {你储存了%*点潜能！} {
-    #math saved_qn %1;
-    @setenv{qn;${saved_qn}};
-};
-
 #ac {您在敝银庄共存有%*两黄金} {
     #var money @ctd{%1};
     @setenv{money;${money}};

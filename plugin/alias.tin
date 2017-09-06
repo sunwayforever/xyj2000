@@ -396,6 +396,8 @@ walk_to east;
     #class cun_qn.inner open;
     #ac {你储存了%*点潜能！} {
         #class cun_qn.inner kill;
+        #math saved_qn %%1;
+        @setenv{qn;${saved_qn}};
         #send {out};
         #send {southwest};
         #delay {1} {
@@ -421,8 +423,10 @@ walk_to east;
     #al qu_qn_action %0;
 
     #class qu_qn.inner open;
-    #ac {你歪头想了会，说道：好吧！} {
+    #ac {你储存了%*点潜能！} {
         #class qu_qn.inner kill;
+        #math saved_qn %%1;
+        @setenv{qn;${saved_qn}};
         #send {out};
         #send {southwest};
         #delay {1} {
@@ -430,12 +434,12 @@ walk_to east;
             qu_qn_action;            
         };
     };
+    
     #class qu_qn.inner close;
     gt 潜能银行;
     on_there {
         withdraw %1;
         account;
-        #send {ok};
     };
 };
 

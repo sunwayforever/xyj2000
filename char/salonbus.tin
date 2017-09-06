@@ -1,7 +1,7 @@
 #class salonbus open;
-#var shifu_pos 2048;
+#var shifu_pos 2158;
 #var sleep_pos 2064;
-#var shifu {kongque};
+#var shifu {mingwang};
 #var weapon_to_wield sword;
 
 #var shortcut F1: juanbi F2: chaofeng F3 tuntian;

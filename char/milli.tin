@@ -54,12 +54,11 @@
     #ti {fengbo} {
         fengbo;
     } {5};
-    #ti {freeze} {
-        cst freeze;
-    } {7};
+    #ti {sheshen} {
+        sheshen;
+    } {6};
     #class attack.inner close;
     cst hufa;
-    cst freeze;
-    fengbo;
+    sheshen;
 };
 #class milli close;

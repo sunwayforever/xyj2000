@@ -97,7 +97,6 @@
         #delay {lj.delay} {
             ask li about kill;   
         } {30};
-        show_to_quest 灭妖: 等待;
     };
 
     #ac {找到目标} {

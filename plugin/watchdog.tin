@@ -2,18 +2,16 @@
 #al {wd.start} {
     #al wd_action #cr;
     #al wd_action %0;
-    #delay {wd_delay} {
-        wd_action;
-    } {600};
+    wd.kick;
 };
 
 #al {wd.stop} {
     #al wd_action #cr;
-    #undelay {wd_delay};
+    #unti {wd_ticker};
 };
 
 #al {wd.kick} {
-    #delay {wd_delay} {
+    #ti {wd_ticker} {
         wd_action;
     } {600};
 };

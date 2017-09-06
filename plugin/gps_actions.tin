@@ -299,4 +299,24 @@
 #al {gps.luhuadang} {
     gps.run_maze {east;east;east;north;east;east;east;north;east;east;east;north;west};
 };
+
+#al {gps.qinghuadong} {
+    #class qinghuadong open;
+    #ac {你伸出手将树用力一推。} {
+        #unac {你伸出手将树用力一推。};
+        #ti {qinghuadong} {
+            #3 turn left;
+            #3 turn right;
+            push tree;
+        } {2};
+    };
+    #ac {刹那间，一声响亮唿喇喇闪开两扇门，你一头撞将进去。} {
+        #class qinghuadong kill;
+        #unti {qinghuadong};
+        gps.run;
+    };
+    #class qinghuadong close;
+    
+    push tree;
+};
 #class gps_actions close;
