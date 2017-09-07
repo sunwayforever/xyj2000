@@ -471,7 +471,7 @@ walk_to east;
     }{3};
 };
 
-#list garbage_list create {lian zi};
+#list garbage_list create {lian zi;pigu wan};
 #list garbage_list size garbage_size;
 
 #al {drop_garbage} {

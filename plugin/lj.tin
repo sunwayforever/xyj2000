@@ -1,5 +1,11 @@
 #class lj open;
 #var lj_stopped 1;
+
+#var lj_request_count 0;
+#var lj_succ_count 0;
+#var lj_qn_count 0;
+#var lj_miss_count 0;
+
 #al {lj.start} {
     #var lj_stopped 0;
     wd.start {lj.restart};
@@ -15,6 +21,13 @@
     };
 };
 
+#al {lj.status} {
+    #math lj_succ_rate (${lj_succ_count}*100)/(${lj_request_count}+1);
+    #math lj_miss_rate (${lj_miss_count}*100)/(${lj_request_count}+1);
+    #echo {成功: ${lj_succ_count}/${lj_request_count} = ${lj_succ_rate}};
+    #echo {没找到怪: ${lj_miss_count}/${lj_request_count} = ${lj_miss_rate}};
+    #echo {获得潜能: ${lj_qn_count}};
+};
 #al {lj.stop} {
     wd.stop;
     #var lj_stopped 1;
@@ -50,6 +63,8 @@
     };
 
     #ac {你得到了%*点武学经验、%*天%*道行和%*点潜能！} {
+        #math lj_succ_count ${lj_succ_count}+1;
+        #math lj_qn_count ${lj_qn_count}+@ctd{%%4};
         wd.kick;
         show_to_quest 灭妖: 完成;
         show_to_info 完成: ${lj_area}, 获得 @ctd{%%4} 点潜能, @ctd{%%1} 点武学;
@@ -110,6 +125,7 @@
     
     #ac {GPS: 遍历完成} {
         wd.kick;
+        #math lj_miss_count ${lj_miss_count}+1;
         show_to_info 没有找到怪: ${lj_area};
         lj.prepare;
     };
@@ -125,6 +141,7 @@
     };
 
     #ac {李靖对你说道：近有%*(%*)在%*为非作歹，请速去降服！}{
+        #math lj_request_count ${lj_request_count}+1;
         wd.kick;
         #var lj_done 0;
         show_to_quest 灭妖: %%1 @ %%3;
