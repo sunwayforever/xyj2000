@@ -53,12 +53,21 @@
     #class attack.inner open;
     #ti {fengbo} {
         fengbo;
-    } {5};
+    } {3};
     #ti {sheshen} {
         sheshen;
-    } {6};
+    } {5};
     #class attack.inner close;
     cst hufa;
     sheshen;
+};
+
+#al {do_reborn} {
+    jifa force dragonforce;
+    jifa spells seashentong;
+    jifa dodge dragonstep;
+    jifa fork fengbo-cha;
+    jifa parry fengbo-cha;
+    jifa unarmed dragonfight;
 };
 #class milli close;

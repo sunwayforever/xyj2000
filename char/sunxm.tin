@@ -52,13 +52,13 @@
     } {3};
     #ti {arrow} {
         cst arrow;
-    } {5};
+    } {4};
     #ti {fenghui} {
         fenghui;
-    } {8};
+    } {5};
     #class attack.inner close;
     cst mihun;
-    fenghui;
+    cst arrow;
 };
 
 #al {do_reborn} {

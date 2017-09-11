@@ -71,6 +71,7 @@
     };
 
     #al {lian_check_status} {
+        re;
         #if {${nl_percent} < 10} {
             #if {${js_percent} < 30} {
                 stop_lian_ticker;
@@ -80,10 +81,8 @@
             #if {${qx_percent} < 30} {
                 stop_lian_ticker;
                 chain chifan dz.full start_lian;
+                #return;
             };
-        };
-        #else {
-            re;
         };
     };
     

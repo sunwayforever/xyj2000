@@ -4,7 +4,7 @@
 #var shifu master;
 #var shortcut nil;
 #var weapon_to_wield stick;
-#var shortcut F1: pili F2: light F3: qiankun;
+#var shortcut F1: pili F2: light F3: qiankun F4: shenhou;
 
 #al {pili} {
     perform pili;
@@ -12,6 +12,10 @@
 
 #al {qiankun} {
     perform qiankun;
+};
+
+#al {shenhou} {
+    perform shenhoukuangwu;
 };
 
 #al {fenshen} {
@@ -40,15 +44,16 @@
 
 #al {attack} {
     #class attack.inner open;
-    #ti {pili} {
-        pili;
-    } {3};
+    #ti {shenhou} {
+        shenhou;
+    } {4};
     #ti {light} {
         cst light;
-    } {4};
+        cst thunder;
+    } {3};
     #class attack.inner close;
-    pili;
     cst light;
+    cst thunder;
 };
 
 #al {do_reborn} {

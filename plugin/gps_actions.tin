@@ -319,4 +319,8 @@
     
     push tree;
 };
+
+#al {gps.kugudong} {
+    gps.run_maze {zuan;up;north;east;east;south;west;out};
+};
 #class gps_actions close;

@@ -220,7 +220,7 @@
             drop bonnet;
             drop yupei;
             drop ring;
-            drop ${weapon_to_wield};
+            #5 drop ${weapon_to_wield};
             drop pifeng;
             drop armor;
             drop fist;

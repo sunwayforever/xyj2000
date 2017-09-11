@@ -1,0 +1,144 @@
+#class lian_force open;
+#var du_book book;
+#al {lian_force.start} {
+    wd.start {lian_force.restart};
+    lian_force.setup;
+    chain buji health start_lian_force;
+};
+
+#al {lian_force.restart} {
+    after_launch {
+        lian_force.start;
+    };
+};
+
+#al {lian_force.stop} {
+    stop_lian_force_ticker;
+    #class lian_force.inner kill;
+};
+
+#var train_pos 0;
+#al {lian_force.train} {
+    #if {${train_pos} == 0} {
+        gt 938;
+        #math train_pos ${train_pos}+1;
+        #var train_animal shark;
+        on_there {
+            start_train;
+        };
+    };
+    #elseif {${train_pos} == 1} {
+        gt 935;
+        #math train_pos ${train_pos}+1;
+        #var train_animal shark;
+        on_there {
+            start_train;
+        };
+    };
+    #elseif {${train_pos} == 2} {
+        gt 2159;
+        #math train_pos ${train_pos}+1;
+        #var train_animal gui;
+        on_there {
+            start_train;
+        };
+    };
+    #elseif {${train_pos} == 3} {
+        gt 2160;
+        #math train_pos ${train_pos}+1;
+        #var train_animal gui;
+        on_there {
+            start_train;
+        };
+    };
+    #else {
+        #var train_pos 0;
+        lian_force.train;
+    };
+};
+
+#al {start_train} {
+    #ti {train} {
+        train ${train_animal};
+    } {5};
+};
+
+#al {lian_force.levelup} {
+    #var levelup_required 0;
+    gt ${shifu_pos};
+    on_there {
+        xue dragonforce from ${shifu};
+        start_lian_force;
+    };
+};
+#al {lian_force.setup} {
+    #class lian_force.inner open;
+    #ac {以示降服。} {
+        #unti {train};
+        wd.kick;
+        start_lian_force;
+    };
+
+    #var levelup_required 0;
+    #ac {┃□龙神心法 (dragonforce)%*%s%d/ %d} {
+        #var n %%3;
+        #var point %%4;
+        #math levelup_point (${n}+1)*(${n}+1);
+        #if {${point} > ${levelup_point}} {
+            #var levelup_required 1;
+        };
+        #else {
+            #var levelup_required 0;
+        };
+    };
+    
+    #ac {你试着练功，可毫无进展，需要驯服更多的海兽以增进龙神心法。} {
+        wd.kick;
+        stop_lian_force_ticker;
+        #send {skills};
+        #delay {3} {
+            #if {${levelup_required} == 1} {
+                lian_force.levelup;
+            };
+            #else {
+                health {
+                    lian_force.train;
+                };            
+            };            
+        };
+    };
+    
+    #al {start_lian_force} {
+        gt 吸真台;
+        on_there {
+            start_lian_force_ticker;
+        };
+    };
+
+    #al {start_lian_force_ticker} {
+        #ti {lian_force} {
+            lian force;
+        } {0.6};
+        #ti {check_js} {
+            #if {${js_percent} < 20} {
+                yun refresh;
+            };
+            #if {${qx_percent} < 20} {
+                yun recover;
+            };
+            #if {${nl_percent} < 20} {
+                stop_lian_force_ticker;
+                chain health start_lian_force;
+            };
+        } {3};
+    };
+    
+    #al {stop_lian_force_ticker} {
+        #unticker {lian_force};
+        #unticker {check_js};
+    };
+    
+    #class lian_force.inner close;
+};
+
+#class lian_force close;
