@@ -67,7 +67,7 @@
         #math lj_qn_count ${lj_qn_count}+@ctd{%%4};
         wd.kick;
         show_to_quest 灭妖: 完成;
-        show_to_info 完成: ${lj_area}, 获得 @ctd{%%4} 点潜能, @ctd{%%1} 点武学;
+        show_to_info 完成: ${lj_area}, 获得 @ctd{%%4} 点潜能, @ctd{%%1} 点武学, @ctd{%%2} 天道行;
         #var lj_done 1;
         #if {${lj_stopped} == 0} {
             lj.prepare;

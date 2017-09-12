@@ -14,7 +14,7 @@
 #al {buji} {
     #al buji_action #cr;
     #al buji_action %0;
-    chain drop_garbage equip get_qian get_yao get_dan get_chuansuoqi buji_action;
+    chain drop_garbage equip get_qian chifan get_yao get_dan get_chuansuoqi buji_action;
 };
 
 #al {daoju} {

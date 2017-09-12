@@ -323,4 +323,25 @@
 #al {gps.kugudong} {
     gps.run_maze {zuan;up;north;east;east;south;west;out};
 };
+
+#al {gps.tianzhu} {
+    #class gps_tianzhu open;
+    #ac {公主对国王撒了个娇，红着脸向后宫走去。} {
+        south;
+        #class gps_tianzhu kill;
+        gps.run;
+    };
+
+    #ac {皇宫伺卫将枪一横，威严地喝了一声：禁行！} {
+        south; south;
+    };
+    
+    #ac {昭阳宫 -} {
+        #class gps_tianzhu kill;
+        gps.run;
+    };
+    
+    #class gps_tianzhu close;
+    #send {north};
+};
 #class gps_actions close;

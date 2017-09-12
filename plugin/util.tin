@@ -215,6 +215,7 @@
 
 #al {load} {
     #var v %1;
+    #class %1 kill;
     #if {"${v}" == "char"} {
         #read char/${char}${dot}tin;
     };

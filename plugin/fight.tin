@@ -316,7 +316,7 @@
 #al {health} {
     #al tmp_health #cr;
     #al tmp_health %0;
-    chain qx.full js.full chifan dz.full ms.full re tmp_health;
+    chain qx.full js.full dz.full ms.full re tmp_health;
 };
 
 #ac {你所使用的外功中没有这种功能。} {

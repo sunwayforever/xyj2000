@@ -23,7 +23,8 @@ class TestBot(irc.bot.SingleServerIRCBot):
         thread.start()
 
     def on_pubmsg(self, c, e):
-        print(e.arguments[0])
+        if e.source.user == "~sunway":
+            print(e.arguments[0])
 
     def get_lines(self):
         while True:
