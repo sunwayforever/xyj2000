@@ -15,7 +15,7 @@
 };
 
 #al {shenhou} {
-    jiali max; perform shenhoukuangwu;
+    jiali 10; perform shenhoukuangwu;
 };
 
 #al {fenshen} {

@@ -14,10 +14,6 @@ restart() {
     restart=1
 }
 
-remove_tmp() {
-    sleep 5;
-    rm /tmp/xyj_${char}.tin
-}
 # erq, sunxm, milli, salonbus, beige
 login() {
     echo "#var pid $$;" > /tmp/xyj_${char}.tin
@@ -42,4 +38,5 @@ while [[ ${restart} -eq 1 ]]; do
     restart=0
     login
     sleep 3
+    echo "trying restart"
 done
