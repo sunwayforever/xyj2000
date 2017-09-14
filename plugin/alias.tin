@@ -42,32 +42,6 @@
     };
 };
 
-#al {iall} {
-    #echo {≡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━≡};
-    #send {i ring};
-    #send {i necklace};
-    #send {i spear};
-    #send {i staff};
-    #send {i blade};
-    #send {i shield};
-    #send {i sword};
-    #send {i whip};
-    #send {i head};
-    #send {i hands};
-    #send {i waist};
-    #send {i armor};
-    #send {i cloth};
-    #send {i boots};
-    #send {i wrists};
-    #send {i surcoat};
-    #ac {你身上id为surcoat的东西有下面这些} {
-        #delay {0.5} {
-            #echo {≡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━≡};
-            #buffer lock;
-        };
-    };
-};
-
 #al {heal.stop} {
     #unticker {heal};
 };
@@ -229,27 +203,6 @@ walk_to east;
     };
 };
 
-#al {on_echo} {
-    #al tmp_echo #cr;
-    #al tmp_echo %0;
-    #ac {^>} {
-        #unac {^>};
-        tmp_echo;
-    };
-};
-
-#al {l} {
-    #ungag {^$};
-    #send {l %0};
-    #delay {gag_delay} {
-        #gag {^$};
-    } {1.5};
-    #ac {^>} {
-        #unac {^>};
-        #gag {^$};
-    }
-};
-
 #macro {\eL} {
     show.reset;
 };
@@ -269,7 +222,7 @@ walk_to east;
             #system {kill -30 ${pid}};
             end_and_restart;
         };
-    } {120};
+    } {600};
 };
 
 #event {SESSION DEACTIVATED} {
