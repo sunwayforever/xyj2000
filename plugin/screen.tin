@@ -55,6 +55,11 @@
     };
 };
 
+#al {show_to_important} {
+    #var show_important %0;
+    update_status_line;
+};
+
 #al {show_to_status} {
     #var show_status %0;
     #if {${show_inited} == 0} {
@@ -147,7 +152,7 @@
 };
 
 #al {update_status_line} {
-    #echo {{<099>${show_status}<099> => <cfa>${show_quest}<099>}{${show_hp_pos}}};
+    #echo {{<099>${show_status}<099> <daa>${show_important}<099> => <cfa>${show_quest}<099>}{${show_hp_pos}}};
 };
 
 #al {show_to_quest} {

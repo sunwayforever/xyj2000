@@ -48,11 +48,16 @@
 #var water 0;
 #var maxwater 100;
 
+#var last_wx 0;
 #ac {食物：%s%d/%s%d%s武学：%s%*} {
     #var food %2;
     #var maxfood %4;
     #math food_percent ${food}*100/${maxfood};
     #var wx %7;
+    #if {${wx} < ${last_wx}} {
+        show_to_important ${last_wx} -> ${wx};
+    };
+    #var last_wx ${wx};
 };
 
 #ac {潜能：%s%d%s杀气：%s%*} {

@@ -9,7 +9,7 @@
 };
 
 #al {init_set} {
-    set wimpy 20;
+    set wimpy 30;
     set openmap 1;
     set combat_message_others 2;
     set report_message_status 1;
