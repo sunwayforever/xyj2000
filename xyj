@@ -22,12 +22,16 @@ login() {
     for i in plugin/*.tin; do
         echo "#read $i;" >> /tmp/xyj_${char}.tin
     done
+    if [[ ! -f char/${char}_env.tin ]];then
+        cp char/env_template.tin char/${char}_env.tin
+    fi
     if [[ -f char/${char}.tin ]];then
         echo "#read char/${char}.tin;" >> /tmp/xyj_${char}.tin
-        echo "#read char/${char}_env.tin;" >> /tmp/xyj_${char}.tin
     else
         echo "#read char/newbie.tin;" >> /tmp/xyj_${char}.tin
     fi
+    echo "#read char/${char}_env.tin;" >> /tmp/xyj_${char}.tin
+
     echo "#delay {1} {#session mud xyj.thu.cn 6666;gb;no;$char;$pass;y};" >> /tmp/xyj_${char}.tin
     LANG="zh_CN.GBK" tt++ -G /tmp/xyj_${char}.tin
 }
