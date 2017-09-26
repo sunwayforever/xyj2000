@@ -10,7 +10,7 @@
         #delay {2} {
             #showme GOT_CHUANSUOQI;
             chuansuoqi_action;
-        };    
+        };
     };
     #al {qu_chuansuoqi} {
         gt 礼品店;
@@ -35,7 +35,7 @@
     };
     #class get_chuansuoqi.inner close;
 
-    checkitem 时空穿梭器;    
+    checkitem 时空穿梭器;
 };
 
 #al {get_penglai} {
@@ -45,7 +45,7 @@
     #ac {ITEM_FOUND} {
         #class get_penglai.inner kill;
         #delay {2} {
-            penglai_action;    
+            penglai_action;
         };
     };
     #ac {ITEM_NOT_FOUND} {
@@ -71,7 +71,7 @@
     #ac {ITEM_FOUND} {
         #class get_xueshan.inner kill;
         #delay {2} {
-            xueshan_action;    
+            xueshan_action;
         };
     };
     #ac {ITEM_NOT_FOUND} {
@@ -93,7 +93,7 @@
 #al {get_bishuizhou} {
     #al bishuizhou_action #cr;
     #al bishuizhou_action %0;
-    
+
     #class bishuizhou open;
     #ac {ITEM_NOT_FOUND} {
         gt 南城客栈;
@@ -114,7 +114,7 @@
         #class bishuizhou kill;
         #delay {2} {
             #showme GOT_BISHUIZHOU;
-            bishuizhou_action;            
+            bishuizhou_action;
         };
     };
     #ac {你向店小二买下一个桂花酒袋} {
@@ -133,7 +133,7 @@
 #al {get_book} {
     #al book_action #cr;
     #al book_action %0;
-    
+
     #class bishuizhou open;
     #ac {ITEM_NOT_FOUND} {
         gt 南城客栈;
@@ -159,13 +159,13 @@
         };
     };
     #class bishuizhou close;
-    checkitem {无字天书};    
+    checkitem {无字天书};
 };
 
 #al get_pillow {
     #al pillow_action #cr;
     #al pillow_action %0;
-    
+
     #class get_pillow open;
     #al {got_pillow} {
         #class get_pillow kill;
@@ -180,14 +180,14 @@
     };
     #ac {ITEM_FOUND} {
         #delay {2} {
-            got_pillow;    
+            got_pillow;
         };
     };
     #ac {你向店小二买下一只黄粱枕。} {
         got_pillow;
     };
     #class get_pillow close;
-    
+
     checkitem 黄粱枕;
 };
 
@@ -223,7 +223,7 @@
         #delay {2} {
             #showme GOT_QIAN;
             qian_action;
-        };    
+        };
     };
     #al {qu_qian} {
         gt 相记钱庄;
@@ -262,7 +262,7 @@
         #delay {2} {
             #showme GOT_YAO;
             yao_action;
-        };    
+        };
     };
     #al {qu_yao} {
         gt 回春药铺;
@@ -298,7 +298,7 @@
         #class get_dan.inner kill;
         #delay {2} {
             dan_action;
-        };    
+        };
     };
     #al {qu_dan} {
         gt 回春药铺;
@@ -335,7 +335,7 @@
         #delay {2} {
             #showme GOT_WAN;
             wan_action;
-        };    
+        };
     };
     #al {qu_wan} {
         gt 回春药铺;
@@ -365,15 +365,15 @@
     #ac {ITEM_FOUND} {
         #class get_shutie.inner kill;
         #delay {2} {
-            shutie_action;    
+            shutie_action;
         };
     };
     #al {shutie_updown} {
         #ti {shutie_updown} {
-            down;up;    
+            down;up;
         } {30};
     };
-    
+
     #ac {ITEM_NOT_FOUND} {
         gt 琉璃塔十三层;
         on_there {
@@ -387,7 +387,7 @@
     };
     #class get_shutie.inner close;
 
-    checkitem {书帖};    
+    checkitem {书帖};
 };
 
 #al {get_huangqian} {
@@ -397,7 +397,7 @@
     #ac {ITEM_FOUND} {
         #class get_huangqian.inner kill;
         #delay {2} {
-            huangqian_action;    
+            huangqian_action;
         };
     };
     #ac {ITEM_NOT_FOUND} {
@@ -412,8 +412,102 @@
     };
     #class get_huangqian.inner close;
 
-    checkitem {黄钱};    
+    checkitem {黄钱};
+};
+
+#al {rsg.slave} {
+    #class get_rsg open;
+    #ac {五庄观人参果品尝大会即将开始！} {
+        gt ct;
+        #ti {accept} {
+            accept zhenyuan_daxian;
+        } {1};
+    } {1};
+
+    #ac {镇元大仙说道：好！人参果分发完毕，诸位仙贤尽情享用吧。} {
+        #unti {accept};
+        #unti {yao};
+        
+        gt 南城客栈;
+        on_there {
+            eat guo;
+        };
+    } {1};
+    
+    #ac {等白光黯去，你睁眼一看，发现置身于一个陌生的地方。} {
+        #unti {accept};
+        #ti {yao} {
+            ask zhenyuan daxian about 人参果;
+        } {2};
+    };
+    
+    #ac {镇元大仙给你一枚人参果} {
+        #unti {yao};
+        show_to_info 镇元大仙给你一枚人参果;
+    };
+    
+    #class get_rsg close;
+};
+
+#al {rsg.master} {
+    #class get_rsg open;
+    #al {rsg_retry} {
+        #unti {yao};
+        
+        gt 南城客栈;
+        on_there {
+            eat guo;
+        };
+
+        #delay {get_rsg_delay} {
+            chain buji health get_yaoshi;
+        } {1800};
+    };
+
+    #ac {你什么也没摸着。} {
+        rsg_retry;
+    };
+    
+    #ac {镇元大仙说道：好！人参果分发完毕，诸位仙贤尽情享用吧。} {
+        rsg_retry;
+    } {1};
+    
+    #ac {等白光黯去，你睁眼一看，发现置身于一个陌生的地方。} {
+        #ti {yao} {
+            ask zhenyuan daxian about 人参果;
+        } {2};
+    };
+    
+    #ac {镇元大仙给你一枚人参果} {
+        show_to_info 镇元大仙给你一枚人参果;
+    };
+    
+    #ac {只听当！地一声，一把黄铜钥匙掉在地上。} {
+        #send {get key};
+    };
+
+    #ac {你捡起一把黄铜钥匙。} {
+        gt 西瓜地;
+        on_there {
+            open door;
+        };
+    };
+
+    #al {get_yaoshi} {
+        gt 亭底暗室;
+        on_there {
+            mo;
+        };
+    };
+    #class get_rsg close;
+
+    chain buji health get_yaoshi;
 };;
 
+#al {rsg.stop} {
+    #class get_rsg kill;
+    #unti {yao};
+    #unti {accept};
+};
 
 #class get_item close;

@@ -226,21 +226,22 @@
 
 #al {gps.wudidong} {
     #class gps_wudidong open;
-    #ti {push_statue} {
-        jiali max; push statue;
-    } {6};
-
-    #ti {heal} {
-        yun heal;
-    } {2};
+    #al {push_statue} {
+        jiali max; push statue; jiali none;
+    };
+    #ac {只听“哗啦”一声，房顶落下一堆砖瓦，正砸在你头顶！} {
+        health {
+            push_statue;
+        };
+    };
     #ac {你纵身一跃，跳了进去，大洞随即又合上了。} {
         #class gps_wudidong kill;
-        #unticker {push_statue};
-        #unticker {heal};
         gps.run;
     };
     #class gps_wudidong close;
-    jiali max; push statue;
+    health {
+        push_statue;
+    };
 };
 
 #al {gps.baiyundong} {

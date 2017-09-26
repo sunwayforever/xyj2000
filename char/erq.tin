@@ -1,7 +1,7 @@
 #class erq open;
-#var shifu_pos ½²¾­ÌÃ;
+#var shifu_pos ÑþÌ¨;
 #var sleep_pos 264;
-#var shifu master;
+#var shifu puti;
 #var shortcut nil;
 #var weapon_to_wield stick;
 #var shortcut F1: pili F2: light F3: qiankun F4: shenhou;
@@ -49,11 +49,9 @@
     } {4};
     #ti {light} {
         cst light;
-        cst thunder;
     } {3};
     #class attack.inner close;
     cst light;
-    cst thunder;
 };
 
 #al {do_reborn} {

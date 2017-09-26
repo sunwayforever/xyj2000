@@ -283,7 +283,7 @@
     #al qx_full_action #cr;
     #al qx_full_action %0;
     #al {check_qx} {
-        #if {${eff_qx_percent} < 70} {
+        #if {${eff_qx_percent} < 90} {
             eat 5 yao;
             #delay {2} {
                 check_qx;
@@ -300,7 +300,7 @@
     #al js_full_action #cr;
     #al js_full_action %0;
     #al {check_js} {
-        #if {${eff_js_percent} < 70} {
+        #if {${eff_js_percent} < 90} {
             eat 5 dan;
             #delay {2} {
                 check_js;

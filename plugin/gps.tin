@@ -69,6 +69,7 @@ load gps_actions;
 };
 
 #al {gps.gt} {
+    health.cancel;
     #var gps_stop 0;
     #var gps_gt_dest %1;
     #replace gps_gt_dest ( \(;

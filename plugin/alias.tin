@@ -113,13 +113,12 @@
 };
 
 #al {log.save} {
-    #system {cp debug${dot}${char}${dot}log ${char}${dot}log};
+    #system {cp /tmp/debug${dot}${char}${dot}log ${char}${dot}log};
 };
 
 #al {log.start} {
-    #log overwrite debug${dot}${char}${dot}log;
+    #log overwrite /tmp/debug${dot}${char}${dot}log;
     #debug all log;
-    #var debug_info on;
     update_status;
 };
 
@@ -435,6 +434,7 @@ walk_to east;
         #math garbage_index ${garbage_index}+1;
         #if {${garbage_index} > ${garbage_size}} {
             #class drop_garbage kill;
+            #unti {drop_garbage};
             #delay {2} {
                 #send {up};
                 drop_garbage_action;                

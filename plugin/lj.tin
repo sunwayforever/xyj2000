@@ -29,6 +29,7 @@
     #echo {»ñµÃÇ±ÄÜ: ${lj_qn_count}};
 };
 #al {lj.stop} {
+    log.stop;
     wd.stop;
     #var lj_stopped 1;
     #undelay {lj.delay};
@@ -37,6 +38,7 @@
 };
 
 #al {lj.prepare} {
+    log.start;
     wd.kick;
     quest.prepare {
         lj.q;

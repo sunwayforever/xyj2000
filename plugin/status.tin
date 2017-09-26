@@ -55,6 +55,7 @@
     #math food_percent ${food}*100/${maxfood};
     #var wx %7;
     #if {${wx} < ${last_wx}} {
+        log.save;
         show_to_important ${last_wx} -> ${wx};
     };
     #var last_wx ${wx};
