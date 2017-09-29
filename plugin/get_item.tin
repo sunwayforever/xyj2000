@@ -416,7 +416,6 @@
 };
 
 #al {rsg.slave} {
-    show_to_quest rsg.slave;
     #class get_rsg open;
     #ac {五庄观人参果品尝大会即将开始！} {
         gt ct;
@@ -446,12 +445,11 @@
         #unti {yao};
         show_to_info 镇元大仙给你一枚人参果;
     };
-    
     #class get_rsg close;
+    show_to_quest rsg slave;
 };
 
 #al {rsg.master} {
-    show_to_quest rsg.master;
     #class get_rsg open;
     #al {rsg_retry} {
         #unti {yao};
@@ -502,11 +500,12 @@
         };
     };
     #class get_rsg close;
-
+    show_to_quest rsg master;
     chain buji health get_yaoshi;
-};;
+};
 
 #al {rsg.stop} {
+    show_to_quest {};
     #class get_rsg kill;
     #unti {yao};
     #unti {accept};

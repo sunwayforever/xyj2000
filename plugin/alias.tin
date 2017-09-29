@@ -280,7 +280,7 @@ walk_to east;
 };
 
 #al {notify} {
-    irc.notify %0;
+    #nop %0;
 };
 
 #al {corpse} {
