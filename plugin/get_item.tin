@@ -416,11 +416,12 @@
 };
 
 #al {rsg.slave} {
+    show_to_quest rsg.slave;
     #class get_rsg open;
     #ac {五庄观人参果品尝大会即将开始！} {
         gt ct;
         #ti {accept} {
-            accept zhenyuan_daxian;
+            accept zhenyuan daxian;
         } {1};
     } {1};
 
@@ -450,6 +451,7 @@
 };
 
 #al {rsg.master} {
+    show_to_quest rsg.master;
     #class get_rsg open;
     #al {rsg_retry} {
         #unti {yao};

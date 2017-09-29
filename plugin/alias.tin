@@ -449,7 +449,7 @@ walk_to east;
     #ac {你身上没有这样东西。} {
         #unti {drop_garbage};
         #delay {1} {
-            drop_next_garbge;    
+            drop_next_garbge;
         };
     };
     #class drop_garbage close;
